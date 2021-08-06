@@ -7,10 +7,10 @@
     <section id="main-common" data-color-theme="dark">
       <common-interst></common-interst>
     </section>
-    <section id="retail" data-color-theme="light">
+    <section id="services" data-color-theme="light">
       <services></services>
     </section>
-    <section id="entertainment" data-color-theme="dark">
+    <section id="initiators" data-color-theme="dark">
       <Initiators></Initiators>
     </section>
   </div>
@@ -43,12 +43,12 @@ export default {
           id: "main-common",
         },
         {
-          title: "retail",
-          id: "retail",
+          title: "Services",
+          id: "services",
         },
         {
-          title: "entertainment",
-          id: "entertainment",
+          title: "initiators",
+          id: "initiators",
         },
       ],
     };
