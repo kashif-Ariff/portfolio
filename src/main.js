@@ -54,7 +54,7 @@ import "font-awesome/css/font-awesome.min.css";
 // import BaseVideoModal from '@/common/components/base/BaseVideoModal.vue'
 import BaseCarousel from '@/common/components/base/BaseCarousel.vue'
 import BaseSectionsScroll from '@/common/components/base/BaseSectionsScroll'
-import SvgIcon from '@/common/components/base/BaseSvgIcon.vue'
+import BaseSvgIcon from '@/common/components/base/BaseSvgIcon.vue'
 import i18n from '@/common/i18n'
 import accessibility from '@/mixin/accessibility.js'
 import baseSmoothScrollbar from "@/common/components/base/BaseSmoothScrollbar"
@@ -91,7 +91,7 @@ import vuescroll from 'vuescroll';
 //library.add(faUserSecret)
     // Install BootstrapVue
 Vue.use(BootstrapVue)
-Vue.component('svg-icon', SvgIcon)
+Vue.component('base-svg-icon', BaseSvgIcon)
 Vue.component('carousel', BaseCarousel)
 Vue.component('base-section-scroll', BaseSectionsScroll)
 Vue.component('base-smooth-scrollbar',baseSmoothScrollbar)
