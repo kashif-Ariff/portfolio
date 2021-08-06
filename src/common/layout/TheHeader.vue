@@ -1,6 +1,7 @@
 <template>
   <div>
     <BaseIcons />
+    <the-menu @close="closeMenu"></the-menu>
     <FixedHeader :threshold="150">
       <header class="">
         <nav class="nav">
@@ -97,7 +98,6 @@
       </header>
     </FixedHeader>
     <services :isOpen="isService"></services>
-    <the-menu @close="closeMenu"></the-menu>
   </div>
 </template>
 <script>
