@@ -1,0 +1,68 @@
+<template>
+  <div class="home">
+    <base-sections-scroll :page-sections="pageSections"></base-sections-scroll>
+    <section id="header" data-color-theme="light">
+      <HomeBannerVue />
+    </section>
+    <section id="main-common" data-color-theme="dark">
+      <common-interst></common-interst>
+    </section>
+    <section id="retail" data-color-theme="light">
+      <services></services>
+    </section>
+    <section id="entertainment" data-color-theme="dark">
+      <Initiators></Initiators>
+    </section>
+  </div>
+</template>
+
+<script>
+import CommonInterst from "../modules/home/components/CommonInterst.vue";
+import HomeBannerVue from "../modules/home/components/HomeBanner.vue";
+import Services from "../modules/home/components/Services.vue";
+import Initiators from "../modules/home/components/Initiators.vue";
+import BaseSectionsScroll from "@/common/components/base/BaseSectionsScroll";
+export default {
+  name: "Home",
+  components: {
+    HomeBannerVue,
+    CommonInterst,
+    Services,
+    Initiators,
+    BaseSectionsScroll,
+  },
+  data() {
+    return {
+      pageSections: [
+        {
+          title: "Header",
+          id: "header",
+        },
+        {
+          title: "COMMON INTERESTS",
+          id: "main-common",
+        },
+        {
+          title: "retail",
+          id: "retail",
+        },
+        {
+          title: "entertainment",
+          id: "entertainment",
+        },
+      ],
+    };
+  },
+  created() {
+    document.body.classList.add("front-page");
+  },
+  mounted() {
+    document.body.classList.add("front-page");
+  },
+  destroyed() {
+    document.body.classList.remove("front-page");
+  },
+};
+</script>
+<style lang="scss" scoped>
+</style>

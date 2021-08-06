@@ -1,0 +1,21 @@
+%d-flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+%d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%d-flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+%d-flex-center-column {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
