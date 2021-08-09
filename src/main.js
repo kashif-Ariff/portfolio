@@ -51,6 +51,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import '@/assets/sccs/utility/_variables.scss'
 import 'vue-select/dist/vue-select.css';
 import "font-awesome/css/font-awesome.min.css";
+import '@/assets/sccs/helper/_fonts.scss'
 // import BaseVideoModal from '@/common/components/base/BaseVideoModal.vue'
 import BaseCarousel from '@/common/components/base/BaseCarousel.vue'
 import BaseSectionsScroll from '@/common/components/base/BaseSectionsScroll'

@@ -123,7 +123,7 @@ export default {
   /deep/ {
     .sliderNavigation {
       z-index: 1;
-      padding: 0 25px;
+      padding: 0 rem(25px);
       background-color: #0a2333;
       width: 350px;
       height: 130px;

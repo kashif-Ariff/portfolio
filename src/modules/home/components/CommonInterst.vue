@@ -108,7 +108,7 @@ export default {
 <style lang="scss" scoped>
 .main-common {
   @media screen and (max-width: 767px) {
-    margin: 0px 20px;
+    margin: 0px rem(20px);
   }
 }
 .main-common .slider-services .slider-item {
@@ -116,20 +116,27 @@ export default {
 }
 .slider-header {
   @media screen and (max-width: 991px) {
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
   }
 }
 .container-right {
   position: relative;
   /deep/ {
+    .swiper-container {
+      padding-left: 10px;
+    }
     .sliderNavigation {
-      top: -156px;
+      top: -130px;
       z-index: 0;
       height: 0;
       --border: var(--swiper-theme-color);
       --arrow: var(--swiper-theme-color);
       bottom: 0;
       left: 120px;
+      @media screen and (min-width: 1600px) {
+        left: 70px;
+        top: -162px;
+      }
       @media screen and (max-width: 1200px) {
         top: -132px;
         left: 160px;
@@ -163,7 +170,7 @@ export default {
           }
         }
         #prevArrow {
-          margin-right: 10px;
+          margin-right: rem(10px);
         }
       }
     }

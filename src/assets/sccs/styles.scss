@@ -1,7 +1,7 @@
 @import "import";
 .slider-services {
   .swiper-slide {
-    margin: 25px 0px;
+    margin: rem(25px) 0px;
     @include prefixer(transition, all 0.4s ease-in-out, o moz wibket);
   }
 }
@@ -37,12 +37,12 @@
   height: auto;
   background-size: cover;
   background-position: center;
-  padding-bottom: 40px;
+  padding-bottom: rem(40px);
   position: relative;
   z-index: 1;
   @media (max-width: 991.98px) {
     height: auto;
-    padding-bottom: 55px;
+    padding-bottom: rem(55px);
   }
   @include small_medium {
     // height: 85vh;
@@ -62,15 +62,15 @@
   .header-slider {
     .heaer-slider-item {
       outline: none;
-      margin-top: 250px;
+      margin-top: rem(250px);
       @media screen and (max-width: 1600px) {
-        margin-top: 160px;
+        margin-top: rem(160px);
       }
       @media screen and (max-width: 991px) {
-        margin-top: 235px;
+        margin-top: rem(235px);
       }
       @media screen and (max-width: 575px) {
-        margin-top: 175px;
+        margin-top: rem(175px);
       }
       h2 {
         color: $whiteColor;
@@ -78,16 +78,16 @@
         text-align: center;
         margin: auto;
         line-height: 1.4;
-        font-size: 42px;
-        margin-bottom: 60px;
+        font-size: rem(42px);
+        margin-bottom: rem(60px);
         @media (max-width: 991.98px) {
           width: 90%;
-          margin-bottom: 15px;
-          font-size: 35px;
+          margin-bottom: rem(15px);
+          font-size: rem(35px);
           line-height: 1.2;
         }
         @include small_medium {
-          font-size: 20px;
+          font-size: rem(20px);
         }
       }
       .slider-search {
@@ -100,8 +100,8 @@
         text-align: center;
         margin: auto;
         // line-height: 105px;
-        padding-inline-start: 63px;
-        padding-inline-end: 28px;
+        padding-inline-start: rem(63px);
+        padding-inline-end: rem(28px);
         position: relative;
         @media (max-width: 1600px) {
           height: 90px;
@@ -115,8 +115,8 @@
         @include xSmall {
           height: 60px;
           line-height: 60px;
-          padding-inline-start: 26px;
-          padding-inline-end: 13px;
+          padding-inline-start: rem(26px);
+          padding-inline-end: rem(13px);
         }
         @media (max-width: 350px) {
           padding-inline-start: 14px;
@@ -171,9 +171,12 @@
           content: "Search";
           z-index: 666;
           color: $thirdColor;
-          @include fonts($Gotham-Book, 24px);
+          // @include fonts($Gotham-Book, 24px);
+          font-size: rem(24px);
+          font-weight: 400;
           @media (max-width: 1600px) {
             top: 13px;
+            left: 50px;
           }
           @media (max-width: 991.98px) {
             top: -17px;
@@ -188,37 +191,44 @@
         p {
           flex-grow: 3;
           text-align: left;
-          margin-top: 25px;
+          margin-top: rem(40px);
+          @media screen and (max-width: 1600px) {
+            margin-top: rem(30px);
+          }
           span.vue-typer {
             cursor: pointer;
           }
           span.vue-typer span {
             cursor: pointer;
-            @include fonts($Gotham-Light, 22px);
+            font-size: rem(22px);
+            font-weight: 300;
+            //   @include fonts($Gotham-Light, 22px);
             color: $grayColor;
             position: relative;
             margin-bottom: 0;
             @include small_medium {
-              font-size: 14px;
-              margin-top: 13px;
+              font-size: rem(14px);
+              margin-top: rem(13px);
             }
             @include xxSmall {
-              font-size: 10px;
+              font-size: rem(10px);
             }
           }
         }
       }
       > p {
         text-align: center;
-        @include fonts($Gotham-bold, 17px);
+        //    @include fonts($Gotham-bold, 17px);
+        font-size: rem(17px);
+        font-weight: 700;
         color: $whiteColor;
-        margin-top: 60px;
+        margin-top: rem(60px);
         text-transform: uppercase;
         @media (max-width: 991.8px) {
-          margin-top: 20px;
+          margin-top: rem(20px);
         }
         @include small_medium {
-          font-size: 14px;
+          font-size: rem(14px);
         }
         svg {
           margin-inline-end: 15px;
@@ -239,13 +249,13 @@
       }
       .watch-video {
         display: flex;
-        margin-top: 80px;
+        margin-top: rem(80px);
         padding-bottom: 7px;
         @media (max-width: 991.8px) {
-          margin-top: 45px;
+          margin-top: rem(45px);
         }
         @include xSmall {
-          margin-top: 20px;
+          margin-top: rem(20px);
         }
         .animate-video {
           position: relative;
@@ -318,13 +328,17 @@
             margin-inline-start: 24px;
             text-align: left;
             &:first-child {
-              @include fonts($Gotham-bold, 16px);
+              //     @include fonts($Gotham-bold, 16px);
+              font-size: rem(16px);
+              font-weight: 700;
             }
             &:last-child {
-              @include fonts($Gotham-Book, 16px);
+              //     @include fonts($Gotham-Book, 16px);
+              font-size: rem(16px);
+              font-weight: 400;
             }
             @include small_medium {
-              margin-inline-start: 12px;
+              margin-inline-start: rem(12px);
               font-size: 14px !important;
             }
           }
@@ -336,20 +350,20 @@
 @media (min-width: 768px) {
   .container-right {
     margin-right: 0;
-    padding-left: 15px;
+    padding-left: rem(15px);
     margin-left: calc(50vw - 375px);
     max-width: auto;
   }
 }
 @media screen and (max-width: 768px) {
   .container-right {
-    padding-left: 15px;
+    padding-left: rem(15px);
   }
 }
 @media screen and (max-width: 575px) {
   .container-right {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: rem(15px);
+    padding-right: rem(15px);
   }
 }
 @media (min-width: 992px) {
@@ -426,67 +440,71 @@ input {
 
 /* --------.main-common---------- */
 .main-common {
-  padding-top: 61px;
-  padding-bottom: 37px;
+  padding-top: rem(61px);
+  padding-bottom: rem(37px);
   @media (max-width: 1199.98px) {
-    padding-top: 25px;
+    padding-top: rem(25px);
   }
   h2 {
     font-family: "Gotham-bold";
-    font-size: 36px;
+    font-size: rem(36px);
     color: #234156;
     text-transform: uppercase;
     position: relative;
     z-index: 1;
     @include small_medium {
-      font-size: 25px;
+      font-size: rem(25px);
     }
   }
   p {
     color: $mainColor;
     margin-top: 0;
-    margin-bottom: 24px;
-    @include fonts($AlegreyaSans-Regular, 24px);
+    margin-bottom: rem(24px);
+    //     @include fonts($AlegreyaSans-Regular, 24px);
+    font-size: rem(24px);
+    font-weight: 400;
     @include small_medium {
-      font-size: 16px;
+      font-size: rem(16px);
     }
   }
   svg {
     width: 60px;
     height: 60px;
     color: $thirdColor;
-    margin-bottom: 30px;
-    margin-top: 19px;
+    margin-bottom: rem(30px);
+    margin-top: rem(19px);
     @media (max-width: 1199.98px) {
-      margin-bottom: 17px;
+      margin-bottom: rem(17px);
     }
   }
   .slider-header {
     div {
       &:last-child {
-        margin-bottom: 50px;
+        margin-bottom: rem(50px);
         display: flex;
         // align-items: center;
         @media (max-width: 991.98px) {
           margin-bottom: 0;
         }
         @include large {
-          margin-top: 24px;
+          margin-top: rem(24px);
         }
         a {
-          margin-top: 10px;
+          margin-top: rem(10px);
           @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
-          @include fonts($Gotham-Book, 24px);
+          // @include fonts($Gotham-Book, 24px);
+          font-size: rem(24px);
+          font-weight: 400;
           color: $thirdColor;
           text-transform: capitalize;
-          margin-inline-end: 20px;
+          margin-inline-end: rem(20px);
           position: relative;
           z-index: 1;
           &:hover {
             color: $mainColor;
           }
           @media (max-width: 1199.98px) {
-            font-size: 18px;
+            font-size: rem(18px);
           }
         }
         ul {
@@ -510,11 +528,11 @@ input {
               }
             }
             &:last-child {
-              margin-inline-start: 10px;
+              margin-inline-start: rem(10px);
             }
             i {
               color: $mainColor;
-              font-size: 20px;
+              font-size: rem(20px);
             }
           }
         }
@@ -528,15 +546,15 @@ input {
       outline: none;
       background-color: $whiteColor;
       border-radius: 30px;
-      padding: 21px 30px 20px 30px;
-      margin: 25px 0;
+      padding: rem(21px) rem(30px) rem(20px) rem(30px);
+      margin: rem(25px) 0;
       // margin-inline-end: 20px;
       box-shadow: -3px 1px 10px #ccc;
       min-height: 272px;
       @include prefixer(transition, all 0.7s ease-in-out, o moz wibket);
       position: relative;
       @media (max-width: 1199.98px) {
-        padding: 12px 10px 15px 10px;
+        padding: rem(12px) rem(10px) rem(15px) rem(10px);
       }
       &:hover {
         transform: translateY(-19px);
@@ -556,15 +574,19 @@ input {
       }
 
       h4 {
-        @include fonts($Gotham-bold, 18px);
+        //    @include fonts($Gotham-bold, 18px);
+        font-size: rem(18px);
+        font-weight: 700;
         color: $thirdColor;
 
-        @media (max-width: 1299.98px) {
-          font-size: 13px;
-        }
+        //    @media (max-width: 1299.98px) {
+        //      font-size: rem(13px);
+        //    }
       }
       span {
         @include fonts($Gotham-Light, 16px);
+        font-weight: 400;
+        font-size: rem(16px);
         color: $thirdgray;
         @include truncate(2, 1.5);
       }
@@ -585,8 +607,8 @@ input {
 
 /* --------.o-services---------- */
 .o-services {
-  padding-top: 85px;
-  padding-bottom: 70px;
+  padding-top: rem(85px);
+  padding-bottom: rem(70px);
 
   background-size: cover;
   background-position: center;
@@ -595,15 +617,19 @@ input {
   text-align: center;
   h2 {
     text-align: center;
-    @include fonts($Gotham-bold, 36px);
+    //     @include fonts($Gotham-bold, 36px);
+    font-size: rem(36px);
+    font-weight: 700;
     margin-bottom: 20px;
   }
   p {
-    @include fonts($AlegreyaSans-Regular, 24px);
+    //     @include fonts($AlegreyaSans-Regular, 24px);
+    font-size: rem(24px);
+    font-weight: 400;
     margin-bottom: 66px;
   }
   .services-content {
-    margin-bottom: 75px;
+    margin-bottom: rem(75px);
     outline: none;
     border: none;
     .row {
@@ -612,7 +638,7 @@ input {
           padding: 0;
         }
         @include small_medium {
-          margin-bottom: 25px;
+          margin-bottom: rem(25px);
         }
       }
     }
@@ -621,18 +647,24 @@ input {
     }
     h6 {
       margin-top: 25px;
-      @include fonts($Gotham-bold, 18px);
-      @media (max-width: 1199.98px) {
-        font-size: 14px;
-      }
+      //  @include fonts($Gotham-bold, 18px);
+      font-size: rem(18px);
+      font-weight: 700;
+      //  @media (max-width: 1199.98px) {
+      //    font-size: 14px;
+      //  }
     }
     span {
-      @include fonts($AlegreyaSans-Regular, 14px);
+      //  @include fonts($AlegreyaSans-Regular, 14px);
+      font-weight: 400;
+      font-size: rem(14px);
     }
   }
   a {
     display: block;
     @include fonts($Gotham-Book, 21px);
+    font-size: rem(21px);
+    font-weight: 500;
     @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
     &:hover {
       color: $mainColor;
@@ -668,20 +700,20 @@ input {
   .slick-prev:before {
     font-family: "FontAwesome";
     content: "\f104";
-    font-size: 25px;
+    font-size: rem(25px);
     font-weight: bold;
   }
   .slick-next:before {
     font-family: "FontAwesome";
     content: "\f105";
-    font-size: 25px;
+    font-size: rem(25px);
     font-weight: bold;
   }
 }
 /* --------.o-services---------- */
 
 .mb-30 {
-  margin-bottom: 30px !important;
+  margin-bottom: rem(30px) !important;
 }
 
 /* --------.initiators---------- */
@@ -690,12 +722,12 @@ input {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: 18px;
+  padding-bottom: rem(18px);
   border-bottom: 1px dashed #000;
-  padding-top: 90px;
+  padding-top: rem(90px);
   @include small_medium {
     padding-bottom: 0px;
-    padding-top: 40px;
+    padding-top: rem(40px);
   }
   .slick-slider {
     @include xSmall {
@@ -703,47 +735,51 @@ input {
     }
   }
   .slick-list {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: rem(30px);
+    padding-bottom: rem(30px);
   }
 
   .slider-header {
     h2 {
-      @include fonts($Gotham-Book, 36px);
+      //  @include fonts($Gotham-Book, 36px);
+      font-size: rem(36px);
+      font-weight: 500;
       color: $thirdColor;
       position: relative;
       z-index: 1;
       @include small_medium {
-        font-size: 27px;
+        //    font-size: 27px;
         margin-bottom: 5px;
       }
     }
     p {
-      @include fonts($Gotham-Book, 24px);
+      //  @include fonts($Gotham-Book, 24px);
+      font-size: rem(24px);
+      font-weight: 400;
       color: $mainColor;
       margin-bottom: 0px;
       position: relative;
       z-index: 1;
       @include small_medium {
-        font-size: 16px;
-        margin-bottom: 20px;
+        font-size: rem(16px);
+        margin-bottom: rem(20px);
       }
     }
     div {
       &:last-child {
         display: flex;
         justify-content: center;
-        margin-bottom: 37px;
+        margin-bottom: rem(37px);
         @include small_medium {
           justify-content: flex-end;
         }
         a {
           font-family: "Gotham-Book";
-          font-size: 24px;
+          font-size: rem(24px);
           color: #234156;
           text-transform: capitalize;
-          margin-inline-end: 20px;
-          margin-top: 10px;
+          margin-inline-end: rem(20px);
+          margin-top: rem(10px);
           position: relative;
           z-index: 1;
           @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
@@ -751,7 +787,7 @@ input {
             color: $mainColor;
           }
           @media (max-width: 1024px) {
-            font-size: 18px;
+            font-size: rem(18px);
           }
         }
         ul {
@@ -775,11 +811,11 @@ input {
               }
             }
             &:last-child {
-              margin-inline-start: 10px;
+              margin-inline-start: rem(10px);
             }
             i {
               color: $mainColor;
-              font-size: 20px;
+              font-size: rem(20px);
             }
           }
         }
@@ -790,7 +826,7 @@ input {
     .slider-item {
       outline: none;
       border: none;
-      margin-inline-end: 15px;
+      margin-inline-end: rem(15px);
       cursor: pointer;
       @include prefixer(transition, all 0.7s ease-in-out, o moz wibket);
       filter: drop-shadow(2px 4px 6px #ccc);
@@ -806,7 +842,7 @@ input {
         display: flex;
         justify-content: center;
         background-color: $whiteColor;
-        padding: 0 30px;
+        padding: 0 rem(30px);
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
         @media (max-width: 1299.98px) {
@@ -815,24 +851,26 @@ input {
         & > div {
           &:first-child {
             width: 35%;
-            padding-top: 30px;
-            padding-inline-end: 25px;
-            margin-inline-end: 25px;
+            padding-top: rem(30px);
+            padding-inline-end: rem(25px);
+            margin-inline-end: rem(25px);
             border-inline-end: 1px dashed;
             position: relative;
             @media (max-width: 1199.98px) {
-              padding-inline-end: 13px;
-              margin-inline-end: 14px;
+              padding-inline-end: rem(13px);
+              margin-inline-end: rem(14px);
             }
             svg {
               width: 72px;
-              margin-bottom: 17px;
+              margin-bottom: rem(17px);
               @media (max-width: 1199.98px) {
                 margin-bottom: 7px;
               }
             }
             a {
-              @include fonts($Gotham-bold, 13px);
+              //     @include fonts($Gotham-bold, 13px);
+              font-size: rem(13px);
+              font-weight: 700;
               color: $mainColor;
               @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
               &:hover {
@@ -841,22 +879,26 @@ input {
             }
           }
           &:last-child {
-            padding-top: 30px;
-            padding-bottom: 30px;
+            padding-top: rem(30px);
+            padding-bottom: rem(30px);
             h6 {
-              @include fonts($Gotham-bold, 20px);
-              margin-bottom: 20px;
+              //     @include fonts($Gotham-bold, 20px);
+              font-size: rem(20px);
+              font-weight: 700;
+              margin-bottom: rem(20px);
               min-height: 48px;
               @media (max-width: 1299.98px) {
-                font-size: 15px;
+                //  font-size: 15px;
                 margin-bottom: 8px;
               }
             }
             p {
-              @include fonts($AlegreyaSans-Regular, 15px);
+              //     @include fonts($AlegreyaSans-Regular, 15px);
+              font-size: rem(15px);
+              font-weight: 400;
               margin-bottom: 0;
               @media (max-width: 1199.98px) {
-                font-size: 13px;
+                //  font-size: 13px;
               }
             }
           }
@@ -973,7 +1015,8 @@ main {
   }
   .vs__actions {
     position: relative;
-    padding-right: 22px;
+    padding-right: rem(30px);
+    padding-left: rem(30px);
     .vs__open-indicator {
       width: 0;
       height: 0;

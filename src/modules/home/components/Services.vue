@@ -110,11 +110,11 @@ export default {
   background-image: url("../../../assets/images/home/bg-services.png");
   .services-slider {
     @media screen and (max-width: 1600px) {
-      margin: 0px 42px;
+      margin: 0px rem(42px);
     }
   }
   .slider-item {
-    margin: 25px 0px;
+    margin: rem(25px) 0px;
   }
   /deep/ {
     .sideNavigation {

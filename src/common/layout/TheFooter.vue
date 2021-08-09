@@ -76,10 +76,10 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  margin-top: 60px;
+  margin-top: rem(60px);
 
   @include small_medium {
-    margin-top: 20px;
+    margin-top: rem(20px);
   }
   .row {
     div {
@@ -96,35 +96,43 @@ footer {
           background-image: none;
         }
         p {
-          @include fonts($Gotham-Book, 16px);
+          // @include fonts($Gotham-Book, 16px);
+          font-size: rem(16px);
+          font-weight: 500;
           color: $thirdgray;
           margin-bottom: 0;
           &:first-child {
             @include small_medium {
               margin-bottom: 9px;
             }
-            margin-bottom: 33px;
-            @include fonts($Gotham-Book, 18px);
+            margin-bottom: rem(33px);
+            //   @include fonts($Gotham-Book, 18px);
+            font-size: rem(18px);
+            font-weight: 400;
             color: $thirdColor;
           }
         }
         span {
           display: block;
-          @include fonts($Gotham-Book, 15px);
+          // @include fonts($Gotham-Book, 15px);
+          font-size: rem(15px);
+          font-weight: 500;
           color: $thirdgray;
-          margin-bottom: 33px;
+          margin-bottom: rem(33px);
           margin-top: 5px;
           @include small_medium {
-            margin-bottom: 15px;
+            margin-bottom: rem(15px);
           }
         }
         div {
           h6 {
-            @include fonts($Gotham-bold, 14px);
+            //   @include fonts($Gotham-bold, 14px);
+            font-size: rem(14px);
+            font-weight: 700;
             color: $thirdColor;
-            margin-bottom: 20px;
+            margin-bottom: rem(20px);
             @include small_medium {
-              margin-bottom: 7px;
+              margin-bottom: rem(7px);
             }
           }
           ul {
@@ -133,7 +141,7 @@ footer {
             align-items: center;
             li {
               // text-align:left;
-              font-size: 16px;
+              font-size: rem(16px);
               width: 35px;
               height: 35px;
               background-color: transparent;
@@ -141,7 +149,7 @@ footer {
               border-radius: 50%;
               @include prefixer(transition, all 0.5s ease-in-out, o moz wibket);
               &:not(:last-child) {
-                margin-inline-end: 17px;
+                margin-inline-end: rem(17px);
               }
               &:hover {
                 background-color: $whiteColor;
@@ -155,21 +163,27 @@ footer {
       }
       &:not(:first-child) {
         h4 {
-          @include fonts($Gotham-bold, 18px);
+          // @include fonts($Gotham-bold, 18px);
+          font-size: rem(18px);
+          font-weight: 700;
           color: $thirdColor;
-          margin-bottom: 25px;
+          margin-bottom: rem(25px);
         }
         ul {
           li {
             width: fit-content;
-            @include fonts($Gotham-Book, 16px);
+            //   @include fonts($Gotham-Book, 16px);
+            font-size: rem(16px);
+            font-weight: 400;
             color: $thirdgray;
-            margin-bottom: 11px;
+            margin-bottom: rem(15px);
             cursor: pointer;
-            @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
+            transition: 0.3s ease all;
             &:hover {
               color: $mainColor;
-              @include fonts($Gotham-bold, 16px);
+              //     @include fonts($Gotham-bold, 16px);
+              font-weight: bold;
+              font-size: rem(16px);
             }
           }
         }
@@ -179,9 +193,11 @@ footer {
   > div {
     &:last-child {
       @include fonts($Gotham-Book, 16px);
+      font-size: rem(16px);
+      font-weight: 500;
       text-align: center;
       background-color: $thirdColor;
-      padding: 25px 0;
+      padding: rem(25px) 0;
       color: $whiteColor;
     }
   }

@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Gotham";
-  src: url("./fonts/new-fonts/Gotham-Black.woff") format("woff"),
-    url("./fonts/new-fonts/Gotham-Black.woff2") format("woff2");
+  src: url("../../fonts/new-fonts/Gotham-Black.woff") format("woff"),
+    url("../../fonts/new-fonts/Gotham-Black.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -10,71 +10,71 @@
   font-family: "Gotham";
   font-weight: 700;
   font-style: normal;
-  src: url("./fonts/new-fonts/Gotham-Bold.woff") format("woff"),
-    url("./fonts/new-fonts/Gotham-Bold.woff2") format("woff2");
+  src: url("../../fonts/new-fonts/Gotham-Bold.woff") format("woff"),
+    url("../../fonts/new-fonts/Gotham-Bold.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Gotham";
   font-weight: 400;
   font-style: normal;
-  src: url("./fonts/new-fonts/Gotham-Book.woff") format("woff"),
-    url("./fonts/new-fonts/Gotham-Book.woff2") format("woff2");
+  src: url("../../fonts/new-fonts/Gotham-Book.woff") format("woff"),
+    url("../../fonts/new-fonts/Gotham-Book.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Gotham";
   font-weight: 300;
   font-style: normal;
-  src: url("./fonts/new-fonts/Gotham-Light.woff") format("woff"),
-    url("./fonts/new-fonts/Gotham-Light.woff2") format("woff2");
+  src: url("../../fonts/new-fonts/Gotham-Light.woff") format("woff"),
+    url("../../fonts/new-fonts/Gotham-Light.woff2") format("woff2");
 }
 
 // new font
 
 @font-face {
   font-family: "GothamRounded-Bold";
-  src: url("./fonts/new-fonts/GothamRounded-Bold.woff") format("woff"),
-    url("./fonts/new-fonts/GothamRounded-Bold.woff2") format("woff2");
+  src: url("../../fonts/new-fonts/GothamRounded-Bold.woff") format("woff"),
+    url("../../fonts/new-fonts/GothamRounded-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GothamRounded-Book";
-  src: url("./fonts/new-fonts/GothamRounded-Book.woff") format("woff"),
-    url("./fonts/new-fonts/GothamRounded-Book.woff2") format("woff2");
+  src: url("../../fonts/new-fonts/GothamRounded-Book.woff") format("woff"),
+    url("../../fonts/new-fonts/GothamRounded-Book.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GothamRounded-Light";
-  src: url("./fonts/new-fonts/GothamRounded-Light.woff") format("woff"),
-    url("./fonts/new-fonts/GothamRounded-Light.woff2") format("woff2");
+  src: url("../../fonts/new-fonts/GothamRounded-Light.woff") format("woff"),
+    url("../../fonts/new-fonts/GothamRounded-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GothamRounded-Medium";
-  src: url("./fonts/new-fonts/GothamRounded-Medium.woff") format("woff"),
-    url("./fonts/new-fonts/GothamRounded-Medium.woff2") format("woff2");
+  src: url("../../fonts/new-fonts/GothamRounded-Medium.woff") format("woff"),
+    url("../../fonts/new-fonts/GothamRounded-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 /*-----------------------*/
 @font-face {
   font-family: "AlegreyaSans-Regular";
-  src: url("./fonts/new-fonts/AlegreyaSans-Regular.woff") format("woff"),
-    url("./fonts/new-fonts/AlegreyaSans-Regular.woff2") format("woff2");
+  src: url("../../fonts/new-fonts/AlegreyaSans-Regular.woff") format("woff"),
+    url("../../fonts/new-fonts/AlegreyaSans-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "AlegreyaSans-light";
-  src: url("./fonts/new-fonts/AlegreyaSansSC-Light.woff") format("woff"),
-    url("./fonts/new-fonts/AlegreyaSansSC-Light.woff2") format("woff2");
+  src: url("../../fonts/new-fonts/AlegreyaSansSC-Light.woff") format("woff"),
+    url("../../fonts/new-fonts/AlegreyaSansSC-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-family: "Alegreya Sans SC";
@@ -84,14 +84,14 @@
 // arabic font
 @font-face {
   font-family: "DroidArabicKufiRegular";
-  src: url("./fonts/new-fonts/DroidKufi-Regular/droidkufi-regular.eot");
-  src: url("./fonts/new-fonts/DroidKufi-Regular/droidkufi-regular.eot")
+  src: url("../../fonts/new-fonts/DroidKufi-Regular/droidkufi-regular.eot");
+  src: url("../../fonts/new-fonts/DroidKufi-Regular/droidkufi-regular.eot")
       format("embedded-opentype"),
-    url("./fonts/new-fonts/DroidKufi-Regular/droidkufi-regular.woff")
+    url("../../fonts/new-fonts/DroidKufi-Regular/droidkufi-regular.woff")
       format("woff"),
-    url("./fonts/new-fonts/DroidKufi-Regular/droidkufi-regular.ttf")
+    url("../../fonts/new-fonts/DroidKufi-Regular/droidkufi-regular.ttf")
       format("truetype"),
-    url("./fonts/new-fonts/DroidKufi-Regular/droidkufi-regular.svg#DroidArabicKufiRegular")
+    url("../../fonts/new-fonts/DroidKufi-Regular/droidkufi-regular.svg#DroidArabicKufiRegular")
       format("svg");
 }
 // arabic font

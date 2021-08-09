@@ -176,8 +176,8 @@ export default {
 .initiators {
   background-image: url("../../../assets/images/home/bg-initators.png");
   .slider-item {
-    margin-top: 25px !important;
-    margin-bottom: 25px !important;
+    margin-top: rem(25px) !important;
+    margin-bottom: rem(25px) !important;
   }
   .slider-header {
     @media screen and (max-width: 991px) {
@@ -191,13 +191,17 @@ export default {
       transform: translateY(-19px);
     }
     .sliderNavigation {
-      top: -144px;
+      top: -130px;
       z-index: 0;
       height: 0;
       --border: var(--swiper-theme-color);
       --arrow: var(--swiper-theme-color);
       bottom: 0;
       left: 150px;
+      @media screen and (min-width: 1600px) {
+        left: 70px;
+        top: -162px;
+      }
       @media screen and (max-width: 1200px) {
         top: -140px;
         left: 200px;

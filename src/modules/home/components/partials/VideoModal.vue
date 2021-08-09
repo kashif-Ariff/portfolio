@@ -29,7 +29,7 @@ export default {
   top: 0;
   z-index: 99999;
   margin: auto;
-  padding-top: 120px;
+  padding-top: rem(120px);
   &.active {
     display: block;
   }
@@ -37,7 +37,7 @@ export default {
     width: 100%;
   }
   @media screen and (max-width: 991px) {
-    padding-top: 200px;
+    padding-top: rem(200px);
   }
   p {
     z-index: 12;

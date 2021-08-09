@@ -128,7 +128,7 @@ header {
         display: inline-block;
         width: 22px;
         height: 0;
-        margin-right: 12px;
+        margin-right: rem(12px);
       }
     }
   }
@@ -159,12 +159,12 @@ header {
   height: auto;
   background-size: cover;
   background-position: center;
-  padding-bottom: 40px;
+  padding-bottom: rem(40px);
   position: relative;
   z-index: 1;
   @media (max-width: 991.98px) {
     height: auto;
-    padding-bottom: 55px;
+    padding-bottom: rem(55px);
   }
   @include small_medium {
     // height: 85vh;
@@ -194,15 +194,15 @@ header {
     // }
     .heaer-slider-item {
       outline: none;
-      margin-top: 250px;
+      margin-top: rem(250px);
       @media screen and (max-width: 1600px) {
-        margin-top: 160px;
+        margin-top: rem(160px);
       }
       @media screen and (max-width: 991px) {
-        margin-top: 235px;
+        margin-top: rem(235px);
       }
       @media screen and (max-width: 575px) {
-        margin-top: 175px;
+        margin-top: rem(175px);
       }
       h2 {
         color: $whiteColor;
@@ -210,16 +210,16 @@ header {
         text-align: center;
         margin: auto;
         line-height: 1.4;
-        font-size: 42px;
-        margin-bottom: 60px;
+        font-size: rem(42px);
+        margin-bottom: rem(60px);
         @media (max-width: 991.98px) {
           width: 90%;
-          margin-bottom: 15px;
-          font-size: 35px;
+          margin-bottom: rem(15px);
+          font-size: rem(35px);
           line-height: 1.2;
         }
         @include small_medium {
-          font-size: 20px;
+          font-size: rem(20px);
         }
       }
       .slider-search {
@@ -232,8 +232,8 @@ header {
         text-align: center;
         margin: auto;
         // line-height: 105px;
-        padding-inline-start: 63px;
-        padding-inline-end: 28px;
+        padding-inline-start: rem(63px);
+        padding-inline-end: rem(28px);
         position: relative;
         @media (max-width: 1600px) {
           height: 90px;
@@ -247,11 +247,11 @@ header {
         @include xSmall {
           height: 60px;
           line-height: 60px;
-          padding-inline-start: 26px;
-          padding-inline-end: 13px;
+          padding-inline-start: rem(26px);
+          padding-inline-end: rem(13px);
         }
         @media (max-width: 350px) {
-          padding-inline-start: 14px;
+          padding-inline-start: rem(14px);
         }
         // new
         span.search-icon {
@@ -303,16 +303,18 @@ header {
           content: "Search";
           z-index: 666;
           color: $thirdColor;
-          @include fonts($Gotham-Book, 24px);
+          // @include fonts($Gotham-Book, 24px);
+          font-size: rem(24px);
+          font-weight: 500;
           @media (max-width: 1600px) {
             top: 13px;
           }
           @media (max-width: 991.98px) {
             top: -17px;
-            font-size: 18px;
+            font-size: rem(18px);
           }
           @include xSmall {
-            font-size: 14px;
+            font-size: rem(14px);
             top: -11px;
             left: 25px;
           }
@@ -320,34 +322,38 @@ header {
         p {
           flex-grow: 3;
           margin-top: 25px;
-          @include fonts($Gotham-Light, 22px);
+          // @include fonts($Gotham-Light, 22px);
+          font-size: rem(22px);
+          font-weight: 300;
           color: $grayColor;
           position: relative;
           text-align: left;
           margin-bottom: 0;
           @include small_medium {
-            font-size: 14px;
-            margin-top: 13px;
+            font-size: rem(14px);
+            margin-top: rem(13px);
           }
           @include xxSmall {
-            font-size: 10px;
+            font-size: rem(10px);
           }
         }
       }
       > p {
         text-align: center;
-        @include fonts($Gotham-bold, 17px);
+        //    @include fonts($Gotham-bold, 17px);
+        font-size: rem(17px);
+        font-weight: 700;
         color: $whiteColor;
-        margin-top: 60px;
+        margin-top: rem(60px);
         text-transform: uppercase;
         @media (max-width: 991.8px) {
-          margin-top: 20px;
+          margin-top: rem(20px);
         }
         @include small_medium {
-          font-size: 14px;
+          font-size: rem(14px);
         }
         svg {
-          margin-inline-end: 15px;
+          margin-inline-end: rem(15px);
           display: inline-block;
           width: 50px;
           fill: $mainColor;
@@ -365,13 +371,13 @@ header {
       }
       .watch-video {
         display: flex;
-        margin-top: 80px;
+        margin-top: rem(80px);
         padding-bottom: 7px;
         @media (max-width: 991.8px) {
-          margin-top: 45px;
+          margin-top: rem(45px);
         }
         @include xSmall {
-          margin-top: 20px;
+          margin-top: rem(20px);
         }
         .animate-video {
           position: relative;
@@ -398,7 +404,7 @@ header {
               width: 60px;
               height: 60px;
               i {
-                font-size: 20px;
+                font-size: rem(20px);
               }
             }
           }
@@ -441,17 +447,21 @@ header {
             color: $whiteColor;
             margin-top: 5px;
             text-align: center;
-            margin-inline-start: 24px;
+            margin-inline-start: rem(24px);
             text-align: left;
             &:first-child {
-              @include fonts($Gotham-bold, 16px);
+              //     @include fonts($Gotham-bold, 16px);
+              font-size: rem(16px);
+              font-weight: 700;
             }
             &:last-child {
-              @include fonts($Gotham-Book, 16px);
+              //     @include fonts($Gotham-Book, 16px);
+              font-size: rem(16px);
+              font-weight: 700;
             }
             @include small_medium {
-              margin-inline-start: 12px;
-              font-size: 14px !important;
+              margin-inline-start: rem(12px);
+              font-size: rem(14px) !important;
             }
           }
         }
@@ -460,7 +470,7 @@ header {
   }
   .slider-arrows {
     @extend %d-flex-between;
-    padding: 0 25px;
+    padding: 0 rem(25px);
     background-color: $secondColor;
     width: 350px;
     height: 130px;
@@ -479,7 +489,7 @@ header {
     ul {
       @extend %d-flex-around;
       width: 50%;
-      margin-top: 20px;
+      margin-top: rem(20px);
       li {
         cursor: pointer;
         opacity: 0.5;
@@ -489,21 +499,21 @@ header {
         }
         i {
           color: $whiteColor;
-          font-size: 30px;
+          font-size: rem(30px);
           @media (max-width: 330px) {
-            font-size: 15px;
+            font-size: rem(15px);
           }
         }
       }
     }
     span {
       width: 50%;
-      font-size: 20px;
+      font-size: rem(20px);
       font-weight: bold;
       color: $whiteColor;
       text-align: center;
       @media (max-width: 330px) {
-        font-size: 16px;
+        font-size: rem(16px);
       }
     }
   }
@@ -566,7 +576,7 @@ nav {
     }
     @media (max-width: 991.98px) {
       text-align: center;
-      padding: 15px 0;
+      padding: rem(15px) 0;
     }
   }
   .nav-content {
@@ -589,7 +599,7 @@ nav {
       margin-right: 0;
     }
     svg {
-      margin-inline-end: 10px;
+      margin-inline-end: rem(10px);
       width: 22px;
       fill: $whiteColor;
       @media (max-width: 1199.98px) {
@@ -604,12 +614,14 @@ nav {
     }
     span {
       text-transform: uppercase;
-      @include fonts($Gotham-Book, 16px);
+      //  @include fonts($Gotham-Book, 16px);
+      font-size: rem(16px);
+      font-weight: 500;
       @include xSmall {
-        font-size: 13px;
+        font-size: rem(13px);
       }
       @include xxSmall {
-        font-size: 12px;
+        font-size: rem(12px);
         font-weight: bold;
       }
     }
@@ -629,11 +641,11 @@ nav {
         width: 67px;
       }
       i {
-        font-size: 18px;
-        margin-inline-end: 10px;
+        font-size: rem(18px);
+        margin-inline-end: rem(10px);
         @include xSmall {
           margin-inline-end: 2px;
-          font-size: 14px;
+          font-size: rem(14px);
         }
       }
       // svg {
@@ -719,20 +731,20 @@ nav {
     }
   }
   .login-info {
-    padding: 0px 60px;
-    padding-top: 39px;
-    padding-bottom: 85px;
+    padding: 0px rem(60px);
+    padding-top: rem(39px);
+    padding-bottom: rem(85px);
     background-color: $whiteColor;
     text-align: center;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     @media (max-width: 991.98px) {
-      padding-bottom: 56px;
+      padding-bottom: rem(56px);
     }
     @include small_medium {
       border-radius: 25px !important;
-      padding-inline-end: 20px;
-      padding-inline-start: 20px;
+      padding-inline-end: rem(20px);
+      padding-inline-start: rem(20px);
     }
     #close-login {
       display: none;
@@ -754,16 +766,18 @@ nav {
       }
     }
     h2 {
-      @include fonts($Gotham-bold, 42px);
+      //  @include fonts($Gotham-bold, 42px);
+      font-size: rem(42px);
+      font-weight: 700;
       color: $thirdColor;
-      margin-bottom: 60px;
+      margin-bottom: rem(60px);
       text-transform: uppercase;
       @media (max-width: 991.98px) {
-        font-size: 30px;
-        margin-bottom: 38px;
+        font-size: rem(30px);
+        margin-bottom: rem(38px);
       }
       @include small_medium {
-        margin-bottom: 25px;
+        margin-bottom: rem(25px);
       }
     }
     form {
@@ -779,11 +793,11 @@ nav {
           }
         }
         &:last-of-type {
-          margin-top: 39px;
-          margin-bottom: 39px;
+          margin-top: rem(39px);
+          margin-bottom: rem(39px);
           @include small_medium {
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: rem(20px);
+            margin-bottom: rem(20px);
           }
           svg {
             width: 22px;
@@ -798,25 +812,29 @@ nav {
           }
         }
         input {
-          @include fonts($Gotham-Book, 21px);
+          // @include fonts($Gotham-Book, 21px);
+          font-size: rem(21px);
+          font-weight: 500;
           background-color: inherit;
           color: $thirdColor;
-          padding-inline-start: 53px;
-          padding-inline-end: 50px;
+          padding-inline-start: rem(53px);
+          padding-inline-end: rem(50px);
           border-radius: 10px;
           height: 62px;
           margin: auto;
           width: 100%;
           position: relative;
           @include small_medium {
-            padding-inline-start: 44px;
-            padding-inline-end: 44px;
+            padding-inline-start: rem(44px);
+            padding-inline-end: rem(44px);
           }
           &::placeholder {
-            @include fonts($Gotham-Book, 21px);
+            //   @include fonts($Gotham-Book, 21px);
+            font-weight: 500;
+            font-size: rem(21px);
             color: $thirdColor;
             @include small_medium {
-              font-size: 14px;
+              font-size: rem(14px);
             }
           }
         }
@@ -834,7 +852,9 @@ nav {
         }
       }
       a {
-        @include fonts($Gotham-bold, 24px);
+        //    @include fonts($Gotham-bold, 24px);
+        font-size: rem(24px);
+        font-weight: 700;
         color: $thirdColor;
         // margin-top: 28px;
         margin-top: 2px;
@@ -842,21 +862,23 @@ nav {
           text-decoration: underline;
         }
         @include small_medium {
-          margin-top: 15px;
-          font-size: 18px;
+          margin-top: rem(15px);
+          font-size: rem(18px);
         }
       }
       button {
         @extend %d-flex-center;
-        margin-top: 35px;
+        margin-top: rem(35px);
         background-color: $mainColor;
-        @include fonts($Gotham-Book, 18px);
+        //    @include fonts($Gotham-Book, 18px);
+        font-size: rem(18px);
+        font-weight: 500;
         @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
         &:hover {
           background-color: $thirdColor;
         }
         @include small_medium {
-          margin-top: 15px;
+          margin-top: rem(15px);
         }
       }
       #sing-up {
@@ -894,8 +916,8 @@ nav {
       display: block;
       margin-left: auto;
       cursor: pointer;
-      margin-inline-end: 15px;
-      margin-top: 30px;
+      margin-inline-end: rem(15px);
+      margin-top: rem(30px);
       @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
       &:hover {
         transform: scale(0.7);
@@ -904,28 +926,34 @@ nav {
     h2 {
       text-transform: uppercase;
       // margin-top: 150px;
-      margin-top: 75px;
-      @include fonts($Gotham-bold, 42px);
+      margin-top: rem(75px);
+      //  @include fonts($Gotham-bold, 42px);
+      font-weight: 700;
+      font-size: rem(42px);
       color: $whiteColor;
       @media (max-width: 991.98px) {
-        font-size: 30px;
-        margin-top: 61px;
+        font-size: rem(30px);
+        margin-top: rem(61px);
       }
     }
     p {
-      @include fonts($Gotham-Light, 24px);
+      //  @include fonts($Gotham-Light, 24px);
+      font-weight: 300;
+      font-size: rem(24px);
       @include medium {
-        font-size: 18px;
+        font-size: rem(18px);
       }
       color: $whiteColor;
-      margin: 34px 0;
+      margin: rem(34px) 0;
     }
     button {
       border: 1px solid $whiteColor;
       background-color: transparent;
       @extend %d-flex-center;
       margin: auto;
-      @include fonts($Gotham-Book, 18px);
+      //  @include fonts($Gotham-Book, 18px);
+      font-size: rem(18px);
+      font-weight: 500;
       @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
       &:hover {
         // background-color: #009bde9a;

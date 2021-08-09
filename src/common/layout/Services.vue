@@ -257,7 +257,7 @@ export default {
   --toggleColor: #009cde;
   background-color: $thirdColor;
   height: auto;
-  padding-top: 30px;
+  padding-top: rem(30px);
   position: absolute;
   top: 130px;
   left: 0;
@@ -324,18 +324,20 @@ export default {
   h2 {
     color: $whiteColor;
     text-transform: uppercase;
-    @include fonts($Gotham-bold, 42px);
-    margin-bottom: 12px;
+    //     @include fonts($Gotham-bold, 42px);
+    font-size: rem(42px);
+    font-weight: 700;
+    margin-bottom: rem(12px);
     z-index: 1;
     position: relative;
     @media (max-width: 991.98px) {
-      font-size: 30px;
+      font-size: rem(30px);
     }
   }
   .services-drop-down {
-    margin-bottom: 90px;
+    margin-bottom: rem(90px);
     @include small_medium {
-      margin-bottom: 40px;
+      margin-bottom: rem(40px);
     }
 
     > .row {
@@ -349,14 +351,14 @@ export default {
     .drop-down-itmes {
       background-color: $whiteColor;
       border-radius: 44px;
-      padding: 20px 50px;
+      padding: rem(20px) rem(50px);
       height: 110px;
       @media (max-width: 991.98px) {
-        padding: 10px 20px;
+        padding: rem(10px) rem(20px);
         height: fit-content;
       }
       @include small_medium {
-        margin-bottom: 15px;
+        margin-bottom: rem(15px);
       }
 
       .row {
@@ -391,14 +393,16 @@ export default {
         }
       }
       p {
-        @include fonts($Gotham-Book, 24px);
+        //    @include fonts($Gotham-Book, 24px);
+        font-size: rem(24px);
+        font-weight: 400;
         color: $thirdColor;
         margin-bottom: -4px;
         @media (max-width: 991.98px) {
-          font-size: 18px;
+          font-size: rem(18px);
         }
         @include xSmall {
-          font-size: 13px;
+          font-size: rem(13px);
         }
       }
 
@@ -417,14 +421,15 @@ export default {
           transform: unset;
           top: 0;
           color: $mainColor;
-          font-size: 30px;
+          font-size: rem(30px);
         }
         span {
           color: $grayColor;
-          @include fonts($Gotham-Light, 17px);
-
+          // @include fonts($Gotham-Light, 17px);
+          font-size: rem(17px);
+          font-weight: 300;
           @media (max-width: 991.98px) {
-            font-size: 13px;
+            font-size: rem(13px);
           }
         }
         .list {
@@ -441,9 +446,9 @@ export default {
           li {
             position: relative;
             @media (max-width: 991.98px) {
-              font-size: 14px;
-              padding-left: 11px;
-              padding-right: 25px;
+              font-size: rem(14px);
+              padding-left: rem(11px);
+              padding-right: rem(25px);
             }
 
             &::after {
@@ -486,7 +491,9 @@ export default {
         background-color: $secondColor;
       }
       span {
-        @include fonts($Gotham-Book, 24px);
+        //    @include fonts($Gotham-Book, 24px);
+        font-size: rem(24px);
+        font-weight: 400;
         margin-inline-end: 7px;
       }
       /deep/ {
@@ -499,13 +506,13 @@ export default {
   }
 
   .common {
-    margin-bottom: 110px;
+    margin-bottom: rem(110px);
     @media (max-width: 991.8px) {
       margin-bottom: 0px;
     }
     .slider-services {
       .swiper-slide {
-        margin: 25px 0px;
+        margin: rem(25px) 0px;
         @include prefixer(transition, all 0.4s ease-in-out, o moz wibket);
       }
     }
@@ -518,25 +525,27 @@ export default {
     p {
       color: $whiteColor;
       margin-bottom: 40px;
-      @include fonts($AlegreyaSans-Regular, 24px);
+      //  @include fonts($AlegreyaSans-Regular, 24px);
+      font-size: rem(24px);
+      font-weight: 400;
       @media (max-width: 991.98px) {
         margin-top: 0;
-        font-size: 18px;
-        margin-bottom: 20px;
+        font-size: rem(18px);
+        margin-bottom: rem(20px);
       }
     }
     svg {
       width: 60px;
       color: $thirdColor;
-      margin-bottom: 30px;
-      margin-top: 19px;
+      margin-bottom: rem(30px);
+      margin-top: rem(19px);
       @media (max-width: 991.98px) {
-        margin-bottom: 15px;
+        margin-bottom: rem(15px);
       }
     }
     .slider-header {
       @media screen and (max-width: 767px) {
-        padding-bottom: 40px;
+        padding-bottom: rem(40px);
       }
       div {
         &:last-child {

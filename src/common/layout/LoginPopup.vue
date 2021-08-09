@@ -181,7 +181,7 @@ export default {
     .back-drop {
       position: fixed;
       z-index: -1;
-      padding-top: 100px;
+      padding-top: rem(100px);
       left: 0;
       top: 0;
       width: 100%;
@@ -239,7 +239,7 @@ export default {
         }
         @media (max-width: 991.98px) {
           text-align: center;
-          padding: 15px 0;
+          padding: rem(15px) 0;
         }
       }
       .nav-content {
@@ -270,7 +270,7 @@ export default {
             margin-inline-end: 0px;
           }
           @include xSmall {
-            width: 15px;
+            width: rem(15px);
           }
           @include xxSmall {
             display: none;
@@ -278,12 +278,14 @@ export default {
         }
         span {
           text-transform: uppercase;
-          @include fonts($Gotham-Book, 16px);
+          // @include fonts($Gotham-Book, 16px);
+          font-size: rem(16px);
+          font-weight: 400;
           @include xSmall {
-            font-size: 13px;
+            font-size: rem(13px);
           }
           @include xxSmall {
-            font-size: 12px;
+            font-size: rem(12px);
             font-weight: bold;
           }
         }
@@ -303,11 +305,11 @@ export default {
             width: 67px;
           }
           i {
-            font-size: 18px;
-            margin-inline-end: 10px;
+            font-size: rem(18px);
+            margin-inline-end: rem(10px);
             @include xSmall {
               margin-inline-end: 2px;
-              font-size: 14px;
+              font-size: rem(14px);
             }
           }
           // svg {
@@ -393,9 +395,9 @@ export default {
         }
       }
       .login-info {
-        padding: 0px 60px;
-        padding-top: 39px;
-        padding-bottom: 85px;
+        padding: 0px rem(60px);
+        padding-top: rem(39px);
+        padding-bottom: rem(85px);
         background-color: $whiteColor;
         text-align: center;
         border-top-left-radius: 25px;
@@ -428,16 +430,18 @@ export default {
           }
         }
         h2 {
-          @include fonts($Gotham-bold, 42px);
+          // @include fonts($Gotham-bold, 42px);
+          font-weight: 700;
+          font-size: rem(42px);
           color: $thirdColor;
-          margin-bottom: 60px;
+          margin-bottom: rem(60px);
           text-transform: uppercase;
           @media (max-width: 991.98px) {
-            font-size: 30px;
-            margin-bottom: 38px;
+            font-size: rem(30px);
+            margin-bottom: rem(38px);
           }
           @include small_medium {
-            margin-bottom: 25px;
+            margin-bottom: rem(25px);
           }
         }
         form {
@@ -455,11 +459,11 @@ export default {
               }
             }
             &:last-of-type:not(.singleItem) {
-              margin-top: 39px;
-              margin-bottom: 39px;
+              margin-top: rem(39px);
+              margin-bottom: rem(39px);
               @include small_medium {
-                margin-top: 20px;
-                margin-bottom: 20px;
+                margin-top: rem(20px);
+                margin-bottom: rem(20px);
               }
               /deep/ {
                 svg {
@@ -476,25 +480,29 @@ export default {
               }
             }
             input {
-              @include fonts($Gotham-Book, 21px);
+              //     @include fonts($Gotham-Book, 21px);
+              font-weight: 400;
+              font-size: rem(21px);
               background-color: inherit;
               color: $thirdColor;
-              padding-inline-start: 53px;
-              padding-inline-end: 50px;
+              padding-inline-start: rem(70px);
+              padding-inline-end: rem(50px);
               border-radius: 10px;
               height: 62px;
               margin: auto;
               width: 100%;
               position: relative;
               @include small_medium {
-                padding-inline-start: 44px;
-                padding-inline-end: 44px;
+                padding-inline-start: rem(44px);
+                padding-inline-end: rem(44px);
               }
               &::placeholder {
-                @include fonts($Gotham-Book, 21px);
+                //  @include fonts($Gotham-Book, 21px);
+                font-size: rem(21px);
+                font-weight: 400;
                 color: $thirdColor;
                 @include small_medium {
-                  font-size: 14px;
+                  font-size: rem(14px);
                 }
               }
             }
@@ -514,7 +522,9 @@ export default {
             }
           }
           a {
-            @include fonts($Gotham-bold, 24px);
+            //   @include fonts($Gotham-bold, 24px);
+            font-weight: 700;
+            font-size: rem(24px);
             color: $thirdColor;
             // margin-top: 28px;
             margin-top: 2px;
@@ -522,21 +532,23 @@ export default {
               text-decoration: underline;
             }
             @include small_medium {
-              margin-top: 15px;
+              margin-top: rem(15px);
               font-size: 18px;
             }
           }
           button {
             @extend %d-flex-center;
-            margin-top: 35px;
+            margin-top: rem(35px);
             background-color: $mainColor;
-            @include fonts($Gotham-Book, 18px);
+            //   @include fonts($Gotham-Book, 18px);
+            font-size: rem(18px);
+            font-weight: 400;
             @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
             &:hover {
               background-color: $thirdColor;
             }
             @include small_medium {
-              margin-top: 15px;
+              margin-top: rem(15px);
             }
           }
           #sing-up {
@@ -575,8 +587,8 @@ export default {
             display: block;
             margin-left: auto;
             cursor: pointer;
-            margin-inline-end: 15px;
-            margin-top: 30px;
+            margin-inline-end: rem(15px);
+            margin-top: rem(30px);
             @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
             &:hover {
               transform: scale(0.7);
@@ -586,28 +598,34 @@ export default {
         h2 {
           text-transform: uppercase;
           // margin-top: 150px;
-          margin-top: 75px;
-          @include fonts($Gotham-bold, 42px);
+          margin-top: rem(75px);
+          // @include fonts($Gotham-bold, 42px);
+          font-size: rem(42px);
+          font-weight: 700;
           color: $whiteColor;
           @media (max-width: 991.98px) {
-            font-size: 30px;
-            margin-top: 61px;
+            font-size: rem(30px);
+            margin-top: rem(61px);
           }
         }
         p {
-          @include fonts($Gotham-Light, 24px);
+          // @include fonts($Gotham-Light, 24px);
+          font-size: rem(24px);
+          font-weight: 300;
           @include medium {
-            font-size: 18px;
+            font-size: rem(18px);
           }
           color: $whiteColor;
-          margin: 34px 0;
+          margin: rem(34px) 0;
         }
         button {
           border: 1px solid $whiteColor;
           background-color: transparent;
           @extend %d-flex-center;
           margin: auto;
-          @include fonts($Gotham-Book, 18px);
+          // @include fonts($Gotham-Book, 18px);
+          font-size: rem(18px);
+          font-weight: 400;
           @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
           &:hover {
             // background-color: #009bde9a;

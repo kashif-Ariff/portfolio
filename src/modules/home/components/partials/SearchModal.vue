@@ -127,19 +127,19 @@ export default {
       box-shadow: none;
       border-radius: 0;
       width: 70%;
-      margin-top: 17px;
+      margin-top: rem(17px);
       .ti-input {
         border: 0;
-        font-size: 20px;
+        font-size: rem(20px);
       }
       .ti-tag {
         width: fit-content;
-        padding: 10px 14px;
+        padding: rem(10px) rem(14px);
         text-align: center;
         color: #000;
         background-color: #f9f8f7;
         border-radius: 30px;
-        font-size: 14px;
+        font-size: rem(14px);
         cursor: pointer;
         transition: 0.3s all ease-in-out;
         &:hover {
@@ -152,7 +152,7 @@ export default {
         box-shadow: none;
         outline: none;
         background-color: transparent;
-        padding: 0 6px;
+        padding: 0 rem(6px);
         margin: 0;
         width: auto;
         max-width: inherit;
@@ -164,7 +164,7 @@ export default {
     display: none;
     width: 90%;
     border-radius: 30px;
-    padding: 55px 50px;
+    padding: rem(60px) rem(55px);
     position: absolute;
     left: 0;
     right: 0;
@@ -172,7 +172,7 @@ export default {
     margin: auto;
     z-index: 999999;
     @media (max-width: 991.98px) {
-      padding: 56px 10px 20px 20px;
+      padding: rem(56px) rem(10px) rem(20px) rem(20px);
     }
     @include xxSmall {
       padding-left: 0;
@@ -217,15 +217,17 @@ export default {
       // height: 120px;
       min-height: 120px;
       border-radius: 51px;
-      padding: 5px 15px;
+      padding: rem(5px) rem(15px);
 
       @media (max-width: 991.98px) {
-        padding: 6px 5px;
+        padding: rem(6px) rem(5px);
         min-height: 85px;
       }
       label {
         padding-inline-end: 40px;
-        @include fonts($Gotham-bold, 25px);
+        //    @include fonts($Gotham-bold, 25px);
+        font-size: rem(25px);
+        font-weight: 700;
         color: $mainColor;
         position: relative;
         &::after {
@@ -242,12 +244,12 @@ export default {
           display: none;
         }
         @include small_medium {
-          font-size: 16px;
-          padding-inline-end: 15px;
+          font-size: rem(16px);
+          padding-inline-end: rem(15px);
         }
         @include xxSmall {
-          font-size: 12px;
-          padding-inline-end: 5px;
+          font-size: rem(12px);
+          padding-inline-end: rem(5px);
         }
       }
       > span {
@@ -306,13 +308,13 @@ export default {
         }
         .tag {
           width: fit-content;
-          padding: 10px 14px;
+          padding: rem(10px) rem(14px);
           text-align: center;
           color: #000;
           background-color: $grayOpacity;
-          margin-bottom: 15px;
+          margin-bottom: rem(15px);
           border-radius: 30px;
-          font-size: 14px;
+          font-size: rem(14px);
           cursor: pointer;
           transition: 0.3s all ease-in-out;
           &:hover {
@@ -331,12 +333,14 @@ export default {
     .search-list {
       margin-top: 50px;
       h6 {
-        @include fonts($Gotham-bold, 18px);
-        margin-bottom: 25px;
+        //    @include fonts($Gotham-bold, 18px);
+        font-size: rem(18px);
+        font-weight: 700;
+        margin-bottom: rem(25px);
         color: $thirdColor;
       }
       @media (max-width: 991.98px) {
-        margin-top: 15px;
+        margin-top: rem(15px);
       }
       ul {
         @media (max-width: 991.98px) {
@@ -345,12 +349,14 @@ export default {
           flex-wrap: wrap;
         }
         li {
-          @include fonts($Gotham-Book, 14px);
+          // @include fonts($Gotham-Book, 14px);
+          font-size: rem(14px);
+          font-weight: 500;
           width: fit-content;
-          padding: 5px 14px;
+          padding: rem(5px) rem(14px);
           text-align: center;
           background-color: $grayOpacity;
-          margin-bottom: 6px;
+          margin-bottom: rem(6px);
           border-radius: 30px;
           cursor: pointer;
           transition: 0.3s all ease-in-out;
