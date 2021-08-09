@@ -46,34 +46,11 @@
               </svg>
 
               <form action="">
-                <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 384 275.55"
-                  >
-                    <g id="Layer_2" data-name="Layer 2">
-                      <g id="Layer_1-2" data-name="Layer 1">
-                        <path
-                          d="M348.65,0H35.35A35.34,35.34,0,0,0,0,35.35V240.2a35.34,35.34,0,0,0,35.35,35.35h313.3A35.34,35.34,0,0,0,384,240.2V35.35A35.33,35.33,0,0,0,348.65,0ZM361.5,240.2a12.85,12.85,0,0,1-12.85,12.85H35.35A12.85,12.85,0,0,1,22.5,240.2V35.35A12.85,12.85,0,0,1,35.35,22.5h313.3A12.85,12.85,0,0,1,361.5,35.35Z"
-                        />
-                        <path
-                          d="M150.55,165.3a41.38,41.38,0,1,0-61.71,0,59.48,59.48,0,0,0-28.59,50.8A11.25,11.25,0,0,0,71.5,227.35h96.4a11.25,11.25,0,0,0,11.25-11.25,59.47,59.47,0,0,0-28.6-50.8ZM119.7,118.9a18.88,18.88,0,1,1-18.88,18.87A18.89,18.89,0,0,1,119.7,118.9ZM84.5,204.85a37,37,0,0,1,70.4,0Z"
-                        />
-                        <path
-                          d="M312.5,108.45H228.15a11.25,11.25,0,0,0,0,22.5H312.5a11.25,11.25,0,1,0,0-22.5Z"
-                        />
-                        <path
-                          d="M312.5,48.2H71.5a11.25,11.25,0,0,0,0,22.5h241a11.25,11.25,0,0,0,0-22.5Z"
-                        />
-                        <path
-                          d="M312.5,156.65H228.15a11.25,11.25,0,0,0,0,22.5H312.5a11.25,11.25,0,0,0,0-22.5Z"
-                        />
-                        <path
-                          d="M288.4,204.85H228.15a11.25,11.25,0,0,0,0,22.5H288.4a11.25,11.25,0,0,0,0-22.5Z"
-                        />
-                      </g>
-                    </g>
-                  </svg>
+                <div class="singleItem">
+                  <base-svg-icon
+                    icon-id="idCard"
+                    icon-viewbox="0 0 384 275.55"
+                  ></base-svg-icon>
                   <input type="text" placeholder="Civil ID" />
                 </div>
                 <div>
@@ -471,26 +448,30 @@ export default {
             position: relative;
             border-radius: 20px;
             &:first-child {
-              svg {
-                top: 22px;
+              /deep/ {
+                svg {
+                  top: 22px;
+                }
               }
             }
-            &:last-of-type {
+            &:last-of-type:not(.singleItem) {
               margin-top: 39px;
               margin-bottom: 39px;
               @include small_medium {
                 margin-top: 20px;
                 margin-bottom: 20px;
               }
-              svg {
-                width: 22px;
-                fill: $secondColor;
-                &:last-of-type {
-                  left: auto;
-                  right: 18px;
-                  cursor: pointer;
-                  width: 25px;
-                  top: 23px;
+              /deep/ {
+                svg {
+                  width: 22px;
+                  fill: $secondColor;
+                  &:last-of-type {
+                    left: auto;
+                    right: 18px;
+                    cursor: pointer;
+                    width: 25px;
+                    top: 23px;
+                  }
                 }
               }
             }
@@ -517,16 +498,18 @@ export default {
                 }
               }
             }
-            svg {
-              fill: $secondColor;
-              width: 25px;
-              position: absolute;
-              top: 16px;
-              z-index: 1;
-              left: 17px;
-              @include small_medium {
-                width: 20px;
-                top: 24px;
+            /deep/ {
+              svg {
+                fill: $secondColor;
+                width: 25px;
+                position: absolute;
+                top: 16px;
+                z-index: 1;
+                left: 17px;
+                @include small_medium {
+                  width: 20px;
+                  top: 24px;
+                }
               }
             }
           }
@@ -643,6 +626,18 @@ export default {
     top: 16px !important;
     z-index: 1 !important;
     left: 17px !important;
+  }
+  .singleItem {
+    /deep/ {
+      div {
+        margin: 0 !important;
+        padding: 0 !important;
+        svg {
+          right: auto !important;
+          left: 18px !important;
+        }
+      }
+    }
   }
 }
 </style>
