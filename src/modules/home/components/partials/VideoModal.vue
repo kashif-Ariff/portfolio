@@ -74,7 +74,7 @@ export default {
   }
 }
 .plyr--full-ui.plyr--video .plyr__control--overlaid {
-  color: secondGray;
+  color: $secondGray;
   background-color: $secondGray;
 }
 </style>
