@@ -662,7 +662,7 @@ input {
   }
   a {
     display: block;
-    @include fonts($Gotham-Book, 21px);
+    //     @include fonts($Gotham-Book, 21px);
     font-size: rem(21px);
     font-weight: 500;
     @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
@@ -774,7 +774,7 @@ input {
           justify-content: flex-end;
         }
         a {
-          font-family: "Gotham-Book";
+          // font-family: "Gotham-Book";
           font-size: rem(24px);
           color: #234156;
           text-transform: capitalize;
