@@ -22,52 +22,21 @@
                     <span>login</span>
                   </div>
                   <div class="nav-services" @click="isService = !isService">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 87.1 87.11"
-                    >
-                      <g id="Layer_2" data-name="Layer 2">
-                        <g id="Layer_1-2" data-name="Layer 1">
-                          <path
-                            d="M31.93,0H7.54A7.55,7.55,0,0,0,0,7.54V31.93a7.55,7.55,0,0,0,7.54,7.54H31.93a7.55,7.55,0,0,0,7.54-7.54V7.54A7.54,7.54,0,0,0,31.93,0Zm1.41,31.93a1.41,1.41,0,0,1-1.41,1.41H7.54a1.41,1.41,0,0,1-1.41-1.41V7.54A1.41,1.41,0,0,1,7.54,6.13H31.93a1.41,1.41,0,0,1,1.41,1.41Z"
-                          />
-                          <path
-                            d="M79.56,0H55.17a7.55,7.55,0,0,0-7.54,7.54V31.93a7.55,7.55,0,0,0,7.54,7.54H79.56a7.55,7.55,0,0,0,7.54-7.54V7.54A7.55,7.55,0,0,0,79.56,0ZM81,31.93a1.41,1.41,0,0,1-1.41,1.41H55.17a1.41,1.41,0,0,1-1.41-1.41V7.54a1.41,1.41,0,0,1,1.41-1.41H79.56A1.41,1.41,0,0,1,81,7.54Z"
-                          />
-                          <path
-                            d="M31.93,47.63H7.54A7.55,7.55,0,0,0,0,55.17V79.56a7.55,7.55,0,0,0,7.54,7.55H31.93a7.55,7.55,0,0,0,7.54-7.55V55.17a7.54,7.54,0,0,0-7.54-7.54Zm1.41,31.93A1.41,1.41,0,0,1,31.93,81H7.54a1.41,1.41,0,0,1-1.41-1.41V55.17a1.41,1.41,0,0,1,1.41-1.41H31.93a1.41,1.41,0,0,1,1.41,1.41Z"
-                          />
-                          <path
-                            d="M79.56,47.63H55.17a7.55,7.55,0,0,0-7.54,7.54V79.56a7.55,7.55,0,0,0,7.54,7.54H79.56a7.54,7.54,0,0,0,7.54-7.54V55.17a7.55,7.55,0,0,0-7.54-7.54ZM81,79.56A1.41,1.41,0,0,1,79.56,81H55.17a1.41,1.41,0,0,1-1.41-1.41V55.17a1.41,1.41,0,0,1,1.41-1.41H79.56A1.41,1.41,0,0,1,81,55.17Z"
-                          />
-                        </g>
-                      </g>
-                    </svg>
+                    <span class="iconCustom">
+                      <base-svg-icon
+                        icon-id="service-icon"
+                        icon-viewbox="0 0 87.1 87.11"
+                      ></base-svg-icon>
+                    </span>
                     <span><a href="#">our services</a></span>
                   </div>
                   <div class="nav-menu" @click="openMenu">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 54.76 41.87"
-                    >
-                      <defs></defs>
-                      <g id="Layer_2" data-name="Layer 2">
-                        <g id="Layer_4" data-name="Layer 4">
-                          <path
-                            class="cls-1"
-                            d="M17.38,6.44H3.22A3.22,3.22,0,0,1,3.22,0H17.38a3.22,3.22,0,1,1,0,6.44Z"
-                          />
-                          <path
-                            class="cls-1"
-                            d="M51.54,24.16H3.22a3.22,3.22,0,0,1,0-6.44H51.54a3.22,3.22,0,0,1,0,6.44Z"
-                          />
-                          <path
-                            class="cls-1"
-                            d="M40.54,41.87H3.22a3.22,3.22,0,1,1,0-6.44H40.54a3.22,3.22,0,0,1,0,6.44Z"
-                          />
-                        </g>
-                      </g>
-                    </svg>
+                    <span class="iconCustom">
+                      <base-svg-icon
+                        icon-id="header-menu"
+                        icon-viewbox="0 0 54.76 41.87"
+                      ></base-svg-icon>
+                    </span>
                     <span>menu</span>
                   </div>
                   <div class="nav-lang">
@@ -152,6 +121,17 @@ header {
   margin: auto;
   z-index: 999999;
   transition: 0.4s ease all;
+  .iconCustom {
+    display: inline-block;
+    /deep/ {
+      div {
+        display: inline-block;
+        width: 22px;
+        height: 0;
+        margin-right: 12px;
+      }
+    }
+  }
   &.vue-fixed-header--isFixed {
     background: #224156;
     border-bottom: 1px solid #224156;

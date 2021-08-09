@@ -64,7 +64,7 @@
             <i class="fa fa-angle-left"></i>
             <span class="sr-only">Previous Slide</span>
           </button>
-          <button
+          <!-- <button
             type="button"
             role="button"
             :aria-label="
@@ -92,7 +92,7 @@
               ></svg-icon>
               <span class="sr-only">Play</span>
             </div>
-          </button>
+          </button> -->
           <!-- <button type="button" role="button" v-if="interval==0" aria-label="Play" @click="interval=4000" class="sliderNavigation__controls--play">
                         <svg-icon iconId="slider-pause" icon-viewbox="0 0 30.52 38.09"></svg-icon>
                         <span class="sr-only">Play</span>

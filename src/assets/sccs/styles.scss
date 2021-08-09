@@ -711,6 +711,8 @@ input {
     h2 {
       @include fonts($Gotham-Book, 36px);
       color: $thirdColor;
+      position: relative;
+      z-index: 1;
       @include small_medium {
         font-size: 27px;
         margin-bottom: 5px;
@@ -720,6 +722,8 @@ input {
       @include fonts($Gotham-Book, 24px);
       color: $mainColor;
       margin-bottom: 0px;
+      position: relative;
+      z-index: 1;
       @include small_medium {
         font-size: 16px;
         margin-bottom: 20px;
@@ -740,6 +744,8 @@ input {
           text-transform: capitalize;
           margin-inline-end: 20px;
           margin-top: 10px;
+          position: relative;
+          z-index: 1;
           @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
           &:hover {
             color: $mainColor;
@@ -806,7 +812,7 @@ input {
         @media (max-width: 1299.98px) {
           padding: 0 7px;
         }
-        div {
+        & > div {
           &:first-child {
             width: 35%;
             padding-top: 30px;
