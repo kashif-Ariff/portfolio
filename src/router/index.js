@@ -26,6 +26,18 @@ const routes = [
         },
         children: [...home],
     },
+    {
+                path: `/:lang/media-center`,
+                name: 'media-center',
+                component: () =>
+                    import ('../views/MediaCenter.vue'),
+            },
+            {
+                path: `/:lang/board-directors`,
+                name: 'contact-us',
+                component: () =>
+                    import ('../views/BoardDirectors.vue'),
+            },
 //     {
 //         path: `/:lang/contact-us`,
 //         name: 'contact-us',
