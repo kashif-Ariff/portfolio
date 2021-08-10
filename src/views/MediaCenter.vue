@@ -1,13 +1,13 @@
 <template>
   <div class="mediaCenter">
     <div class="container">
-        <press-release-card  :card-data="cardData" aria-label="PRESS RELEASE"/>
+        <media-center-card  :card-data="cardData" aria-label="PRESS RELEASE"/>
     </div>
   </div>
 </template>
 
 <script>
-import PressReleaseCard from '@/modules/media-center/partials/PressReleaseCard';
+import MediaCenterCard from '@/modules/media-center/partials/MediaCenterCard';
 export default {
     data(){
         return{
@@ -19,13 +19,12 @@ export default {
                     link:"#",
                     title:"Eid Mubarak From The National Fund",
                     content:"Zain Drone assigned by Kuwait’s Public Authority of Industry to acquire precise Zain Drone assigned by Kuwait’s Public Authority of Industry to acquire preciseZain Drone assigned by Kuwait’s Public Authority of Industry to acquire precise.."
-                },
-                
+                }
             ]
         }
     },
     components:{
-        PressReleaseCard
+        MediaCenterCard
     }
 }
 </script>
