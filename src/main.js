@@ -59,6 +59,7 @@ import BaseSvgIcon from '@/common/components/base/BaseSvgIcon.vue'
 import i18n from '@/common/i18n'
 import accessibility from '@/mixin/accessibility.js'
 import baseSmoothScrollbar from "@/common/components/base/BaseSmoothScrollbar"
+import baseInnerBanner from "@/common/components/base/BaseInnerBanner"
 import VueScrollbar from 'vue-scrollbar-live';
 import VueTyperPlugin from 'vue-typer'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
@@ -95,7 +96,8 @@ Vue.use(BootstrapVue)
 Vue.component('base-svg-icon', BaseSvgIcon)
 Vue.component('carousel', BaseCarousel)
 Vue.component('base-section-scroll', BaseSectionsScroll)
-Vue.component('base-smooth-scrollbar',baseSmoothScrollbar)
+Vue.component('base-smooth-scrollbar', baseSmoothScrollbar)
+Vue.component('base-inner-banner',baseInnerBanner)
 Vue.component('vue-select', vSelect)
 Vue.component('VueFontawesome', require('vue-fontawesome-icon/VueFontawesome.vue').default);
 Vue.component('scrollbar', VueScrollbar);

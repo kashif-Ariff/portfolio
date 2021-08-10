@@ -191,19 +191,19 @@ export default {
       transform: translateY(-19px);
     }
     .sliderNavigation {
-      top: -130px;
+      top: -135px;
       z-index: 0;
       height: 0;
       --border: var(--swiper-theme-color);
       --arrow: var(--swiper-theme-color);
       bottom: 0;
       left: 150px;
-      @media screen and (min-width: 1600px) {
+      @media screen and (min-width: 1599px) {
         left: 70px;
-        top: -162px;
+        top: -155px;
       }
       @media screen and (max-width: 1200px) {
-        top: -140px;
+        top: -130px;
         left: 200px;
       }
       @media screen and (max-width: 1042px) {
@@ -211,7 +211,7 @@ export default {
       }
       @media screen and (max-width: 991px) {
         left: 220px;
-        top: -100px;
+        top: -102px;
       }
       @media screen and (max-width: 767px) {
         //    left: 220px;

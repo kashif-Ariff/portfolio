@@ -42,7 +42,7 @@
   z-index: 1;
   @media (max-width: 991.98px) {
     height: auto;
-    padding-bottom: rem(55px);
+    padding-bottom: rem(80px);
   }
   @include small_medium {
     // height: 85vh;
@@ -64,13 +64,13 @@
       outline: none;
       margin-top: rem(250px);
       @media screen and (max-width: 1600px) {
-        margin-top: rem(160px);
+        margin-top: rem(200px);
       }
       @media screen and (max-width: 991px) {
-        margin-top: rem(235px);
+        margin-top: rem(250px);
       }
       @media screen and (max-width: 575px) {
-        margin-top: rem(175px);
+        margin-top: rem(220px);
       }
       h2 {
         color: $whiteColor;
@@ -211,7 +211,7 @@
               margin-top: rem(13px);
             }
             @include xxSmall {
-              font-size: rem(10px);
+              //     font-size: rem(10px);
             }
           }
         }
@@ -312,9 +312,12 @@
             @include small_medium {
               width: 70px;
               height: 70px;
-              left: 7px;
+              left: 4px;
               // right: 10px;
               top: 0px;
+            }
+            @media screen and (max-width: 575px) {
+              left: 5px;
             }
           }
         }
@@ -553,9 +556,6 @@ input {
       min-height: 272px;
       @include prefixer(transition, all 0.7s ease-in-out, o moz wibket);
       position: relative;
-      @media (max-width: 1199.98px) {
-        padding: rem(12px) rem(10px) rem(15px) rem(10px);
-      }
       &:hover {
         transform: translateY(-19px);
         a {
@@ -648,7 +648,7 @@ input {
     h6 {
       margin-top: 25px;
       //  @include fonts($Gotham-bold, 18px);
-      font-size: rem(18px);
+      font-size: rem(20px);
       font-weight: 700;
       //  @media (max-width: 1199.98px) {
       //    font-size: 14px;
@@ -657,7 +657,7 @@ input {
     span {
       //  @include fonts($AlegreyaSans-Regular, 14px);
       font-weight: 400;
-      font-size: rem(14px);
+      font-size: rem(16px);
     }
   }
   a {

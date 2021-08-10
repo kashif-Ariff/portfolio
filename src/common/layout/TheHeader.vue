@@ -63,9 +63,9 @@
             </div>
           </div>
         </nav>
-        <login-popup></login-popup>
       </header>
     </FixedHeader>
+    <login-popup></login-popup>
     <services :isOpen="isService"></services>
   </div>
 </template>

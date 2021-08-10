@@ -124,6 +124,9 @@ export default {
   /deep/ {
     .swiper-container {
       padding-left: 10px;
+      @media screen and (max-width: 575px) {
+        padding-right: 10px;
+      }
     }
     .sliderNavigation {
       top: -130px;
@@ -135,18 +138,19 @@ export default {
       left: 120px;
       @media screen and (min-width: 1600px) {
         left: 70px;
-        top: -162px;
+        top: -135px;
       }
       @media screen and (max-width: 1200px) {
-        top: -132px;
+        //    top: -132px;
         left: 160px;
       }
       @media screen and (max-width: 1042px) {
         left: 180px;
+        top: -115px;
       }
       @media screen and (max-width: 991px) {
         left: 30px;
-        top: -70px;
+        top: -62px;
       }
       @media screen and (max-width: 859px) {
         left: 90px;

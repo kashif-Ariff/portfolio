@@ -32,9 +32,9 @@ export default {
   cursor: pointer;
   @include prefixer(transition, all 0.7s ease-in-out, o moz wibket);
   min-height: 278px;
-  @media (max-width: 1199.98px) {
-    padding: rem(12px) rem(10px) rem(15px) rem(10px);
-  }
+  //   @media (max-width: 1199.98px) {
+  //     padding: rem(12px) rem(10px) rem(15px) rem(10px);
+  //   }
   &:hover {
     transform: translateY(-19px);
     a {

@@ -7,43 +7,12 @@
             <div class="col-12 col-md-7 login-info">
               <h2>Sign in to Nf</h2>
               <!-- <img src="img/home/icon/close.svg" alt="" id="close-login"> -->
-              <svg
-                version="1.1"
+              <base-svg-icon
+                icon-id="close-btn"
+                icon-viewbox="0 0 512 512"
                 id="close-login"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 512 512"
-                style="enable-background: new 0 0 512 512"
-                xml:space="preserve"
-              >
-                <g>
-                  <g>
-                    <path
-                      d="M257,0C116.39,0,0,114.39,0,255s116.39,257,257,257s255-116.39,255-257S397.61,0,257,0z M383.22,338.79
-                            c11.7,11.7,11.7,30.73,0,42.44c-11.61,11.6-30.64,11.79-42.44,0L257,297.42l-85.79,83.82c-11.7,11.7-30.73,11.7-42.44,0
-                            c-11.7-11.7-11.7-30.73,0-42.44l83.8-83.8l-83.8-83.8c-11.7-11.71-11.7-30.74,0-42.44c11.71-11.7,30.74-11.7,42.44,0L257,212.58
-                            l83.78-83.82c11.68-11.68,30.71-11.72,42.44,0c11.7,11.7,11.7,30.73,0,42.44l-83.8,83.8L383.22,338.79z"
-                    />
-                  </g>
-                </g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-                <g></g>
-              </svg>
+                class="close"
+              ></base-svg-icon>
 
               <form action="">
                 <div class="singleItem">
@@ -145,13 +114,17 @@ export default {
     },
     modalShow: function () {
       var modal = document.getElementById("loginModal");
+      var body = document.querySelector("body");
       modal.style.display = "block";
       modal.classList.add("OpenModal");
+      body.classList.add("no-scroll");
     },
     modalHide: function () {
+      var body = document.querySelector("body");
       var modal = document.getElementById("loginModal");
       modal.style.display = "none";
       modal.classList.remove("OpenModal");
+      body.classList.remove("no-scroll");
     },
   },
   mounted() {
@@ -159,8 +132,9 @@ export default {
     document.querySelectorAll(".login-modal-btn").forEach((element) => {
       element.addEventListener("click", this.modalShow);
     });
-    var span = document.getElementsByClassName("close")[0];
-    span.addEventListener("click", this.modalHide);
+    document.querySelectorAll(".close").forEach((item) => {
+      item.addEventListener("click", this.modalHide);
+    });
     window.addEventListener("click", function (event) {
       var modal = document.getElementById("loginModal");
       var background = document.getElementsByClassName("back-drop")[0];
@@ -174,10 +148,16 @@ export default {
 
 <style lang="scss" scoped>
 .loginModal {
+  position: relative;
+  z-index: 999999999999999;
   .modal {
-    position: relative;
-    //     display: none;
-    overflow: visible;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    //     position: relative;
+    //     //     display: none;
+    //     overflow: visible;
     .back-drop {
       position: fixed;
       z-index: -1;
@@ -379,21 +359,22 @@ export default {
     .login {
       //  display: none;
       position: absolute;
-      top: -40px;
+      top: 40px;
       width: 75%;
-      z-index: 9999;
+
       margin: auto;
       left: 0;
       right: 0;
+      padding-bottom: 40px;
       @include medium {
-        width: 90%;
+        width: 80%;
       }
-      @include xSmall {
-        width: 95%;
-        .row {
-          padding: 0 10px;
-        }
-      }
+      //  @include xSmall {
+      //    width: 95%;
+      //    .row {
+      //      padding: 0 10px;
+      //    }
+      //  }
       .login-info {
         padding: 0px rem(60px);
         padding-top: rem(39px);
@@ -486,15 +467,15 @@ export default {
               background-color: inherit;
               color: $thirdColor;
               padding-inline-start: rem(70px);
-              padding-inline-end: rem(50px);
+              padding-inline-end: rem(65px);
               border-radius: 10px;
               height: 62px;
               margin: auto;
               width: 100%;
               position: relative;
               @include small_medium {
-                padding-inline-start: rem(44px);
-                padding-inline-end: rem(44px);
+                padding-inline-start: rem(65px);
+                padding-inline-end: rem(65px);
               }
               &::placeholder {
                 //  @include fonts($Gotham-Book, 21px);

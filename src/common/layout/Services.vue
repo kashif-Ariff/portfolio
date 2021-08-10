@@ -193,19 +193,19 @@ export default {
       ],
       options_sub_one: [
         { code: null, label: "All" },
-        { code: "a", label: "This is First option" },
+        { code: "a", label: "First option" },
         { code: "b", label: "Selected Option" },
         { code: "c", label: "Search for Idea" },
       ],
       options_sub_two: [
         { code: null, label: "All" },
-        { code: "a", label: "This is First option" },
+        { code: "a", label: "First option" },
         { code: "b", label: "Selected Option" },
         { code: "c", label: "Search for Idea" },
       ],
       options_sub_three: [
         { code: null, label: "All" },
-        { code: "a", label: "This is First option" },
+        { code: "a", label: "First option" },
         { code: "b", label: "Selected Option" },
         { code: "c", label: "Search for Idea" },
       ],
@@ -281,10 +281,10 @@ export default {
           }
         }
         @media screen and (max-width: 991px) {
-          top: -100px;
+          top: -80px;
         }
         @media screen and (max-width: 767px) {
-          top: -50px;
+          top: -35px;
           left: 0;
           right: auto;
         }
@@ -352,10 +352,10 @@ export default {
       background-color: $whiteColor;
       border-radius: 44px;
       padding: rem(20px) rem(50px);
-      height: 110px;
+      //  height: 110px;
       @media (max-width: 991.98px) {
-        padding: rem(10px) rem(20px);
-        height: fit-content;
+        //    padding: rem(10px) rem(20px);
+        //    height: fit-content;
       }
       @include small_medium {
         margin-bottom: rem(15px);
