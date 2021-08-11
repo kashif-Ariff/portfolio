@@ -68,7 +68,7 @@ export default {
       font-size: rem(42px);
       color: #fff;
       text-transform: uppercase;
-      font-weight: 400;
+      font-weight: 700;
     }
     &--info {
       color: #fff;

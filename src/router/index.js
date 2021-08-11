@@ -44,6 +44,12 @@ const routes = [
                 component: () =>
                     import ('../views/OurServices.vue'),
             },
+            {
+                path: `/:lang/knowledge-library`,
+                name: 'knowledge-library',
+                component: () =>
+                    import ('../views/KnowledgeLibrary.vue'),
+            },
 //     {
 //         path: `/:lang/contact-us`,
 //         name: 'contact-us',
