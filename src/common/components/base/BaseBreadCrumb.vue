@@ -7,7 +7,7 @@
 <script>
 export default {
   props: {
-    items: Object,
+    items: Array,
   },
   data() {
     return {};
@@ -21,11 +21,24 @@ export default {
     .breadcrumb {
       background: transparent;
       &-item {
-        color: var(--primary);
+        color: var(--secondary);
         opacity: 1;
         font-size: rem(24px);
         padding-right: rem(80px);
         position: relative;
+        text-transform: capitalize;
+        @media screen and (max-width: 991px) {
+          font-size: rem(22px);
+          padding-right: rem(30px);
+        }
+        @media screen and (max-width: 767px) {
+          font-size: rem(18px);
+          padding-right: rem(20px);
+        }
+        @media screen and (max-width: 575px) {
+          font-size: rem(16px);
+          //   padding-right: rem(20px);
+        }
         &:not(:first-child) {
           &::before {
             content: "";
@@ -40,10 +53,23 @@ export default {
           }
         }
         a {
-          color: var(--primary);
+          color: var(--secondary);
           opacity: 0.6;
           font-size: rem(24px);
           transition: 0.3s ease all;
+          text-transform: capitalize;
+          @media screen and (max-width: 991px) {
+            font-size: rem(22px);
+            padding-right: rem(30px);
+          }
+          @media screen and (max-width: 767px) {
+            font-size: rem(18px);
+            padding-right: rem(20px);
+          }
+          @media screen and (max-width: 575px) {
+            font-size: rem(16px);
+            //   padding-right: rem(20px);
+          }
           &:hover {
             opacity: 1;
           }

@@ -32,14 +32,14 @@
       <div class="container">
         <div class="sliderNavigation__controls">
           <!-- <p class="sliderNavigation__controls--pagination">{{currentSlide + 1}}/{{totalSlides}}</p> -->
-          <div
+          <!-- <div
             class="sliderNavigation__controls--pagination"
             :class="[
               'swiper-pagination' + this.sliderId,
               fractionPagination == true ? '' : 'd-none',
             ]"
-          ></div>
-          <div
+          ></div> -->
+          <!-- <div
             :class="[fractionPagination == true ? 'd-none' : '']"
             class="sliderNavigation__controls--pagination customPagination"
           >
@@ -49,7 +49,7 @@
             >
             out of
             <span class="total swiper-pagination-total">{{ totalSlides }}</span>
-          </div>
+          </div> -->
           <button
             type="button"
             id="prevArrow"
@@ -365,8 +365,8 @@ export default {
       }
     }
     &--arrow {
-      width: rem(65px);
-      height: rem(65px);
+      width: rem(50px);
+      height: rem(50px);
       border: solid 1px var(--border) !important;
       border-radius: 50%;
       color: var(--arrow);

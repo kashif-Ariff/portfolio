@@ -37,6 +37,12 @@ const routes = [
                 name: 'contact-us',
                 component: () =>
                     import ('../views/BoardDirectors.vue'),
+     },
+            {
+                path: `/:lang/our-services`,
+                name: 'contact-us',
+                component: () =>
+                    import ('../views/OurServices.vue'),
             },
 //     {
 //         path: `/:lang/contact-us`,

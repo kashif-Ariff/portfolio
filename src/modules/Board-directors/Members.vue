@@ -60,11 +60,11 @@ export default {
       swiper: null,
       items: [
         {
-          text: "Media center",
+          text: "about the national fund",
           href: "#",
         },
         {
-          text: "Home",
+          text: "Board of Directors",
           active: true,
         },
       ],
@@ -103,7 +103,7 @@ export default {
   mounted() {
     this.swiper = new Swiper(this.$refs.members, {
       slidesPerView: 3,
-      spaceBetween: 100,
+      spaceBetween: 0,
       //  freeMode: true,
       //  freeModeSticky: true,
       centeredSlides: true,
@@ -114,7 +114,7 @@ export default {
           spaceBetween: 100,
           // allowTouchMove: false,
           slidesPerView: 3,
-          centeredSlides: false,
+          // centeredSlides: false,
         },
         1200: {
           spaceBetween: 100,
@@ -157,13 +157,13 @@ export default {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0px;
+  bottom: -15px;
   @media screen and (max-width: 991px) {
     width: 100%;
   }
   h2 {
     font-size: rem(35px);
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1;
     margin-bottom: 5px;
     color: #224156;
@@ -175,17 +175,20 @@ export default {
     margin: 0;
     color: #224156;
     line-height: 1.2;
-  }
-  @media screen and (max-width: 1600px) {
-    bottom: 0px;
-    h2 {
-      font-size: rem(25px);
+    @media screen and (max-width: 991px) {
+      font-size: rem(20px);
     }
   }
+  //   @media screen and (max-width: 1600px) {
+  //     bottom: 0px;
+  //     h2 {
+  //       font-size: rem(25px);
+  //     }
+  //   }
   @media screen and (max-width: 991px) {
-    bottom: 1%;
+    //     bottom: 1%;
     h2 {
-      font-size: rem(20px);
+      font-size: rem(22px);
     }
   }
 }

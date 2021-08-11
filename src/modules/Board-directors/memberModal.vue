@@ -2,10 +2,10 @@
   <div class="swiper-modal">
     <div class="swiper-modal-body">
       <div class="swiper-modal-close" @click="$emit('close')">
-        <img src="@/assets/images/close_icon.png" alt="" />
+        <img class="img-fluid" src="@/assets/images/close_icon.png" alt="" />
       </div>
       <div class="scrollWrapper left">
-        <base-smooth-scrollbar height="350px">
+        <base-smooth-scrollbar height="360px">
           <ul class="swiper-modal-aside">
             <li
               v-for="item in members"
@@ -199,7 +199,7 @@ export default {
 }
 
 .swiper-modal-content {
-  @media (min-width: 575px) {
+  @media (min-width: 767px) {
     display: flex;
     align-items: flex-start;
     width: 100%;
@@ -216,10 +216,10 @@ export default {
       margin-bottom: rem(30px);
       max-width: 150px;
     }
-    @media screen and (max-width: 991px) and (min-width: 576px) {
+    @media screen and (max-width: 991px) and (min-width: 767px) {
       margin-right: rem(20px);
     }
-    @media screen and (max-width: 575px) {
+    @media screen and (max-width: 767px) {
       max-width: 100px;
     }
   }
@@ -262,6 +262,7 @@ export default {
   }
   @media screen and (max-width: 767px) {
     top: -15px;
+    max-width: 20px;
   }
 }
 
