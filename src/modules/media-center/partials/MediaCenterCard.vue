@@ -55,7 +55,7 @@ export default {
         .btn-secondary{
             font-size: rem(18px);
             border-radius: 12px;
-            color: #000;
+            color: #224156;
             background: #fff;
             border: 2px solid #224156;
             text-transform: capitalize;
@@ -111,9 +111,6 @@ export default {
                 padding: 3px;
                 outline-offset:-3px;
                 @include truncate(5,1.3);
-                &:hover{
-                    // color: var(--primary);
-                }
             }
             & + a{
                 margin-top: auto;
