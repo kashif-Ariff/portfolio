@@ -66,7 +66,7 @@ export default {
 <style lang="scss" scoped>
 .informationCard{
     display: grid;
-    grid-template-columns: 300px 1fr 260px;
+    grid-template-columns: 300px 1fr 250px;
     padding: rem(50px) rem(30px);
     border: 1px solid #e6eaec;
     border-radius: 25px;
@@ -103,9 +103,11 @@ export default {
     &__link{
         display: grid;
         place-items: center;
+        margin-left: rem(30px);
         .btn.btn-primary{
             padding-right: rem(35px);
             transition: .5s all;
+		    border: 2px solid var(--primary);
             &:hover{
                 background: #fff;
                 color: var(--primary);

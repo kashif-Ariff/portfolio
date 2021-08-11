@@ -56,7 +56,6 @@ export default {
     align-items: center;
     flex: 0 0 320px;
     max-width: 320px;
-
     label {
       font-size: rem(20px);
       font-weight: 500;
@@ -82,6 +81,10 @@ export default {
         border-bottom-right-radius: 18px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+        transition: .5s all;
+        &:hover{
+          background-color: var(--secondary);
+        }
       }
       /deep/ {
         .v-select {
