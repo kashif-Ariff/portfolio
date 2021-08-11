@@ -80,6 +80,8 @@ export default {
         padding-bottom: 0;
         border-top-right-radius: 18px;
         border-bottom-right-radius: 18px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
       }
       /deep/ {
         .v-select {
@@ -164,11 +166,13 @@ export default {
       }
     }
     .form-control {
-      border: 2px solid #019cde;
-      border-top-left-radius: 18px;
-      border-bottom-left-radius: 18px;
-      width: 90px;
-      font-weight: 400;
+        border: 2px solid #019CDE;
+        border-top-left-radius: 18px;
+        border-bottom-left-radius: 18px;
+        width: 90px;
+        font-weight: 400;
+        font-size: rem(20px);
+        color: #404040 !important;
     }
     @media screen and (max-width: 1600px) {
       flex: 0 0 250px;
