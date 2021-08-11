@@ -36,53 +36,58 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .swiper-slide {
-  width: 110px !important;
+  //   width: 110px !important;
   transition: all 0.3s ease;
   background-color: #ccc;
-  height: 320px;
+  height: 380px;
   position: relative;
   background-position: center top !important;
   background-size: cover;
   filter: unset !important;
   cursor: pointer;
   overflow: hidden;
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  transform: scale(0.7);
+  box-shadow: 0px 0px 13px 3px rgba($color: black, $alpha: 0.1);
+  //   width: 280px !important;
   @media screen and (max-width: 575px) {
     height: 300px;
   }
-  &:nth-child(2) {
-    margin-top: 20px;
-    @media screen and (max-width: 991px) {
-      margin-top: 10px;
-    }
-  }
+  //   &:nth-child(2) {
+  //     margin-top: 20px;
+  //     @media screen and (max-width: 991px) {
+  //       margin-top: 10px;
+  //     }
+  //   }
 
-  &:nth-child(3) {
-    margin-top: 40px;
-    @media screen and (max-width: 991px) {
-      margin-top: 20px;
-    }
-  }
+  //   &:nth-child(3) {
+  //     margin-top: 40px;
+  //     @media screen and (max-width: 991px) {
+  //       margin-top: 20px;
+  //     }
+  //   }
 
-  &:nth-child(5) {
-    margin-top: 20px;
-    @media screen and (max-width: 991px) {
-      margin-top: 10px;
-    }
-  }
+  //   &:nth-child(5) {
+  //     margin-top: 20px;
+  //     @media screen and (max-width: 991px) {
+  //       margin-top: 10px;
+  //     }
+  //   }
 
-  &:nth-child(6) {
-    margin-top: 40px;
-    @media screen and (max-width: 991px) {
-      margin-top: 20px;
-    }
-  }
+  //   &:nth-child(6) {
+  //     margin-top: 40px;
+  //     @media screen and (max-width: 991px) {
+  //       margin-top: 20px;
+  //     }
+  //   }
 
-  &:nth-child(8) {
-    margin-top: 20px;
-    @media screen and (max-width: 991px) {
-      margin-top: 10px;
-    }
-  }
+  //   &:nth-child(8) {
+  //     margin-top: 20px;
+  //     @media screen and (max-width: 991px) {
+  //       margin-top: 10px;
+  //     }
+  //   }
   span {
     position: absolute;
     left: 0;
@@ -99,6 +104,9 @@ export default {
     @media screen and (max-width: 991px) {
       bottom: 0px;
     }
+  }
+  &.swiper-slide-active {
+    transform: scale(1);
   }
 }
 
@@ -159,44 +167,45 @@ export default {
 
 @media (max-width: 991px) {
   .swiper-slide-active {
-    width: 140px !important;
+    //     width: 140px !important;
     filter: grayscale(0%);
+    transform: scale(1);
   }
 }
 
 @media (min-width: 992px) {
   .swiper-slide {
-    width: 100px !important;
+    //     width: 100px !important;
     height: 412px;
 
     &:hover {
-      width: 150px !important;
+      //  width: 150px !important;
       filter: grayscale(0%);
     }
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
   .swiper-slide {
-    width: 120px !important;
+    //     width: 120px !important;
     height: 412px;
 
     &:hover {
-      width: 150px !important;
+      //  width: 150px !important;
       filter: grayscale(0%);
     }
     @media screen and (max-width: 1600px) {
-      height: 300px;
+      //  height: 300px;
     }
   }
 }
 @media screen and (min-width: 500px) and (max-width: 991px) and (orientation: landscape) {
   .swiper-slide {
-    height: 160px;
-    width: 110px;
+    //     height: 160px;
+    //     width: 110px;
   }
   .swiper-slide-active {
-    width: 130px !important;
+    //     width: 130px !important;
   }
 }
 </style>

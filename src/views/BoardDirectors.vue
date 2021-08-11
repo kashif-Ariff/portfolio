@@ -25,5 +25,6 @@ export default {
 <style lang="scss" scoped>
 .boardDirector {
   position: relative;
+  padding-bottom: rem(80px);
 }
 </style>

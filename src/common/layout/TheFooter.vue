@@ -76,10 +76,10 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  margin-top: rem(60px);
-
+  padding-top: rem(60px);
+  border-top: 3px dashed rgba(100, 121, 136, 0.5);
   @include small_medium {
-    margin-top: rem(20px);
+    padding-top: rem(20px);
   }
   .row {
     div {

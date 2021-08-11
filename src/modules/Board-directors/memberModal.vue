@@ -2,11 +2,10 @@
   <div class="swiper-modal">
     <div class="swiper-modal-body">
       <div class="swiper-modal-close" @click="$emit('close')">
-        <!-- <img src="@/assets/images/close_icon.png" alt="" /> -->
-        cross
+        <img src="@/assets/images/close_icon.png" alt="" />
       </div>
       <div class="scrollWrapper left">
-        <base-smooth-scrollbar height="470px">
+        <base-smooth-scrollbar height="350px">
           <ul class="swiper-modal-aside">
             <li
               v-for="item in members"
@@ -22,11 +21,13 @@
       </div>
 
       <div class="swiper-modal-content">
-        <img
-          class="swiper-modal-img"
-          :src="require(`@/assets/images/board-directors/${member.img}`)"
-          alt=""
-        />
+        <div class="swiper-modal-content-image">
+          <img
+            class="swiper-modal-img"
+            :src="require(`@/assets/images/board-directors/${member.img}`)"
+            alt=""
+          />
+        </div>
 
         <div class="swiper-modal-info">
           <div class="swiper-modal-header">
@@ -34,15 +35,14 @@
             <h2 class="swiper-modal-position" v-html="member.position"></h2>
           </div>
           <div class="scrollWrapper right">
-            <base-smooth-scrollbar height="470px">
+            <base-smooth-scrollbar height="350px">
               <p v-html="member.info"></p>
-              <p>
-                <strong>{{ $t("labels.dob") }}: </strong>{{ member.dob }}<br />
-                <strong>{{ $t("labels.education") }}: </strong
-                >{{ member.education }}
-              </p>
+              <!-- <p>
+                <strong>DOB: </strong>{{ member.dob }}<br />
+                <strong>Education: </strong>{{ member.education }}
+              </p> -->
               <p v-html="member.work"></p>
-              <p v-html="member.membership"></p>
+              <!-- <p v-html="member.membership"></p> -->
             </base-smooth-scrollbar>
           </div>
         </div>
@@ -69,26 +69,22 @@ export default {
 }
 .swiper-modal {
   width: 100%;
-  height: 100vh;
   //   background-image: url(../../assets/images/banners/board-of-directors.png);
   background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 50px 20px 20px;
+  //   padding: 50px 20px 20px;
   // @media screen and (max-width:991px){
   //   padding:20px;
   //   padding-top:rem(200px);
   // }
   @media screen and (max-width: 767px) {
-    padding-top: rem(40px);
+    //     padding-top: rem(40px);
   }
 
   position: static;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  //   height: 100vh;
   z-index: 100;
   // overflow: auto;
 
@@ -99,9 +95,9 @@ export default {
   }
   .scrollWrapper {
     &.left {
-      @media screen and (max-width: 1600px) {
-        height: calc(100vh - 60px);
-      }
+      //  @media screen and (max-width: 1600px) {
+      //    height: calc(100vh - 60px);
+      //  }
       @media screen and (max-width: 992px) {
         display: none;
       }
@@ -116,7 +112,7 @@ export default {
         height: auto;
       }
       // @media screen and (max-width:1199px){
-      //   height:calc(100vh - 200px);
+      //   height:calc(350px);
       // }
       @media screen and (max-width: 991px) {
         height: 150px;
@@ -173,6 +169,9 @@ export default {
 
   .active {
     opacity: 1;
+    p {
+      color: #019cde;
+    }
   }
   li {
     p {
@@ -207,6 +206,9 @@ export default {
     max-width: 1000px;
   }
   img {
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    box-shadow: 0px 0px 12px -2px rgba($color: black, $alpha: 0.1);
     @media screen and (max-width: 991px) {
       margin: auto;
       display: block;
@@ -232,6 +234,8 @@ export default {
   p {
     line-height: 1.3;
     margin-bottom: rem(25px);
+    font-size: rem(18px);
+    color: #82919c;
     @media screen and (max-width: 1199px) {
       padding-right: rem(30px);
     }
@@ -280,11 +284,11 @@ export default {
 }
 
 .swiper-modal-name {
-  font-size: 22px;
-  font-weight: 900;
-
+  font-size: rem(30px);
+  font-weight: 500;
+  color: #224156;
   @media (min-width: 992px) {
-    font-size: 28px;
+    font-size: rem(28px);
   }
   @media screen and (max-width: 767px) {
     font-size: rem(19px);
@@ -292,9 +296,11 @@ export default {
 }
 
 .swiper-modal-position {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: rem(20px);
+  font-weight: 400;
   margin-top: 6px;
+  opacity: 0.6;
+  color: #224156;
 
   @media (min-width: 992px) {
     font-size: 18px;

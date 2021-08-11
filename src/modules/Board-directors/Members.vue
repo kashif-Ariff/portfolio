@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="breadCrumbs" v-if="!showModal">
+      <base-bread-crumb :items="items"></base-bread-crumb>
+    </div>
     <div class="swiper-container" ref="members" v-show="!showModal">
       <div class="swiper-wrapper">
         <memberItem
@@ -15,7 +18,7 @@
     </div>
 
     <transition name="fade">
-      <div v-if="showName" class="member">
+      <div v-if="showName && !showModal" class="member">
         <div class="text-center mt-md">
           <h2 class="heading-secondary" v-html="currentMember.name"></h2>
           <p class="mt-sm" v-html="currentMember.position"></p>
@@ -55,6 +58,16 @@ export default {
       showModal: false,
       showName: false,
       swiper: null,
+      items: [
+        {
+          text: "Media center",
+          href: "#",
+        },
+        {
+          text: "Home",
+          active: true,
+        },
+      ],
     };
   },
 
@@ -68,17 +81,18 @@ export default {
     },
 
     openModal({ member, idx, el }) {
-      if (window.innerWidth < 992) {
-        if (el.classList.contains("swiper-slide-active")) {
-          this.showModal = true;
-          this.currentMember = member;
-        } else {
-          this.swiper.slideTo(idx);
-        }
-      } else {
+      if (el.classList.contains("swiper-slide-active")) {
         this.showModal = true;
         this.currentMember = member;
+      } else {
+        this.swiper.slideTo(idx);
       }
+      //  if (window.innerWidth < 992) {
+
+      //  } else {
+      //    this.showModal = true;
+      //    this.currentMember = member;
+      //  }
     },
 
     modalMemberClick(member) {
@@ -89,23 +103,23 @@ export default {
   mounted() {
     this.swiper = new Swiper(this.$refs.members, {
       slidesPerView: 3,
-      spaceBetween: 30,
-      freeMode: true,
-      freeModeSticky: true,
+      spaceBetween: 100,
+      //  freeMode: true,
+      //  freeModeSticky: true,
       centeredSlides: true,
       observer: true,
       observeParents: true,
       breakpoints: {
         992: {
-          spaceBetween: 30,
-          allowTouchMove: false,
+          spaceBetween: 100,
+          // allowTouchMove: false,
           slidesPerView: 3,
           centeredSlides: false,
         },
         1200: {
-          spaceBetween: 30,
-          allowTouchMove: false,
-          centeredSlides: false,
+          spaceBetween: 100,
+          // allowTouchMove: false,
+          // centeredSlides: false,
           slidesPerView: 3,
         },
       },
@@ -121,11 +135,6 @@ export default {
       this.showName = true;
     });
   },
-  watch: {
-    showModal: function () {
-      console.log("test");
-    },
-  },
 };
 </script>
 
@@ -134,34 +143,41 @@ export default {
 .swiper-wrapper {
   padding-bottom: 30px;
 }
-@media (min-width: 992px) {
-  .swiper-wrapper {
-    display: flex;
-    justify-content: center;
-  }
+// @media (min-width: 992px) {
+//   .swiper-wrapper {
+//     display: flex;
+//     justify-content: center;
+//     padding-left: 25px;
+//   }
+// }
+.breadCrumbs {
+  margin-bottom: rem(50px);
 }
 .member {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 7%;
+  bottom: 0px;
   @media screen and (max-width: 991px) {
     width: 100%;
   }
   h2 {
-    font-size: rem(30px);
-    font-weight: 900;
+    font-size: rem(35px);
+    font-weight: 600;
     line-height: 1;
     margin-bottom: 5px;
+    color: #224156;
   }
   p {
-    font-size: rem(18px);
-    font-weight: 600;
+    font-size: rem(28px);
+    font-weight: 400;
+    opacity: 0.6;
     margin: 0;
+    color: #224156;
     line-height: 1.2;
   }
   @media screen and (max-width: 1600px) {
-    bottom: -8%;
+    bottom: 0px;
     h2 {
       font-size: rem(25px);
     }
