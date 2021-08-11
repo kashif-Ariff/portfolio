@@ -2,15 +2,15 @@
   <div class="filters">
       <h2>Information Sources</h2>
       <div class="row justify-content-center">
-        <div class="col-md-3">
-              <vue-select
-                  :options="input__options"
-                  v-model="selected_item"
-                  aria-label="content category"
-                  tabIndex="0"
-              ></vue-select>
+        <div class="col-md-4">
+            <vue-select
+                :options="input__options"
+                v-model="selected_item"
+                aria-label="content category"
+                tabIndex="0"
+            ></vue-select>
         </div>
-         <div class="col-md-9">
+         <div class="col-md-8">
          <div class="filters__search">
               <input
                   type="text"
@@ -51,6 +51,8 @@ export default {
 <style lang="scss" scoped>
 .filters{
   margin-bottom: rem(50px);
+  padding-right: rem(30px);
+  padding-left: rem(30px);
   h2{
     font-size: rem(35px);
     font-weight: 400;
@@ -70,17 +72,19 @@ export default {
     &__search{
       display: flex;
       justify-content: space-between;
+      input{
+        border:3px solid transparent;
+      }
       button{
         display: flex;
         align-items: center;
         margin-left: rem(30px);
-        padding: rem(22px) rem(35px);
         /deep/ svg{
           width: 20px;
           height: 20px;
         }
         span{
-          margin-left: rem(10px);
+          margin-left: rem(8px);
           font-size: rem(24px);
         }
       }

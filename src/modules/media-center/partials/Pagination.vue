@@ -1,5 +1,5 @@
 <template>
-  <div class="pressReleasePagination" :aria-label="ariaLabel" role="region">
+  <div class="pagination" :aria-label="ariaLabel" role="region">
     <div class="show_items">
       <label class="items__show">show items</label>
       <div class="form-group">
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.pressReleasePagination {
+.pagination {
   display: flex;
   justify-content: space-between;
   padding: rem(40px) 0;
@@ -129,6 +129,9 @@ export default {
               }
             }
           }
+          .vs__dropdown-toggle {
+		          min-height: 45px;
+          }
           .vs__selected-options {
             .vs__selected {
               opacity: 1;
@@ -175,10 +178,14 @@ export default {
         font-weight: 400;
         font-size: rem(20px);
         color: #404040 !important;
+        padding: rem(20px);
     }
     @media screen and (max-width: 1600px) {
-      flex: 0 0 250px;
-      max-width: 250px;
+      flex: 0 0 290px;
+      max-width: 290px;
+      label{
+        margin-right: rem(10px);
+      }
       .form-control {
         width: 85px;
       }
@@ -270,6 +277,7 @@ export default {
         height: 40px;
         width: 40px;
         @include flex(center, center);
+        margin-bottom: 0;
         .page-link {
           background: transparent;
           color: #82919c;

@@ -2,7 +2,7 @@
   <div class="mediaCenter">
     <div class="container">
         <media-center-card  :card-data="cardData" aria-label="PRESS RELEASE"/>
-        <press-release-pagination aria-label="PRESS RELEASE PAGINATION"></press-release-pagination>
+        <pagination aria-label="PRESS RELEASE PAGINATION"></pagination>
         <base-document></base-document> 
     </div>
   </div>
@@ -10,7 +10,7 @@
 
 <script>
 import MediaCenterCard from '@/modules/media-center/partials/MediaCenterCard';
-import PressReleasePagination from "@/modules/media-center/partials/PressReleasePagination.vue";
+import Pagination from "@/modules/media-center/partials/Pagination.vue";
 import BaseDocument from '@/common/components/base/BaseDocument.vue';
 export default {
     data(){
@@ -45,7 +45,7 @@ export default {
     },
     components:{
         MediaCenterCard,
-        PressReleasePagination,
+        Pagination,
         BaseDocument
     }
 }
