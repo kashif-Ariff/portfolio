@@ -9,7 +9,7 @@
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class="btn">
+                    <div class=" btn btn-danger">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
@@ -32,7 +32,7 @@
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class="btn">
+                    <div class="btn btn-primary">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
@@ -55,16 +55,18 @@
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class="icon">
-                        <span>
-                            <svg-icon
-                                icon-id="pdf-icon"
-                                icon-viewbox="0 0 369 384"
-                            ></svg-icon>
-                        </span>
-                        Download
+                    <div class="btn btn-success">
+                        <div class="icon">
+                            <span>
+                                <base-svg-icon
+                                    icon-id="excel-icon"
+                                    icon-viewbox="0 0 18 24"
+                                ></base-svg-icon>
+                            </span>
+                            Download
+                        </div>
                     </div>
-                </div>  
+                </div>
             </router-link>
         </li>
         <li class="relatedDocuments__list--item">
@@ -76,14 +78,39 @@
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class="icon">
-                        <span>
-                            <svg-icon
-                                icon-id="pdf-icon"
-                                icon-viewbox="0 0 369 384"
-                            ></svg-icon>
-                        </span>
-                        Download
+                    <div class="btn btn-danger">
+                        <div class="icon">
+                            <span>
+                                <base-svg-icon
+                                    icon-id="image-icon"
+                                    icon-viewbox="0 0 14.078 18.771"
+                                ></base-svg-icon>
+                            </span>
+                            Download
+                        </div>
+                    </div>
+                </div>
+            </router-link>
+        </li> 
+        <li class="relatedDocuments__list--item">
+            <router-link
+                to="#"
+                class="document__info"  aria-label="Arabic – PDF – 150 megabytes">
+                <h2>
+                   Profile of The National Fund
+                </h2>
+                <div class="relatedDocuments__list--item--documents">
+                    <span class="file-size">200 KB</span>
+                    <div class="btn btn-success">
+                        <div class="icon">
+                            <span>
+                                <base-svg-icon
+                                    icon-id="video-icon"
+                                    icon-viewbox="0 0 14.078 18.771"
+                                ></base-svg-icon>
+                            </span>
+                            Download
+                        </div>
                     </div>
                 </div>
             </router-link>
@@ -167,7 +194,7 @@ export default {
                 .icon {
                     font-size: rem(20px);
                     color: #fff;
-                    font-weight: 700;
+                    font-weight: 500;
                     display: inline-flex;
                     align-items: center;
                     flex: 1;
@@ -209,7 +236,7 @@ export default {
                 .file-size {
                     margin: 0px;
                     font-size: rem(20px);
-                    font-weight: 900;
+                    font-weight: 700;
                     text-transform: uppercase;
                     color: var(--secondary);
                     margin-right:rem(35px);
@@ -221,9 +248,7 @@ export default {
                         margin-right:rem(20px);
                     }
                 }
-                .btn{
-                    background-color: #DE2C2D;
-                }
+                
             }
             a:hover,a:focus{
                 outline-width: 3px;
