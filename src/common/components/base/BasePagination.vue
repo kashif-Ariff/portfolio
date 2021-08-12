@@ -176,9 +176,9 @@ export default {
 		          background-repeat: no-repeat !important;
               width: 16px;
               height: 16px;
-              top: 16px;
+              top: 14px;
               background-size: 100% 100%;
-              left: -26px;
+              left: -22px;
             }
             .vs__open-indicator {
                 border: 0;
