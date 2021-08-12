@@ -1,6 +1,5 @@
 <template>
   <div class="filters">
-      <h2>Information Sources</h2>
       <div class="row justify-content-center">
         <div class="col-md-4">
             <vue-select
@@ -50,25 +49,9 @@ export default {
 
 <style lang="scss" scoped>
 .filters{
-  margin-bottom: rem(50px);
-  padding-right: rem(30px);
-  padding-left: rem(30px);
-  h2{
-    font-size: rem(35px);
-    font-weight: 400;
-    color: var(--secondary);
-    text-align: center;
     margin-bottom: rem(70px);
-  }
-  /deep/ {
-      .v-select {
-          .vs__actions {
-              .vs__clear{
-                display: none;
-              }
-          }
-      }
-    }
+    padding-right: rem(30px);
+    padding-left: rem(30px);
     &__search{
       display: flex;
       justify-content: space-between;
@@ -76,7 +59,7 @@ export default {
         border:3px solid transparent;
       }
       button{
-        display: flex;
+         display: flex;
         align-items: center;
         margin-left: rem(30px);
         /deep/ svg{

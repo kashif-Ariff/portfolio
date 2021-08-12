@@ -38,7 +38,7 @@
 	transition: all 0.5s ease;
 	font-size: rem(24px);
 	color: #fff;
-	padding: rem(10px) rem(20px);
+	padding: rem(10px) rem(30px);
 	font-weight: 400;
 	vertical-align: middle;
 	position: relative;
@@ -113,7 +113,9 @@
 		text-transform: capitalize;
 		color: var(--primary);
 		border: 2px solid var(--primary);
-		padding-right: rem(35px);
+		padding: rem(11px) rem(28px) rem(11px) rem(20px);
+
+		// padding-right: rem(35px);
 		// padding: rem(10.5px) rem(40px);
 		&:hover {
 			background: #fff;

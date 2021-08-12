@@ -3,6 +3,7 @@
     <base-inner-banner :banner-detail="innerBannerDetail" />
     <div class="container">
       <div class="content-box">
+        <h2>Information Sources</h2>
         <section id="">
           <filters />
         </section>
@@ -12,8 +13,6 @@
         <section id="">
           <base-pagination />
         </section>
-          
-          
       </div>
     </div>
   </div>
@@ -39,6 +38,12 @@ export default {
 
 <style lang="scss" scoped>
 .knowledgeLibrary {
- 
+  h2{
+    font-size: rem(35px);
+    font-weight: 400;
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: rem(80px);
+  }
 }
 </style>

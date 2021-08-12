@@ -43,6 +43,11 @@ export default {
       ],
     };
   },
+  methods: {
+      linkGen(pageNum) {
+          return pageNum === 1 ? '?' : `?page=${pageNum}`
+      },
+  },
 };
 </script>
 
@@ -61,15 +66,15 @@ export default {
   .gotoPage {
     display: flex;
     align-items: center;
-    flex: 0 0 320px;
-    max-width: 320px;
+    flex: 0 0 330px;
+    max-width: 330px;
     label {
-      font-size: rem(20px);
-      font-weight: 500;
       text-transform: capitalize;
-      color: #224156;
-      margin-right: rem(20px);
+      color: var(--secondary);
       margin-bottom: 0px;
+      font-size: rem(18px);
+      font-weight: 400;
+      margin-right: rem(30px);
       @media screen and (max-width: 380px) {
         margin-bottom: 10px;
       }
@@ -82,8 +87,7 @@ export default {
         font-size: rem(24px);
         font-weight: 400;
         text-transform: capitalize;
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0 rem(25px);
         border-top-right-radius: 18px;
         border-bottom-right-radius: 18px;
         border-top-left-radius: 0;
@@ -161,14 +165,24 @@ export default {
             }
           }
           .vs__actions {
+            position: relative;
             button.vs__clear {
               display: none;
             }
             &:after {
-              //     background-image: url(C:/xampp/htdocs/nf-vue/src/assets/images/icons/arrowDown.png);
-              width: 18px;
+              content: '';
+              position: absolute;
+              background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.804' height='7.572' viewBox='0 0 12.804 7.572'%3E%3Cpath id='Path_42452' data-name='Path 42452' d='M766,5530.358l5.158,5.158,4.818-5.158' transform='translate(-764.586 -5528.944)' fill='none' stroke='%23019cde' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E%0A");
+		          background-repeat: no-repeat !important;
+              width: 16px;
+              height: 16px;
               top: 16px;
+              background-size: 100% 100%;
+              left: -26px;
             }
+            .vs__open-indicator {
+                border: 0;
+              }
           }
           .vs__dropdown-menu {
             min-width: unset !important;
@@ -188,7 +202,7 @@ export default {
         border-bottom-left-radius: 18px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        width: 90px;
+        width: 105px;
         font-weight: 400;
         font-size: rem(20px);
         color: #404040 !important;
@@ -256,6 +270,7 @@ export default {
         font-size: rem(14px);
       }
     }
+   
   }
   .show_items {
     @media screen and (max-width: 767px) {

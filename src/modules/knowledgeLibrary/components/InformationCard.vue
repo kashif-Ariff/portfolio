@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="informationCard card" v-for="card in cardData" :key="card.index">
-            <div class="card-body grid" data-grid-item-width="1/3">
+            <div class="card-body grid" data-grid-item-gap="30" data-grid-item-width="1/3">
                 <div class="informationCard__info" >
                     <div class="informationCard__info--image">
                         <img :src="require(`@/assets/images/logo/${card.logo}`)" alt="" class="img-fluid">
@@ -67,45 +67,50 @@ export default {
 
 <style lang="scss" scoped>
 .informationCard{
-        margin: rem(40px) 0;
+        margin-bottom: rem(40px);
     .card-body{
         padding: rem(50px) rem(30px);
         &.grid{
-            grid-template-columns: 300px 1fr 250px;
+            grid-template-columns: 300px 1fr 265px;
         }
     }
     &__info{
-            border-right: 1px solid  rgba($color: #224156, $alpha: 0.4);
-            &--title{
-                color: var(--secondary);
-                font-size: rem(16px);
+        border-right: 1px solid #A6B3BB;
+        &--title{
+            color: var(--secondary);
+            font-size: rem(16px);
+            font-weight: 400;
+            margin: rem(30px) 0 rem(15px) 0;
+            line-height: 1.5;
+        }
+        &--subtitle{
+            display: flex;
+            align-items: center;
+            .icon{
+                margin-right: rem(10px);
+            }
+            span{
+                font-size: rem(12px);
                 font-weight: 400;
-                margin: rem(30px) 0 rem(15px) 0;
+                color: #647a88;
             }
-            &--subtitle{
-                display: flex;
-                align-items: center;
-                .icon{
-                    margin-right: rem(10px);
-                }
-            }
+        }
     }
     &__detail{
-        padding: rem(30px);
-        border-right: 1px solid  rgba($color: #224156, $alpha: 0.4);
+        padding: rem(30px) rem(30px) 0 0;
+        border-right: 1px solid #A6B3BB;
         p{
             font-size: rem(16px);
             font-weight: 300;
-            color: var(--secondary);
             margin: 0;
             line-height: 1.3;
             @include truncate(4)
         }
     }
     &__link{
-        display: grid;
-        place-items: center;
-        margin-left: rem(30px);
+        display: flex;
+        align-items: center;
+
     }
 }
 </style>>
