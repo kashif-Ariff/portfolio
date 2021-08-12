@@ -32,13 +32,13 @@
       <div class="container">
         <div class="sliderNavigation__controls">
           <!-- <p class="sliderNavigation__controls--pagination">{{currentSlide + 1}}/{{totalSlides}}</p> -->
-          <!-- <div
+          <div
             class="sliderNavigation__controls--pagination"
             :class="[
               'swiper-pagination' + this.sliderId,
               fractionPagination == true ? '' : 'd-none',
             ]"
-          ></div> -->
+          ></div>
           <!-- <div
             :class="[fractionPagination == true ? 'd-none' : '']"
             class="sliderNavigation__controls--pagination customPagination"
@@ -374,10 +374,10 @@ export default {
         font-size: 20px;
       }
       //  @include flex(center, center);
-      @media screen and (max-width: 1320px) {
-        width: rem(55px);
-        height: rem(55px);
-      }
+      //  @media screen and (max-width: 1320px) {
+      //    width: rem(55px);
+      //    height: rem(55px);
+      //  }
       @media screen and (max-width: 991px) {
         width: 45px;
         height: 45px;

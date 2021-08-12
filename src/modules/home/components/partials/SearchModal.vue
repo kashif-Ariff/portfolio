@@ -21,45 +21,45 @@
         <div class="col-12 col-lg-3">
           <h6>LATEST INTERESTS</h6>
           <ul class="list-unstyled">
-            <li @click="tag = 'Training'">Training</li>
-            <li @click="tag = 'License'">License</li>
-            <li @click="tag = 'Investment'">Investment</li>
-            <li @click="tag = 'Marketing'">Marketing</li>
-            <li @click="tag = 'lorem ipsum'">lorem ipsum</li>
-            <li @click="tag = 'lorem ipsum'">lorem ipsum</li>
+            <li>Training</li>
+            <li>License</li>
+            <li>Investment</li>
+            <li>Marketing</li>
+            <li>lorem ipsum</li>
+            <li>lorem ipsum</li>
           </ul>
         </div>
         <div class="col-12 col-lg-3">
           <h6>LATEST INTERESTS</h6>
           <ul class="list-unstyled">
-            <li @click="tag = 'Training'">Training</li>
-            <li @click="tag = 'License'">License</li>
-            <li @click="tag = 'Investment'">Investment</li>
-            <li @click="tag = 'Marketing'">Marketing</li>
-            <li @click="tag = 'lorem ipsum'">lorem ipsum</li>
-            <li @click="tag = 'lorem ipsum'">lorem ipsum</li>
+            <li>Training</li>
+            <li>License</li>
+            <li>Investment</li>
+            <li>Marketing</li>
+            <li>lorem ipsum</li>
+            <li>lorem ipsum</li>
           </ul>
         </div>
         <div class="col-12 col-lg-3">
           <h6 class="text-capitalize">Lorem Ipsum</h6>
           <ul class="list-unstyled">
-            <li @click="tag = 'lorem ipsum'">Lorem Ipsum</li>
-            <li @click="tag = 'lorem ipsum'">Lorem Ipsum</li>
-            <li @click="tag = 'lorem ipsum'">Lorem Ipsum</li>
-            <li @click="tag = 'lorem ipsum'">Lorem Ipsum</li>
-            <li @click="tag = 'lorem ipsum'">Lorem Ipsum</li>
-            <li @click="tag = 'lorem ipsum'">Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
           </ul>
         </div>
         <div class="col-12 col-lg-3">
           <h6 class="text-capitalize">Lorem Ipsum</h6>
           <ul class="list-unstyled">
-            <li @click="tag = 'lorem ipsum'">Lorem Ipsum</li>
-            <li @click="tag = 'lorem ipsum'">Lorem Ipsum</li>
-            <li @click="tag = 'lorem ipsum'">Lorem Ipsum</li>
-            <li @click="tag = 'lorem ipsum'">Lorem Ipsum</li>
-            <li @click="tag = 'lorem ipsum'">Lorem Ipsum</li>
-            <li @click="tag = 'lorem ipsum'">Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
           </ul>
         </div>
       </div>
@@ -68,7 +68,7 @@
 </template>
 
 <script>
-import VueTagsInput from "@johmun/vue-tags-input";
+import VueTagsInput, { createTag } from "@johmun/vue-tags-input";
 
 export default {
   props: {
@@ -83,12 +83,24 @@ export default {
       tags: [],
     };
   },
+  methods: {
+    addTag: function (tag) {
+      createTag(tag, this.tags);
+    },
+  },
   mounted() {
-    document.querySelector(".ti-input input").focus();
+    document.querySelector("input").focus();
+    document.querySelectorAll(".search-list ul li").forEach((list) => {
+      let $self = this;
+      list.addEventListener("click", function () {
+        var text = list.textContent;
+        $self.addTag(text);
+      });
+    });
   },
   watch: {
-    tag: function () {
-      document.querySelector(".ti-input input").focus();
+    tags: function () {
+      document.querySelector("input").focus();
     },
   },
 };
@@ -96,6 +108,14 @@ export default {
 
 <style lang="scss" scoped>
 .MainSearch {
+  /deep/ {
+    .vue-tags-input {
+      margin-top: 0px !important;
+    }
+    .vue-tags-input.ti-focus {
+      margin-top: 0px !important;
+    }
+  }
   .overlay {
     position: fixed;
     z-index: 999999;
@@ -165,10 +185,11 @@ export default {
     width: 90%;
     border-radius: 30px;
     padding: rem(60px) rem(55px);
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
-    top: 108px;
+    top: 50%;
+    transform: translateY(-50%);
     margin: auto;
     z-index: 999999;
     @media (max-width: 991.98px) {
@@ -190,7 +211,7 @@ export default {
       right: 16px;
       cursor: pointer;
       border-radius: 50%;
-      filter: drop-shadow(2px 4px 6px $mainColor);
+      //  filter: drop-shadow(2px 4px 6px $mainColor);
       img {
         width: 44px;
         @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
@@ -229,12 +250,22 @@ export default {
         font-size: rem(25px);
         font-weight: 700;
         color: $mainColor;
+        margin-bottom: 0px;
         position: relative;
         &::after {
-          @include postionEle(0, auto, 0, absolute, $opacity-color, 2px, 50px);
+          @include postionEle(
+            50%,
+            auto,
+            0,
+            absolute,
+            $opacity-color,
+            2px,
+            50px
+          );
           content: "";
           z-index: 5;
           right: 0px;
+          transform: translateY(-50%);
           @include small_medium {
             top: -10px;
           }
@@ -255,8 +286,8 @@ export default {
       > span {
         cursor: pointer;
         border-radius: 50%;
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
         @extend %d-flex-center;
         background-color: $mainColor;
         @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
@@ -266,12 +297,12 @@ export default {
         /deep/ {
           svg {
             fill: $whiteColor;
-            width: 50px;
+            width: 36px;
             @media (max-width: 991.98px) {
-              width: 50px;
+              width: 36px;
             }
             @include xSmall {
-              width: 30px;
+              width: 28px;
             }
           }
         }
@@ -350,10 +381,10 @@ export default {
         }
         li {
           // @include fonts($Gotham-Book, 14px);
-          font-size: rem(14px);
-          font-weight: 500;
+          font-size: rem(15px);
+          font-weight: 400;
           width: fit-content;
-          padding: rem(5px) rem(14px);
+          padding: rem(7px) rem(14px);
           text-align: center;
           background-color: $grayOpacity;
           margin-bottom: rem(6px);

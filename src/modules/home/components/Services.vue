@@ -12,64 +12,12 @@
             navigation-theme="simple"
             id="plo"
           >
-            <div class="position-relative swiper-slide slider-item">
-              <img src="@/assets/images/home/photo.png" alt="" />
-              <h6>Supportive Center Services</h6>
-              <span
-                >Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry...
-              </span>
-              <a href="#" class="abs-link"></a>
-            </div>
-
-            <div class="position-relative swiper-slide slider-item">
-              <img src="@/assets/images/home/img-2.png" alt="" />
-              <h6>National Registry Services</h6>
-              <span
-                >Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry...
-              </span>
-              <a href="#" class="abs-link"></a>
-            </div>
-
-            <div class="position-relative swiper-slide slider-item">
-              <img src="@/assets/images/home/img-3.png" alt="" />
-              <h6>Financier Services</h6>
-              <span
-                >Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry...
-              </span>
-              <a href="#" class="abs-link"></a>
-            </div>
-
-            <div class="position-relative swiper-slide slider-item">
-              <img src="@/assets/images/home/img-4.png" alt="" />
-              <h6>Training and Mentoring</h6>
-              <span
-                >Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry...
-              </span>
-              <a href="#" class="abs-link"></a>
-            </div>
-
-            <div class="position-relative swiper-slide slider-item">
-              <img src="@/assets/images/home/img-4.png" alt="" />
-              <h6>Training and Mentoring</h6>
-              <span
-                >Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry...
-              </span>
-              <a href="#" class="abs-link"></a>
-            </div>
-
-            <div class="position-relative swiper-slide slider-item">
-              <img src="@/assets/images/home/img-4.png" alt="" />
-              <h6>Training and Mentoring</h6>
-              <span
-                >Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry...
-              </span>
-              <a href="#" class="abs-link"></a>
+            <div
+              class="swiper-slide"
+              v-for="slide in services"
+              :key="slide.index"
+            >
+              <services-card :card-data="slide"></services-card>
             </div>
           </carousel>
         </div>
@@ -80,9 +28,53 @@
 </template>
 
 <script>
+import ServicesCard from "./partials/ServicesCard.vue";
 export default {
+  components: { ServicesCard },
   data() {
     return {
+      services: [
+        {
+          index: 0,
+          image: "photo.png",
+          title: "Supportive Center Services",
+          detail:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry ",
+          link: "#",
+        },
+        {
+          index: 1,
+          image: "img-2.png",
+          title: "National Registry Services",
+          detail:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry ",
+          link: "#",
+        },
+        {
+          index: 2,
+          image: "img-3.png",
+          title: "Financier Services",
+          detail:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry ",
+          link: "#",
+        },
+        {
+          index: 3,
+          image: "img-4.png",
+          title: "Financier Services",
+          detail:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry ",
+          link: "#",
+        },
+        {
+          index: 4,
+          image: "photo.png",
+          title: "Financier Services",
+          detail:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry ",
+          link: "#",
+        },
+      ],
       sliderOption: {
         slidesPerView: 1,
         spaceBetween: 10,
@@ -106,6 +98,59 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.o-services {
+  padding-top: rem(85px);
+  padding-bottom: rem(70px);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $whiteColor;
+  text-align: center;
+  h2 {
+    text-align: center;
+    //     @include fonts($Gotham-bold, 36px);
+    font-size: rem(36px);
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  p {
+    //     @include fonts($AlegreyaSans-Regular, 24px);
+    font-size: rem(24px);
+    font-weight: 400;
+    margin-bottom: 66px;
+    color: #fff;
+  }
+  .services-content {
+    margin-bottom: rem(75px);
+    outline: none;
+    border: none;
+    .row {
+      > div {
+        @include medium {
+          padding: 0;
+        }
+        @include small_medium {
+          margin-bottom: rem(25px);
+        }
+      }
+    }
+  }
+  a {
+    display: block;
+    //     @include fonts($Gotham-Book, 21px);
+    font-size: rem(21px);
+    font-weight: 400;
+    @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
+    &:hover {
+      color: $mainColor;
+    }
+
+    i {
+      margin-inline-start: 15px;
+    }
+  }
+}
 .o-services {
   background-image: url("../../../assets/images/home/bg-services.png");
   .services-slider {

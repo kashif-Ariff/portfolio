@@ -359,16 +359,21 @@ export default {
     .login {
       //  display: none;
       position: absolute;
-      top: 40px;
-      width: 75%;
+      //  top: 40px;
+      max-width: 950px;
 
       margin: auto;
       left: 0;
       right: 0;
-      padding-bottom: 40px;
-      @include medium {
-        width: 80%;
+      //  padding-bottom: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      @media screen and (max-width: 767px) {
+        max-width: 80%;
       }
+      //  @include medium {
+      //    max-width: 80%;
+      //  }
       //  @include xSmall {
       //    width: 95%;
       //    .row {

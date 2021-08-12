@@ -405,69 +405,93 @@ export default {
           font-size: rem(13px);
         }
       }
-
-      .nice-select {
-        border: none;
-        width: 100%;
-        padding-left: unset;
-        padding-inline-start: 3px;
-        @include xSmall {
-          padding: 0;
-        }
-        &::after {
-          content: "\f0dd";
-          font-family: "FontAwesome";
-          border: 0;
-          transform: unset;
-          top: 0;
-          color: $mainColor;
-          font-size: rem(30px);
-        }
-        span {
-          color: $grayColor;
-          // @include fonts($Gotham-Light, 17px);
-          font-size: rem(17px);
-          font-weight: 300;
-          @media (max-width: 991.98px) {
-            font-size: rem(13px);
+      /deep/ {
+        .v-select {
+          border: none;
+          box-shadow: none;
+          padding-left: 0px;
+          background: transparent;
+          .vs__dropdown-option {
+            color: #5d5d5d;
+            font-size: rem(18px);
+            font-weight: 400;
+            border-bottom: solid 1px #f5f5f3;
+            margin: rem(0px) rem(10px);
+            padding: rem(15px) 0;
+            padding-left: rem(20px);
+            line-height: 1;
           }
-        }
-        .list {
-          width: 100%;
-          border: 0;
-          border-radius: 0;
-          top: 48px;
-          border-bottom-left-radius: 25px;
-          border-bottom-right-radius: 25px;
-          @include small_medium {
-            top: 32px;
-          }
-
-          li {
-            position: relative;
-            @media (max-width: 991.98px) {
-              font-size: rem(14px);
-              padding-left: rem(11px);
-              padding-right: rem(25px);
-            }
-
-            &::after {
-              @include postionUrl(
-                5px,
-                auto,
-                11px,
-                absolute,
-                url("../../assets/images/home/icon/check-icon.png")
-              );
-              opacity: 0;
-              @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
-            }
-            &:hover::after {
-              opacity: 1;
+          .vs__dropdown-toggle {
+            .vs__selected {
+              color: #525252;
+              font-weight: 400;
+              font-size: 17px;
             }
           }
         }
       }
+      //  .nice-select {
+      //    border: none;
+      //    width: 100%;
+      //    padding-left: unset;
+      //    padding-inline-start: 3px;
+      //    @include xSmall {
+      //      padding: 0;
+      //    }
+      //    &::after {
+      //      content: "\f0dd";
+      //      font-family: "FontAwesome";
+      //      border: 0;
+      //      transform: unset;
+      //      top: 0;
+      //      color: $mainColor;
+      //      font-size: rem(30px);
+      //    }
+      //    span {
+      //      color: $grayColor;
+      //      // @include fonts($Gotham-Light, 17px);
+      //      font-size: rem(17px);
+      //      font-weight: 300;
+      //      @media (max-width: 991.98px) {
+      //        font-size: rem(13px);
+      //      }
+      //    }
+      //    .list {
+      //      width: 100%;
+      //      border: 0;
+      //      border-radius: 0;
+      //      top: 48px;
+      //      border-bottom-left-radius: 25px;
+      //      border-bottom-right-radius: 25px;
+      //      @include small_medium {
+      //        top: 32px;
+      //      }
+
+      //      li {
+      //        position: relative;
+      //        @media (max-width: 991.98px) {
+      //          font-size: rem(14px);
+      //          padding-left: rem(11px);
+      //          padding-right: rem(25px);
+      //        }
+
+      //        &::after {
+      //          @include postionUrl(
+      //            5px,
+      //            auto,
+      //            11px,
+      //            absolute,
+      //            url("../../assets/images/home/icon/check-icon.png")
+      //          );
+      //          opacity: 0;
+      //          @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
+      //        }
+      //        &:hover::after {
+      //          opacity: 1;
+      //        }
+      //      }
+      //    }
+      //  }
     }
     .services-search {
       background-color: $mainColor;

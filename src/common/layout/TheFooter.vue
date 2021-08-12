@@ -192,7 +192,7 @@ footer {
   }
   > div {
     &:last-child {
-      @include fonts($Gotham-Book, 16px);
+      //  @include fonts($Gotham-Book, 16px);
       font-size: rem(16px);
       font-weight: 500;
       text-align: center;

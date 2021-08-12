@@ -39,7 +39,7 @@ export default {
         spaceBetween: 20,
         breakpoints: {
           1200: {
-            slidesPerView: 5,
+            slidesPerView: 4.5,
           },
           767: {
             slidesPerView: 3,
@@ -107,6 +107,173 @@ export default {
 
 <style lang="scss" scoped>
 .main-common {
+  padding-top: rem(61px);
+  padding-bottom: rem(37px);
+  @media (max-width: 1199.98px) {
+    padding-top: rem(25px);
+  }
+  h2 {
+    font-weight: 700;
+    font-size: rem(36px);
+    color: #234156;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    @include small_medium {
+      font-size: rem(25px);
+    }
+  }
+  p {
+    color: $mainColor;
+    margin-top: 0;
+    margin-bottom: rem(24px);
+    //     @include fonts($AlegreyaSans-Regular, 24px);
+    font-size: rem(24px);
+    font-weight: 400;
+    @include small_medium {
+      font-size: rem(16px);
+    }
+  }
+  svg {
+    width: 60px;
+    height: 60px;
+    color: $thirdColor;
+    margin-bottom: rem(30px);
+    margin-top: rem(19px);
+    @media (max-width: 1199.98px) {
+      margin-bottom: rem(17px);
+    }
+  }
+  .slider-header {
+    div {
+      &:last-child {
+        margin-bottom: rem(50px);
+        display: flex;
+        // align-items: center;
+        @media (max-width: 991.98px) {
+          margin-bottom: 0;
+        }
+        @include large {
+          margin-top: rem(24px);
+        }
+        a {
+          margin-top: rem(10px);
+          @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
+          // @include fonts($Gotham-Book, 24px);
+          font-size: rem(24px);
+          font-weight: 400;
+          color: $thirdColor;
+          text-transform: capitalize;
+          margin-inline-end: rem(20px);
+          position: relative;
+          z-index: 1;
+          &:hover {
+            color: $mainColor;
+          }
+          @media (max-width: 1199.98px) {
+            font-size: rem(18px);
+          }
+        }
+        ul {
+          //   @extend %d-flex-around;
+          li {
+            display: inline-block;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 1px solid $mainColor;
+            @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
+            &:hover {
+              background-color: $secondColor;
+              border: none;
+              &:i {
+                color: #000;
+              }
+            }
+            &:last-child {
+              margin-inline-start: rem(10px);
+            }
+            i {
+              color: $mainColor;
+              font-size: rem(20px);
+            }
+          }
+        }
+      }
+    }
+  }
+  .slider-services {
+    .slider-item {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background-color: $whiteColor;
+      border-radius: 30px;
+      padding: rem(21px) rem(30px) rem(20px) rem(30px);
+      margin: rem(25px) 0;
+      // margin-inline-end: 20px;
+      box-shadow: -3px 1px 10px #ccc;
+      min-height: 272px;
+      @include prefixer(transition, all 0.7s ease-in-out, o moz wibket);
+      position: relative;
+      &:hover {
+        transform: translateY(-19px);
+        box-shadow: -3px 1px 12px 3px #ccc;
+        a {
+          opacity: 1;
+        }
+      }
+      a {
+        display: block;
+        color: $mainColor;
+        text-align: right;
+        opacity: 0;
+        @include prefixer(transition, all 0.5s ease-in-out, o moz wibket);
+        &:hover {
+          color: $secondColor;
+        }
+      }
+
+      h4 {
+        //    @include fonts($Gotham-bold, 18px);
+        font-size: rem(18px);
+        font-weight: 700;
+        color: $thirdColor;
+
+        //    @media (max-width: 1299.98px) {
+        //      font-size: rem(13px);
+        //    }
+      }
+      span {
+        @include fonts($Gotham-Light, 16px);
+        font-weight: 400;
+        font-size: rem(16px);
+        color: $thirdgray;
+        @include truncate(2, 1.5);
+      }
+    }
+    .slick-current {
+      transform: translateY(-19px);
+      a {
+        opacity: 1;
+        @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
+        &:hover {
+          color: $secondColor;
+        }
+      }
+    }
+    .swiper-slide-active {
+      .slider-item {
+        box-shadow: -3px 1px 12px 3px #ccc;
+      }
+    }
+  }
+}
+.main-common {
   @media screen and (max-width: 767px) {
     margin: 0px rem(20px);
   }
@@ -129,24 +296,24 @@ export default {
       }
     }
     .sliderNavigation {
-      top: -130px;
+      top: -155px;
       z-index: 0;
       height: 0;
       --border: var(--swiper-theme-color);
       --arrow: var(--swiper-theme-color);
       bottom: 0;
-      left: 120px;
+      left: 140px;
       @media screen and (min-width: 1600px) {
-        left: 70px;
-        top: -135px;
+        left: 89px;
+        top: -153px;
       }
       @media screen and (max-width: 1200px) {
         //    top: -132px;
-        left: 160px;
+        left: 180px;
       }
       @media screen and (max-width: 1042px) {
-        left: 180px;
-        top: -115px;
+        left: 193px;
+        top: -134px;
       }
       @media screen and (max-width: 991px) {
         left: 30px;
@@ -169,7 +336,7 @@ export default {
           &:hover {
             opacity: 1;
             --border: var(--gray-dark);
-            --arrow: var(--swiper-theme-color);
+            --arrow: #fff;
             background: var(--gray-dark);
           }
         }

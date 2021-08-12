@@ -17,7 +17,7 @@
             icon-id="cross-icon"
             icon-viewbox="0 0 512 512"
           ></base-svg-icon> </span
-        ><span class="text">Close</span>
+        ><span class="text">Close menu</span>
       </a>
     </div>
     <div class="container">
@@ -545,15 +545,15 @@ body.menuOpen {
   }
   &::before {
     content: "";
-    //     background-image: url();
+    background: url("../../assets/images/down.png");
     background-repeat: no-repeat;
     position: absolute;
-    top: 25%;
-    width: 540px;
-    height: 600px;
-    background-size: 40%;
+    top: 0%;
+    width: 360px;
+    height: 300px;
+    background-size: cover;
     background-repeat: no-repeat;
-    transform: rotate(284deg);
+    transform: rotate(0deg);
     transform-origin: top left;
     background-position: top left;
     left: 0%;
@@ -564,16 +564,16 @@ body.menuOpen {
   }
   &::after {
     content: "";
-    //     background: url("../../assets/images/down.png");
+    background: url("../../assets/images/down.png");
     position: absolute;
     bottom: 0%;
-    width: 330px;
-    height: 148px;
+    width: 360px;
+    height: 300px;
     background-size: cover;
     background-repeat: no-repeat;
     transform: rotate(0deg);
     background-position: top left;
-    right: 2%;
+    right: 0%;
     z-index: -1;
     @media screen and (max-width: 1200px) {
       display: none;
@@ -591,16 +591,17 @@ body.menuOpen {
 
     a {
       color: #fff;
-      font-size: rem(20px);
+      font-size: rem(18px);
       text-transform: uppercase;
       display: inline-block;
+      font-weight: 700;
       //height: rem(32px);
       padding: 12px 12px;
       //padding-top: 0px;
       position: relative;
       z-index: 2;
       /deep/ svg {
-        width: rem(25px);
+        width: rem(20px);
         height: auto;
       }
     }
@@ -615,7 +616,7 @@ body.menuOpen {
         margin-left: 6px;
         padding: 5px 0px;
         @media screen and (max-width: 1199px) {
-          background: rgba(34, 65, 86, 0.9);
+          background: #000;
         }
       }
       &.icon {
@@ -625,7 +626,7 @@ body.menuOpen {
           width: 50px;
           height: 50px;
           position: absolute;
-          border: 1px solid #fff;
+          border: 2px solid #fff;
           top: 50%;
           left: 50%;
           transform: translate(-42%, -50%);
@@ -658,6 +659,9 @@ body.menuOpen {
           text-decoration: none;
           padding: rem(8px) rem(8px);
           display: inline-block;
+          @media screen and (max-width: 1600px) {
+            font-size: rem(50px);
+          }
           @media screen and (max-width: 991px) {
             font-size: rem(30px);
           }
@@ -702,7 +706,9 @@ body.menuOpen {
             a {
               color: #fff;
               font-size: rem(29px);
-
+              @media screen and (max-width: 1600px) {
+                font-size: rem(25px);
+              }
               @media screen and (max-width: 991px) {
                 font-size: rem(22px);
               }
