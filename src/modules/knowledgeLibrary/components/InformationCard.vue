@@ -103,8 +103,8 @@ export default {
             font-size: rem(16px);
             font-weight: 300;
             margin: 0;
-            line-height: 1.3;
-            @include truncate(4)
+            line-height: 1.4 !important;
+            @include truncate(4.2)
         }
     }
     &__link{
