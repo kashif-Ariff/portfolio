@@ -36,7 +36,7 @@
 	line-height: 1;
 	border-radius: 35px;
 	transition: all 0.5s ease;
-	font-size: rem(20px);
+	font-size: rem(24px);
 	color: #fff;
 	padding: rem(10px) rem(20px);
 	font-weight: 400;
@@ -46,7 +46,7 @@
 	box-shadow: none !important;
 	@media screen and (max-width: 1600px) {
 		font-size: rem(18px);
-		padding: rem(16px) rem(30px);
+		padding: rem(10px) rem(30px);
 	}
 
 	&:active {
@@ -109,9 +109,17 @@
 		}
 	}
 	&.btn-secondary {
-		background: var(--secondary);
-		text-transform: uppercase;
+		background: #fff;
+		text-transform: capitalize;
+		color: var(--primary);
+		border: 2px solid var(--primary);
+		padding-right: rem(35px);
 		// padding: rem(10.5px) rem(40px);
+		&:hover {
+			background: #fff;
+			color: var(--primary);
+			cursor: pointer;
+		}
 		&.bold {
 			font-weight: 700;
 		}
@@ -121,6 +129,7 @@
 				color: #fff;
 			}
 		}
+
 		&:focus {
 			background: var(--primary);
 			color: #fff;
@@ -137,8 +146,8 @@
 			max-width: 100%;
 		}
 		&:focus {
-			border-color: var(--secondary);
-			background: var(--secondary);
+			// border-color: var(--secondary);
+			background: var(--primary);
 		}
 	}
 	&.btn-yellow {

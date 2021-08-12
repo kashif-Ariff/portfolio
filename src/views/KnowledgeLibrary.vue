@@ -10,7 +10,7 @@
           <information-Card />
         </section>
         <section id="">
-          <pagination />
+          <base-pagination />
         </section>
           
           
@@ -32,7 +32,7 @@ export default {
   components:{
     Filters: () => import('@/modules/knowledgeLibrary/components/Filters.vue'),
     InformationCard: () => import('@/modules/knowledgeLibrary/components/InformationCard.vue'),
-    Pagination:() => import("@/modules/media-center/partials/Pagination.vue")
+    BasePagination:() => import("@/common/components/base/BasePagination.vue")
   }
 };
 </script>

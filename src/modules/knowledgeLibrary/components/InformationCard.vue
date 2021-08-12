@@ -1,27 +1,29 @@
 <template>
     <div>
-        <div class="informationCard" v-for="card in cardData" :key="card.index">
-            <div class="informationCard__info" >
+        <div class="informationCard card" v-for="card in cardData" :key="card.index">
+            <div class="card-body grid" data-grid-item-width="1/3">
+                <div class="informationCard__info" >
                     <div class="informationCard__info--image">
                         <img :src="require(`@/assets/images/logo/${card.logo}`)" alt="" class="img-fluid">
                     </div>
                     <div class="informationCard__info--title">
-                    {{card.title}}
+                        {{card.title}}
                     </div>
                     <div class="informationCard__info--subtitle">
-                            <div class="icon">
-                                <img :src="require(`@/assets/images/icons/${card.icon}`)" alt="" class="img-fluid">
-                            </div>
+                        <div class="icon">
+                            <img :src="require(`@/assets/images/icons/${card.icon}`)" alt="" class="img-fluid">
+                        </div>
                         <span>
                             {{card.subTitle}}
                         </span>
                     </div>
-            </div>
-            <div class="informationCard__detail">
-                <p>{{card.content}}</p>
-            </div>
-            <div class="informationCard__link">
-                <button class="btn btn-primary">Explore Content</button>
+                </div>
+                <div class="informationCard__detail">
+                    <p>{{card.content}}</p>
+                </div>
+                <div class="informationCard__link">
+                    <button class="btn btn-secondary">Explore Content</button>
+                </div>
             </div>
         </div>
     </div>
@@ -65,28 +67,28 @@ export default {
 
 <style lang="scss" scoped>
 .informationCard{
-    display: grid;
-    grid-template-columns: 300px 1fr 250px;
-    padding: rem(50px) rem(30px);
-    border: 1px solid #e6eaec;
-    border-radius: 25px;
-    box-shadow: 0px 0px 17px -4px rgba($color: black, $alpha: 0.3);
-    margin: rem(40px) 0;
-    &__info{
-        border-right: 1px solid  rgba($color: #224156, $alpha: 0.4);
-        &--title{
-            color: var(--secondary);
-            font-size: rem(16px);
-            font-weight: 400;
-            margin: rem(30px) 0 rem(15px) 0;
+        margin: rem(40px) 0;
+    .card-body{
+        padding: rem(50px) rem(30px);
+        &.grid{
+            grid-template-columns: 300px 1fr 250px;
         }
-        &--subtitle{
-            display: flex;
-            align-items: center;
+    }
+    &__info{
+            border-right: 1px solid  rgba($color: #224156, $alpha: 0.4);
+            &--title{
+                color: var(--secondary);
+                font-size: rem(16px);
+                font-weight: 400;
+                margin: rem(30px) 0 rem(15px) 0;
+            }
+            &--subtitle{
+                display: flex;
+                align-items: center;
                 .icon{
                     margin-right: rem(10px);
                 }
-        }
+            }
     }
     &__detail{
         padding: rem(30px);
@@ -104,16 +106,6 @@ export default {
         display: grid;
         place-items: center;
         margin-left: rem(30px);
-        .btn.btn-primary{
-            padding-right: rem(35px);
-            transition: .5s all;
-		    border: 2px solid var(--primary);
-            &:hover{
-                background: #fff;
-                color: var(--primary);
-                cursor: pointer;
-            }
-        }
     }
 }
 </style>>
