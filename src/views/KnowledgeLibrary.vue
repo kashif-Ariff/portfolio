@@ -2,18 +2,18 @@
   <div class="knowledgeLibrary">
     <base-inner-banner :banner-detail="innerBannerDetail" />
     <div class="container">
-      <div class="content-box">
-        <h2>Information Sources</h2>
-        <section id="">
-          <filters />
-        </section>
-        <section id="">
-          <information-Card />
-        </section>
-        <section id="">
-          <base-pagination />
-        </section>
-      </div>
+        <div class="content-box">
+            <h2>Information Sources</h2>
+            <section id="" data-color-theme="dark">
+                <filters />
+            </section>
+            <section id="" data-color-theme="dark">
+                <information-Card />
+            </section>
+            <section id="" data-color-theme="dark">
+                <base-pagination />
+          </section>
+        </div>
     </div>
   </div>
 </template>

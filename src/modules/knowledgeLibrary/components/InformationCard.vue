@@ -104,7 +104,7 @@ export default {
             font-weight: 300;
             margin: 0;
             line-height: 1.4 !important;
-            @include truncate(4.2)
+            @include truncate(4.5)
         }
     }
     &__link{

@@ -50,6 +50,12 @@ const routes = [
                 component: () =>
                     import ('../views/KnowledgeLibrary.vue'),
             },
+            {
+                path: `/:lang/support-center`,
+                name: 'support-center',
+                component: () =>
+                    import ('../views/SupportCenters.vue'),
+            },
 //     {
 //         path: `/:lang/contact-us`,
 //         name: 'contact-us',
