@@ -169,6 +169,8 @@ export default {
         border: 2px solid #019CDE;
         border-top-left-radius: 18px;
         border-bottom-left-radius: 18px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
         width: 90px;
         font-weight: 400;
         font-size: rem(20px);

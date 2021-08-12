@@ -32,17 +32,18 @@
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                     <div class="icon">
-                        <span>
-                            <svg-icon
-                                icon-id="video-icon"
-                                icon-viewbox="0 0 238.4 224"
-                            ></svg-icon>
-                        </span>
-                        Download
-                    </div>
+                    <div class="btn">
+                        <div class="icon">
+                            <span>
+                                <base-svg-icon
+                                    icon-id="word-icon"
+                                    icon-viewbox="0 0 18 24"
+                                ></base-svg-icon>
+                            </span>
+                            Download
+                        </div>
+                    </div> 
                 </div>
-               
             </router-link>
         </li>
         <li class="relatedDocuments__list--item">

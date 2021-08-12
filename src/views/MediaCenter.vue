@@ -1,8 +1,8 @@
 <template>
   <div class="mediaCenter">
     <div class="container">
-        // <media-center-card  :card-data="cardData" aria-label="PRESS RELEASE"/>
-        // <press-release-pagination aria-label="PRESS RELEASE PAGINATION"></press-release-pagination>
+        <media-center-card  :card-data="cardData" aria-label="PRESS RELEASE"/>
+        <press-release-pagination aria-label="PRESS RELEASE PAGINATION"></press-release-pagination>
         <base-document></base-document> 
     </div>
   </div>
