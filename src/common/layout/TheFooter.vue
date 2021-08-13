@@ -78,10 +78,23 @@ export default {
 footer {
   padding-top: rem(60px);
   border-top: 3px dashed rgba(100, 121, 136, 0.5);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    background: url(../../assets/images/footerIcon.png);
+    bottom: 0px;
+    right: 0px;
+    background-size: cover;
+  }
   @include small_medium {
     padding-top: rem(20px);
   }
   .row {
+    padding-bottom: rem(50px);
     div {
       @media (min-width: 992px) {
         padding: 0;
@@ -96,10 +109,9 @@ footer {
           background-image: none;
         }
         p {
-          // @include fonts($Gotham-Book, 16px);
           font-size: rem(16px);
-          font-weight: 500;
-          color: $thirdgray;
+          font-weight: 400;
+          color: #404040;
           margin-bottom: 0;
           &:first-child {
             @include small_medium {
@@ -108,16 +120,16 @@ footer {
             margin-bottom: rem(33px);
             //   @include fonts($Gotham-Book, 18px);
             font-size: rem(18px);
-            font-weight: 400;
-            color: $thirdColor;
+            font-weight: 500;
+            color: var(--secondary);
           }
         }
         span {
           display: block;
           // @include fonts($Gotham-Book, 15px);
           font-size: rem(15px);
-          font-weight: 500;
-          color: $thirdgray;
+          font-weight: 400;
+          color: #404040;
           margin-bottom: rem(33px);
           margin-top: 5px;
           @include small_medium {
@@ -154,6 +166,7 @@ footer {
               &:hover {
                 background-color: $whiteColor;
                 i {
+                  font-size: 18px;
                   color: $mainColor;
                 }
               }

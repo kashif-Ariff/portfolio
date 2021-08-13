@@ -1,0 +1,113 @@
+<template>
+  <div class="search contentWrapper" role="search">
+    <base-inner-banner :banner-detail="innerBannerDetail" />
+    <div class="container">
+      <div class="siteSearch">
+        <h2 class="search__title">search</h2>
+        <div class="search__head">
+          <search-field></search-field>
+          <search-interests></search-interests>
+        </div>
+        <search-list></search-list>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import BaseMediaSlider from "@/common/components/base/BaseMediaSlider.vue";
+import SearchField from "@/modules/search/SearchField.vue";
+import SearchInterests from "@/modules/search/SearchInterests.vue";
+import SearchList from "@/modules/search/SearchList.vue";
+export default {
+  data() {
+    return {
+      sliderOption: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        centeredSlides: true,
+      },
+      innerBannerDetail: {
+        image: "BOD.png",
+        title: "Our services",
+      },
+    };
+  },
+  components: {
+    SearchField,
+    SearchInterests,
+    SearchList,
+    BaseMediaSlider,
+  },
+  methods: {
+    tabChange() {},
+  },
+  created() {
+    document.body.classList.add("searchPage");
+  },
+  destroyed() {
+    document.body.classList.remove("searchPage");
+  },
+  mounted() {},
+};
+</script>
+
+<style lang="scss" scoped>
+.search {
+  background: #f0f0f0;
+  /deep/ {
+    .baseInnerBanner {
+      &__image {
+        z-index: 1;
+      }
+      .container {
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+  &__title {
+    font-size: rem(42px);
+    font-weight: 800;
+    color: var(--secondary);
+    text-transform: uppercase;
+    padding-left: rem(50px);
+    @media screen and (max-width: 767px) {
+      padding-left: rem(0px);
+    }
+  }
+  .siteSearch {
+    padding: 0px rem(10px) rem(60px);
+    overflow: auto;
+    @media screen and (max-width: 767px) {
+      padding-top: rem(75px);
+    }
+  }
+
+  &__head {
+    width: 100%;
+    background: #fff;
+    padding: rem(20px) rem(25px) rem(12px) rem(44px);
+    margin-top: rem(25px);
+    box-shadow: 0 0 9px 0px rgba($color: #000000, $alpha: 0.2);
+    @media screen and (max-width: 991px) {
+      padding: rem(10px) rem(15px) rem(12px) rem(15px);
+    }
+  }
+}
+[lang="ar"] {
+  .search {
+    background: #f0f0f0;
+    &__title {
+      padding-right: rem(50px);
+      padding-left: rem(0px);
+      @media screen and (max-width: 767px) {
+        padding-right: rem(0px);
+      }
+    }
+    &__head {
+      padding: rem(20px) rem(44px) rem(12px) rem(25px);
+    }
+  }
+}
+</style>

@@ -55,6 +55,12 @@ const routes = [
                 name: 'support-center',
                 component: () =>
                     import ('../views/SupportCenters.vue'),
+     },
+            {
+                path: `/:lang/search`,
+                name: 'search',
+                component: () =>
+                    import ('../views/Search.vue'),
             },
 //     {
 //         path: `/:lang/contact-us`,

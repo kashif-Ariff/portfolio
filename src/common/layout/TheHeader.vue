@@ -587,6 +587,9 @@ nav {
     transition: 0.4s ease all;
     .nav-services {
       cursor: pointer;
+      height: 100%;
+      display: flex;
+      align-items: center;
       &.poniter {
         pointer-events: none;
         opacity: 0.5;
@@ -662,9 +665,12 @@ nav {
     .nav-menu {
       cursor: pointer;
       position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
       &::before {
         @include postionEle(
-          6px,
+          50%,
           -20px,
           // -22%,
           auto,
@@ -673,6 +679,7 @@ nav {
           0.5px,
           17px
         );
+        transform: translateY(-50%);
         content: "";
         @include large {
           left: -9px;
@@ -683,7 +690,7 @@ nav {
       }
       &::after {
         @include postionEle(
-          6px,
+          50%,
           auto,
           -20px,
           // -21%,
@@ -692,6 +699,7 @@ nav {
           0.5px,
           17px
         );
+        transform: translateY(-50%);
         content: "";
         right: -20px;
         @include large {

@@ -107,7 +107,6 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: rem(18px);
-  border-bottom: 1px dashed #000;
   padding-top: rem(90px);
   @include small_medium {
     padding-bottom: 0px;

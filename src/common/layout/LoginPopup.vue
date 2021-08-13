@@ -151,13 +151,15 @@ export default {
   position: relative;
   z-index: 999999999999999;
   .modal {
-    position: fixed;
+    //     position: fixed;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    //     overflow: auto;
     //     position: relative;
     //     //     display: none;
-    //     overflow: visible;
+    overflow: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
     .back-drop {
       position: fixed;
       z-index: -1;
