@@ -531,7 +531,8 @@ export default {
   }
   &.navigationSimple {
     .sliderNavigation__controls--arrow {
-      border: unset !important;
+      // border: unset !important;
+      
       width: 45px;
       height: 45px;
       outline-offset: 2px;

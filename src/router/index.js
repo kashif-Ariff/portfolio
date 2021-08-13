@@ -68,6 +68,12 @@ const routes = [
                 component: () =>
                     import ('../views/Initiators.vue'),
             },
+            {
+                path: `/:lang/publication`,
+                name: 'publication',
+                component: () =>
+                    import ('../views/Publication.vue'),
+            },
 //     {
 //         path: `/:lang/contact-us`,
 //         name: 'contact-us',

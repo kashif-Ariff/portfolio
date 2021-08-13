@@ -3,20 +3,22 @@
         <b-tabs pills>
             <b-tab title="description" class="description" active>
                 <div class="description__detail">
-                    <!-- <base-smooth-scrollbar> -->
-                    <h3 class="description__title" tabIndex="0">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    </h3>
-                    <div tabIndex="0">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
-                        </p>
-                        <p>
-                            dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-                        </p>
+                    <base-smooth-scrollbar>
+                        <h3 class="description__title" tabIndex="0">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        </h3>
+                        <div tabIndex="0">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
+                            </p>
+                            <p>
+                                dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+                            </p>
+                        </div>
+                    </base-smooth-scrollbar>
+                    <div class="button-row">
+                        <router-link to="" class="btn btn-primary">Explore More</router-link>
                     </div>
-                    <button class="btn btn-primary">Explore More</button>
-                    <!-- </base-smooth-scrollbar> -->
                 </div>
             </b-tab>
             <b-tab title="Links">

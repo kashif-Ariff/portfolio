@@ -261,14 +261,29 @@
 	&.btn-red {
 		background-color: #de2c2d;
 		color: #fff;
+		padding: 15px 18px;
+		display: inline-flex;
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 	&.btn-green {
 		background-color: #107c41;
 		color: #fff;
+		padding: 15px 18px;
+		display: inline-flex;
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 	&.btn-blue {
 		background-color: #1c5cbb;
 		color: #fff;
+		padding: 15px 18px;
+		display: inline-flex;
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 }
 

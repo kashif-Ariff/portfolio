@@ -18,25 +18,28 @@ export default {
                 {
                     color: '#fcc30b',
                     index: '01',
-                    image: '7.png',
-                    image_hover: '7.png',
-                    title: 'affordable and clean energy',
+                    image: 'calendar.png',
+                    image_hover: 'calendar-hover.png',
+                    title: 'Small and Medium Enterprise guide',
+                    heading:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
                     detail: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nulla molestiae ab iste cum provident odit dolorem quae voluptate quos. Repellat iure doloribus magnam ab maxime reiciendis quia magni voluptatum. Ducimus architecto aut error molestiae ad fuga. Reprehenderit, quasi impedit, exercitationem cupiditate esse harum enim neque temporibus soluta porro eveniet blanditiis. Amet suscipit optio placeat. Blanditiis voluptatem esse fugiat amet tempora officiis rem repellendus eaque est, quidem maiores quasi sint illum molestias repudiandae quo numquam. Nemo et, officia eligendi delectus ex sunt nostrum, fuga perspiciatis eum dicta, quod molestiae voluptates enim architecto quia sed sapiente illum id dolor deserunt. Dolore?',
                 },
                 {
                     color: '#a21942',
                     index: '02',
-                    image: '8.png',
-                    image_hover: '8.png',
+                    image: 'calendar.png',
+                    image_hover: 'calendar-hover.png',
                     title: 'decent work & economic growth',
+                    heading:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
                     detail: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nulla molestiae ab iste cum provident odit dolorem quae voluptate quos. Repellat iure doloribus magnam ab maxime reiciendis quia magni voluptatum. Ducimus architecto aut error molestiae ad fuga. Reprehenderit, quasi impedit, exercitationem cupiditate esse harum enim neque temporibus soluta porro eveniet blanditiis. Amet suscipit optio placeat. Blanditiis voluptatem esse fugiat amet tempora officiis rem repellendus eaque est, quidem maiores quasi sint illum molestias repudiandae quo numquam. Nemo et, officia eligendi delectus ex sunt nostrum, fuga perspiciatis eum dicta, quod molestiae voluptates enim architecto quia sed sapiente illum id dolor deserunt. Dolore?',
                 },
                 {
                     color: '#fd6925',
                     index: '03',
-                    image: '9.png',
-                    image_hover: '9.png',
+                    image: 'calendar.png',
+                    image_hover: 'calendar-hover.png',
                     title: 'industry, innovation & infrastructure',
+                    heading:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
                     detail: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nulla molestiae ab iste cum provident odit dolorem quae voluptate quos. Repellat iure doloribus magnam ab maxime reiciendis quia magni voluptatum. Ducimus architecto aut error molestiae ad fuga. Reprehenderit, quasi impedit, exercitationem cupiditate esse harum enim neque temporibus soluta porro eveniet blanditiis. Amet suscipit optio placeat. Blanditiis voluptatem esse fugiat amet tempora officiis rem repellendus eaque est, quidem maiores quasi sint illum molestias repudiandae quo numquam. Nemo et, officia eligendi delectus ex sunt nostrum, fuga perspiciatis eum dicta, quod molestiae voluptates enim architecto quia sed sapiente illum id dolor deserunt. Dolore?',
                 },
             ],
@@ -58,7 +61,6 @@ export default {
             height: auto;
         }
     }
-    background: #f0f0f0;
     padding: rem(35px) 0px;
     &__description {
         margin-top: rem(30px);

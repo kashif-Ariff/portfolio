@@ -1,15 +1,14 @@
 <template>
     <ul class="relatedDocuments__list">
         <li class="relatedDocuments__list--item">
-            <router-link
-                to="#"
+            <div
                 class="document__info"  aria-label="Image – image-icon – 100 megabytes">
                 <h2>
                     Profile of The National Fund
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class=" btn btn-red">
+                    <a href="#" class=" btn btn-red">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
@@ -19,20 +18,19 @@
                             </span>
                             Download
                         </div>
-                    </div>
+                    </a>
                 </div>
-            </router-link>
+            </div>
         </li>
         <li class="relatedDocuments__list--item">
-            <router-link
-                to="#"
+            <div
                 class="document__info"  aria-label="Video – video-icon – 400 megabytes">
                 <h2>
                     Profile of The National Fund
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class="btn btn-blue">
+                    <a href="#" class="btn btn-blue">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
@@ -42,20 +40,19 @@
                             </span>
                             Download
                         </div>
-                    </div> 
+                    </a> 
                 </div>
-            </router-link>
+            </div>
         </li>
         <li class="relatedDocuments__list--item">
-                <router-link
-                to="#"
+                <div
                 class="document__info"  aria-label="English – PDF – 150 megabytes">
                 <h2>
                    Profile of The National Fund
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class="btn btn-green">
+                    <a href="#" class="btn btn-green">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
@@ -65,20 +62,19 @@
                             </span>
                             Download
                         </div>
-                    </div>
+                    </a>
                 </div>
-            </router-link>
+            </div>
         </li>
         <li class="relatedDocuments__list--item">
-            <router-link
-                to="#"
+            <div
                 class="document__info"  aria-label="Arabic – PDF – 150 megabytes">
                 <h2>
                    Profile of The National Fund
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class="btn btn-red">
+                    <a href="#" class="btn btn-red">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
@@ -88,20 +84,19 @@
                             </span>
                             Download
                         </div>
-                    </div>
+                    </a>
                 </div>
-            </router-link>
+            </div>
         </li> 
         <li class="relatedDocuments__list--item">
-            <router-link
-                to="#"
+            <div
                 class="document__info"  aria-label="Arabic – PDF – 150 megabytes">
                 <h2>
                    Profile of The National Fund
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class="btn btn-blue">
+                    <a href="#" class="btn btn-blue">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
@@ -111,20 +106,19 @@
                             </span>
                             Download
                         </div>
-                    </div>
+                    </a>
                 </div>
-            </router-link>
+            </div>
         </li>
         <li class="relatedDocuments__list--item">
-            <router-link
-                to="#"
+            <div
                 class="document__info"  aria-label="Arabic – PDF – 150 megabytes">
                 <h2>
                    Profile of The National Fund
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class="btn btn-green">
+                    <a href="#" class="btn btn-green">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
@@ -134,9 +128,9 @@
                             </span>
                             Download
                         </div>
-                    </div>
+                    </a>
                 </div>
-            </router-link>
+            </div>
         </li>
     </ul>
 </template>
@@ -211,8 +205,8 @@ export default {
                     background: var(--primary);
                 }
                 &:hover {
-                    border-color: var(--primary);
-                    background: var(--primary);
+                    // border-color: var(--primary);
+                    // background: var(--primary);
                 }
                 .icon {
                     font-size: rem(20px);
