@@ -3,123 +3,27 @@
         <b-tabs pills>
             <b-tab title="description" class="description" active>
                 <div class="description__detail">
-                    <base-smooth-scrollbar>
-                        <h3 class="description__title" tabIndex="0">
-                            Lorem Ipsum is simply
-                        </h3>
-                        <div tabIndex="0">
-                            <p>
-                                It is with great pride that I address our Zain
-                                family.
-                            </p>
-                            <p>
-                                Zain has accomplished many achievements never
-                                before encountered in the industry. Our leading
-                                pace has always been accredited to our culture,
-                                with a deep understanding that in order to
-                                improve the lives of our clients we must reflect
-                                our internal working culture and our promise for
-                                a wonderful world.
-                            </p>
-                            <p>
-                                Zain has accomplished many achievements never
-                                before encountered in the industry. Our leading
-                                pace has always been accredited to our culture,
-                                with a deep understanding that in order to
-                                improve the lives of our clients we must reflect
-                                our internal working culture and our promise for
-                                a wonderful world.
-                            </p>
-                            <p>
-                                Zain has accomplished many achievements never
-                                before encountered in the industry. Our leading
-                                pace has always been accredited to our culture,
-                                with a deep understanding that in order to
-                                improve the lives of our clients we must reflect
-                                our internal working culture and our promise for
-                                a wonderful world.
-                            </p>
-                            <p>
-                                Zain has accomplished many achievements never
-                                before encountered in the industry. Our leading
-                                pace has always been accredited to our culture,
-                                with a deep understanding that in order to
-                                improve the lives of our clients we must reflect
-                                our internal working culture and our promise for
-                                a wonderful world.
-                            </p>
-                        </div>
-                    </base-smooth-scrollbar>
+                    <!-- <base-smooth-scrollbar> -->
+                    <h3 class="description__title" tabIndex="0">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    </h3>
+                    <div tabIndex="0">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
+                        </p>
+                        <p>
+                            dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+                        </p>
+                    </div>
+                    <button class="btn btn-primary">Explore More</button>
+                    <!-- </base-smooth-scrollbar> -->
                 </div>
             </b-tab>
-            <b-tab title="Related Documents">
-                <div class="relatedDocuments">
-                    <base-smooth-scrollbar>
-                        <router-link
-                            to="#"
-                            class="document__info"
-                            aria-label="File name – PDF – 150 megabytes"
-                        >
-                            <h3>file name</h3>
-                            <div class="icon">
-                                <span>
-                                    <base-svg-icon
-                                        icon-id="pdf-icon"
-                                        icon-viewbox="0 0 369 384"
-                                    ></base-svg-icon>
-                                </span>
-                                150MB
-                            </div>
-                        </router-link>
-                        <router-link
-                            to="#"
-                            class="document__info"
-                            aria-label="File name – PDF – 150 megabytes"
-                        >
-                            <h3>file name</h3>
-                            <div class="icon">
-                                <span>
-                                    <base-svg-icon
-                                        icon-id="pdf-icon"
-                                        icon-viewbox="0 0 369 384"
-                                    ></base-svg-icon>
-                                </span>
-                                150MB
-                            </div>
-                        </router-link>
-                        <router-link
-                            to="#"
-                            class="document__info"
-                            aria-label="File name – PDF – 150 megabytes"
-                        >
-                            <h3>file name</h3>
-                            <div class="icon">
-                                <span>
-                                    <base-svg-icon
-                                        icon-id="pdf-icon"
-                                        icon-viewbox="0 0 369 384"
-                                    ></base-svg-icon>
-                                </span>
-                                150MB
-                            </div>
-                        </router-link>
-                        <router-link
-                            to="#"
-                            class="document__info"
-                            aria-label="File name – PDF – 150 megabytes"
-                        >
-                            <h3>file name</h3>
-                            <div class="icon">
-                                <span>
-                                    <base-svg-icon
-                                        icon-id="pdf-icon"
-                                        icon-viewbox="0 0 369 384"
-                                    ></base-svg-icon>
-                                </span>
-                                150MB
-                            </div>
-                        </router-link>
-                    </base-smooth-scrollbar>
+            <b-tab title="Links">
+                <div class="links">
+                    <!-- <base-smooth-scrollbar> -->
+                        <base-document></base-document> 
+                    <!-- </base-smooth-scrollbar> -->
                 </div>
             </b-tab>
         </b-tabs>
@@ -127,7 +31,12 @@
 </template>
 
 <script>
-export default {}
+export default {
+    components:{
+        BaseDocument: ()=> import('@/common/components/base/BaseDocument.vue')
+
+    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -147,19 +56,18 @@ export default {}
         }
     }
     &__title {
-        font-size: rem(24px);
+        font-size: rem(21px);
         color: var(--secondary);
-        font-weight: 900;
-        text-transform: uppercase;
-        margin-bottom: rem(35px);
+        font-weight: 400;
+        margin-bottom: rem(15px);
     }
     p {
         font-weight: 400;
-        font-size: rem(22px);
-        color: #2d2d2d;
+        font-size: rem(21px);
+        margin-bottom: rem(30px);
     }
 }
-.relatedDocuments {
+.links {
     /deep/ .scrollArea {
         --barcolor: #6e337a;
         --trackcolor: #adadad;
@@ -228,7 +136,7 @@ export default {}
             }
         }
     }
-    .relatedDocuments {
+    .links {
         .scrollArea__contents {
             padding-left: rem(45px);
             padding-right: 2px;

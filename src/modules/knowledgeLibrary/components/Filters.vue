@@ -59,7 +59,7 @@ export default {
         border:3px solid transparent;
       }
       button{
-         display: flex;
+        display: flex;
         align-items: center;
         margin-left: rem(30px);
         /deep/ svg{

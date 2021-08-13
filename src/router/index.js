@@ -55,12 +55,18 @@ const routes = [
                 name: 'support-center',
                 component: () =>
                     import ('../views/SupportCenters.vue'),
-     },
+            },
             {
                 path: `/:lang/search`,
                 name: 'search',
                 component: () =>
                     import ('../views/Search.vue'),
+            },
+            {
+                path: `/:lang/initiators`,
+                name: 'initiators',
+                component: () =>
+                    import ('../views/Initiators.vue'),
             },
 //     {
 //         path: `/:lang/contact-us`,

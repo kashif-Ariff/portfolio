@@ -9,7 +9,7 @@
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class=" btn btn-danger">
+                    <div class=" btn btn-red">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
@@ -32,7 +32,7 @@
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class="btn btn-primary">
+                    <div class="btn btn-blue">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
@@ -55,7 +55,7 @@
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class="btn btn-success">
+                    <div class="btn btn-green">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
@@ -78,7 +78,7 @@
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class="btn btn-danger">
+                    <div class="btn btn-red">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
@@ -101,7 +101,30 @@
                 </h2>
                 <div class="relatedDocuments__list--item--documents">
                     <span class="file-size">200 KB</span>
-                    <div class="btn btn-success">
+                    <div class="btn btn-blue">
+                        <div class="icon">
+                            <span>
+                                <base-svg-icon
+                                    icon-id="video-icon"
+                                    icon-viewbox="0 0 14.078 18.771"
+                                ></base-svg-icon>
+                            </span>
+                            Download
+                        </div>
+                    </div>
+                </div>
+            </router-link>
+        </li>
+        <li class="relatedDocuments__list--item">
+            <router-link
+                to="#"
+                class="document__info"  aria-label="Arabic – PDF – 150 megabytes">
+                <h2>
+                   Profile of The National Fund
+                </h2>
+                <div class="relatedDocuments__list--item--documents">
+                    <span class="file-size">200 KB</span>
+                    <div class="btn btn-green">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
@@ -175,7 +198,7 @@ export default {
                 display:flex;
                 align-items: center;
                 justify-content: space-between;
-                 border-radius: 35px;
+                border-radius: 35px;
                 @media screen and (max-width:991px) {
                     padding: rem(15px) rem(25px);
                 }
@@ -222,9 +245,10 @@ export default {
                 }
                 h2{
                     padding-right:rem(60px);
-                    font-weight:500;
+                    font-weight:400;
                     font-size: rem(21px);
-                    color: #224156;
+                    color: var(--secondary);
+                    margin: 0;
                     @media screen and (max-width:667px){
                         padding-right:rem(25px);
                     }
@@ -236,7 +260,7 @@ export default {
                 .file-size {
                     margin: 0px;
                     font-size: rem(20px);
-                    font-weight: 700;
+                    font-weight: 400;
                     text-transform: uppercase;
                     color: var(--secondary);
                     margin-right:rem(35px);

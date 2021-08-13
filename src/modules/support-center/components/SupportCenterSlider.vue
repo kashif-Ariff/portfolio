@@ -1,12 +1,12 @@
 <template>
     <div
-        class="corporateGovernance customTabs"
+        class="supportCenterSlider customTabs"
         role="region"
         :aria-label="ariaLabel"
     >
         <div class="container">
-            <h2 class="sectionTitle">{{ sectionTitle }}</h2>
-            <div class="corporateGovernance__head customTabs__items">
+            <!-- <h2 class="sectionTitle">{{ sectionTitle }}</h2> -->
+            <div class="supportCenterSlider__head customTabs__items">
                 <carousel
                     navigation-layout="side"
                     :carousel-settings="sliderOption"
@@ -20,14 +20,14 @@
                         <a
                             data-target="highlights"
                             class="nav-link"
-                            :class="{ active: isActive(0) }"
+                            :class="{ active: isActive(0)}"
                             v-on:click.stop.prevent="tabIndex = 0"
                             data-toggle="tab"
                             href="#"
                             role="tab"
-                            aria-controls="governance_0"
+                            aria-controls="supportCenter_0"
                             aria-selected="true"
-                            id="tab_governance_0"
+                            id="tab_supportCenter_0"
                         >
                             <div class="slide__card--image">
                                 <img
@@ -36,8 +36,8 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="corporateGovernance__item--title">
-                                introduction
+                            <p class="supportCenterSlider__item--title">
+                               Business Incubators
                             </p>
                         </a>
                     </div>
@@ -48,24 +48,24 @@
                         <a
                             data-target="highlights"
                             class="nav-link"
-                            :class="{ active: isActive(1) }"
+                            :class="{ active: isActive(1)}"
                             v-on:click.stop.prevent="tabIndex = 1"
                             data-toggle="tab"
                             href="#"
                             role="tab"
-                            aria-controls="governance_1"
-                            aria-selected="true"
-                            id="tab_governance_1"
+                            aria-controls="supportCenter_1"
+                            aria-selected="false"
+                            id="tab_supportCenter_1"
                         >
                             <div class="slide__card--image">
                                 <img
-                                    src="@/assets/images/support-center/logoipsum.jpg"
+                                    src="@/assets/images/support-center/logoipsum2.png"
                                     alt=""
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="corporateGovernance__item--title">
-                                introduction
+                            <p class="supportCenterSlider__item--title">
+                                Creative Centers
                             </p>
                         </a>
                     </div>
@@ -76,14 +76,14 @@
                         <a
                             data-target="highlights"
                             class="nav-link"
-                            :class="{ active: isActive(2) }"
+                            :class="{ active: isActive(2)}"
                             v-on:click.stop.prevent="tabIndex = 2"
                             data-toggle="tab"
                             href="#"
                             role="tab"
-                            aria-controls="governance_2"
-                            aria-selected="true"
-                            id="tab_governance_2"
+                            aria-controls="supportCenter_2"
+                            aria-selected="false"
+                            id="tab_supportCenter_2"
                         >
                             <div class="slide__card--image">
                                 <img
@@ -92,26 +92,26 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="corporateGovernance__item--title">
+                            <p class="supportCenterSlider__item--title">
                                 introduction
                             </p>
                         </a>
                     </div>
-                    <div
+                     <div
                         class="swiper-slide slide__card"
                         role="presentation"
                     >
                         <a
                             data-target="highlights"
                             class="nav-link"
-                            :class="{ active: isActive(3) }"
+                            :class="{ active: isActive(3)}"
                             v-on:click.stop.prevent="tabIndex = 3"
                             data-toggle="tab"
                             href="#"
                             role="tab"
-                            aria-controls="governance_3"
-                            aria-selected="true"
-                            id="tab_governance_3"
+                            aria-controls="supportCenter_3"
+                            aria-selected="false"
+                            id="tab_supportCenter_3"
                         >
                             <div class="slide__card--image">
                                 <img
@@ -120,26 +120,26 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="corporateGovernance__item--title">
+                            <p class="supportCenterSlider__item--title">
                                 introduction
                             </p>
                         </a>
                     </div>
-                    <div
+                     <div
                         class="swiper-slide slide__card"
                         role="presentation"
                     >
                         <a
                             data-target="highlights"
                             class="nav-link"
-                            :class="{ active: isActive(4) }"
+                            :class="{ active: isActive(4)}"
                             v-on:click.stop.prevent="tabIndex = 4"
                             data-toggle="tab"
                             href="#"
                             role="tab"
-                            aria-controls="governance_4"
-                            aria-selected="true"
-                            id="tab_governance_4"
+                            aria-controls="supportCenter_4"
+                            aria-selected="false"
+                            id="tab_supportCenter_4"
                         >
                             <div class="slide__card--image">
                                 <img
@@ -148,7 +148,7 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="corporateGovernance__item--title">
+                            <p class="supportCenterSlider__item--title">
                                 introduction
                             </p>
                         </a>
@@ -160,14 +160,14 @@
                         <a
                             data-target="highlights"
                             class="nav-link"
-                            :class="{ active: isActive(5) }"
+                            :class="{ active: isActive(5)}"
                             v-on:click.stop.prevent="tabIndex = 5"
                             data-toggle="tab"
                             href="#"
                             role="tab"
-                            aria-controls="governance_5"
-                            aria-selected="true"
-                            id="tab_governance_5"
+                            aria-controls="supportCenter_5"
+                            aria-selected="false"
+                            id="tab_supportCenter_5"
                         >
                             <div class="slide__card--image">
                                 <img
@@ -176,7 +176,7 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="corporateGovernance__item--title">
+                            <p class="supportCenterSlider__item--title">
                                 introduction
                             </p>
                         </a>
@@ -188,14 +188,14 @@
                         <a
                             data-target="highlights"
                             class="nav-link"
-                            :class="{ active: isActive(0) }"
-                            v-on:click.stop.prevent="tabIndex = 0"
+                            :class="{ active: isActive(6)}"
+                            v-on:click.stop.prevent="tabIndex = 6"
                             data-toggle="tab"
                             href="#"
                             role="tab"
-                            aria-controls="governance_0"
-                            aria-selected="true"
-                            id="tab_governance_0"
+                            aria-controls="supportCenter_6"
+                            aria-selected="false"
+                            id="tab_supportCenter_6"
                         >
                             <div class="slide__card--image">
                                 <img
@@ -204,7 +204,7 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="corporateGovernance__item--title">
+                            <p class="supportCenterSlider__item--title">
                                 introduction
                             </p>
                         </a>
@@ -216,14 +216,14 @@
                         <a
                             data-target="highlights"
                             class="nav-link"
-                            :class="{ active: isActive(0) }"
-                            v-on:click.stop.prevent="tabIndex = 0"
+                            :class="{ active: isActive(7)}"
+                            v-on:click.stop.prevent="tabIndex = 7"
                             data-toggle="tab"
                             href="#"
                             role="tab"
-                            aria-controls="governance_0"
-                            aria-selected="true"
-                            id="tab_governance_0"
+                            aria-controls="supportCenter_7"
+                            aria-selected="false"
+                            id="tab_supportCenter_7"
                         >
                             <div class="slide__card--image">
                                 <img
@@ -232,7 +232,7 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="corporateGovernance__item--title">
+                            <p class="supportCenterSlider__item--title">
                                 introduction
                             </p>
                         </a>
@@ -240,15 +240,16 @@
                 </carousel>
             </div>
         </div>
-        <div class="corporateGovernance__body customTabs__contents">
+        <div class="supportCenterSlider__body customTabs__contents">
             <b-tabs v-model="tabIndex" nav-wrapper-class="d-none">
-                <b-tab id="governance_5" button-id="tab_governance_5"><articlse-association></articlse-association></b-tab>
-                <b-tab id="governance_3" button-id="tab_governance_3">1</b-tab>
-                <b-tab id="governance_3" button-id="tab_governance_3">2</b-tab>
-                <b-tab id="governance_3" button-id="tab_governance_3">3</b-tab>
-                <b-tab id="governance_2" button-id="tab_governance_2">4</b-tab>
-                <b-tab id="governance_3" button-id="tab_governance_3">5</b-tab>
-                <b-tab id="governance_4" button-id="tab_governance_4">6</b-tab>
+                <b-tab id="supportCenter_0" button-id="tab_supportCenter_0"><articlse-association></articlse-association></b-tab>
+                <b-tab id="supportCenter_1" button-id="tab_supportCenter_1">1</b-tab>
+                <b-tab id="supportCenter_2" button-id="tab_supportCenter_2">2</b-tab>
+                <b-tab id="supportCenter_3" button-id="tab_supportCenter_3">3</b-tab>
+                <b-tab id="supportCenter_4" button-id="tab_supportCenter_4">4</b-tab>
+                <b-tab id="supportCenter_5" button-id="tab_supportCenter_5">5</b-tab>
+                <b-tab id="supportCenter_6" button-id="tab_supportCenter_6">6</b-tab>
+                <b-tab id="supportCenter_7" button-id="tab_supportCenter_7">7</b-tab>
             </b-tabs>
         </div>
     </div>
@@ -270,10 +271,11 @@ export default {
                 observer: true,
                 observeParents: true,
                 rtl: this.$i18n.locale=="en" ? false : true,
+                spaceBetween: 10,
                 breakpoints: {
                    
                     1200: {
-                        slidesPerView: 6,
+                        slidesPerView:6,
                     },
                     991: {
                         slidesPerView: 5,
@@ -300,8 +302,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.corporateGovernance {
-    .corporateGovernance {
+.supportCenterSlider {
+    .supportCenterSlider {
     padding: rem(35px) 0px;
     @media screen and (max-width: 991px) {
         padding-top: rem(10px);
@@ -314,7 +316,11 @@ export default {
         position: relative;
         font-size: rem(22px);
         /deep/ {
+            .sideWrapper{
+                margin: 0 60px;
+            }
             .swiper-container {
+                padding: 10px;
                 @media screen and (max-width: 1600px) {
                     margin: 0 60px;
                 }
@@ -343,46 +349,60 @@ export default {
                     }
                 }
                 &.sideNavigation {
-                    @media screen and (max-width: 1600px) {
-                        #nextArrow {
-                            right: -10px;
+                      #nextArrow {
+                          right: 0;
+                      }
+                      #prevArrow {
+                            left: 0;
                         }
-                        #prevArrow {
-                            left: -10px;
-                        }
-                    }
-                    @media screen and (max-width: 1199px) {
-                        #nextArrow {
-                            right: 0px;
-                        }
-                        #prevArrow {
-                            left: 0px;
-                        }
-                    }
+                    // @media screen and (max-width: 1600px) {
+                    //     #nextArrow {
+                    //         right: -10px;
+                    //     }
+                    //     #prevArrow {
+                    //         left: -10px;
+                    //     }
+                    // }
+                    // @media screen and (max-width: 1199px) {
+                    //     #nextArrow {
+                    //         right: 0px;
+                    //     }
+                    //     #prevArrow {
+                    //         left: 0px;
+                    //     }
+                    // }
                 }
             }
         }
         .nav-link {
-            padding: 8px;
+            padding: 0;
             transition: 0.4s ease all;
             position: relative;
             display: inline-block;
-            transform: scale(0.8);
+            transform: scale(0.9);
+            width: 100%;
             &.active {
-                .corporateGovernance__item--image {
-                    &::before {
-                        background: rgba($color: #000000, $alpha: 0);
-                    }
+                .slide__card--image {
+                    background: unset;
+                    // transform: scale(1);
                 }
+                // .supportCenterSlider__item--image {
+                //     &::before {
+                //         background: rgba($color: #000000, $alpha: 0);
+                //     }
+                // }
                 transform: scale(1);
-                .corporateGovernance__item--title {
+                .supportCenterSlider__item--title {
                     color: var(--secondary);
-                    font-weight: 800;
+                    font-weight: 500;
+                    font-size: rem(17px);
                 }
             }
             outline-offset: -3px !important;
             outline-width: 3px;
-
+            .slide__card--image{
+                border-radius: 25px;
+            }
             &:focus {
                 outline-color: var(--primary);
                 &::before {
@@ -434,10 +454,10 @@ export default {
             }
         }
         &--title {
-            font-size: rem(18px);
-            color: #2e2e2e;
-            text-transform: uppercase;
-            font-weight: bold;
+            font-size: rem(17px);
+            color: var(--secondary);
+            text-transform: capitalize;
+            font-weight: 500;
             display: inline-block;
             margin-top: rem(20px);
         }
@@ -463,81 +483,7 @@ export default {
                 }
             }
             .tab-content {
-                margin-top: rem(35px);
-            }
-        }
-    }
-    /deep/ {
-        .awards {
-            &__head {
-                .sliderNavigation {
-                    --color: var(--primary) !important;
-                    --arrow: var(--secondary) !important;
-                    --border: var(--secondary) !important;
-                }
-                a.nav-link {
-                    color: #949494;
-                    @media screen and (min-width: 1600px) {
-                        padding-top: rem(4px);
-                    }
-                    padding-top: rem(4px);
-                    &.active {
-                        color: var(--primary);
-                    }
-                    &:focus {
-                        outline-color: var(--primary);
-                        outline-offset: 4px;
-                    }
-                }
-            }
-            &__body {
-                .milestoneCard {
-                    &__body {
-                        p {
-                            min-height: 75px;
-                            a {
-                                font-size: rem(20px);
-                                text-transform: uppercase;
-                                color: var(--primary);
-                                font-weight: 600;
-                                display: inline-block;
-                            }
-                        }
-                    }
-                }
-                &--items {
-                    .sliderNavigation {
-                        --color: var(--primary);
-                        --arrow: var(--secondary);
-                        --border: var(--secondary);
-                        --topborder: #444444;
-                    }
-                }
-            }
-        }
-    }
-    /deep/ {
-        .milestoneCard {
-            .scrollArea {
-                padding-top: rem(30px);
-                height: 110px;
-            }
-        }
-        @media screen and (max-width: 991px) and (min-width: 370px) {
-            .tabs .nav-pills {
-                flex-direction: row;
-                li {
-                    width: 50%;
-                }
-            }
-        }
-        @media screen and (max-width: 575px) {
-            .tabs .nav-pills {
-                li {
-                    a.nav-link {
-                        font-size: rem(16px);
-                    }
-                }
+                margin-top: rem(25px);
             }
         }
     }

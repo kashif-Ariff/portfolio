@@ -38,7 +38,7 @@
 	transition: all 0.5s ease;
 	font-size: rem(24px);
 	color: #fff;
-	padding: rem(10px) rem(30px);
+	padding: rem(13px) rem(30px);
 	font-weight: 400;
 	vertical-align: middle;
 	position: relative;
@@ -114,7 +114,6 @@
 		color: var(--primary);
 		border: 2px solid var(--primary);
 		padding: rem(11px) rem(28px) rem(11px) rem(20px);
-
 		// padding-right: rem(35px);
 		// padding: rem(10.5px) rem(40px);
 		&:hover {
@@ -258,6 +257,18 @@
 			webkit-animation: fa-spin 2s infinite linear;
 			animation: fa-spin 2s infinite linear;
 		}
+	}
+	&.btn-red {
+		background-color: #de2c2d;
+		color: #fff;
+	}
+	&.btn-green {
+		background-color: #107c41;
+		color: #fff;
+	}
+	&.btn-blue {
+		background-color: #1c5cbb;
+		color: #fff;
 	}
 }
 

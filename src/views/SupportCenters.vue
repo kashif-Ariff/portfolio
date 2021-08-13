@@ -2,11 +2,11 @@
   <div class="suportCenter">
       <base-inner-banner :banner-detail="innerBannerDetail" />
       <div class="container">
-        <section id="corporate-governance" data-color-theme="dark">
-          <corporate-governance
+        <section id="" data-color-theme="dark">
+          <support-center-slider
               section-title="Corporate Governance"
               aria-label="Corporate Governance"
-          ></corporate-governance>
+          ></support-center-slider>
         </section>
     </div>
   </div>
@@ -23,7 +23,7 @@ export default {
     };
   },
   components:{
-    CorporateGovernance: () => import('@/modules/support-center/components/CorporateGovernance.vue'),
+    SupportCenterSlider: () => import('@/modules/support-center/components/SupportCenterSlider.vue'),
   }
 }
 </script>

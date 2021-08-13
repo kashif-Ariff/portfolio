@@ -176,7 +176,7 @@ export default {
 		          background-repeat: no-repeat !important;
               width: 16px;
               height: 16px;
-              top: 14px;
+              top: 15px;
               background-size: 100% 100%;
               left: -22px;
             }

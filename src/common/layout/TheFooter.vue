@@ -77,6 +77,7 @@ export default {
 <style lang="scss" scoped>
 footer {
   padding-top: rem(60px);
+  margin-top: rem(130px);
   border-top: 3px dashed rgba(100, 121, 136, 0.5);
   position: relative;
 
