@@ -74,6 +74,12 @@ const routes = [
                 component: () =>
                     import ('../views/Publication.vue'),
             },
+            {
+                path: `/:lang/common-intrest`,
+                name: 'common-intrest',
+                component: () =>
+                    import ('../views/CommonInterest.vue'),
+            },
 //     {
 //         path: `/:lang/contact-us`,
 //         name: 'contact-us',

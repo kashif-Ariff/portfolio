@@ -22,7 +22,7 @@
                     <p>{{card.content}}</p>
                 </div>
                 <div class="informationCard__link">
-                    <button class="btn btn-secondary">Explore Content</button>
+                    <a href="#" class="btn btn-secondary">Explore Content</a>
                 </div>
             </div>
         </div>

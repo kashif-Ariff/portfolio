@@ -441,17 +441,19 @@ body {
 		overflow-y: hidden;
 	}
 }
-a {
-	color: $whiteColor;
-	outline: none;
-	border: none;
-	&:hover {
-		text-decoration: none;
+nav {
+	a {
 		color: $whiteColor;
-	}
-	&:focus {
 		outline: none;
 		border: none;
+		&:hover {
+			text-decoration: none;
+			color: $whiteColor;
+		}
+		&:focus {
+			outline: none;
+			border: none;
+		}
 	}
 }
 input {
@@ -1034,6 +1036,65 @@ main {
 		}
 	}
 }
+.scrollArea {
+	--barcolor: #d31b88;
+	--trackcolor: #000;
+	.scrollbar-content {
+		padding-right: 20px;
+	}
+	.scrollbar {
+		border-radius: 0 !important;
+		width: 6px !important;
+		background: var(--barcolor) !important;
+	}
+	.scrollbar-y {
+		width: 6px !important;
+		opacity: 1 !important;
+		background: var(--secondary) !important;
+		border-radius: 25px !important;
+	}
+	&__contents {
+		padding-right: rem(25px);
+	}
+	.__vuescroll {
+		.__rail-is-vertical {
+			background: var(--secondary) !important;
+			border-radius: 0 !important;
+			right: 0 !important;
+		}
+		.__bar-is-vertical {
+			border-radius: 0 !important;
+			background: var(--secondary) !important;
+			opacity: 1 !important;
+		}
+		.__bar-wrap-is-vertical {
+			background: var(--trackcolor) !important;
+			border-radius: 0 !important;
+		}
+	}
+}
+[data-color-theme='light'] {
+	--highlight: #eada2f;
+	--trackcolor: #fff;
+	.swiper-slide {
+		.nav-link {
+			--highlight: #eada2f;
+		}
+	}
+	.scrollArea {
+		--barcolor: #d1c12f;
+		--trackcolor: #000;
+	}
+}
+.scrollArea {
+	.detail {
+		padding-right: 15px;
+	}
+}
+
+.no-scroll {
+	overflow: hidden;
+}
 .content-box {
 	border: 1px solid #e6eaec;
 	border-radius: 25px;
@@ -1058,7 +1119,8 @@ main {
 		border-bottom-right-radius: 21px;
 		border: 2px solid #c0c9cf;
 		box-shadow: 0px 0px 12px 2px rgba($color: black, $alpha: 0.1);
-		transform: scale(0.96);
+		transform: scale(0.9);
+		transition: 0.5s all ease;
 	}
 	.nav-link {
 		&.active {
@@ -1067,6 +1129,118 @@ main {
 				transform: scale(1);
 				box-shadow: 0px 0px 12px 0px rgba($color: black, $alpha: 0.25);
 			}
+		}
+	}
+}
+.iconTabs {
+	--titlecolor: #0c0c0c;
+	&__item {
+		&--image {
+			margin-bottom: rem(16px);
+			position: relative;
+			// min-height: 75px;
+			display: flex;
+			justify-content: center;
+			@media screen and (max-width: 767px) {
+				min-height: 60px;
+			}
+		}
+		h3 {
+			font-size: rem(20px);
+			color: var(--secondary);
+			font-weight: 400;
+			text-align: center;
+			transition: 0.4s ease all;
+			margin-bottom: 0;
+			padding-bottom: 0;
+			@media screen and (max-width: 991px) {
+				font-size: rem(17px);
+			}
+		}
+		.nav-link {
+			--iconbg: transparent;
+			padding: rem(10px) rem(5px);
+			.tab-icon {
+				width: rem(80px);
+				height: rem(80px);
+				padding: rem(14px);
+				@include flex(center, center);
+				border-radius: 50%;
+				// background: var(--iconbg);
+				img {
+					position: relative;
+					width: auto;
+					height: auto;
+					max-height: 100%;
+					&.selected {
+						opacity: 0;
+						position: relative;
+						z-index: -999;
+						width: 0;
+						height: 0;
+					}
+				}
+			}
+			&:focus {
+				outline-offset: -5px;
+			}
+			&.active {
+				--titlecolor: var(--secondary);
+				--iconbg: var(--primary);
+				h3 {
+					opacity: 1;
+					padding-bottom: 0;
+					margin-bottom: 0;
+				}
+				.tab-icon {
+					img {
+						opacity: 0;
+						visibility: hidden;
+						z-index: -999;
+						width: 0;
+						height: 0;
+						max-height: 100%;
+						&.selected {
+							opacity: 1;
+							z-index: 1;
+							visibility: visible;
+							width: auto;
+							height: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+[lang='ar'] {
+	.scrollArea {
+		.detail {
+			padding-left: 15px;
+			padding-right: 0;
+		}
+	}
+	.scrollArea {
+		direction: ltr;
+		.scrollbar-content {
+			padding-left: 20px;
+			padding-right: 0;
+		}
+		&__contents {
+			padding-left: rem(25px);
+			padding-right: 0;
+		}
+		.__vuescroll {
+			.__rail-is-vertical {
+				left: 0 !important;
+				right: auto !important;
+			}
+		}
+	}
+	.scrollbar-wrap {
+		.scrollbar-y {
+			left: 0.025px;
+			right: auto;
 		}
 	}
 }

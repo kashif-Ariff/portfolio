@@ -18,12 +18,12 @@ export default {
     return {
       innerBannerDetail: {
         image: "BOD.png",
-        title: "publications",
+        title: "common interests",
       },
     };
   },
   components:{
-    PublicationSlider: () => import('@/modules/publication/components/PublicationSlider.vue'),
+    PublicationSlider: () => import('@/modules/common-interest/components/commonInterestSlider.vue'),
   }
 }
 </script>

@@ -248,53 +248,9 @@ export default {
     // }
     &__slide {
         .slide__card--image{
-            transform: scale(.9);
+            transform: scale(.88);
         }
-        // .goals__slide--logo {
-        //     color: var(--activeColor);
-        // }
-
-        // &--link {
-        //     height: 160px;
-        //     display: inline-flex;
-        //     width: 100%;
-        //     background: #fff;
-        //     box-shadow: 0 0 6px 0px rgba($color: #000000, $alpha: 0.2);
-        //     transition: 0.4s ease all;
-        //     // padding: rem(30px);
-        //     text-align: center;
-        //     position: relative;
-        //     justify-content: center;
-        //     flex-direction: column;
-        //     align-items: center;
-        //     transform: scale(0.9);
-        //     transform-origin: center;
-        //     &:active,
-        //     &:focus {
-        //         outline-color: var(--primary);
-        //         outline-offset: 1px !important;
-        //     }
-        //     &.active {
-        //         transform: scale(1);
-        //         // background: var(--activeColor);
-        //         .goals__slide--logo {
-        //             color: #fff;
-        //         }
-        //         .goals__slide--count {
-        //             color: #fff;
-        //         }
-        //         h3 {
-        //             color: #fff;
-        //             font-size: rem(16px) !important;
-        //         }
-        //     }
-        // }
-        // &--logo {
-        //     width: 62px;
-        //     height: 62px;
-        //     display: inline-block;
-        //     color: #000;
-        // }
+      
         h3 {
             font-size: rem(16px);
             color: #000;
@@ -302,14 +258,6 @@ export default {
             margin-bottom: 0;
             margin-top: 0;
         }
-        // &--count {
-        //     position: absolute;
-        //     color: #000;
-        //     top: 15px;
-        //     right: 15px;
-        //     font-weight: 800;
-        //     font-size: rem(22px);
-        // }
         &--title {
             font-size: rem(20px);
             color: var(--secondary);

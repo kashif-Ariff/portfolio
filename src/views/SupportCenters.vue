@@ -4,8 +4,8 @@
       <div class="container">
         <section id="" data-color-theme="dark">
           <support-center-slider
-              section-title="Corporate Governance"
-              aria-label="Corporate Governance"
+              section-title=""
+              aria-label=""
           ></support-center-slider>
         </section>
     </div>

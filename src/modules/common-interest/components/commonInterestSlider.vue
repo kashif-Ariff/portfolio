@@ -5,8 +5,7 @@
         :aria-label="ariaLabel"
     >
         <div class="container">
-            <!-- <h2 class="sectionTitle">{{ sectionTitle }}</h2> -->
-            <div class="supportCenterSlider__head customTabs__items">
+            <div class="supportCenterSlider__head iconTabs__item customTabs__items">
                 <carousel
                     navigation-layout="side"
                     :carousel-settings="sliderOption"
@@ -29,12 +28,19 @@
                             aria-selected="true"
                             id="tab_supportCenter_0"
                         >
-                            <div class="slide__card--image">
-                                <img
-                                    src="@/assets/images/support-center/logoipsum.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                />
+                            <div class="slide__card--image iconTabs__item--image">
+                                <span class="tab-icon">
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        alt=""
+                                        class="img-fluid selected"
+                                    />
+                                </span>
                             </div>
                             <p class="supportCenterSlider__item--title">
                                Business Incubators
@@ -57,12 +63,19 @@
                             aria-selected="false"
                             id="tab_supportCenter_1"
                         >
-                            <div class="slide__card--image">
-                                <img
-                                    src="@/assets/images/support-center/logoipsum2.png"
-                                    alt=""
-                                    class="img-fluid"
-                                />
+                           <div class="slide__card--image iconTabs__item--image">
+                                <span class="tab-icon">
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        alt=""
+                                        class="img-fluid selected"
+                                    />
+                                </span>
                             </div>
                             <p class="supportCenterSlider__item--title">
                                 Creative Centers
@@ -85,12 +98,19 @@
                             aria-selected="false"
                             id="tab_supportCenter_2"
                         >
-                            <div class="slide__card--image">
-                                <img
-                                    src="@/assets/images/support-center/logoipsum.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                />
+                            <div class="slide__card--image iconTabs__item--image">
+                                <span class="tab-icon">
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        alt=""
+                                        class="img-fluid selected"
+                                    />
+                                </span>
                             </div>
                             <p class="supportCenterSlider__item--title">
                                 introduction
@@ -113,12 +133,19 @@
                             aria-selected="false"
                             id="tab_supportCenter_3"
                         >
-                            <div class="slide__card--image">
-                                <img
-                                    src="@/assets/images/support-center/logoipsum.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                />
+                            <div class="slide__card--image iconTabs__item--image">
+                                <span class="tab-icon">
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        alt=""
+                                        class="img-fluid selected"
+                                    />
+                                </span>
                             </div>
                             <p class="supportCenterSlider__item--title">
                                 introduction
@@ -141,12 +168,19 @@
                             aria-selected="false"
                             id="tab_supportCenter_4"
                         >
-                            <div class="slide__card--image">
-                                <img
-                                    src="@/assets/images/support-center/logoipsum.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                />
+                            <div class="slide__card--image iconTabs__item--image">
+                                <span class="tab-icon">
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        alt=""
+                                        class="img-fluid selected"
+                                    />
+                                </span>
                             </div>
                             <p class="supportCenterSlider__item--title">
                                 introduction
@@ -169,12 +203,19 @@
                             aria-selected="false"
                             id="tab_supportCenter_5"
                         >
-                            <div class="slide__card--image">
-                                <img
-                                    src="@/assets/images/support-center/logoipsum.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                />
+                            <div class="slide__card--image iconTabs__item--image">
+                                <span class="tab-icon">
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        alt=""
+                                        class="img-fluid selected"
+                                    />
+                                </span>
                             </div>
                             <p class="supportCenterSlider__item--title">
                                 introduction
@@ -197,12 +238,19 @@
                             aria-selected="false"
                             id="tab_supportCenter_6"
                         >
-                            <div class="slide__card--image">
-                                <img
-                                    src="@/assets/images/support-center/logoipsum.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                />
+                           <div class="slide__card--image iconTabs__item--image">
+                                <span class="tab-icon">
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        alt=""
+                                        class="img-fluid selected"
+                                    />
+                                </span>
                             </div>
                             <p class="supportCenterSlider__item--title">
                                 introduction
@@ -225,12 +273,19 @@
                             aria-selected="false"
                             id="tab_supportCenter_7"
                         >
-                            <div class="slide__card--image">
-                                <img
-                                    src="@/assets/images/support-center/logoipsum.jpg"
-                                    alt=""
-                                    class="img-fluid"
-                                />
+                            <div class="slide__card--image iconTabs__item--image">
+                                <span class="tab-icon">
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        alt=""
+                                        class="img-fluid"
+                                    />
+                                    <img
+                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        alt=""
+                                        class="img-fluid selected"
+                                    />
+                                </span>
                             </div>
                             <p class="supportCenterSlider__item--title">
                                 introduction
@@ -242,7 +297,26 @@
         </div>
         <div class="supportCenterSlider__body customTabs__contents">
             <b-tabs v-model="tabIndex" nav-wrapper-class="d-none">
-                <b-tab id="supportCenter_0" button-id="tab_supportCenter_0"><articlse-association></articlse-association></b-tab>
+                <b-tab id="supportCenter_0" button-id="tab_supportCenter_0">
+                    <div class="description__detail">
+                        <base-smooth-scrollbar>
+                            <h3 class="description__title" tabIndex="0">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                            </h3>
+                            <div tabIndex="0">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
+                                </p>
+                                <p>
+                                    dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+                                </p>
+                            </div>
+                        </base-smooth-scrollbar>
+                        <div class="button-row">
+                            <router-link to="" class="btn btn-primary">Explore More</router-link>
+                        </div>
+                    </div>
+                </b-tab>
                 <b-tab id="supportCenter_1" button-id="tab_supportCenter_1">1</b-tab>
                 <b-tab id="supportCenter_2" button-id="tab_supportCenter_2">2</b-tab>
                 <b-tab id="supportCenter_3" button-id="tab_supportCenter_3">3</b-tab>
@@ -256,11 +330,9 @@
 </template>
 
 <script>
-import ArticlseAssociation from '@/modules/support-center/components/partials/ArticlseAssociation'
-
 export default {
     components: {
-        ArticlseAssociation,
+        BaseDocument: ()=> import('@/common/components/base/BaseDocument.vue')
     },
     data() {
         return {
@@ -275,7 +347,7 @@ export default {
                 breakpoints: {
                    
                     1200: {
-                        slidesPerView:6,
+                        slidesPerView:5,
                     },
                     991: {
                         slidesPerView: 5,
@@ -381,13 +453,9 @@ export default {
             display: inline-block;
             transform: scale(0.9);
             width: 100%;
-            .slide__card--image{
-                transform: scale(.96);
-            }
             &.active {
                 .slide__card--image {
-                    background: unset;
-                    
+                    // background: unset;
                 }
                 transform: scale(1);
                 .supportCenterSlider__item--title {
@@ -399,7 +467,7 @@ export default {
             outline-offset: -3px !important;
             outline-width: 3px;
             .slide__card--image{
-                border-radius: 25px;
+                // border-radius: 25px;
             }
             &:focus {
                 outline-color: var(--primary);
