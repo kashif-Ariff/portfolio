@@ -80,6 +80,18 @@ const routes = [
                 component: () =>
                     import ('../views/Contact.vue'),
             },
+            {
+                path: `/:lang/media-center-detail`,
+                name: 'media-center-detail',
+                component: () =>
+                    import ('../views/MediaCenterDetail.vue'),
+            },
+            {
+                path: `/:lang/faq`,
+                name: 'faq',
+                component: () =>
+                    import ('../views/Faq.vue'),
+            },
 //     {
 //         path: `/:lang/contact-us`,
 //         name: 'contact-us',

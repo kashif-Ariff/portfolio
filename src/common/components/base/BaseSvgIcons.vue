@@ -307,6 +307,29 @@
           <path id="Path_42238" data-name="Path 42238" d="M29.775,39.045A14.344,14.344,0,0,0,17.964,32.7h-5.4A14.428,14.428,0,0,0,.75,39.045,1.48,1.48,0,0,0,.624,40.49a1.241,1.241,0,0,0,1.131.754H28.833a1.394,1.394,0,0,0,1.131-.754A1.925,1.925,0,0,0,29.775,39.045Z" transform="translate(0 -13.487)" fill="#224156"/>
         </g>
       </g>
+       <g id="cross-icon">
+        <path id="X" d="M-2691.594,896.234l-13.082-13.082-13.081,13.082a2,2,0,0,1-2.829,0,2,2,0,0,1,0-2.829l13.082-13.081-13.082-13.081a2,2,0,0,1,0-2.829,2,2,0,0,1,2.829,0l13.081,13.082,13.082-13.082a2,2,0,0,1,2.828,0,2,2,0,0,1,0,2.829l-13.081,13.081,13.081,13.081a2,2,0,0,1,0,2.829,2,2,0,0,1-1.414.585A1.992,1.992,0,0,1-2691.594,896.234Z" transform="translate(2721.172 -863.828)" fill="#224156"/>
+      </g>
+      <g id="highlight">
+        <g id="Group_1671" data-name="Group 1671" transform="translate(0.3)">
+          <g id="Rectangle_899" data-name="Rectangle 899" fill="#224156" stroke="#224156" stroke-width="1.5">
+            <rect width="21" height="7" rx="2" stroke="none"/>
+            <rect x="0.75" y="0.75" width="19.5" height="5.5" rx="1.25" fill="none"/>
+          </g>
+          <line id="Line_10" data-name="Line 10" x2="19.6" transform="translate(0.7 12.5)" fill="none" stroke="#224156" stroke-linecap="round" stroke-width="2"/>
+          <line id="Line_11" data-name="Line 11" x2="19.6" transform="translate(0.7 19.5)" fill="none" stroke="#224156" stroke-linecap="round" stroke-width="2"/>
+        </g>
+      </g>
+      <g id="detail">
+        <g id="Group_1672" data-name="Group 1672" transform="translate(1 1)">
+          <line id="Line_12" data-name="Line 12" x2="19.6" transform="translate(0 8)" fill="none" stroke="#224156" stroke-linecap="round" stroke-width="2"/>
+          <line id="Line_14" data-name="Line 14" x2="9.8" transform="translate(0 16)" fill="none" stroke="#224156" stroke-linecap="round" stroke-width="2"/>
+          <line id="Line_13" data-name="Line 13" x2="13.8" fill="none" stroke="#224156" stroke-linecap="round" stroke-width="2"/>
+        </g>
+      </g>
+      <g id="paperClip-icon">
+          <path id="paperclip" d="M25.926,20.738a6.569,6.569,0,0,1,0-9.294l9.961-9.962a5.069,5.069,0,0,1,7.168,7.169l-8.387,8.388c-1.39,1.391-2.653,1.391-4.043,0a3.565,3.565,0,0,1,0-5.044l7.1-7.1a.531.531,0,0,1,.751,0l.751.751a.531.531,0,0,1,0,.751l-7.1,7.1c-.563.563-.78.94-.224,1.794a.807.807,0,0,0,1.263.245l8.387-8.388a2.944,2.944,0,1,0-4.163-4.164l-9.961,9.962a4.448,4.448,0,1,0,6.293,6.287l8.672-8.677a.531.531,0,0,1,.751,0l.751.751a.531.531,0,0,1,0,.751l-8.671,8.676a6.569,6.569,0,0,1-9.3,0Z" transform="translate(-24 0)" fill="#224156"/>
+      </g>
     </svg>
   </div>
 </template>
