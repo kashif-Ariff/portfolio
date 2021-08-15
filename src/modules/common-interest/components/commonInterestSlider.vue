@@ -1,11 +1,11 @@
 <template>
     <div
-        class="supportCenterSlider customTabs"
+        class="commonInterestSlider customTabs"
         role="region"
         :aria-label="ariaLabel"
     >
         <div class="container">
-            <div class="supportCenterSlider__head iconTabs__item customTabs__items">
+            <div class="commonInterestSlider__head iconTabs__item customTabs__items">
                 <carousel
                     navigation-layout="side"
                     :carousel-settings="sliderOption"
@@ -42,7 +42,7 @@
                                     />
                                 </span>
                             </div>
-                            <p class="supportCenterSlider__item--title">
+                            <p class="commonInterestSlider__item--title">
                                Business Incubators
                             </p>
                         </a>
@@ -77,7 +77,7 @@
                                     />
                                 </span>
                             </div>
-                            <p class="supportCenterSlider__item--title">
+                            <p class="commonInterestSlider__item--title">
                                 Creative Centers
                             </p>
                         </a>
@@ -112,7 +112,7 @@
                                     />
                                 </span>
                             </div>
-                            <p class="supportCenterSlider__item--title">
+                            <p class="commonInterestSlider__item--title">
                                 introduction
                             </p>
                         </a>
@@ -147,7 +147,7 @@
                                     />
                                 </span>
                             </div>
-                            <p class="supportCenterSlider__item--title">
+                            <p class="commonInterestSlider__item--title">
                                 introduction
                             </p>
                         </a>
@@ -182,7 +182,7 @@
                                     />
                                 </span>
                             </div>
-                            <p class="supportCenterSlider__item--title">
+                            <p class="commonInterestSlider__item--title">
                                 introduction
                             </p>
                         </a>
@@ -217,7 +217,7 @@
                                     />
                                 </span>
                             </div>
-                            <p class="supportCenterSlider__item--title">
+                            <p class="commonInterestSlider__item--title">
                                 introduction
                             </p>
                         </a>
@@ -252,7 +252,7 @@
                                     />
                                 </span>
                             </div>
-                            <p class="supportCenterSlider__item--title">
+                            <p class="commonInterestSlider__item--title">
                                 introduction
                             </p>
                         </a>
@@ -287,45 +287,46 @@
                                     />
                                 </span>
                             </div>
-                            <p class="supportCenterSlider__item--title">
+                            <p class="commonInterestSlider__item--title">
                                 introduction
                             </p>
                         </a>
                     </div>
                 </carousel>
             </div>
-        </div>
-        <div class="supportCenterSlider__body customTabs__contents">
-            <b-tabs v-model="tabIndex" nav-wrapper-class="d-none">
-                <b-tab id="supportCenter_0" button-id="tab_supportCenter_0">
-                    <div class="description__detail">
-                        <base-smooth-scrollbar>
-                            <h3 class="description__title" tabIndex="0">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                            </h3>
-                            <div tabIndex="0">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
-                                </p>
-                                <p>
-                                    dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-                                </p>
+             <div class="commonInterestSlider__body customTabs__contents">
+                <b-tabs v-model="tabIndex" nav-wrapper-class="d-none">
+                    <b-tab id="supportCenter_0" button-id="tab_supportCenter_0" class="description">
+                        <div class="description__detail">
+                            <base-smooth-scrollbar>
+                                <h3 class="description__title" tabIndex="0">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                </h3>
+                                <div tabIndex="0">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
+                                    </p>
+                                    <p>
+                                        dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+                                    </p>
+                                </div>
+                            </base-smooth-scrollbar>
+                            <div class="button-row">
+                                <router-link to="" class="btn btn-primary">Explore More</router-link>
                             </div>
-                        </base-smooth-scrollbar>
-                        <div class="button-row">
-                            <router-link to="" class="btn btn-primary">Explore More</router-link>
                         </div>
-                    </div>
-                </b-tab>
-                <b-tab id="supportCenter_1" button-id="tab_supportCenter_1">1</b-tab>
-                <b-tab id="supportCenter_2" button-id="tab_supportCenter_2">2</b-tab>
-                <b-tab id="supportCenter_3" button-id="tab_supportCenter_3">3</b-tab>
-                <b-tab id="supportCenter_4" button-id="tab_supportCenter_4">4</b-tab>
-                <b-tab id="supportCenter_5" button-id="tab_supportCenter_5">5</b-tab>
-                <b-tab id="supportCenter_6" button-id="tab_supportCenter_6">6</b-tab>
-                <b-tab id="supportCenter_7" button-id="tab_supportCenter_7">7</b-tab>
-            </b-tabs>
+                    </b-tab>
+                    <b-tab id="supportCenter_1" button-id="tab_supportCenter_1">1</b-tab>
+                    <b-tab id="supportCenter_2" button-id="tab_supportCenter_2">2</b-tab>
+                    <b-tab id="supportCenter_3" button-id="tab_supportCenter_3">3</b-tab>
+                    <b-tab id="supportCenter_4" button-id="tab_supportCenter_4">4</b-tab>
+                    <b-tab id="supportCenter_5" button-id="tab_supportCenter_5">5</b-tab>
+                    <b-tab id="supportCenter_6" button-id="tab_supportCenter_6">6</b-tab>
+                    <b-tab id="supportCenter_7" button-id="tab_supportCenter_7">7</b-tab>
+                </b-tabs>
+            </div>
         </div>
+       
     </div>
 </template>
 
@@ -374,8 +375,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.supportCenterSlider {
-    .supportCenterSlider {
+.commonInterestSlider {
+    .commonInterestSlider {
     padding: rem(35px) 0px;
     @media screen and (max-width: 991px) {
         padding-top: rem(10px);
@@ -458,7 +459,7 @@ export default {
                     // background: unset;
                 }
                 transform: scale(1);
-                .supportCenterSlider__item--title {
+                .commonInterestSlider__item--title {
                     color: var(--secondary);
                     font-weight: 500;
                     font-size: rem(17px);
@@ -536,6 +537,34 @@ export default {
     &__body {
         .scrollArea {
             height: 185px;
+        }
+        .description {
+            &__detail {
+                /deep/.scrollArea {
+                    --barcolor: #6e337a !important;
+                    --trackcolor: #adadad !important;
+                    --h: 235px;
+                }
+                .scrollArea__contents {
+                    padding-top: 5px;
+                    padding-left: 5px;
+                    h3 {
+                        outline-offset: 2px;
+                    }
+                }
+            }
+            &__title {
+                font-size: rem(21px);
+                color: var(--secondary);
+                font-weight: 400;
+                margin-bottom: rem(15px);
+            }
+            p{
+                font-weight: 400;
+                font-size: rem(21px);
+                margin-bottom: rem(30px);
+            }
+            
         }
         /deep/ {
             .nav-pills {

@@ -57,12 +57,6 @@ const routes = [
                     import ('../views/SupportCenters.vue'),
             },
             {
-                path: `/:lang/search`,
-                name: 'search',
-                component: () =>
-                    import ('../views/Search.vue'),
-            },
-            {
                 path: `/:lang/initiators`,
                 name: 'initiators',
                 component: () =>

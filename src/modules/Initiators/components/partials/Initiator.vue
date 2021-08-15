@@ -1,16 +1,16 @@
 <template>
-    <div class="goals">
+    <div class="initiator">
         <div class="sliderNavigation__custom"></div>
-        <div class="goals__head iconTabs__item">
+        <div class="initiator__head iconTabs__item">
             <carousel
-                class="goals__head--slider"
+                class="initiator__head--slider"
                 @init="setSlider"
                 :carousel-settings="sliderOption"
                 role="tablist"
             >
                 <div
-                    class="swiper-slide slide__card goals__slide iconTabs__item"
-                    v-for="(goal, index) in goals"
+                    class="swiper-slide slide__card initiator__slide iconTabs__item"
+                    v-for="(card , index) in cardContent"
                     :key="index"
                     role="presentation"
                 >
@@ -24,62 +24,62 @@
                         href="#"
                         role="tab"
                         :aria-selected="index == 0 ? 'true' : 'false'"
-                        :aria-controls="`tab_global_gaols_${index}`"
-                        :id="`global_gaols_${index}`"
+                        :aria-controls="`tab_initiator_${index}`"
+                        :id="`initiator_${index}`"
                     >
                         <div class="slide__card--image iconTabs__item--image">
                             <span class="tab-icon">
                                 <img
-                                    :src="`${require(`@/assets/images/tabs-icon/${goal.image}`)}`"
+                                    :src="`${require(`@/assets/images/tabs-icon/${card.image}`)}`"
                                     alt=""
                                     class="img-fluid"
                                 />
                                 <img
-                                    :src="`${require(`@/assets/images/tabs-icon/${goal.image_hover}`)}`"
+                                    :src="`${require(`@/assets/images/tabs-icon/${card.image_hover}`)}`"
                                     alt=""
                                     class="img-fluid selected"
                                 />
                             </span>
                         </div>
-                        <h3 class="goals__slide--title" id="goal_title">
-                            {{ goal.title }}
+                        <h3 class="initiator__slide--title" id="initiator_title">
+                            {{ card.title }}
                         </h3>
                     </a>
                 </div>
             </carousel>
         </div>
         <div class="container">
-            <div class="goals__body">
+            <div class="initiator__body">
                 <b-tabs v-model="tabIndex" nav-wrapper-class="d-none">
                     <b-tab
-                        :title="goal.title"
-                        v-for="(goal, i) in goals"
+                        :title="card.title"
+                        v-for="(card, i) in cardContent"
                         :key="i"
-                        :id="`tab_global_gaols_${i}`"
-                        :button-id="`global_gaols_${i}`"
+                        :id="`tab_initiator${i}`"
+                        :button-id="`initiator${i}`"
                     >
                         <div
                             class="card"
-                            :style="{ '--activeColor': goal.color }"
+                            :style="{ '--activeColor': card.color }"
                         >
                             <div class="card__head">
                                 <span class="card__head--icon">
                                     <img
-                                        :src="`${require(`@/assets/images/tabs-icon/${goal.image_hover}`)}`"
+                                        :src="`${require(`@/assets/images/tabs-icon/${card.image_hover}`)}`"
                                         alt=""
                                         class="img-fluid"
                                     />
                                 </span>
                                 <h3
                                     class="card__head--title"
-                                    aria-describedby="goal_title"
+                                    aria-describedby="initiator_title"
                                 >
-                                   {{goal.heading}}
+                                   {{card.heading}}
                                 </h3>
                             </div>
                             <div class="card__body">
                                 <base-smooth-scrollbar class="detail">
-                                    <p>{{ goal.detail }}</p>
+                                    <p>{{ card.detail }}</p>
                                 </base-smooth-scrollbar>
                                 <div class="button-row">
                                     <a href="#" class="btn btn-primary">Explore more</a>
@@ -96,7 +96,7 @@
 <script>
 export default {
     props: {
-        goals: Array,
+        cardContent: Array,
     },
     data() {
         return {
@@ -147,7 +147,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.goals {
+.initiator {
     // --activeColor: #d31b88;
     position: relative;
     .sliderNavigation__custom {
@@ -284,7 +284,7 @@ export default {
             overflow: hidden;
             padding: 0;
             &__head {
-                padding: rem(25px) rem(25px) rem(18px) rem(52px);
+                padding: rem(20px) rem(25px) rem(18px) rem(52px);
                 background: var(--secondary);
                 display: flex;
                 align-items: center;
@@ -324,6 +324,7 @@ export default {
                 /deep/ .scrollArea {
                     // --barcolor: var(--activeColor);
                     --h: 170px;
+                    margin-bottom: 30px;
                     @media screen and (max-width: 1600px) {
                         --h: 110px;
                     }
