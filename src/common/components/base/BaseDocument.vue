@@ -1,18 +1,23 @@
 <template>
-    <ul class="relatedDocuments__list">
-        <li class="relatedDocuments__list--item">
-            <div
-                class="document__info"  aria-label="Image – image-icon – 100 megabytes">
-                <h2>
-                    Profile of The National Fund
-                </h2>
-                <div class="relatedDocuments__list--item--documents">
-                    <span class="file-size">200 KB</span>
-                    <a href="#" class=" btn btn-red">
+    <div class="card">
+    <div class="table">
+        <!-- <div class="table__head">
+            <div class="table__row">
+                <div class="table__row--cell" data-width="50">Title</div>
+                <div class="table__row--cell" data-width="14">Size</div>
+                <div class="table__row--cell" data-width="14">Download</div>
+            </div>
+        </div> -->
+        <div class="table__body">
+            <div class="table__row" v-for="text in documents" :key="text.index">
+                <div class="table__row--cell" data-width="50">{{text.title}}</div>
+                <div class="table__row--cell" data-width="14">{{text.size}}</div>
+                <div class="table__row--cell" data-width="14">
+                  <a href="#" class=" btn" :class="text.file">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
-                                    icon-id="pdf-icon"
+                                    :icon-id="text.file"
                                     icon-viewbox="0 0 18 24"
                                 ></base-svg-icon>
                             </span>
@@ -21,118 +26,9 @@
                     </a>
                 </div>
             </div>
-        </li>
-        <li class="relatedDocuments__list--item">
-            <div
-                class="document__info"  aria-label="Video – video-icon – 400 megabytes">
-                <h2>
-                    Profile of The National Fund
-                </h2>
-                <div class="relatedDocuments__list--item--documents">
-                    <span class="file-size">200 KB</span>
-                    <a href="#" class="btn btn-blue">
-                        <div class="icon">
-                            <span>
-                                <base-svg-icon
-                                    icon-id="word-icon"
-                                    icon-viewbox="0 0 18 24"
-                                ></base-svg-icon>
-                            </span>
-                            Download
-                        </div>
-                    </a> 
-                </div>
-            </div>
-        </li>
-        <li class="relatedDocuments__list--item">
-                <div
-                class="document__info"  aria-label="English – PDF – 150 megabytes">
-                <h2>
-                   Profile of The National Fund
-                </h2>
-                <div class="relatedDocuments__list--item--documents">
-                    <span class="file-size">200 KB</span>
-                    <a href="#" class="btn btn-green">
-                        <div class="icon">
-                            <span>
-                                <base-svg-icon
-                                    icon-id="excel-icon"
-                                    icon-viewbox="0 0 18 24"
-                                ></base-svg-icon>
-                            </span>
-                            Download
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </li>
-        <li class="relatedDocuments__list--item">
-            <div
-                class="document__info"  aria-label="Arabic – PDF – 150 megabytes">
-                <h2>
-                   Profile of The National Fund
-                </h2>
-                <div class="relatedDocuments__list--item--documents">
-                    <span class="file-size">200 KB</span>
-                    <a href="#" class="btn btn-red">
-                        <div class="icon">
-                            <span>
-                                <base-svg-icon
-                                    icon-id="image-icon"
-                                    icon-viewbox="0 0 14.078 18.771"
-                                ></base-svg-icon>
-                            </span>
-                            Download
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </li> 
-        <li class="relatedDocuments__list--item">
-            <div
-                class="document__info"  aria-label="Arabic – PDF – 150 megabytes">
-                <h2>
-                   Profile of The National Fund
-                </h2>
-                <div class="relatedDocuments__list--item--documents">
-                    <span class="file-size">200 KB</span>
-                    <a href="#" class="btn btn-blue">
-                        <div class="icon">
-                            <span>
-                                <base-svg-icon
-                                    icon-id="video-icon"
-                                    icon-viewbox="0 0 14.078 18.771"
-                                ></base-svg-icon>
-                            </span>
-                            Download
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </li>
-        <li class="relatedDocuments__list--item">
-            <div
-                class="document__info"  aria-label="Arabic – PDF – 150 megabytes">
-                <h2>
-                   Profile of The National Fund
-                </h2>
-                <div class="relatedDocuments__list--item--documents">
-                    <span class="file-size">200 KB</span>
-                    <a href="#" class="btn btn-green">
-                        <div class="icon">
-                            <span>
-                                <base-svg-icon
-                                    icon-id="video-icon"
-                                    icon-viewbox="0 0 14.078 18.771"
-                                ></base-svg-icon>
-                            </span>
-                            Download
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </li>
-    </ul>
+        </div>
+    </div>
+</div>
 </template>
 
 <script>

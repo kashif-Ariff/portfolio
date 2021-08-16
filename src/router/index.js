@@ -92,6 +92,12 @@ const routes = [
                 component: () =>
                     import ('../views/Faq.vue'),
             },
+            {
+                path: `/:lang/search`,
+                name: 'search',
+                component: () =>
+                    import ('../views/Search.vue'),
+            },
 //     {
 //         path: `/:lang/contact-us`,
 //         name: 'contact-us',
