@@ -44,6 +44,12 @@ export default {
     color: var(--secondary);
     text-align: center;
     margin-bottom: rem(80px);
+    @media screen and (max-width:1199px) {
+        margin-bottom: rem(50px);
+    }
+    @media screen and (max-width:1199px) {
+        font-size: rem(30px);
+    }
   }
 }
 </style>

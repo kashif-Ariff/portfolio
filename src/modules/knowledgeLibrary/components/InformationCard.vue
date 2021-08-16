@@ -70,12 +70,56 @@ export default {
         margin-bottom: rem(40px);
     .card-body{
         padding: rem(50px) rem(30px);
+        // @media screen and (max-width:991px) {
+        //     padding: rem(35px) rem(20px);
+        // }
         &.grid{
             grid-template-columns: 300px 1fr 265px;
+            @media screen and (max-width:1199px) {
+                grid-gap:20px;
+                grid-template-columns: 250px 1fr 200px;
+            }
+            @media screen and (max-width:991px) {
+                grid-template-columns: 190px 1fr 160px;
+                grid-gap:15px;
+            }
+            @media screen and (max-width:767px) {
+                grid-template-columns: none;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-gap:15px;
+            }
         }
     }
     &__info{
-        border-right: 1px solid #A6B3BB;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 170px;
+            background: #A6B3BB;
+            top: -15px;
+            right: 0;
+            @media screen and (max-width:1199px) {
+                height: 150px;
+            }
+            @media screen and (max-width:991px) {
+                height: 130px;
+            }
+            @media screen and (max-width:767px) {
+                height: 1px;
+                width: 130px;
+            }
+        }
+        // border-right: 1px solid #A6B3BB;
+        &--image{
+            @media screen and (max-width:1199px) {
+                max-width: 215px;
+            }
+            @media screen and (max-width:1199px) {
+                max-width: 170px;
+            }
+        }
         &--title{
             color: var(--secondary);
             font-size: rem(16px);
@@ -97,8 +141,26 @@ export default {
         }
     }
     &__detail{
-        padding: rem(30px) rem(30px) 0 0;
-        border-right: 1px solid #A6B3BB;
+        position: relative;
+        padding: 0 rem(30px) 0 0;
+       &::before{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 170px;
+            background: #A6B3BB;
+            top: -15px;
+            right: 0;
+            @media screen and (max-width:1199px) {
+                height: 150px;
+            }
+            @media screen and (max-width:991px) {
+                height: 130px;
+            }
+        }
+        @media screen and (max-width:1199px) {
+            padding: 0 rem(15px) 0 0;
+        }
         p{
             font-size: rem(16px);
             font-weight: 300;
@@ -110,7 +172,6 @@ export default {
     &__link{
         display: flex;
         align-items: center;
-
     }
 }
 </style>>
