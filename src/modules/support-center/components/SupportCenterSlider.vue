@@ -387,7 +387,7 @@ export default {
             &.active {
                 .slide__card--image {
                     background: unset;
-                    
+                    transform: scale(1);
                 }
                 transform: scale(1);
                 .supportCenterSlider__item--title {
