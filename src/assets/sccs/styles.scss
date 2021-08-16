@@ -5,7 +5,12 @@
 		max-width: 1180px;
 	}
 }
-
+.sectionTitle{
+	font-size: rem(30px);
+	color: var(--secondary);
+	font-weight: 500;
+	margin-bottom: rem(15px);
+}
 .slider-services {
 	.swiper-slide {
 		margin: rem(25px) 0px;

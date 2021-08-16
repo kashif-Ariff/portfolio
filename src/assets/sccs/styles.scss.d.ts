@@ -1,7 +1,7 @@
 import { StyleProp, TextStyle } from 'react-native'
 
 export const container: StyleProp<TextStyle>
-export const custom-border-radius: StyleProp<TextStyle>
+export const sectionTitle: StyleProp<TextStyle>
 export const slider-services: StyleProp<TextStyle>
 export const swiper-slide: StyleProp<TextStyle>
 export const swiper-slide-active: StyleProp<TextStyle>
@@ -39,7 +39,21 @@ export const vs__clear: StyleProp<TextStyle>
 export const tabs: StyleProp<TextStyle>
 export const nav-pills: StyleProp<TextStyle>
 export const nav-link: StyleProp<TextStyle>
+export const scrollArea: StyleProp<TextStyle>
+export const scrollbar-content: StyleProp<TextStyle>
+export const scrollbar: StyleProp<TextStyle>
+export const scrollbar-y: StyleProp<TextStyle>
+export const __vuescroll: StyleProp<TextStyle>
+export const __rail-is-vertical: StyleProp<TextStyle>
+export const __bar-is-vertical: StyleProp<TextStyle>
+export const __bar-wrap-is-vertical: StyleProp<TextStyle>
+export const detail: StyleProp<TextStyle>
+export const no-scroll: StyleProp<TextStyle>
 export const content-box: StyleProp<TextStyle>
 export const card: StyleProp<TextStyle>
 export const slide__card: StyleProp<TextStyle>
 export const slide__card--image: StyleProp<TextStyle>
+export const iconTabs: StyleProp<TextStyle>
+export const tab-icon: StyleProp<TextStyle>
+export const selected: StyleProp<TextStyle>
+export const scrollbar-wrap: StyleProp<TextStyle>
