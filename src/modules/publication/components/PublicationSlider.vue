@@ -1,4 +1,8 @@
 <template>
+<div>
+    <div class="breadCrumbs" v-if="!showModal">
+      <base-bread-crumb :items="items"></base-bread-crumb>
+    </div>
     <div
         class="supportCenterSlider customTabs"
         role="region"
@@ -297,7 +301,7 @@
         </div>
         <div class="supportCenterSlider__body customTabs__contents">
             <b-tabs v-model="tabIndex" nav-wrapper-class="d-none">
-                <b-tab id="supportCenter_0" button-id="tab_supportCenter_0"><base-document></base-document></b-tab>
+                <b-tab id="supportCenter_0" button-id="tab_supportCenter_0"><publication-table></publication-table></b-tab>
                 <b-tab id="supportCenter_1" button-id="tab_supportCenter_1">1</b-tab>
                 <b-tab id="supportCenter_2" button-id="tab_supportCenter_2">2</b-tab>
                 <b-tab id="supportCenter_3" button-id="tab_supportCenter_3">3</b-tab>
@@ -308,12 +312,13 @@
             </b-tabs>
         </div>
     </div>
+</div>
 </template>
 
 <script>
 export default {
     components: {
-        BaseDocument: ()=> import('@/common/components/base/BaseDocument.vue')
+        PublicationTable: ()=> import('./PublicationTable.vue')
     },
     data() {
         return {
@@ -344,6 +349,16 @@ export default {
                     },
                 },
             },
+            items: [
+                {
+                text: "Media Center",
+                href: "#",
+                },
+                {
+                text: "Publications",
+                active: true,
+                },
+            ],
         }
     },
     methods: {

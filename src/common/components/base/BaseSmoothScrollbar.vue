@@ -20,7 +20,7 @@ export default {
         }
     },
     created(){
-        if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        if( /Android|webOS|iPhone|Macintosh|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent) ) {
             this.isMobile=true
         }
     }

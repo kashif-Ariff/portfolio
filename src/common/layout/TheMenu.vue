@@ -26,27 +26,19 @@
           <ul class="mainNav" role="menubar">
             <li role="none">
               <router-link @click.native="closeMenu" to="/" role="menuitem"
-                >Home</router-link
+                >Homepage</router-link
               >
             </li>
-            <li role="none">
+             <li role="none">
               <router-link
                 @click.native="closeMenu"
-                to="`/${$i18n.locale}/covid-19`"
+                to="`/${$i18n.locale}/media-center`"
                 role="menuitem"
-                >Covid19</router-link
-              >
-            </li>
-            <li role="none">
-              <router-link
-                @click.native="closeMenu"
-                to="`/${$i18n.locale}/about-us`"
-                role="menuitem"
-                >About Zain</router-link
+                >about us</router-link
               >
               <button
                 aria-expanded="false"
-                aria-controls="about_menu"
+                aria-controls="media_menu"
                 aria-haspopup="true"
               >
                 <base-svg-icon
@@ -55,73 +47,41 @@
                 ></base-svg-icon>
               </button>
               <ul
-                id="about_menu"
+                id="media_menu"
                 role="menu"
-                aria-label="about zain"
+                aria-label="media center"
                 class="submenu"
               >
-                <li role="none">
+               <li role="none">
                   <router-link
                     @click.native="closeMenu"
-                    to="`/${$i18n.locale}/about-us/world-of-zain`"
+                    to="`/${$i18n.locale}/media-center/contact`"
                     role="menuitem"
-                    >The World of Zain</router-link
+                    >vission and mission</router-link
                   >
                 </li>
                 <li role="none">
                   <router-link
                     @click.native="closeMenu"
-                    to="`/${$i18n.locale}/about-us/ceo-message`"
+                    :to="`/${$i18n.locale}/board-directors`"
                     role="menuitem"
-                    >ceo message</router-link
+                    >board of directors</router-link
                   >
                 </li>
                 <li role="none">
                   <router-link
                     @click.native="closeMenu"
-                    to="`/${$i18n.locale}/about-us/our-management`"
+                    :to="`/${$i18n.locale}/faq`"
                     role="menuitem"
-                    >Board & Management</router-link
+                    >faqs</router-link
                   >
                 </li>
                 <li role="none">
                   <router-link
                     @click.native="closeMenu"
-                    to="`/${$i18n.locale}/about-us/milestones`"
+                    :to="`/${$i18n.locale}/contact`"
                     role="menuitem"
-                    >Milestones</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/about-us/corporate-governance`"
-                    role="menuitem"
-                    >Corporate Governance</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/about-us/our-brand`"
-                    role="menuitem"
-                    >Our Brand</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/about-us/awards-recognitions`"
-                    role="menuitem"
-                    >Awards &amp; Recognitions</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/about-us/diversity-and-inclusion`"
-                    role="menuitem"
-                    >Diversity And Inclusion</router-link
+                    >contact us</router-link
                   >
                 </li>
               </ul>
@@ -129,7 +89,7 @@
             <li role="none">
               <router-link
                 @click.native="closeMenu"
-                to="`/${$i18n.locale}/media-center`"
+                :to="`/${$i18n.locale}/media-center`"
                 role="menuitem"
                 >Media Center</router-link
               >
@@ -152,69 +112,21 @@
                 <li role="none">
                   <router-link
                     @click.native="closeMenu"
-                    to="`/${$i18n.locale}/media-center/press-release`"
+                    :to="`/${$i18n.locale}/publication`"
                     role="menuitem"
-                    >Press Releases</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/media-center/media-gallery`"
-                    role="menuitem"
-                    >Media Gallery</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/media-center/corporate-magazine`"
-                    role="menuitem"
-                    >Corporate Magazine</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/media-center/contact`"
-                    role="menuitem"
-                    >Contact</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/media-center/video-gallery`"
-                    role="menuitem"
-                    >Video Gallery</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/media-center/research-reports`"
-                    role="menuitem"
-                    >Research Reports</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/media-center/zain-news`"
-                    role="menuitem"
-                    >Zain in the News</router-link
+                    >Publications</router-link
                   >
                 </li>
               </ul>
             </li>
             <li role="none">
-              <router-link
+              <router-link 
                 @click.native="closeMenu"
-                to="`/${$i18n.locale}/investor-relations`"
+                :to="`/${$i18n.locale}/our-services`"
                 role="menuitem"
-                >Investor Relations</router-link
+                >services</router-link
               >
-              <button
+              <!-- <button
                 aria-expanded="false"
                 aria-controls="investor_menu"
                 aria-haspopup="true"
@@ -278,203 +190,47 @@
                     >IR Calendar</router-link
                   >
                 </li>
-              </ul>
+              </ul> -->
             </li>
             <li role="none">
               <router-link
                 @click.native="closeMenu"
                 to="`/${$i18n.locale}/sustainability`"
                 role="menuitem"
-                >Corporate Sustainability</router-link
+                >electronic services</router-link
               >
-              <button
-                aria-expanded="false"
-                aria-controls="sustainability_menu"
-                aria-haspopup="true"
-              >
-                <base-svg-icon
-                  icon-id="arrow-down-menu"
-                  icon-viewbox="0 0 492 289.26"
-                ></base-svg-icon>
-              </button>
-              <ul
-                id="sustainability_menu"
-                role="menu"
-                aria-label="sustainability"
-                class="submenu"
-              >
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/sustainability/tele-communication`"
-                    role="menuitem"
-                    >Tele Communication</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/sustainability/sustainability-report`"
-                    role="menuitem"
-                    >Sustainability Report</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/sustainability/our-reports`"
-                    role="menuitem"
-                    >Our Reports</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/sustainability/facts-figures`"
-                    role="menuitem"
-                    >Facts &amp; Figures</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/sustainability/our-commitments`"
-                    role="menuitem"
-                    >Our Commitments</router-link
-                  >
-                </li>
-
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/sustainability/global-goals`"
-                    role="menuitem"
-                    >Global Goals</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/sustainability/newsletter`"
-                    role="menuitem"
-                    >Newsletter</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/sustainability/climatechange`"
-                    role="menuitem"
-                    >Climate Change</router-link
-                  >
-                </li>
-              </ul>
             </li>
             <li role="none">
               <router-link
                 @click.native="closeMenu"
-                to="`/${$i18n.locale}/partners-subsidiaries`"
+                :to="`/${$i18n.locale}/knowledge-library`"
                 role="menuitem"
-                >Partnes Subsidiaries</router-link
+                >knowledge library</router-link
               >
-              <button
-                aria-expanded="false"
-                aria-controls="partner_menu"
-                aria-haspopup="true"
+            </li>
+             <li role="none">
+              <router-link
+                @click.native="closeMenu"
+                :to="`/${$i18n.locale}/initiators`"
+                role="menuitem"
+                >the initiators</router-link
               >
-                <base-svg-icon
-                  icon-id="arrow-down-menu"
-                  icon-viewbox="0 0 492 289.26"
-                ></base-svg-icon>
-              </button>
-              <ul
-                id="partner_menu"
-                role="menu"
-                aria-label="Partnes Subsidiaries"
-                class="submenu"
+            </li>
+             <li role="none">
+              <router-link
+                @click.native="closeMenu"
+                :to="`/${$i18n.locale}/common-intrest`"
+                role="menuitem"
+                >common interest</router-link
               >
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/partner/global-services`"
-                    role="menuitem"
-                    >Global Services</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/partners-subsidiaries/i_supplier_registration_portal`"
-                    role="menuitem"
-                    >ZAIN GROUP'S I-SUPPLIER REGISTRATION PORTAL</router-link
-                  >
-                </li>
-              </ul>
             </li>
             <li role="none">
               <router-link
                 @click.native="closeMenu"
-                to="`/${$i18n.locale}/business`"
+                :to="`/${$i18n.locale}/support-center`"
                 role="menuitem"
-                >Zain Business</router-link
+                >support center</router-link
               >
-              <button
-                aria-expanded="false"
-                aria-controls="business_menu"
-                aria-haspopup="true"
-              >
-                <base-svg-icon
-                  icon-id="arrow-down-menu"
-                  icon-viewbox="0 0 492 289.26"
-                ></base-svg-icon>
-              </button>
-              <ul
-                id="business_menu"
-                role="menu"
-                aria-label="Zain Business"
-                class="submenu"
-              >
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/business/why-Zain-business`"
-                    role="menuitem"
-                    >WHY ZAIN BUSINESS</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/business/portfolio`"
-                    role="menuitem"
-                    >PORTFOLIO</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/business/business-news`"
-                    role="menuitem"
-                    >D&L NEWS</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/business/business-market`"
-                    role="menuitem"
-                    >ZAIN BUSINESS MARKET</router-link
-                  >
-                </li>
-                <li role="none">
-                  <router-link
-                    @click.native="closeMenu"
-                    to="`/${$i18n.locale}/business/business_contact`"
-                    role="menuitem"
-                    >CONTACT US</router-link
-                  >
-                </li>
-              </ul>
             </li>
           </ul>
         </nav>
