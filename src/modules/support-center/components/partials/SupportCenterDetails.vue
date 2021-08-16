@@ -24,7 +24,9 @@
             <b-tab title="Links">
                 <div class="links">
                     <!-- <base-smooth-scrollbar> -->
-                        <base-document></base-document> 
+                        <div class="card">
+                            <base-document :documents="documents"></base-document>
+                        </div>
                     <!-- </base-smooth-scrollbar> -->
                 </div>
             </b-tab>
@@ -36,7 +38,47 @@
 export default {
     components:{
         BaseDocument: ()=> import('@/common/components/base/BaseDocument.vue')
-
+    },
+    data(){
+        return{
+            documents:[
+                {
+                index:0,
+                title:'Profile of The National Fund	',
+                size:'200 KB',
+                file:'pdf',
+                download:'Download',
+                },
+                {
+                index:1,
+                title:'Profile of The National Fund	',
+                size:'200 KB',
+                file:'word',
+                download:'Download',
+                },
+                {
+                index:2,
+                title:'Profile of The National Fund	',
+                size:'200 KB',
+                file:'excel',
+                download:'Download',
+                },
+                {
+                index:3,
+                title:'Profile of The National Fund	',
+                size:'200 KB',
+                file:'pdf',
+                download:'Download',
+                },
+                {
+                index:4,
+                title:'Profile of The National Fund	',
+                size:'200 KB',
+                file:'word',
+                download:'Download',
+                }
+            ]
+        }
     }
 }
 </script>
@@ -80,49 +122,8 @@ export default {
         padding-top: 2px;
         padding-left: 2px;
     }
-    .document__info {
-        width: 100%;
-        height: 70px;
-        background: #fff;
-        display: inline-flex;
-        justify-content: space-between;
-        padding: 0px 35px;
-        align-items: center;
-        text-decoration: none;
-        box-shadow: 0 0 13px 0px rgba($color: #000000, $alpha: 0.2);
-        border: 2px solid transparent;
-        transition: 0.4s ease all;
-        margin-bottom: rem(30px);
-        outline-offset: -4px;
-        outline-width: 3px;
-        &:focus {
-            // outline: none;
-            outline-color: var(--primary);
-        }
-        &:hover {
-            border-color: var(--primary);
-        }
-        .icon {
-            font-size: rem(20px);
-            color: #131413;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            span {
-                color: #131413;
-                width: 22px;
-                height: 20px;
-                display: inline-block;
-                margin-right: 10px;
-            }
-        }
-        h3 {
-            margin: 0px;
-            font-size: rem(22px);
-            font-weight: 900;
-            text-transform: uppercase;
-            color: var(--secondary);
-        }
+    .card{
+        padding: rem(30px) rem(40px);
     }
 }
 [lang='ar']{

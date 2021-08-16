@@ -20,8 +20,8 @@ export default {
     data(){
         return{
             innerBannerDetail: {
-                image: "BOD.png",
-                title: "board publications",
+              image: "BOD.png",
+              title: "board publications",
             },
         }
     }

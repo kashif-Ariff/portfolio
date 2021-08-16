@@ -345,28 +345,12 @@ export default {
                     }
                 }
                 &.sideNavigation {
-                      #nextArrow {
-                          right: 0;
-                      }
-                      #prevArrow {
-                            left: 0;
-                        }
-                    // @media screen and (max-width: 1600px) {
-                    //     #nextArrow {
-                    //         right: -10px;
-                    //     }
-                    //     #prevArrow {
-                    //         left: -10px;
-                    //     }
-                    // }
-                    // @media screen and (max-width: 1199px) {
-                    //     #nextArrow {
-                    //         right: 0px;
-                    //     }
-                    //     #prevArrow {
-                    //         left: 0px;
-                    //     }
-                    // }
+                    #nextArrow {
+                        right: 0;
+                    }
+                    #prevArrow {
+                        left: 0;
+                    }
                 }
             }
         }
