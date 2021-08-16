@@ -1,20 +1,20 @@
 <template>
     <div class="initiatorSlider" :aria-label="ariaLabel" role="region">
-        <goals :goals="goals"></goals>
+        <initiator :cardContent="cardContent"></initiator>
     </div>
 </template>
 
 <script>
-import Goals from './partials/Goals.vue'
+import Initiator from './partials/Initiator.vue'
 export default {
-    components: { Goals },
+    components: { Initiator },
     props: {
         sectionTitle: String,
         ariaLabel: String,
     },
     data() {
         return {
-            goals: [
+            cardContent: [
                 {
                     color: '#fcc30b',
                     index: '01',

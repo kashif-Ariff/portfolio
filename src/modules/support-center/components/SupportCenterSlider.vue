@@ -242,7 +242,7 @@
         </div>
         <div class="supportCenterSlider__body customTabs__contents">
             <b-tabs v-model="tabIndex" nav-wrapper-class="d-none">
-                <b-tab id="supportCenter_0" button-id="tab_supportCenter_0"><articlse-association></articlse-association></b-tab>
+                <b-tab id="supportCenter_0" button-id="tab_supportCenter_0"><support-center-details></support-center-details></b-tab>
                 <b-tab id="supportCenter_1" button-id="tab_supportCenter_1">1</b-tab>
                 <b-tab id="supportCenter_2" button-id="tab_supportCenter_2">2</b-tab>
                 <b-tab id="supportCenter_3" button-id="tab_supportCenter_3">3</b-tab>
@@ -256,11 +256,11 @@
 </template>
 
 <script>
-import ArticlseAssociation from '@/modules/support-center/components/partials/ArticlseAssociation'
+import SupportCenterDetails from '@/modules/support-center/components/partials/SupportCenterDetails'
 
 export default {
     components: {
-        ArticlseAssociation,
+        SupportCenterDetails,
     },
     data() {
         return {
