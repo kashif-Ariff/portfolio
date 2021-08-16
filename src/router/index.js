@@ -80,6 +80,12 @@ const routes = [
                 component: () =>
                     import ('../views/CommonInterest.vue'),
             },
+            {
+                path: `/:lang/contact`,
+                name: 'Contact',
+                component: () =>
+                    import ('../views/Contact.vue'),
+            },
 //     {
 //         path: `/:lang/contact-us`,
 //         name: 'contact-us',
