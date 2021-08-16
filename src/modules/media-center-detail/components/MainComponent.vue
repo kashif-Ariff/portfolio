@@ -76,8 +76,8 @@
             <h3 class="title">
                 <base-svg-icon icon-id="paperClip-icon" icon-viewbox="0 0 20.54 22.665"></base-svg-icon>
                 Related Documents :
-        </h3>
-        <base-document :documents="documents"></base-document>
+            </h3>
+            <base-document :documents="documents"></base-document>
         </div>
   </div>
 </template>
@@ -249,27 +249,27 @@ export default {
         box-shadow: none;
         border: none;
         padding: 0;
-        /deep/ {
-            .table__head{
-                display: none;
-            }
-            .table__body{
-                .table__row--cell{
-                &:nth-child(2){
-                    position: relative;
-                    &::before{
-                        position: absolute;
-                        content: '';
-                        width: 1px;
-                        height: 22px;
-                        top: 14px;
-                        left: -15px;
-                        background: var(--secondary);
-                    }
+    }
+    /deep/ {
+        .table__head{
+            display: none;
+        }
+        .table__body{
+            .table__row--cell{
+            &:nth-child(2){
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 1px;
+                    height: 22px;
+                    top: 14px;
+                    left: -15px;
+                    background: var(--secondary);
                 }
-                &:last-child{
-                        text-align: right;
-                    }
+            }
+            &:last-child{
+                    text-align: right;
                 }
             }
         }
