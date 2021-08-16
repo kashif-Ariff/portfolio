@@ -98,6 +98,12 @@ const routes = [
                 component: () =>
                     import ('../views/Search.vue'),
             },
+            {
+                path: `/:lang/board-publication`,
+                name: 'board-publication',
+                component: () =>
+                    import ('../views/BoardPublication.vue'),
+            },
 //     {
 //         path: `/:lang/contact-us`,
 //         name: 'contact-us',

@@ -285,6 +285,24 @@
 			opacity: 0.8;
 		}
 	}
+	&.image {
+		background-color: #00c9a7;
+		color: #fff;
+		padding: 15px 18px;
+		display: inline-flex;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+	&.video {
+		background-color: #009cde;
+		color: #fff;
+		padding: 15px 18px;
+		display: inline-flex;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
 }
 
 .btn-upload {

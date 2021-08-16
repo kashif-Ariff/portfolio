@@ -301,7 +301,11 @@
         </div>
         <div class="supportCenterSlider__body customTabs__contents">
             <b-tabs v-model="tabIndex" nav-wrapper-class="d-none">
-                <b-tab id="supportCenter_0" button-id="tab_supportCenter_0"><publication-table></publication-table></b-tab>
+                <b-tab id="supportCenter_0" button-id="tab_supportCenter_0">
+                    <div class="card">
+                        <base-document :documents="documents"></base-document>
+                    </div>
+                </b-tab>
                 <b-tab id="supportCenter_1" button-id="tab_supportCenter_1">1</b-tab>
                 <b-tab id="supportCenter_2" button-id="tab_supportCenter_2">2</b-tab>
                 <b-tab id="supportCenter_3" button-id="tab_supportCenter_3">3</b-tab>
@@ -318,7 +322,7 @@
 <script>
 export default {
     components: {
-        PublicationTable: ()=> import('./PublicationTable.vue')
+        BaseDocument: ()=> import('@/common/components/base/BaseDocument.vue')
     },
     data() {
         return {
@@ -359,6 +363,43 @@ export default {
                 active: true,
                 },
             ],
+            documents:[
+                {
+                index:0,
+                title:'Profile of The National Fund	',
+                size:'200 KB',
+                file:'pdf',
+                download:'Download',
+                },
+                {
+                index:1,
+                title:'Profile of The National Fund	',
+                size:'200 KB',
+                file:'word',
+                download:'Download',
+                },
+                {
+                index:2,
+                title:'Profile of The National Fund	',
+                size:'200 KB',
+                file:'excel',
+                download:'Download',
+                },
+                {
+                index:3,
+                title:'Profile of The National Fund	',
+                size:'200 KB',
+                file:'pdf',
+                download:'Download',
+                },
+                {
+                index:4,
+                title:'Profile of The National Fund	',
+                size:'200 KB',
+                file:'word',
+                download:'Download',
+                }
+            ]
         }
     },
     methods: {
@@ -532,6 +573,9 @@ export default {
     &__body {
         .scrollArea {
             height: 185px;
+        }
+        .card{
+            padding: rem(30px) rem(40px);
         }
         /deep/ {
             .nav-pills {

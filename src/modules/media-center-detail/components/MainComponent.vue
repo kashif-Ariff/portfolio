@@ -77,11 +77,7 @@
                 <base-svg-icon icon-id="paperClip-icon" icon-viewbox="0 0 20.54 22.665"></base-svg-icon>
                 Related Documents :
         </h3>
-        <base-document
-            id="document"
-            aria-label="DOCUMENT"
-            data-color-theme="dark"
-        ></base-document>
+        <base-document :documents="documents"></base-document>
         </div>
   </div>
 </template>
@@ -110,6 +106,51 @@ export default {
                     thumb: '',
                 },
             ],
+            documents:[
+                {
+                    index:0,
+                    title:'Q8 vs Covid-19 Hackathon',
+                    size:' Download Image',
+                    file:'image',
+                    download:'125 MB',
+
+                },
+                {
+                    index:1,
+                    title:'Q8 vs Covid-19 Hackathon',
+                    size:' Download Image',
+                    file:'video',
+                    download:'125 MB',
+                },
+                {
+                    index:2,
+                    title:'Q8 vs Covid-19 Hackathon',
+                    size:' Download Image',
+                    file:'pdf',
+                    download:'125 MB',
+                },
+                {
+                    index:3,
+                    title:'Q8 vs Covid-19 Hackathon',
+                    size:' Download Image',
+                    file:'pdf',
+                    download:'125 MB',
+                },
+                {
+                    index:4,
+                    title:'Q8 vs Covid-19 Hackathon',
+                    size:' Download Image',
+                    file:'excel',
+                    download:'125 MB',
+                },
+                {
+                    index:5,
+                    title:'Q8 vs Covid-19 Hackathon',
+                    size:' Download Image',
+                    file:'word',
+                    download:'125 MB',
+                }
+            ]
         }
     }
 }
@@ -201,6 +242,35 @@ export default {
                 line-height: 1.4;
                 font-weight: 400;
                 color: #404040;
+            }
+        }
+    }
+    .card{
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        /deep/ {
+            .table__head{
+                display: none;
+            }
+            .table__body{
+                .table__row--cell{
+                &:nth-child(2){
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        width: 1px;
+                        height: 22px;
+                        top: 14px;
+                        left: -15px;
+                        background: var(--secondary);
+                    }
+                }
+                &:last-child{
+                        text-align: right;
+                    }
+                }
             }
         }
     }

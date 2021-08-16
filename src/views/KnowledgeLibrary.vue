@@ -4,13 +4,13 @@
     <div class="container">
         <div class="content-box">
             <h2>Information Sources</h2>
-            <section id="" data-color-theme="dark">
+            <section>
                 <filters />
             </section>
-            <section id="" data-color-theme="dark">
+            <section>
                 <information-Card />
             </section>
-            <section id="" data-color-theme="dark">
+            <section>
                 <base-pagination />
           </section>
         </div>

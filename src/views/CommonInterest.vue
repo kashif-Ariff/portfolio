@@ -3,10 +3,10 @@
       <base-inner-banner :banner-detail="innerBannerDetail" />
       <div class="container">
         <section id="" data-color-theme="dark">
-          <publication-slider
+          <common-interest-slider
               section-title=""
               aria-label=""
-          ></publication-slider>
+          ></common-interest-slider>
         </section>
     </div>
   </div>
@@ -23,7 +23,7 @@ export default {
     };
   },
   components:{
-    PublicationSlider: () => import('@/modules/common-interest/components/commonInterestSlider.vue'),
+    CommonInterestSlider: () => import('@/modules/common-interest/components/commonInterestSlider.vue'),
   }
 }
 </script>
