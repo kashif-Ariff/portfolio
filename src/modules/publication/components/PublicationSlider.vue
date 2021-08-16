@@ -35,20 +35,20 @@
                             <div class="slide__card--image iconTabs__item--image">
                                 <span class="tab-icon">
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        src="@/assets/images/icons/faqs/color/question.png"
                                         alt=""
                                         class="img-fluid"
                                     />
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        src="@/assets/images/icons/faqs/white/question.png"
                                         alt=""
                                         class="img-fluid selected"
                                     />
                                 </span>
+                                <p class="supportCenterSlider__item--title">
+                                   Publications
+                                </p>
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                               Business Incubators
-                            </p>
                         </a>
                     </div>
                     <div
@@ -68,22 +68,22 @@
                             id="tab_supportCenter_1"
                         >
                            <div class="slide__card--image iconTabs__item--image">
-                                <span class="tab-icon">
+                               <span class="tab-icon">
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        src="@/assets/images/icons/faqs/color/question.png"
                                         alt=""
                                         class="img-fluid"
                                     />
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        src="@/assets/images/icons/faqs/white/question.png"
                                         alt=""
                                         class="img-fluid selected"
                                     />
                                 </span>
+                                <p class="supportCenterSlider__item--title">
+                                    Law
+                                </p>
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                                Creative Centers
-                            </p>
                         </a>
                     </div>
                     <div
@@ -105,20 +105,20 @@
                             <div class="slide__card--image iconTabs__item--image">
                                 <span class="tab-icon">
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        src="@/assets/images/icons/faqs/color/question.png"
                                         alt=""
                                         class="img-fluid"
                                     />
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        src="@/assets/images/icons/faqs/white/question.png"
                                         alt=""
                                         class="img-fluid selected"
                                     />
                                 </span>
+                                <p class="supportCenterSlider__item--title">
+                                    introduction
+                                </p>
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                                introduction
-                            </p>
                         </a>
                     </div>
                      <div
@@ -140,20 +140,20 @@
                             <div class="slide__card--image iconTabs__item--image">
                                 <span class="tab-icon">
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        src="@/assets/images/icons/faqs/color/question.png"
                                         alt=""
                                         class="img-fluid"
                                     />
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        src="@/assets/images/icons/faqs/white/question.png"
                                         alt=""
                                         class="img-fluid selected"
                                     />
                                 </span>
+                                <p class="supportCenterSlider__item--title">
+                                    introduction
+                                </p>
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                                introduction
-                            </p>
                         </a>
                     </div>
                      <div
@@ -175,20 +175,20 @@
                             <div class="slide__card--image iconTabs__item--image">
                                 <span class="tab-icon">
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        src="@/assets/images/icons/faqs/color/question.png"
                                         alt=""
                                         class="img-fluid"
                                     />
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        src="@/assets/images/icons/faqs/white/question.png"
                                         alt=""
                                         class="img-fluid selected"
                                     />
                                 </span>
+                                <p class="supportCenterSlider__item--title">
+                                    introduction
+                                </p>
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                                introduction
-                            </p>
                         </a>
                     </div>
                     <div
@@ -210,20 +210,20 @@
                             <div class="slide__card--image iconTabs__item--image">
                                 <span class="tab-icon">
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        src="@/assets/images/icons/faqs/color/question.png"
                                         alt=""
                                         class="img-fluid"
                                     />
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        src="@/assets/images/icons/faqs/white/question.png"
                                         alt=""
                                         class="img-fluid selected"
                                     />
                                 </span>
+                                <p class="supportCenterSlider__item--title">
+                                    introduction
+                                </p>
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                                introduction
-                            </p>
                         </a>
                     </div>
                     <div
@@ -245,20 +245,20 @@
                            <div class="slide__card--image iconTabs__item--image">
                                 <span class="tab-icon">
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        src="@/assets/images/icons/faqs/color/question.png"
                                         alt=""
                                         class="img-fluid"
                                     />
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        src="@/assets/images/icons/faqs/white/question.png"
                                         alt=""
                                         class="img-fluid selected"
                                     />
                                 </span>
+                                <p class="supportCenterSlider__item--title">
+                                    introduction
+                                </p>
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                                introduction
-                            </p>
                         </a>
                     </div>
                     <div
@@ -278,22 +278,22 @@
                             id="tab_supportCenter_7"
                         >
                             <div class="slide__card--image iconTabs__item--image">
-                                <span class="tab-icon">
+                               <span class="tab-icon">
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar.png"
+                                        src="@/assets/images/icons/faqs/color/question.png"
                                         alt=""
                                         class="img-fluid"
                                     />
                                     <img
-                                        src="@/assets/images/tabs-icon/calendar-hover.png"
+                                        src="@/assets/images/icons/faqs/white/question.png"
                                         alt=""
                                         class="img-fluid selected"
                                     />
                                 </span>
+                                <p class="supportCenterSlider__item--title">
+                                    introduction
+                                </p>
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                                introduction
-                            </p>
                         </a>
                     </div>
                 </carousel>
@@ -430,19 +430,17 @@ export default {
             }
             .swiper-container {
                 padding: 10px;
-                @media screen and (max-width: 1600px) {
-                    margin: 0 60px;
-                }
+               
                 .swiper-wrapper {
                     margin: 0px;
                 }
             }
             .sliderNavigation {
                 --color: var(--primary);
-                --arrow: var(--secondary);
-                --border: var(--secondary);
+                --arrow: var(--primary);
+                --border: var(--primary);
                 z-index: 0;
-                height: unset;
+                height: 100%;
                 &__controls {
                     &--pagination {
                         &.customPagination {
@@ -458,28 +456,12 @@ export default {
                     }
                 }
                 &.sideNavigation {
-                      #nextArrow {
-                          right: 0;
-                      }
-                      #prevArrow {
-                            left: 0;
-                        }
-                    // @media screen and (max-width: 1600px) {
-                    //     #nextArrow {
-                    //         right: -10px;
-                    //     }
-                    //     #prevArrow {
-                    //         left: -10px;
-                    //     }
-                    // }
-                    // @media screen and (max-width: 1199px) {
-                    //     #nextArrow {
-                    //         right: 0px;
-                    //     }
-                    //     #prevArrow {
-                    //         left: 0px;
-                    //     }
-                    // }
+                    #nextArrow {
+                        right: 0;
+                    }
+                    #prevArrow {
+                        left: 0;
+                    }
                 }
             }
         }

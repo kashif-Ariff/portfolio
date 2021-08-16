@@ -273,7 +273,6 @@ export default {
                 rtl: this.$i18n.locale=="en" ? false : true,
                 spaceBetween: 10,
                 breakpoints: {
-                   
                     1200: {
                         slidesPerView:6,
                     },
@@ -321,17 +320,14 @@ export default {
             }
             .swiper-container {
                 padding: 10px;
-                @media screen and (max-width: 1600px) {
-                    margin: 0 60px;
-                }
                 .swiper-wrapper {
                     margin: 0px;
                 }
             }
             .sliderNavigation {
                 --color: var(--primary);
-                --arrow: var(--secondary);
-                --border: var(--secondary);
+                --arrow: var(--primary);
+                --border: var(--primary);
                 z-index: 0;
                 height: unset;
                 &__controls {
@@ -379,10 +375,10 @@ export default {
             transition: 0.4s ease all;
             position: relative;
             display: inline-block;
-            transform: scale(0.9);
+            // transform: scale(0.9);
             width: 100%;
             .slide__card--image{
-                transform: scale(.96);
+                // transform: scale(.92);
             }
             &.active {
                 .slide__card--image {
@@ -392,7 +388,7 @@ export default {
                 transform: scale(1);
                 .supportCenterSlider__item--title {
                     color: var(--secondary);
-                    font-weight: 500;
+                    font-weight: 400;
                     font-size: rem(17px);
                 }
             }
@@ -455,7 +451,7 @@ export default {
             font-size: rem(17px);
             color: var(--secondary);
             text-transform: capitalize;
-            font-weight: 500;
+            font-weight: 400;
             display: inline-block;
             margin-top: rem(20px);
         }

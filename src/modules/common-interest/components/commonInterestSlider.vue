@@ -43,7 +43,7 @@
                                 </span>
                             </div>
                             <p class="commonInterestSlider__item--title">
-                               Business Incubators
+                               Entrepreneurship Support Centers
                             </p>
                         </a>
                     </div>
@@ -394,9 +394,6 @@ export default {
             }
             .swiper-container {
                 padding: 10px;
-                @media screen and (max-width: 1600px) {
-                    margin: 0 60px;
-                }
                 .swiper-wrapper {
                     margin: 0px;
                 }
@@ -422,28 +419,12 @@ export default {
                     }
                 }
                 &.sideNavigation {
-                      #nextArrow {
-                          right: 0;
-                      }
-                      #prevArrow {
-                            left: 0;
-                        }
-                    // @media screen and (max-width: 1600px) {
-                    //     #nextArrow {
-                    //         right: -10px;
-                    //     }
-                    //     #prevArrow {
-                    //         left: -10px;
-                    //     }
-                    // }
-                    // @media screen and (max-width: 1199px) {
-                    //     #nextArrow {
-                    //         right: 0px;
-                    //     }
-                    //     #prevArrow {
-                    //         left: 0px;
-                    //     }
-                    // }
+                    #nextArrow {
+                        right: 0;
+                    }
+                    #prevArrow {
+                        left: 0;
+                    }
                 }
             }
         }
@@ -452,24 +433,25 @@ export default {
             transition: 0.4s ease all;
             position: relative;
             display: inline-block;
-            transform: scale(0.9);
+            // transform: scale(0.9);
             width: 100%;
+            .slide__card--image{
+                border-radius: 25px;
+                height: 196px;
+            }
             &.active {
                 .slide__card--image {
                     // background: unset;
                 }
-                transform: scale(1);
+                // transform: scale(1);
                 .commonInterestSlider__item--title {
                     color: var(--secondary);
-                    font-weight: 500;
+                    font-weight: 400;
                     font-size: rem(17px);
                 }
             }
             outline-offset: -3px !important;
             outline-width: 3px;
-            .slide__card--image{
-                // border-radius: 25px;
-            }
             &:focus {
                 outline-color: var(--primary);
                 &::before {
@@ -524,7 +506,7 @@ export default {
             font-size: rem(17px);
             color: var(--secondary);
             text-transform: capitalize;
-            font-weight: 500;
+            font-weight: 400;
             display: inline-block;
             margin-top: rem(20px);
         }

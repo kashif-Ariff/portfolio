@@ -21,7 +21,7 @@ export default {
         return{
             innerBannerDetail: {
                 image: "BOD.png",
-                title: "board publication",
+                title: "board publications",
             },
         }
     }

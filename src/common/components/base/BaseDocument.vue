@@ -12,7 +12,7 @@
                 <div class="table__row--cell" data-width="40">{{text.title}}</div>
                 <div class="table__row--cell" data-width="14">{{text.size}}</div>
                 <div class="table__row--cell" data-width="12">
-                  <a href="#" class=" btn" :class="text.file">
+                  <a href="#" class="btn" :class="text.file">
                         <div class="icon">
                             <span>
                                 <base-svg-icon
