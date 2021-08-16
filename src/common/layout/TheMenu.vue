@@ -117,6 +117,14 @@
                     >Publications</router-link
                   >
                 </li>
+                <li role="none">
+                  <router-link
+                    @click.native="closeMenu"
+                    :to="`/${$i18n.locale}/board-publication`"
+                    role="menuitem"
+                    >board Publications</router-link
+                  >
+                </li>
               </ul>
             </li>
             <li role="none">
@@ -230,6 +238,22 @@
                 :to="`/${$i18n.locale}/support-center`"
                 role="menuitem"
                 >support center</router-link
+              >
+            </li>
+            <li role="none">
+              <router-link
+                @click.native="closeMenu"
+                :to="`/${$i18n.locale}/media-center-detail`"
+                role="menuitem"
+                >media center detail</router-link
+              >
+            </li>
+            <li role="none">
+              <router-link
+                @click.native="closeMenu"
+                :to="`/${$i18n.locale}/search`"
+                role="menuitem"
+                >search</router-link
               >
             </li>
           </ul>
