@@ -300,9 +300,9 @@ export default {
 						background: var(--secondary);
 						font-size: rem(18px);
 						color: #fff;
-						@media screen and (min-width: 1600px) {
-							font-size: rem(20px);
-						}
+						// @media screen and (min-width: 1600px) {
+						// 	font-size: rem(20px);
+						// }
 					}
 				}
 			}
