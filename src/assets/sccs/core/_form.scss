@@ -108,7 +108,7 @@ form {
 	border-width: 3px;
 	// border-width: 3px !important;
 	border-radius: 25px;
-	font-weight: 500;
+	font-weight: 400;
 	box-shadow: 0px 2px 16px -3px rgba($color: black, $alpha: 0.26);
 
 	&.active {
@@ -121,7 +121,7 @@ form {
 		box-shadow: none;
 		border-color: var(--secondary);
 		border-style: dashed;
-		// border-width: 3px;
+		border-width: 3px;
 	}
 	&:read-only {
 		background: transparent;
@@ -144,7 +144,7 @@ textarea {
 		padding-top: rem(20px);
 		line-height: normal;
 		overflow-y: unset !important;
-		border: 1px solid #cec9d4;
+		// border: 1px solid #cec9d4;
 		@media screen and (max-width: 991px) {
 			height: rem(120px) !important;
 		}

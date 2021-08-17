@@ -42,8 +42,8 @@
 							v-for="(item, index) in tabsContent"
 							:key="index"
 						>
-							<div class="contactWrapper row">
-								<div class="contactWrapper__detail col-md-6">
+							<div class="mapWrapper row">
+								<div class="mapWrapper__detail col-md-6">
 									<ul>
 										<li>
 											<span class="icon">
@@ -87,7 +87,7 @@
 										</li>
 									</ul>
 								</div>
-								<div class="contactWrapper__map col-md-6">
+								<div class="mapWrapper__map col-md-6">
 									<iframe
 										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14143117.941545919!2d60.32337114882688!3d30.068124090484673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38db52d2f8fd751f%3A0x46b7a1f7e614925c!2sPakistan!5e0!3m2!1sen!2s!4v1628862714297!5m2!1sen!2s"
 										style="border: 0"
@@ -99,67 +99,78 @@
 					</b-tabs>
 				</div>
 			</div>
-			<div class="contactForm">
-				<div class="contactForm__note d-flex align-items-center">
+			<div class="formDetail">
+				<div class="title d-flex align-items-center">
 					<span class="icon">
 						<base-svg-icon
 							icon-id="agent"
 							icon-viewbox="0 0 29.531 28.658"
 						></base-svg-icon>
 					</span>
-          We’re more than happy to help. Give us a call or just
-						drop a message.
-					<!-- <span class="label"
-						></span
-					> -->
+					We’re more than happy to help. Give us a call or just drop a
+					message.
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<input
-							type="text"
-							class="form-control"
-							placeholder="First Name"
-						/>
-					</div>
-					<div class="col-md-6">
-						<input
-							type="text"
-							class="form-control"
-							placeholder="Last Name"
-						/>
-					</div>
-					<div class="col-md-6">
-						<input
-							type="text"
-							class="form-control"
-							placeholder="Phone No."
-						/>
-					</div>
-					<div class="col-md-6">
-						<input
-							type="text"
-							class="form-control"
-							placeholder="Email"
-						/>
-					</div>
-					<div class="col-md-6">
-						<vue-select
-							:options="input__options"
-							v-model="selected_item"
-							aria-label="content category"
-							tabIndex="0"
-						></vue-select>
-						<div class="mt-30">
-							<vue-recaptcha
-								sitekey="6LdzWSkUAAAAAJQZfr1nvUshWLG7-2LY8BdQAWIq"
-							></vue-recaptcha>
+						<div class="form-group">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="First Name"
+							/>
 						</div>
 					</div>
 					<div class="col-md-6">
-						<textarea
-							class="form-control"
-							placeholder="Message"
-						></textarea>
+						<div class="form-group">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="Last Name"
+							/>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="Phone No."
+							/>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="Email"
+							/>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<vue-select
+								:options="input__options"
+								v-model="selected_item"
+								aria-label="content category"
+								tabIndex="0"
+							></vue-select>
+						</div>
+						<div class="mt-30">
+							<div class="form-group">
+								<vue-recaptcha
+									sitekey="6LdzWSkUAAAAAJQZfr1nvUshWLG7-2LY8BdQAWIq"
+								></vue-recaptcha>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<textarea
+								class="form-control"
+								placeholder="Message"
+							></textarea>
+						</div>
 					</div>
 				</div>
 				<div class="button-row justify-content-end mt-30">
@@ -289,7 +300,9 @@ export default {
 						background: var(--secondary);
 						font-size: rem(18px);
 						color: #fff;
-						
+						@media screen and (min-width: 1600px) {
+							font-size: rem(20px);
+						}
 					}
 				}
 			}
@@ -319,7 +332,7 @@ export default {
 			}
 		}
 		&--body {
-			.contactWrapper {
+			.mapWrapper {
 				&__map {
 					padding: 0;
 					border-radius: 0px;
@@ -394,32 +407,39 @@ export default {
 			}
 		}
 	}
-	.contactForm {
+	.formDetail {
 		margin-top: rem(50px);
-		&__note {
+		.title {
 			margin: rem(60px) 0;
-      font-size: rem(22px);
-      font-weight: 400;
-      color: var(--secondary);
+			font-size: rem(22px);
+			font-weight: 400;
+			color: var(--secondary);
 			.icon {
 				display: flex;
 				align-items: center;
 
 				/deep/ {
-					svg
-					{
+					svg {
 						width: 25px;
 						height: 25px;
-						margin-right: rem(15px);
+						margin-right: 15px;
 						color: var(--secondary);
 					}
 				}
 			}
 		}
-		
+		.form-group {
+			margin-bottom: rem(50px);
+		}
 		.button-row {
 			i {
 				margin-left: 10px;
+				transition: 0.5s ease all;
+			}
+			&:hover {
+				i {
+					transform: translateX(8px);
+				}
 			}
 		}
 	}
