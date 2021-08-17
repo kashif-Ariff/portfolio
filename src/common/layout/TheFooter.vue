@@ -76,10 +76,22 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  padding-top: rem(60px);
+  padding-top: rem(75px);
   margin-top: rem(130px);
-  border-top: 3px dashed rgba(100, 121, 136, 0.5);
+  // border-top: 3px dashed rgba(100, 121, 136, 0.5);
   position: relative;
+  &:after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-image: url("../../assets/images/icons/footer-b.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index:-1;
+  }
 
   &::before {
     content: "";
@@ -128,11 +140,11 @@ footer {
         span {
           display: block;
           // @include fonts($Gotham-Book, 15px);
-          font-size: rem(15px);
+          font-size: rem(16px);
           font-weight: 400;
           color: #404040;
           margin-bottom: rem(33px);
-          margin-top: 5px;
+          margin-top: 12px;
           @include small_medium {
             margin-bottom: rem(15px);
           }
@@ -167,7 +179,6 @@ footer {
               &:hover {
                 background-color: $whiteColor;
                 i {
-                  font-size: 18px;
                   color: $mainColor;
                 }
               }

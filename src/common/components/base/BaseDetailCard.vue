@@ -1,6 +1,6 @@
 <template>
   <div class="slider-item cardDetail swiper-slide">
-    <a :href="cardData.link">More <i class="fa fa-arrow-right"></i></a>
+    <a :href="cardData.link">More <img src="@/assets/images/svg/right-arrow.svg"></a>
     <img :src="require(`@/assets/images/icons/svg/${cardData.image}`)" />
     <h4>{{ cardData.title }}</h4>
     <span>{{ cardData.detail }}</span>
@@ -47,9 +47,14 @@ export default {
     color: $mainColor;
     text-align: right;
     opacity: 0;
+    text-transform: uppercase;
     @include prefixer(transition, all 0.4s ease-in-out, o moz wibket);
     &:hover {
-      color: $secondColor;
+      // color: $secondColor;
+      opacity:.7;
+    }
+    img{
+      margin:0;
     }
   }
 
@@ -58,6 +63,7 @@ export default {
     font-size: rem(18px);
     font-weight: 700;
     color: $thirdColor;
+    margin-bottom:6px;
 
     @media (max-width: 1299.98px) {
       font-size: rem(13px);

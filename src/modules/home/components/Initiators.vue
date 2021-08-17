@@ -9,14 +9,6 @@
           </div>
           <div class="col-12 col-lg-3">
             <a href="#">View All</a>
-            <ul class="list-unstyled" style="visibility: hidden">
-              <li class="initiators-prev">
-                <i class="fa fa-angle-left"></i>
-              </li>
-              <li class="initiators-next">
-                <i class="fa fa-angle-right"></i>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
@@ -119,8 +111,10 @@ export default {
       font-size: rem(36px);
       font-weight: 700;
       color: $thirdColor;
+      text-transform: uppercase;
       position: relative;
       z-index: 1;
+      margin-bottom: rem(20px);
       @include small_medium {
         //    font-size: 27px;
         margin-bottom: 5px;
@@ -142,8 +136,12 @@ export default {
     div {
       &:last-child {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
+        padding-right: 30px;
         margin-bottom: rem(25px);
+        @media screen and (max-width:1850px){
+          justify-content: start;
+        }
         @include small_medium {
           justify-content: flex-end;
         }
@@ -203,14 +201,40 @@ export default {
   }
 }
 .initiators {
-  background-image: url("../../../assets/images/home/bg-initators.png");
+  .container-right{
+    position:relative;
+    &:before{
+      content:"";
+      position:absolute;
+      width:100%;
+      height:100%;
+        left: -146px;
+      top: -110px;
+      background-image: url("../../../assets/images/home/bg-initators.png");
+    }
+    /deep/{
+      .slider-item .slider-item-content > div:last-child{
+        padding-left:rem(20px);
+        @media screen and (max-width:1600px){
+          padding-left:0;
+        }
+        h6{
+          font-weight:500;
+        }
+        p{
+          line-height:1.4;
+        }
+      }
+    }
+  }
+  
   //   background-size: contain;
-  @media screen and (min-width: 991px) {
-    background-position: 2vw;
-  }
-  @media screen and (min-width: 1600px) {
-    background-position: 5vw;
-  }
+  // @media screen and (min-width: 991px) {
+  //   background-position: 2vw;
+  // }
+  // @media screen and (min-width: 1600px) {
+  //   background-position: 5vw;
+  // }
   .slider-item {
     margin-top: rem(25px) !important;
     margin-bottom: rem(25px) !important;

@@ -277,6 +277,7 @@ export default {
   @media screen and (max-width: 767px) {
     margin: 0px rem(20px);
   }
+  
 }
 .main-common .slider-services .slider-item {
   margin-left: unset;
@@ -290,9 +291,9 @@ export default {
   position: relative;
   /deep/ {
     .swiper-container {
-      padding-left: 10px;
+      padding-left: 15px;
       @media screen and (max-width: 575px) {
-        padding-right: 10px;
+        padding-right: 15px;
       }
     }
     .sliderNavigation {

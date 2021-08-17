@@ -567,6 +567,11 @@ export default {
         display: flex;
         flex-direction: column;
         z-index: 1;
+        /deep/{
+          .close{
+            opacity:1;
+          }
+        }
         .close-login{
           opacity:1;
         }

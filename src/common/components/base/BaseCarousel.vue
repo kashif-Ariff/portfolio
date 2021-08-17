@@ -365,13 +365,17 @@ export default {
       }
     }
     &--arrow {
-      width: rem(50px);
-      height: rem(50px);
+      width: rem(65px);
+      height: rem(65px);
       border: solid 1px var(--border) !important;
       border-radius: 50%;
       color: var(--arrow);
+      @media screen and (max-width:1600px){
+        width: rem(55px);
+        height: rem(55px);
+      }
       .fa {
-        font-size: 20px;
+        font-size: 25px;
       }
       //  @include flex(center, center);
       //  @media screen and (max-width: 1320px) {
@@ -536,7 +540,10 @@ export default {
       width: 65px;
       height: 65px;
       outline-offset: 2px;
-
+      @media screen and (max-width:1600px){
+        width: rem(55px);
+        height: rem(55px);
+      }
       @media screen and (max-width: 1320px) {
         width: 40px;
         height: 40px;

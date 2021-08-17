@@ -34,6 +34,9 @@ export default {
     font-size: rem(16px);
     display: inline-block;
     padding: 10px 0px;
+    @include truncate(2.8);
+    line-height: 1.5;
+    max-height: 3.5em;
   }
 }
 </style>

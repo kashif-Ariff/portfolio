@@ -67,6 +67,7 @@ export default {
         padding-inline-end: rem(25px);
         margin-inline-end: rem(25px);
         border-inline-end: 1px dashed;
+        border-color:#aaaaaa;
         position: relative;
         @media (max-width: 1199.98px) {
           padding-inline-end: rem(13px);

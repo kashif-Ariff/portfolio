@@ -77,7 +77,7 @@ export default {
       ],
       sliderOption: {
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 12,
         observer: true,
         observeParents: true,
         breakpoints: {
@@ -111,18 +111,25 @@ export default {
     text-align: center;
     //     @include fonts($Gotham-bold, 36px);
     font-size: rem(36px);
+    text-transform: uppercase;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: rem(30px);
   }
   p {
     //     @include fonts($AlegreyaSans-Regular, 24px);
     font-size: rem(24px);
     font-weight: 400;
-    margin-bottom: 66px;
+    margin-bottom: rem(75px);
     color: #fff;
+    @media screen and (max-width:1600px){
+      margin-bottom:rem(50px);
+    }
   }
   .services-content {
     margin-bottom: rem(75px);
+    @media screen and (max-width:1600px){
+      margin-bottom:rem(50px);
+    }
     outline: none;
     border: none;
     .row {
@@ -166,8 +173,9 @@ export default {
       height: 100%;
       z-index: 0;
       button {
+        border:0 !important;
         .fa {
-          font-size: 30px;
+          font-size: 45px;
         }
       }
     }

@@ -270,7 +270,7 @@ export default {
     position: relative;
     /deep/ {
       .sliderNavigation {
-        top: -130px;
+        top: -120px;
         z-index: 0;
         height: 0;
         --border: var(--swiper-theme-color);
@@ -308,7 +308,7 @@ export default {
             }
           }
           #prevArrow {
-            margin-right: 10px;
+            margin-right: 15px;
           }
         }
       }
@@ -325,9 +325,9 @@ export default {
     color: $whiteColor;
     text-transform: uppercase;
     //     @include fonts($Gotham-bold, 42px);
-    font-size: rem(42px);
+    font-size: rem(36px);
     font-weight: 700;
-    margin-bottom: rem(12px);
+    margin-bottom: rem(15px);
     z-index: 1;
     position: relative;
     @media (max-width: 991.98px) {
@@ -531,7 +531,7 @@ export default {
   }
 
   .common {
-    margin-bottom: rem(110px);
+    margin-bottom: rem(75px);
     @media (max-width: 991.8px) {
       margin-bottom: 0px;
     }
@@ -549,7 +549,7 @@ export default {
 
     p {
       color: $whiteColor;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       //  @include fonts($AlegreyaSans-Regular, 24px);
       font-size: rem(24px);
       font-weight: 400;
@@ -610,6 +610,13 @@ export default {
       }
     }
     .slider-services {
+      .slider-item{
+        /deep/{
+          a{
+            text-transform:uppercase;
+          }
+        }
+      }
       .swiper-slide-active {
         .slider-item {
           transform: translateY(-19px);
