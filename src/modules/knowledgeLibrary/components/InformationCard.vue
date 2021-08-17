@@ -108,7 +108,8 @@ export default {
             }
             @media screen and (max-width:767px) {
                 height: 1px;
-                width: 130px;
+                width: 100%;
+                   
             }
         }
         // border-right: 1px solid #A6B3BB;

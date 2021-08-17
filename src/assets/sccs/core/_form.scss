@@ -97,17 +97,20 @@ form {
 		}
 	}
 }
-
 .form-control {
 	font-size: rem(20px);
 	color: #a4b1b9 !important;
 	background: #fff;
-	padding: rem(22px) rem(22px);
+	padding: rem(23px) rem(22px);
 	outline: none;
-	border: 2px solid #e6eaec;
+	border-style: solid;
+	border-color: #e6eaec;
+	border-width: 3px;
+	// border-width: 3px !important;
 	border-radius: 25px;
 	font-weight: 500;
-	box-shadow: 0px 3px 18px -4px rgba($color: black, $alpha: 0.26);
+	box-shadow: 0px 2px 16px -3px rgba($color: black, $alpha: 0.26);
+
 	&.active {
 		outline: none;
 		box-shadow: none;
@@ -118,7 +121,7 @@ form {
 		box-shadow: none;
 		border-color: var(--secondary);
 		border-style: dashed;
-		border-width: 3px;
+		// border-width: 3px;
 	}
 	&:read-only {
 		background: transparent;
