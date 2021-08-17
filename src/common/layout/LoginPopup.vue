@@ -362,7 +362,7 @@ export default {
       //  display: none;
       position: absolute;
       //  top: 40px;
-      max-width: 950px;
+      max-width: 1200px;
 
       margin: auto;
       left: 0;
@@ -383,13 +383,16 @@ export default {
       //    }
       //  }
       .login-info {
-        padding: 0px rem(60px);
-        padding-top: rem(39px);
-        padding-bottom: rem(85px);
+        padding: rem(110px) rem(96px);
         background-color: $whiteColor;
         text-align: center;
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width:1600px){
+          padding: rem(70px);
+        }
         @media (max-width: 991.98px) {
           padding-bottom: 56px;
         }
@@ -422,8 +425,12 @@ export default {
           font-weight: 700;
           font-size: rem(42px);
           color: $thirdColor;
-          margin-bottom: rem(60px);
+          margin-bottom: rem(85px);
           text-transform: uppercase;
+           @media (max-width: 1600px) {
+            font-size: rem(38px);
+            margin-bottom: rem(50px);
+          }
           @media (max-width: 991.98px) {
             font-size: rem(30px);
             margin-bottom: rem(38px);
@@ -557,7 +564,12 @@ export default {
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
         z-index: 1;
+        .close-login{
+          opacity:1;
+        }
         @include small_medium {
           display: none;
         }
@@ -586,9 +598,9 @@ export default {
         h2 {
           text-transform: uppercase;
           // margin-top: 150px;
-          margin-top: rem(75px);
+          margin-top: rem(90px);
           // @include fonts($Gotham-bold, 42px);
-          font-size: rem(42px);
+          font-size: rem(40px);
           font-weight: 700;
           color: $whiteColor;
           @media (max-width: 991.98px) {
@@ -600,6 +612,7 @@ export default {
           // @include fonts($Gotham-Light, 24px);
           font-size: rem(24px);
           font-weight: 300;
+          line-height:1.4;
           @include medium {
             font-size: rem(18px);
           }
@@ -611,6 +624,7 @@ export default {
           background-color: transparent;
           @extend %d-flex-center;
           margin: auto;
+          margin-top:rem(20px);
           // @include fonts($Gotham-Book, 18px);
           font-size: rem(18px);
           font-weight: 400;

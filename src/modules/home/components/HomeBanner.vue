@@ -158,6 +158,7 @@ export default {
         }
         button {
           position: relative;
+          border:0 !important;
           &#prevArrow {
             left: 0;
             &::before {

@@ -4,7 +4,7 @@
       <div class="services-drop-down">
         <h2 class="mb-30">Our services</h2>
         <div class="row">
-          <div class="col-12 col-md-9 drop-down-itmes">
+          <div class="col-12 col-md-10 drop-down-itmes">
             <div class="row">
               <div class="col-12 col-md-4">
                 <div class="drop-down">
@@ -30,7 +30,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-2">
             <a class="services-search">
               <span>Search </span>
               <base-svg-icon
@@ -350,8 +350,8 @@ export default {
 
     .drop-down-itmes {
       background-color: $whiteColor;
-      border-radius: 44px;
-      padding: rem(20px) rem(50px);
+      border-radius: 47px;
+      padding: rem(22px) rem(50px);
       //  height: 110px;
       @media (max-width: 991.98px) {
         //    padding: rem(10px) rem(20px);
@@ -519,6 +519,7 @@ export default {
         font-size: rem(24px);
         font-weight: 400;
         margin-inline-end: 7px;
+        letter-spacing: 1px;
       }
       /deep/ {
         svg {

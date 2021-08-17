@@ -533,8 +533,8 @@ export default {
     .sliderNavigation__controls--arrow {
       // border: unset !important;
       
-      width: 45px;
-      height: 45px;
+      width: 65px;
+      height: 65px;
       outline-offset: 2px;
 
       @media screen and (max-width: 1320px) {

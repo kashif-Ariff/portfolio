@@ -21,7 +21,7 @@
                     <vue-fontawesome icon="user-o"></vue-fontawesome>
                     <span>login</span>
                   </div>
-                  <div class="nav-services" @click="isService = !isService">
+                  <div class="nav-services" @click="isService = !isService" :class="isService?'active':''">
                     <span class="iconCustom">
                       <base-svg-icon
                         icon-id="service-icon"
@@ -539,6 +539,9 @@ nav {
   border-bottom: 0.5px solid #f8f9fa15;
   padding-bottom: 5px;
   @include prefixer(transition, all 0.2s ease, o moz wibket);
+  a{
+    font-weight:400;
+  }
   &::after {
     @include postionEle(0, 0, 0, absolute, $whiteColor, 45%, 100%);
     border-bottom-right-radius: 50px;
@@ -587,12 +590,23 @@ nav {
     transition: 0.4s ease all;
     .nav-services {
       cursor: pointer;
-      height: 100%;
+      // height: 100%;
       display: flex;
       align-items: center;
       &.poniter {
         pointer-events: none;
         opacity: 0.5;
+      }
+      &:hover , &.active{
+        color:rgba(255, 255, 255, 0.5);
+        a{
+          color:rgba(255, 255, 255, 0.5);
+        }
+      }
+      @media screen and (min-width: 415px){
+        &.active{
+          pointer-events: none;
+        }
       }
     }
     #close-srv {
@@ -665,7 +679,7 @@ nav {
     .nav-menu {
       cursor: pointer;
       position: relative;
-      height: 100%;
+      // height: 100%;
       display: flex;
       align-items: center;
       &::before {
@@ -708,6 +722,9 @@ nav {
         @include xSmall {
           display: none;
         }
+      }
+      &:hover{
+        opacity:.7;
       }
     }
     .nav-lang {
