@@ -4,7 +4,7 @@
       <div class="services-drop-down">
         <h2 class="mb-30">Our services</h2>
         <div class="row">
-          <div class="col-12 col-md-10 drop-down-itmes">
+          <div class="col-12 col-lg-10 drop-down-itmes">
             <div class="row">
               <div class="col-12 col-md-4">
                 <div class="drop-down">
@@ -30,7 +30,7 @@
               </div>
             </div>
           </div>
-          <div class="col-2">
+          <div class="col-lg-2">
             <a class="services-search">
               <span>Search </span>
               <base-svg-icon
@@ -213,7 +213,7 @@ export default {
       selectTwo: categoryTwo,
       selectThree: categoryThree,
       sliderOption: {
-        slidesPerView: 1,
+        slidesPerView: 1.2,
         spaceBetween: 20,
         observer: true,
         observeParents: true,
@@ -221,14 +221,17 @@ export default {
           1200: {
             slidesPerView: 5,
           },
-          991: {
+          992: {
             slidesPerView: 4,
           },
-          767: {
+          768: {
             slidesPerView: 3,
           },
-          575: {
-            slidesPerView: 2,
+          576: {
+            slidesPerView: 2.2,
+          },
+          431: {
+            slidesPerView: 1.4,
           },
         },
       },
@@ -294,6 +297,9 @@ export default {
             margin-right: auto;
           }
           max-width: 340px;
+          @media screen and (max-width:1199px){
+            max-width:150px;
+          }
           &--pagination,
           &--pause {
             display: none;
@@ -353,9 +359,8 @@ export default {
       border-radius: 47px;
       padding: rem(22px) rem(50px);
       //  height: 110px;
-      @media (max-width: 991.98px) {
-        //    padding: rem(10px) rem(20px);
-        //    height: fit-content;
+      @media (max-width: 1600px) {
+           padding: rem(15px) rem(35px);
       }
       @include small_medium {
         margin-bottom: rem(15px);
@@ -411,6 +416,13 @@ export default {
           box-shadow: none;
           padding-left: 0px;
           background: transparent;
+          @media screen and (max-width:767px){
+            padding-right:0;
+            height:45px;
+            .vs__dropdown-toggle {
+              min-height:60px;
+            }
+          }
           .vs__dropdown-option {
             color: #5d5d5d;
             font-size: rem(18px);
@@ -501,12 +513,17 @@ export default {
       border-radius: 41px;
       text-align: center;
       color: $whiteColor;
+      @media screen and (max-width:1600px){
+        height:75px;
+        line-height: 75px;
+      }
       @media (max-width: 991.98px) {
         // height: fit-content;
         // width: fit-content;
         height: 65px;
         line-height: 70px;
         width: 150px;
+        margin:rem(25px) auto auto auto;
       }
       @extend %d-flex-center;
       cursor: pointer;
@@ -526,6 +543,13 @@ export default {
           fill: $whiteColor;
           width: 30px;
         }
+      }
+    }
+    @media screen and (max-width:991px){
+      .col-12:not(:last-child){
+        border-bottom:1px solid;
+        padding-bottom:10px;
+        margin-bottom:10px;
       }
     }
   }

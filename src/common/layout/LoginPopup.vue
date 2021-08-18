@@ -283,15 +283,12 @@ export default {
           cursor: pointer;
           @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
           @include xSmall {
-            height: 49px;
-            width: 67px;
           }
           i {
             font-size: rem(18px);
             margin-inline-end: rem(10px);
             @include xSmall {
               margin-inline-end: 2px;
-              font-size: rem(14px);
             }
           }
           // svg {
@@ -370,6 +367,9 @@ export default {
       //  padding-bottom: 40px;
       top: 50%;
       transform: translateY(-50%);
+     @media screen and (max-width:1025px){
+        margin:0 40px;
+     }
       @media screen and (max-width: 767px) {
         max-width: 80%;
       }

@@ -73,11 +73,17 @@ export default {
           padding-inline-end: rem(13px);
           margin-inline-end: rem(14px);
         }
+        @media screen and (max-width:575px){
+          min-width:70px;
+        }
         img {
           max-width: 72px;
           margin-bottom: rem(17px);
           @media (max-width: 1199.98px) {
             margin-bottom: 7px;
+          }
+          @media screen and (max-width:767px){
+            max-width:45px;
           }
         }
         a {
@@ -85,6 +91,7 @@ export default {
           font-size: rem(13px);
           font-weight: 700;
           color: $mainColor;
+          display: block;
           @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
           &:hover {
             color: $secondColor;
@@ -101,6 +108,9 @@ export default {
           margin-bottom: rem(20px);
           min-height: 48px;
           color: var(--secondary);
+          @media screen and (max-width:767px){
+            font-size:rem(18px);
+          }
           @media (max-width: 1299.98px) {
             //  font-size: 15px;
             margin-bottom: 8px;
@@ -114,6 +124,9 @@ export default {
           color: var(--secondary);
           @media (max-width: 1199.98px) {
             //  font-size: 13px;
+          }
+          @media screen and (max-width:767px){
+            font-size:rem(14px);
           }
         }
       }

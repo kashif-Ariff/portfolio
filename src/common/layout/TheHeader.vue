@@ -151,6 +151,12 @@ header {
         transform: scale(0.9);
       }
     }
+    @media screen and (max-width:991px){
+      top:-85px;
+    }
+    @media screen and (max-width:575px){
+      top:-70px;
+    }
   }
 }
 
@@ -570,6 +576,16 @@ nav {
     transition: 0.4s ease all;
     img {
       transition: 0.4s ease all;
+      @media screen and (max-width:1199px){
+        max-width:275px;
+      }
+       @media screen and (max-width:991px){
+        max-width: 185px;
+        transform: scale(.9);
+        &:last-child{
+          max-height:62px;
+        }
+      }
       &:first-child{
           margin-right:10px;
         }
@@ -582,9 +598,13 @@ nav {
         }
       }
     }
-    @media (max-width: 991.98px) {
+    @media (max-width: 991px) {
       text-align: center;
-      padding: rem(15px) 0;
+      padding: rem(5px) 0;
+      background: #fff;
+      border-bottom-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+      margin-bottom:10px;
     }
   }
   .nav-content {
@@ -639,6 +659,9 @@ nav {
       //  @include fonts($Gotham-Book, 16px);
       font-size: rem(16px);
       font-weight: 500;
+      @media screen and (max-width:1199px){
+        font-size:rem(14px);
+      }
       @include xSmall {
         font-size: rem(13px);
       }
@@ -657,6 +680,15 @@ nav {
       border-radius: 25px;
       position: relative;
       cursor: pointer;
+      @media screen and (max-width:1199px){
+        width:110px;
+        height:45px;
+        line-height: 45px;
+      }
+      @media screen and (max-width:575px){
+        height: 35px !important;
+        width: 90px !important;
+      }
       @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
       @include xSmall {
         height: 49px;
@@ -665,6 +697,9 @@ nav {
       i {
         font-size: rem(18px);
         margin-inline-end: rem(10px);
+        @media screen and (max-width:1199px){
+          font-size:REM(16px);
+        }
         @include xSmall {
           margin-inline-end: 2px;
           font-size: rem(14px);
@@ -736,6 +771,14 @@ nav {
       a {
         &:hover {
           text-decoration: underline;
+        }
+      }
+    }
+    @media screen and (max-width:991px){
+      justify-content: space-around;
+      .nav-menu{
+        &:before , &:after{
+          display:none;
         }
       }
     }

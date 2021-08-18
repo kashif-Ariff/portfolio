@@ -2,7 +2,7 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class=" col-sm-12 col-lg-3">
           <p>Kuwait City, 25501 Mansouriya Al-Faiha Business Center</p>
           <p>Info@nationalfund.gov.kw</p>
           <span> +965 1234 5678/+965 1234 5678</span>
@@ -17,7 +17,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-6 col-sm-4 col-lg-3">
           <h4>About Us</h4>
           <ul class="list-unstyled">
             <li>Vision & Mission</li>
@@ -28,7 +28,7 @@
             <li>FAQ’s</li>
           </ul>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-6 col-sm-4 col-lg-3">
           <h4>News & Events</h4>
           <ul class="list-unstyled">
             <li>Events</li>
@@ -36,7 +36,7 @@
             <li>Publications</li>
           </ul>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12 col-sm-4 col-lg-3">
           <h4>Programs & Services</h4>
           <ul class="list-unstyled">
             <li>Programs</li>
@@ -78,8 +78,11 @@ export default {
 footer {
   padding-top: rem(75px);
   margin-top: rem(130px);
-  // border-top: 3px dashed rgba(100, 121, 136, 0.5);
   position: relative;
+  @media screen and (max-width:991px){
+    padding-top:rem(30px);
+    margin-top:rem(50px);
+  }
   &:after{
     content:"";
     position:absolute;
@@ -111,6 +114,13 @@ footer {
     div {
       @media (min-width: 992px) {
         padding: 0;
+      }
+      @media screen and (max-width:991px){
+        text-align: center;
+        ul{
+          @include flex(center , center);
+          flex-direction: column;
+        }
       }
 
       &:first-child {
@@ -182,6 +192,15 @@ footer {
                   color: $mainColor;
                 }
               }
+            }
+          }
+        }
+        @media screen and (max-width:991px){
+          text-align: center;
+          div{
+            ul{
+              justify-content: center;
+              flex-direction: revert;
             }
           }
         }

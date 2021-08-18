@@ -35,17 +35,20 @@ export default {
   data() {
     return {
       sliderOption: {
-        slidesPerView: 1,
+        slidesPerView: 1.2,
         spaceBetween: 20,
         breakpoints: {
           1200: {
             slidesPerView: 4.5,
           },
-          767: {
+          768: {
             slidesPerView: 3,
           },
-          575: {
-            slidesPerView: 2,
+          576: {
+            slidesPerView: 2.2,
+          },
+          431: {
+            slidesPerView: 1.4,
           },
         },
       },
@@ -311,22 +314,30 @@ export default {
       @media screen and (max-width: 1200px) {
         //    top: -132px;
         left: 180px;
+        top: -150px;
       }
       @media screen and (max-width: 1042px) {
         left: 193px;
         top: -134px;
       }
       @media screen and (max-width: 991px) {
-        left: 30px;
+        right: 90px;
+        left:auto;
         top: -62px;
       }
-      @media screen and (max-width: 859px) {
-        left: 90px;
+      @media screen and (max-width: 767px) {
+        right: 70px;
+      }
+      @media screen and (max-width: 575px) {
+        right: 0;
       }
       &__controls {
         max-width: 340px;
         @media screen and (max-width: 991px) {
-          max-width: 100%;
+          max-width:200px;
+          text-align: right;
+          margin-right: 0;
+          margin-left: auto;
         }
         &--pagination,
         &--pause {

@@ -193,17 +193,10 @@ export default {
     margin: auto;
     z-index: 999999;
     @media (max-width: 991.98px) {
-      padding: rem(56px) rem(10px) rem(20px) rem(20px);
-    }
-    @include xxSmall {
-      padding-left: 0;
-      padding-right: 0;
+      padding: rem(80px) rem(10px) rem(20px) rem(20px);
     }
     @include small_medium {
       width: 97%;
-    }
-    @media (max-width: 408px) {
-      width: 99%;
     }
     > span {
       position: absolute;
@@ -242,7 +235,7 @@ export default {
 
       @media (max-width: 991.98px) {
         padding: rem(6px) rem(5px);
-        min-height: 85px;
+        min-height: 70px;
       }
       label {
         padding-inline-end: 40px;
@@ -266,9 +259,6 @@ export default {
           z-index: 5;
           right: 0px;
           transform: translateY(-50%);
-          @include small_medium {
-            top: -10px;
-          }
         }
 
         @media (max-width: 350px) {
@@ -302,25 +292,25 @@ export default {
               width: 36px;
             }
             @include xSmall {
-              width: 28px;
+              width: 25px;
             }
           }
         }
         @include xSmall {
-          width: 60px;
-          height: 60px;
+          width: 55px;
+          height: 55px;
           /deep/ {
             svg {
-              width: 30px;
+              width: 25px;
             }
           }
         }
         @media (min-width: 576px) and (max-width: 991.98px) {
-          width: 80px;
-          height: 80px;
+          width: 55px;
+          height: 55px;
           /deep/ {
             svg {
-              width: 40px;
+              width: 25px;
             }
           }
         }

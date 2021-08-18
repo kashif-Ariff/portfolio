@@ -440,7 +440,7 @@ body.menuOpen {
           padding: rem(8px) rem(8px);
           display: inline-block;
           @media screen and (max-width: 1600px) {
-            font-size: rem(50px);
+            font-size: rem(45px);
           }
           @media screen and (max-width: 991px) {
             font-size: rem(30px);

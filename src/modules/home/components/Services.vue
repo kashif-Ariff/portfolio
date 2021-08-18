@@ -107,6 +107,10 @@ export default {
   background-repeat: no-repeat;
   color: $whiteColor;
   text-align: center;
+  @media screen and (max-width:991px) {
+    padding-top: rem(35px);
+    padding-bottom: rem(40px);
+  }
   h2 {
     text-align: center;
     //     @include fonts($Gotham-bold, 36px);
@@ -114,6 +118,9 @@ export default {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: rem(30px);
+    @media screen and (max-width:767px){
+      font-size:rem(28px);
+    }
   }
   p {
     //     @include fonts($AlegreyaSans-Regular, 24px);
@@ -123,6 +130,9 @@ export default {
     color: #fff;
     @media screen and (max-width:1600px){
       margin-bottom:rem(50px);
+    }
+    @media screen and (max-width:767px){
+      font-size:rem(18px);
     }
   }
   .services-content {
@@ -162,7 +172,7 @@ export default {
   background-image: url("../../../assets/images/home/bg-services.png");
   .services-slider {
     @media screen and (max-width: 1600px) {
-      margin: 0px rem(42px);
+      margin: 0px rem(75px);
     }
   }
   .slider-item {

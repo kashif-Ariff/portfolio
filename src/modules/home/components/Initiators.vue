@@ -3,7 +3,7 @@
     <div class="container">
       <div class="slider-header">
         <div class="row">
-          <div class="col-12 col-md-9">
+          <div class="col-12 col-lg-9">
             <h2>Get to know the initiators</h2>
             <p>Lorem Ipsum is simply dummy is the text of the printing .</p>
           </div>
@@ -74,16 +74,19 @@ export default {
       ],
       sliderOption: {
         slidesPerView: 1,
-        spaceBetween: 20,
+        spaceBetween: 5,
         breakpoints: {
           992: {
             slidesPerView: 3,
+            spaceBetween: 20,
           },
-          767: {
+          768: {
             slidesPerView: 2,
+            spaceBetween: 20,
           },
-          575: {
+          576: {
             slidesPerView: 2,
+            spaceBetween: 20,
           },
         },
       },
@@ -100,6 +103,9 @@ export default {
   background-repeat: no-repeat;
   padding-bottom: rem(18px);
   padding-top: rem(90px);
+  @media screen and (max-width:991px){
+    padding-top:rem(35px);
+  }
   @include small_medium {
     padding-bottom: 0px;
     padding-top: rem(40px);
@@ -115,6 +121,12 @@ export default {
       position: relative;
       z-index: 1;
       margin-bottom: rem(20px);
+      @media screen and (max-width:767px){
+        font-size:rem(28px);
+      }
+      @media screen and (max-width:767px){
+        font-size:rem(24px);
+      }
       @include small_medium {
         //    font-size: 27px;
         margin-bottom: 5px;
@@ -128,6 +140,12 @@ export default {
       margin-bottom: 0px;
       position: relative;
       z-index: 1;
+      @media screen and (max-width:991px){
+        margin-bottom: 20px;
+      }
+      @media screen and (max-width:767px){
+        font-size:rem(18px);
+      }
       @include small_medium {
         font-size: rem(16px);
         margin-bottom: rem(20px);
@@ -141,9 +159,6 @@ export default {
         margin-bottom: rem(25px);
         @media screen and (max-width:1850px){
           justify-content: start;
-        }
-        @include small_medium {
-          justify-content: flex-end;
         }
         a {
           // font-family: "Gotham-Book";
@@ -238,6 +253,10 @@ export default {
   .slider-item {
     margin-top: rem(25px) !important;
     margin-bottom: rem(25px) !important;
+    @media screen and (max-width:575px){
+      width:300px;
+      margin:auto;
+    }
   }
   .slider-header {
     @media screen and (max-width: 991px) {
@@ -261,34 +280,30 @@ export default {
         top: -125px;
       }
       @media screen and (max-width: 1200px) {
-        top: -120px;
+        top: -150px;
         left: 200px;
       }
       @media screen and (max-width: 1042px) {
-        top: -170px;
         left: 205px;
       }
       @media screen and (max-width: 991px) {
-        left: 220px;
-        top: -92px;
+        right: 90px;
+        left: auto;
+        top: -48px;
       }
       @media screen and (max-width: 767px) {
-        //    left: 220px;
-        top: -95px;
+        right: 70px;
+      }
+      @media screen and (max-width: 575px) {
+        right: 15px;
       }
       &__controls {
         max-width: 340px;
         @media screen and (max-width: 991px) {
-          max-width: 530px;
-          margin: auto;
-        }
-        @media screen and (max-width: 844px) {
-          max-width: 480px;
-        }
-        @media screen and (max-width: 767px) {
-          max-width: 340px;
-          margin-left: auto;
-          margin-right: unset;
+          max-width: 200px;
+              margin-right: 0;
+            margin-left: auto;
+            text-align: right;
         }
         &--pagination,
         &--pause {

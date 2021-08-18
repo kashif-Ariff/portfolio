@@ -134,11 +134,10 @@ export default {
       border-top-left-radius: 45px;
       left: auto;
       @media (max-width: 991.98px) {
-        width: 185px;
+        width: 100%;
         height: 70px;
       }
       @media (max-width: 330px) {
-        width: 132px;
         height: 46px;
       }
       .container {
@@ -189,6 +188,10 @@ export default {
               background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve' fill='%23fff'%3E%3Cg%3E%3Cg%3E%3Cpath d='M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-0.006,0.011-0.013,0.018-0.019C513.968,262.339,513.943,249.635,506.134,241.843z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E");
             }
           }
+          @media screen and (max-width:991px){
+            width:35px !important;
+            height:35px !important;
+          }
         }
       }
     }
@@ -233,7 +236,7 @@ export default {
                 margin-top: rem(250px);
             }
             @media screen and (max-width: 575px) {
-                margin-top: rem(220px);
+                margin-top: rem(190px);
             }
             h2 {
                 color: $whiteColor;
@@ -246,7 +249,7 @@ export default {
                 @media (max-width: 991.98px) {
                     width: 90%;
                     margin-bottom: rem(15px);
-                    font-size: rem(35px);
+                    font-size: rem(30px);
                     line-height: 1.2;
                 }
                 @include small_medium {
@@ -274,8 +277,8 @@ export default {
                 }
                 @media (max-width: 991.98px) {
                     width: 100%;
-                    height: 80px;
-                    line-height: 80px;
+                    height: 65px;
+                    line-height: 65px;
                 }
                 @include xSmall {
                     height: 60px;
@@ -295,15 +298,22 @@ export default {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    @media screen and (max-width:1600px){
+                      width:70px;
+                      height:70px;
+                    }
                     /deep/{
                       svg {
                         color: #ffffff;
                         width: 32px;
+                        @media (max-width: 991.98px) {
+                          width: 24px;
+                      }
                     }
                     }
                     @media (max-width: 991.98px) {
-                        width: 60px;
-                        height: 60px;
+                        width: 50px;
+                        height: 50px;
                     }
                     @include xSmall {
                         width: 40px;
@@ -313,8 +323,8 @@ export default {
                         }
                     }
                     @include xxSmall {
-                        width: 30px;
-                        height: 30px;
+                        // width: 30px;
+                        // height: 30px;
                         svg {
                             width: 18px;
                         }
@@ -402,6 +412,9 @@ export default {
                     display: inline-block;
                     width: 50px;
                     fill: $mainColor;
+                    @media screen and (max-width:991px){
+                      width:30px;
+                    }
                     @include xSmall {
                         width: 30px;
                     }
@@ -419,6 +432,7 @@ export default {
                 padding-bottom: 7px;
                 @media (max-width: 991.8px) {
                     margin-top: rem(45px);
+                    margin-bottom:rem(30px);
                 }
                 @include xSmall {
                     margin-top: rem(20px);
@@ -447,11 +461,18 @@ export default {
                         i {
                             font-size: rem(22px);
                         }
+                        @media screen and (max-width:991px){
+                          width: 58px;
+                          height: 58px;
+                          i {
+                              font-size: rem(20px);
+                          }
+                        }
                         @include small_medium {
-                            width: 60px;
-                            height: 60px;
+                            width: 45px;
+                            height: 45px;
                             i {
-                                font-size: 20px;
+                                font-size: 17px;
                             }
                         }
                     }
@@ -470,9 +491,13 @@ export default {
                         // opacity: 0;
                         // animation: pulse 1s ease-out infinite;
                         // display: none;
+                        @media screen and (max-width:991px){
+                          width: 74px;
+                          height: 73px
+                        }
                         @include small_medium {
-                            width: 70px;
-                            height: 70px;
+                            width: 55px;
+                            height: 55px;
                             left: 4px;
                             // right: 10px;
                             top: 0px;
@@ -509,7 +534,7 @@ export default {
                         }
                         @include small_medium {
                             margin-inline-start: rem(12px);
-                            font-size: 14px !important;
+                            font-size: 13px !important;
                         }
                     }
                 }

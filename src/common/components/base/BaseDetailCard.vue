@@ -21,6 +21,9 @@ export default {
     max-width: 60px;
     margin-bottom: rem(30px);
     margin-top: rem(19px);
+    @media screen and (max-width:575px){
+      max-width:45px;
+    }
   }
   border: none;
   outline: none;
@@ -64,7 +67,9 @@ export default {
     font-weight: 700;
     color: $thirdColor;
     margin-bottom:6px;
-
+  @media (max-width: 1600px) {
+      font-size: rem(16px);
+    }
     @media (max-width: 1299.98px) {
       font-size: rem(13px);
     }

@@ -46,333 +46,337 @@ p {
         border: none;
         outline: none;
     }
+    @media screen and (max-width:767px) {
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+    }
 }
 
 .menuOpen header {
     display: none;
 }
 
-.header-div {
-    // background-image: url("../img/home/bg-home.jpg");
-    height: auto;
-    background-size: cover;
-    background-position: center;
-    padding-bottom: rem(40px);
-    position: relative;
-    z-index: 1;
-    @media (max-width: 991.98px) {
-        height: auto;
-        padding-bottom: rem(80px);
-    }
-    @include small_medium {
-        // height: 85vh;
-    }
-    &::after {
-        // @include postionEle(0, 0, 0, absolute, #0a2333ad, 100%, 100%);
-        content: '';
-        z-index: -1;
-        // @include postionEle(0, 0, 0, absolute, #265c71d1, 100%, 100%);
-        @include postionEle(0, 0, 0, absolute, #0a233375, 100%, 100%);
-    }
-    &.bg-opaciy {
-        &::after {
-            background-color: #0b1a21e6;
-        }
-    }
-    .header-slider {
-        .heaer-slider-item {
-            outline: none;
-            margin-top: rem(250px);
-            @media screen and (max-width: 1600px) {
-                margin-top: rem(200px);
-            }
-            @media screen and (max-width: 991px) {
-                margin-top: rem(250px);
-            }
-            @media screen and (max-width: 575px) {
-                margin-top: rem(220px);
-            }
-            h2 {
-                color: $whiteColor;
-                width: 67%;
-                text-align: center;
-                margin: auto;
-                line-height: 1.4;
-                font-size: rem(42px);
-                margin-bottom: rem(60px);
-                @media (max-width: 991.98px) {
-                    width: 90%;
-                    margin-bottom: rem(15px);
-                    font-size: rem(35px);
-                    line-height: 1.2;
-                }
-                @include small_medium {
-                    font-size: rem(20px);
-                }
-            }
-            .slider-search {
-                cursor: pointer;
-                @extend %d-flex-center;
-                background-color: $whiteColor;
-                border-radius: 45px;
-                width: 90%;
-                height: 105px;
-                text-align: center;
-                margin: auto;
-                // line-height: 105px;
-                padding-right: rem(28px);
-                padding-left: rem(62px);
-                position: relative;
-                @media (max-width: 1600px) {
-                    padding-right: rem(28px);
-                    padding-left: rem(50px);
-                    height: 90px;
-                    // border-radius: 30px;
-                }
-                @media (max-width: 991.98px) {
-                    width: 100%;
-                    height: 80px;
-                    line-height: 80px;
-                }
-                @include xSmall {
-                    height: 60px;
-                    line-height: 60px;
-                    padding-inline-start: rem(26px);
-                    padding-inline-end: rem(13px);
-                }
-                @media (max-width: 350px) {
-                    padding-inline-start: 14px;
-                }
-                // new
-                span.search-icon {
-                    background-color: #009cde;
-                    width: 75px;
-                    height: 75px;
-                    border-radius: 100px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    svg {
-                        color: #ffffff;
-                        width: 32px;
-                    }
-                    @media (max-width: 991.98px) {
-                        width: 60px;
-                        height: 60px;
-                    }
-                    @include xSmall {
-                        width: 40px;
-                        height: 40px;
-                        svg {
-                            width: 22px;
-                        }
-                    }
-                    @include xxSmall {
-                        width: 30px;
-                        height: 30px;
-                        svg {
-                            width: 18px;
-                        }
-                    }
-                }
-                // new
-                img {
-                    width: 75px;
-                    @media (max-width: 991.98px) {
-                        width: 60px;
-                    }
-                    @include xSmall {
-                        width: 40px;
-                    }
-                    @include xxSmall {
-                        width: 30px;
-                    }
-                }
-                &::before {
-                    @include textAbsolute( 23px, 63px, absolute, $mainColor, 24px);
-                    content: 'Search';
-                    z-index: 666;
-                    color: $thirdColor;
-                    // @include fonts($Gotham-Book, 24px);
-                    font-size: rem(24px);
-                    font-weight: 400;
-                    @media (max-width: 1600px) {
-                        top: 13px;
-                        left: 50px;
-                    }
-                    @media (max-width: 991.98px) {
-                        top: -17px;
-                        font-size: 18px;
-                    }
-                    @include xSmall {
-                        font-size: 14px;
-                        top: -11px;
-                        left: 25px;
-                    }
-                }
-                p {
-                    flex-grow: 3;
-                    text-align: left;
-                    margin-top: rem(40px);
-                    @media screen and (max-width: 1600px) {
-                        margin-top: rem(35px);
-                    }
-                    span.vue-typer {
-                        cursor: pointer;
-                    }
-                    span.vue-typer span {
-                        cursor: pointer;
-                        font-size: rem(22px);
-                        font-weight: 300;
-                        //   @include fonts($Gotham-Light, 22px);
-                        color: $grayColor;
-                        position: relative;
-                        margin-bottom: 0;
-                        @include small_medium {
-                            font-size: rem(14px);
-                            margin-top: rem(13px);
-                        }
-                        @include xxSmall {
-                            //     font-size: rem(10px);
-                        }
-                    }
-                }
-            }
-            >p {
-                text-align: center;
-                //    @include fonts($Gotham-bold, 17px);
-                font-size: rem(17px);
-                font-weight: 700;
-                color: $whiteColor;
-                margin-top: rem(60px);
-                text-transform: uppercase;
-                @media (max-width: 991.8px) {
-                    margin-top: rem(20px);
-                }
-                @include small_medium {
-                    font-size: rem(14px);
-                }
-                svg {
-                    margin-inline-end: 15px;
-                    display: inline-block;
-                    width: 50px;
-                    fill: $mainColor;
-                    @include xSmall {
-                        width: 30px;
-                    }
-                }
-                a {
-                    text-decoration: underline;
-                    @include prefixer( transition, all 0.3s ease-in-out, o wibket moz);
-                    &:hover {
-                        color: $mainColor;
-                    }
-                }
-            }
-            .watch-video {
-                display: flex;
-                margin-top: rem(80px);
-                padding-bottom: 7px;
-                @media (max-width: 991.8px) {
-                    margin-top: rem(45px);
-                }
-                @include xSmall {
-                    margin-top: rem(20px);
-                }
-                .animate-video {
-                    position: relative;
-                    cursor: pointer;
-                    @include prefixer( transition, all 0.3s ease-in-out, o moz wibket);
-                    &:hover {
-                        transform: scale(0.7);
-                        div {
-                            display: block;
-                            opacity: 0;
-                            animation: pulse 1s ease-out infinite;
-                        }
-                    }
-                    span {
-                        width: 80px;
-                        height: 80px;
-                        border-radius: 50%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: $mainColor;
-                        text-align: center;
-                        i {
-                            font-size: rem(22px);
-                        }
-                        @include small_medium {
-                            width: 60px;
-                            height: 60px;
-                            i {
-                                font-size: 20px;
-                            }
-                        }
-                    }
-                    div {
-                        @include postionEle( // -8px,
-                        // 16px,
-                        // auto,
-                        // absolute,
-                        // transparebt,
-                        // 100px,
-                        // 100px
-                        -2.5px, 16px, auto, absolute, transparebt, 95px, 95px);
-                        right: 16px;
-                        border: 2px solid $mainColor;
-                        border-radius: 50%;
-                        // opacity: 0;
-                        // animation: pulse 1s ease-out infinite;
-                        // display: none;
-                        @include small_medium {
-                            width: 70px;
-                            height: 70px;
-                            left: 4px;
-                            // right: 10px;
-                            top: 0px;
-                        }
-                        @media screen and (max-width: 575px) {
-                            left: 5px;
-                        }
-                    }
-                    &+div {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                    }
-                }
-                div {
-                    span {
-                        text-transform: uppercase;
-                        display: block;
-                        color: $whiteColor;
-                        margin-top: 5px;
-                        text-align: center;
-                        margin-inline-start: 24px;
-                        text-align: left;
-                        &:first-child {
-                            //     @include fonts($Gotham-bold, 16px);
-                            font-size: rem(16px);
-                            font-weight: 700;
-                        }
-                        &:last-child {
-                            //     @include fonts($Gotham-Book, 16px);
-                            font-size: rem(16px);
-                            font-weight: 400;
-                        }
-                        @include small_medium {
-                            margin-inline-start: rem(12px);
-                            font-size: 14px !important;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
+// .header-div {
+//     // background-image: url("../img/home/bg-home.jpg");
+//     height: auto;
+//     background-size: cover;
+//     background-position: center;
+//     padding-bottom: rem(40px);
+//     position: relative;
+//     z-index: 1;
+//     @media (max-width: 991.98px) {
+//         height: auto;
+//         padding-bottom: rem(80px);
+//     }
+//     @include small_medium {
+//         // height: 85vh;
+//     }
+//     &::after {
+//         // @include postionEle(0, 0, 0, absolute, #0a2333ad, 100%, 100%);
+//         content: '';
+//         z-index: -1;
+//         // @include postionEle(0, 0, 0, absolute, #265c71d1, 100%, 100%);
+//         @include postionEle(0, 0, 0, absolute, #0a233375, 100%, 100%);
+//     }
+//     &.bg-opaciy {
+//         &::after {
+//             background-color: #0b1a21e6;
+//         }
+//     }
+//     .header-slider {
+//         .heaer-slider-item {
+//             outline: none;
+//             margin-top: rem(250px);
+//             @media screen and (max-width: 1600px) {
+//                 margin-top: rem(200px);
+//             }
+//             @media screen and (max-width: 991px) {
+//                 margin-top: rem(250px);
+//             }
+//             @media screen and (max-width: 575px) {
+//                 margin-top: rem(220px);
+//             }
+//             h2 {
+//                 color: $whiteColor;
+//                 width: 67%;
+//                 text-align: center;
+//                 margin: auto;
+//                 line-height: 1.4;
+//                 font-size: rem(42px);
+//                 margin-bottom: rem(60px);
+//                 @media (max-width: 991.98px) {
+//                     width: 90%;
+//                     margin-bottom: rem(15px);
+//                     font-size: rem(35px);
+//                     line-height: 1.2;
+//                 }
+//                 @include small_medium {
+//                     font-size: rem(20px);
+//                 }
+//             }
+//             .slider-search {
+//                 cursor: pointer;
+//                 @extend %d-flex-center;
+//                 background-color: $whiteColor;
+//                 border-radius: 45px;
+//                 width: 90%;
+//                 height: 105px;
+//                 text-align: center;
+//                 margin: auto;
+//                 // line-height: 105px;
+//                 padding-right: rem(28px);
+//                 padding-left: rem(62px);
+//                 position: relative;
+//                 @media (max-width: 1600px) {
+//                     padding-right: rem(28px);
+//                     padding-left: rem(50px);
+//                     height: 90px;
+//                     // border-radius: 30px;
+//                 }
+//                 @media (max-width: 991.98px) {
+//                     width: 100%;
+//                     height: 80px;
+//                     line-height: 80px;
+//                 }
+//                 @include xSmall {
+//                     height: 60px;
+//                     line-height: 60px;
+//                     padding-inline-start: rem(26px);
+//                     padding-inline-end: rem(13px);
+//                 }
+//                 @media (max-width: 350px) {
+//                     padding-inline-start: 14px;
+//                 }
+//                 // new
+//                 span.search-icon {
+//                     background-color: #009cde;
+//                     width: 75px;
+//                     height: 75px;
+//                     border-radius: 100px;
+//                     display: flex;
+//                     align-items: center;
+//                     justify-content: center;
+//                     svg {
+//                         color: #ffffff;
+//                         width: 32px;
+//                     }
+//                     @media (max-width: 991.98px) {
+//                         width: 60px;
+//                         height: 60px;
+//                     }
+//                     @include xSmall {
+//                         width: 40px;
+//                         height: 40px;
+//                         svg {
+//                             width: 22px;
+//                         }
+//                     }
+//                     @include xxSmall {
+//                         width: 30px;
+//                         height: 30px;
+//                         svg {
+//                             width: 18px;
+//                         }
+//                     }
+//                 }
+//                 // new
+//                 img {
+//                     width: 75px;
+//                     @media (max-width: 991.98px) {
+//                         width: 60px;
+//                     }
+//                     @include xSmall {
+//                         width: 40px;
+//                     }
+//                     @include xxSmall {
+//                         width: 30px;
+//                     }
+//                 }
+//                 &::before {
+//                     @include textAbsolute( 23px, 63px, absolute, $mainColor, 24px);
+//                     content: 'Search';
+//                     z-index: 666;
+//                     color: $thirdColor;
+//                     // @include fonts($Gotham-Book, 24px);
+//                     font-size: rem(24px);
+//                     font-weight: 400;
+//                     @media (max-width: 1600px) {
+//                         top: 13px;
+//                         left: 50px;
+//                     }
+//                     @media (max-width: 991.98px) {
+//                         top: -17px;
+//                         font-size: 18px;
+//                     }
+//                     @include xSmall {
+//                         font-size: 14px;
+//                         top: -11px;
+//                         left: 25px;
+//                     }
+//                 }
+//                 p {
+//                     flex-grow: 3;
+//                     text-align: left;
+//                     margin-top: rem(40px);
+//                     @media screen and (max-width: 1600px) {
+//                         margin-top: rem(35px);
+//                     }
+//                     span.vue-typer {
+//                         cursor: pointer;
+//                     }
+//                     span.vue-typer span {
+//                         cursor: pointer;
+//                         font-size: rem(22px);
+//                         font-weight: 300;
+//                         //   @include fonts($Gotham-Light, 22px);
+//                         color: $grayColor;
+//                         position: relative;
+//                         margin-bottom: 0;
+//                         @include small_medium {
+//                             font-size: rem(14px);
+//                             margin-top: rem(13px);
+//                         }
+//                         @include xxSmall {
+//                             //     font-size: rem(10px);
+//                         }
+//                     }
+//                 }
+//             }
+//             >p {
+//                 text-align: center;
+//                 //    @include fonts($Gotham-bold, 17px);
+//                 font-size: rem(17px);
+//                 font-weight: 700;
+//                 color: $whiteColor;
+//                 margin-top: rem(60px);
+//                 text-transform: uppercase;
+//                 @media (max-width: 991.8px) {
+//                     margin-top: rem(20px);
+//                 }
+//                 @include small_medium {
+//                     font-size: rem(14px);
+//                 }
+//                 svg {
+//                     margin-inline-end: 15px;
+//                     display: inline-block;
+//                     width: 50px;
+//                     fill: $mainColor;
+//                     @include xSmall {
+//                         width: 30px;
+//                     }
+//                 }
+//                 a {
+//                     text-decoration: underline;
+//                     @include prefixer( transition, all 0.3s ease-in-out, o wibket moz);
+//                     &:hover {
+//                         color: $mainColor;
+//                     }
+//                 }
+//             }
+//             .watch-video {
+//                 display: flex;
+//                 margin-top: rem(80px);
+//                 padding-bottom: 7px;
+//                 @media (max-width: 991.8px) {
+//                     margin-top: rem(45px);
+//                 }
+//                 @include xSmall {
+//                     margin-top: rem(20px);
+//                 }
+//                 .animate-video {
+//                     position: relative;
+//                     cursor: pointer;
+//                     @include prefixer( transition, all 0.3s ease-in-out, o moz wibket);
+//                     &:hover {
+//                         transform: scale(0.7);
+//                         div {
+//                             display: block;
+//                             opacity: 0;
+//                             animation: pulse 1s ease-out infinite;
+//                         }
+//                     }
+//                     span {
+//                         width: 80px;
+//                         height: 80px;
+//                         border-radius: 50%;
+//                         display: flex;
+//                         justify-content: center;
+//                         align-items: center;
+//                         background-color: $mainColor;
+//                         text-align: center;
+//                         i {
+//                             font-size: rem(22px);
+//                         }
+//                         @include small_medium {
+//                             width: 60px;
+//                             height: 60px;
+//                             i {
+//                                 font-size: 20px;
+//                             }
+//                         }
+//                     }
+//                     div {
+//                         @include postionEle( // -8px,
+//                         // 16px,
+//                         // auto,
+//                         // absolute,
+//                         // transparebt,
+//                         // 100px,
+//                         // 100px
+//                         -2.5px, 16px, auto, absolute, transparebt, 95px, 95px);
+//                         right: 16px;
+//                         border: 2px solid $mainColor;
+//                         border-radius: 50%;
+//                         // opacity: 0;
+//                         // animation: pulse 1s ease-out infinite;
+//                         // display: none;
+//                         @include small_medium {
+//                             width: 70px;
+//                             height: 70px;
+//                             left: 4px;
+//                             // right: 10px;
+//                             top: 0px;
+//                         }
+//                         @media screen and (max-width: 575px) {
+//                             left: 5px;
+//                         }
+//                     }
+//                     &+div {
+//                         display: flex;
+//                         flex-direction: column;
+//                         justify-content: center;
+//                     }
+//                 }
+//                 div {
+//                     span {
+//                         text-transform: uppercase;
+//                         display: block;
+//                         color: $whiteColor;
+//                         margin-top: 5px;
+//                         text-align: center;
+//                         margin-inline-start: 24px;
+//                         text-align: left;
+//                         &:first-child {
+//                             //     @include fonts($Gotham-bold, 16px);
+//                             font-size: rem(16px);
+//                             font-weight: 700;
+//                         }
+//                         &:last-child {
+//                             //     @include fonts($Gotham-Book, 16px);
+//                             font-size: rem(16px);
+//                             font-weight: 400;
+//                         }
+//                         @include small_medium {
+//                             margin-inline-start: rem(12px);
+//                             font-size: 14px !important;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 @media (min-width: 768px) {
     .container-right {
         margin-right: 0;
@@ -591,6 +595,9 @@ input {
             min-height: 272px;
             @include prefixer(transition, all 0.7s ease-in-out, o moz wibket);
             position: relative;
+            @media screen and (max-width: 575px) {
+                min-height: 250px !important;
+            }
             &:hover {
                 transform: translateY(-19px);
                 a {
@@ -730,6 +737,10 @@ main {
     font-weight: 500;
     box-shadow: 0px 2px 16px -3px rgba($color: black, $alpha: 0.26);
     // box-shadow: 0px 0px 8px -2px rgba($color: black, $alpha: 0.3);
+    .vs__dropdown-menu {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
     .vs__dropdown-toggle {
         border: 0;
         background: transparent;
