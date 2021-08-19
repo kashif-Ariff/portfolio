@@ -685,6 +685,11 @@ nav {
         height:45px;
         line-height: 45px;
       }
+      @media screen and (max-width:991px){
+        width:100px;
+        height:35px;
+        line-height: 35px;
+      }
       @media screen and (max-width:575px){
         height: 35px !important;
         width: 90px !important;

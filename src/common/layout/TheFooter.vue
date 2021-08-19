@@ -77,7 +77,7 @@ export default {
 <style lang="scss" scoped>
 footer {
   padding-top: rem(75px);
-  margin-top: rem(130px);
+  margin-top: rem(100px);
   position: relative;
   @media screen and (max-width:991px){
     padding-top:rem(30px);
@@ -120,6 +120,9 @@ footer {
         ul{
           @include flex(center , center);
           flex-direction: column;
+          @media screen and (max-width:575px){
+            margin-bottom:rem(20px);
+          }
         }
       }
 

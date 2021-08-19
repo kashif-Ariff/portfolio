@@ -43,7 +43,7 @@
 							:key="index"
 						>
 							<div class="mapWrapper row">
-								<div class="mapWrapper__detail col-md-6">
+								<div class="mapWrapper__detail col-lg-6">
 									<ul>
 										<li>
 											<span class="icon">
@@ -87,7 +87,7 @@
 										</li>
 									</ul>
 								</div>
-								<div class="mapWrapper__map col-md-6">
+								<div class="mapWrapper__map col-lg-6">
 									<iframe
 										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14143117.941545919!2d60.32337114882688!3d30.068124090484673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38db52d2f8fd751f%3A0x46b7a1f7e614925c!2sPakistan!5e0!3m2!1sen!2s!4v1628862714297!5m2!1sen!2s"
 										style="border: 0"
@@ -156,7 +156,7 @@
 								tabIndex="0"
 							></vue-select>
 						</div>
-						<div class="mt-30">
+						<div class="mt-30 md-none" >
 							<div class="form-group">
 								<vue-recaptcha
 									sitekey="6LdzWSkUAAAAAJQZfr1nvUshWLG7-2LY8BdQAWIq"
@@ -172,8 +172,15 @@
 							></textarea>
 						</div>
 					</div>
+					<div class="col-md-6 d-none md-block">
+						<div class="form-group">
+							<vue-recaptcha
+								sitekey="6LdzWSkUAAAAAJQZfr1nvUshWLG7-2LY8BdQAWIq"
+							></vue-recaptcha>
+						</div>
+					</div>
 				</div>
-				<div class="button-row justify-content-end mt-30">
+				<div class="button-row justify-content-end">
 					<button class="btn btn-primary">
 						Send <i class="fa fa-angle-right ml-10"></i>
 					</button>
@@ -218,7 +225,7 @@ export default {
 				rtl: this.$i18n.locale == 'en' ? false : true,
 				spaceBetween: 10,
 				breakpoints: {
-					991: {
+					1200: {
 						slidesPerView: 5,
 					},
 					768: {
@@ -273,11 +280,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width:767px){
+	.md-none{
+		display: none !important;
+	}
+	.md-block{
+		display: block !important;
+	}
+}
 .contactUs {
+	/deep/{
+		.sectionTitle{
+			font-weight:400;
+			margin-top:rem(130px);
+			@media screen and (max-width:1600px){
+				margin-top:rem(75px);
+			}
+			@media screen and (max-width:991px){
+				margin-top:rem(30px);
+			}
+		}
+	}
 	&__wrapper {
 		&--head {
 			position: relative;
 			margin-bottom: rem(40px);
+			@media screen and (max-width:1600px) and (min-width:576px){
+				margin-left:rem(20px);
+				margin-right:rem(20px);
+			}
 			a.nav-link {
 				padding: 5px;
 				.ContactUs__slide--title {
@@ -314,6 +345,14 @@ export default {
 					margin-left: 7%;
 					margin-right: 7%;
 					padding: 10px;
+					@media screen and (max-width:1600px){
+						margin-left: 4%;
+						margin-right: 4%;
+					}
+					@media screen and (max-width:575px){
+						margin-left: 30px;
+						margin-right: 30px;
+					}
 				}
 				.sliderNavigation {
 					height: 100%;
@@ -367,9 +406,7 @@ export default {
 							font-size: rem(20px);
 							color: #82919c;
 							margin-bottom: rem(30px);
-							@media screen and (min-width: 1600px) {
-								font-size: rem(22px);
-							}
+							word-break: break-all;
 							.icon {
 								position: relative;
 								display: flex;
@@ -387,9 +424,6 @@ export default {
 									position: absolute;
 									font-weight: bold;
 								}
-								@media screen and (min-width: 1600px) {
-									font-size: rem(22px);
-								}
 
 								/deep/ {
 									svg,
@@ -402,8 +436,29 @@ export default {
 								}
 							}
 						}
+						@media screen and (max-width:991px){
+							margin-bottom:rem(25px)
+						}
+					}
+					@media screen and (max-width:575px){
+						padding:0;
+						ul{
+							li{
+								font-size:rem(17px);
+								.icon{
+									min-width:185px;
+									font-size:rem(17px);
+								}
+							}
+						}
 					}
 				}
+			}
+		}
+		.row{
+			@media screen and (max-width:575px){
+				padding-left: 15px;
+				padding-right: 15px;
 			}
 		}
 	}
@@ -441,6 +496,11 @@ export default {
 					transform: translateX(8px);
 				}
 			}
+		}
+	}
+	@media screen and (max-width:767px){
+		.button-row{
+			justify-content: center  !important;
 		}
 	}
 }
