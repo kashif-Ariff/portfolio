@@ -46,7 +46,7 @@
 											class="img-fluid selected"
 										/>
 									</span>
-									<h3 class="publicationSlider__item--title">
+									<h3 class="iconTabs__item--title">
 										{{ card.title }}
 									</h3>
 								</div>
@@ -80,7 +80,8 @@
 export default {
 	components: {
 		BaseDocument: () => import('@/common/components/base/BaseDocument.vue'),
-		 BasePagination:() => import("@/common/components/base/BasePagination.vue")
+		BasePagination: () =>
+			import('@/common/components/base/BasePagination.vue'),
 	},
 	data() {
 		return {
@@ -159,7 +160,7 @@ export default {
 					index: 0,
 					image: 'question.png',
 					image_hover: 'question.png',
-					title: 'publication',
+					title: 'publications',
 				},
 				{
 					index: 1,
@@ -189,7 +190,7 @@ export default {
 					index: 5,
 					image: 'Shop.png',
 					image_hover: 'Shop.png',
-					title: 'publication',
+					title: 'publications',
 				},
 			],
 		};
@@ -205,12 +206,12 @@ export default {
 <style lang="scss" scoped>
 .publicationSlider {
 	padding: rem(35px) 0px;
-	padding-top:0;
+	padding-top: 0;
 	@media screen and (max-width: 991px) {
 		padding-top: rem(10px);
 	}
-	>.container{
-		padding:0
+	> .container {
+		padding: 0;
 	}
 	&__head {
 		margin-top: rem(15px);
@@ -246,24 +247,16 @@ export default {
 			}
 		}
 		.slide__card {
-			padding: 0 rem(10px);
-			transition: 0.4s ease all;
-			position: relative;
-			display: inline-block;
-			transform: scale(0.9);
-			width: 100%;
 			height: 120px;
-			opacity:1 !important;
-			border-top-left-radius: 25px;
-			border-bottom-right-radius: 25px;
-			@media screen and (max-width:991px){
-				height:105px;
+			@media screen and (max-width: 991px) {
+				height: 105px;
 			}
-			.publicationSlider__item--title {
+			.iconTabs__item--title {
 				font-size: rem(16px);
+				text-transform: capitalize;
 			}
 			&.active {
-				.publicationSlider__item--title {
+				.iconTabs__item--title {
 					font-size: rem(16px);
 					font-weight: 400;
 				}
@@ -307,36 +300,6 @@ export default {
 		}
 	}
 	&__item {
-		&--image {
-			width: 100%;
-			height: 140px;
-			margin: auto;
-			position: relative;
-			transition: 0.5s ease all;
-			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-			&::before {
-				content: '';
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				top: 0px;
-				left: 0px;
-				background: rgba($color: #000000, $alpha: 0.5);
-				transition: 0.4s ease all;
-			}
-		}
-		&--title {
-			font-size: rem(16px);
-			color: var(--secondary);
-			text-transform: capitalize;
-			font-weight: 400;
-			display: inline-block;
-			margin-top: 0;
-		}
 		/deep/ {
 			.swiper-container {
 				padding: rem(8px);
@@ -349,8 +312,8 @@ export default {
 		}
 		.card {
 			padding: rem(30px) rem(40px);
-			@media screen and (max-width:991px){
-				padding:rem(25px);
+			@media screen and (max-width: 991px) {
+				padding: rem(25px);
 			}
 		}
 		/deep/ {
@@ -369,19 +332,19 @@ export default {
 			}
 		}
 	}
-	/deep/{
-        .pagination{
-            padding: 0;
-            .show_items{
-                display: none;
-            }
-            .gotoPage{
-                display: none;
-            }
-            ul.pagination{
-                justify-content: flex-end !important;
-            }
-        }
-    }
+	/deep/ {
+		.pagination {
+			padding: 0;
+			.show_items {
+				display: none;
+			}
+			.gotoPage {
+				display: none;
+			}
+			ul.pagination {
+				justify-content: flex-end !important;
+			}
+		}
+	}
 }
 </style>

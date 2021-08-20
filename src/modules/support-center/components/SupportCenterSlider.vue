@@ -1,5 +1,5 @@
 <template>
-	<div class="supportCenterSlider customTabs">
+	<div class="supportCenterSlider">
 		<div class="container">
 			<div class="supportCenterSlider__head">
 				<carousel
