@@ -104,6 +104,12 @@ const routes = [
                 component: () =>
                     import ('../views/BoardPublication.vue'),
             },
+            {
+                path: `/:lang/mission-vision`,
+                name: 'mission-vision',
+                component: () =>
+                    import ('../views/MissionVision.vue'),
+            },
 //     {
 //         path: `/:lang/contact-us`,
 //         name: 'contact-us',
