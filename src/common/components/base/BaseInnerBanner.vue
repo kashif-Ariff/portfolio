@@ -39,6 +39,9 @@ export default {
   height: 340px;
   margin-bottom: rem(60px);
   position: relative;
+  @media screen and (max-width:991px){
+    height:275px;
+  }
   &__image {
     height: 100%;
     position: absolute;
@@ -63,12 +66,21 @@ export default {
       @media screen and (max-width: 1600px) {
         padding-top: rem(250px);
       }
+      @media screen and (max-width: 991px) {
+        padding-top: rem(225px);
+      }
     }
     &--title {
       font-size: rem(42px);
       color: #fff;
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 500;
+      @media screen and (max-width:991px){
+        font-size:rem(35px);
+      }
+      @media screen and (max-width:575px){
+        font-size:rem(30px);
+      }
     }
     &--info {
       color: #fff;
@@ -76,6 +88,9 @@ export default {
       margin-top: rem(20px);
       margin-bottom: rem(10px);
       font-weight: 400;
+      @media screen and (max-width:767px){
+        font-size:rem(19px);
+      }
     }
   }
 }

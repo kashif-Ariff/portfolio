@@ -449,6 +449,7 @@ $data-gap-list: 0,
             border-radius: 85px;
             @media screen and (max-width: 991px) {
                 border-radius: 30px;
+                padding: rem(20px);
             }
             &--cell {
                 font-weight: 400;
