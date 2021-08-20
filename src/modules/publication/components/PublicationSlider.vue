@@ -4,20 +4,18 @@
 			<base-bread-crumb :items="items"></base-bread-crumb>
 		</div>
 		<div
-			class="supportCenterSlider customTabs"
+			class="supportCenterSlider"
 			role="region"
 			:aria-label="ariaLabel"
 		>
 			<div class="container">
 				<div
-					class="supportCenterSlider__head iconTabs customTabs__items"
-				>
+					class="supportCenterSlider__head iconTabs">
 					<carousel
 						navigation-layout="side"
 						:carousel-settings="sliderOption"
 						@init="setSlider"
-						role="tablist"
-					>
+						role="tablist">
 						<div
 							class="swiper-slide slide__card iconTabs__item"
 							role="presentation"
@@ -35,11 +33,7 @@
 								id="tab_supportCenter_0"
 							>
 								<div
-									class="
-										slide__card--image
-										iconTabs__item--image
-									"
-								>
+									class="iconTabs__item--image">
 									<span class="tab-icon">
 										<img
 											src="@/assets/images/icons/faqs/color/question.png"
@@ -52,9 +46,7 @@
 											class="img-fluid selected"
 										/>
 									</span>
-									<h3
-										class="supportCenterSlider__item--title"
-									>
+									<h3>
 										Publications
 									</h3>
 								</div>
