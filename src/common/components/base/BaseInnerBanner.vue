@@ -74,7 +74,7 @@ export default {
       font-size: rem(42px);
       color: #fff;
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 400;
       @media screen and (max-width:991px){
         font-size:rem(35px);
       }

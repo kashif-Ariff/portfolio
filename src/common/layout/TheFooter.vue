@@ -105,6 +105,11 @@ footer {
     bottom: 0px;
     right: 0px;
     background-size: cover;
+    @media screen and (max-width:991px){
+      width:200px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
   @include small_medium {
     padding-top: rem(20px);

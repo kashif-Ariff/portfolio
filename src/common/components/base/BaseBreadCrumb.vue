@@ -17,7 +17,13 @@ export default {
 
 <style lang="scss" scoped>
 .breadCrumb {
-  margin-bottom: rem(90px);
+  margin-bottom: rem(70px);
+  @media screen and (max-width:1600px){
+    margin-bottom: rem(50px);
+  }
+  @media screen and (max-width:991px){
+    margin-bottom: rem(35px);
+  }
   /deep/ {
     .breadcrumb {
       background: transparent;
@@ -25,9 +31,13 @@ export default {
         color: var(--secondary);
         opacity: 1;
         font-size: rem(24px);
-        padding-right: rem(80px);
+        padding-right: rem(55px);
+        padding-left:rem(16px);
         position: relative;
         text-transform: capitalize;
+        &:first-child{
+          padding-left:0;
+        }
         @media screen and (max-width: 991px) {
           font-size: rem(22px);
           padding-right: rem(30px);
@@ -58,7 +68,7 @@ export default {
           opacity: 0.6;
           font-size: rem(24px);
           transition: 0.3s ease all;
-          text-transform: capitalize;
+          text-transform: uppercase;
           @media screen and (max-width: 991px) {
             font-size: rem(22px);
             padding-right: rem(30px);

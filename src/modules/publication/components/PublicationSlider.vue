@@ -67,6 +67,7 @@
 							<base-document
 								:documents="documents"
 							></base-document>
+							<base-pagination></base-pagination>
 						</div>
 					</b-tab>
 				</b-tabs>
@@ -79,6 +80,7 @@
 export default {
 	components: {
 		BaseDocument: () => import('@/common/components/base/BaseDocument.vue'),
+		 BasePagination:() => import("@/common/components/base/BasePagination.vue")
 	},
 	data() {
 		return {
@@ -91,10 +93,7 @@ export default {
 				rtl: this.$i18n.locale == 'en' ? false : true,
 				spaceBetween: 40,
 				breakpoints: {
-					1200: {
-						slidesPerView: 5,
-					},
-					991: {
+					992: {
 						slidesPerView: 5,
 					},
 					768: {
@@ -206,8 +205,12 @@ export default {
 <style lang="scss" scoped>
 .publicationSlider {
 	padding: rem(35px) 0px;
+	padding-top:0;
 	@media screen and (max-width: 991px) {
 		padding-top: rem(10px);
+	}
+	>.container{
+		padding:0
 	}
 	&__head {
 		margin-top: rem(15px);
@@ -250,6 +253,12 @@ export default {
 			transform: scale(0.9);
 			width: 100%;
 			height: 120px;
+			opacity:1 !important;
+			border-top-left-radius: 25px;
+			border-bottom-right-radius: 25px;
+			@media screen and (max-width:991px){
+				height:105px;
+			}
 			.publicationSlider__item--title {
 				font-size: rem(16px);
 			}
@@ -340,6 +349,9 @@ export default {
 		}
 		.card {
 			padding: rem(30px) rem(40px);
+			@media screen and (max-width:991px){
+				padding:rem(25px);
+			}
 		}
 		/deep/ {
 			.nav-pills {
@@ -357,5 +369,19 @@ export default {
 			}
 		}
 	}
+	/deep/{
+        .pagination{
+            padding: 0;
+            .show_items{
+                display: none;
+            }
+            .gotoPage{
+                display: none;
+            }
+            ul.pagination{
+                justify-content: flex-end !important;
+            }
+        }
+    }
 }
 </style>

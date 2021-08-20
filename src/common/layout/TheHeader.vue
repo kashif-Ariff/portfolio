@@ -618,6 +618,9 @@ nav {
       // height: 100%;
       display: flex;
       align-items: center;
+      .iconCustom{
+        height:20px;
+      }
       &.poniter {
         pointer-events: none;
         opacity: 0.5;

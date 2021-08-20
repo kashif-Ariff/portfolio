@@ -9,7 +9,7 @@
 				role="tablist"
 			>
 				<div
-					class="swiper-slide initiator__slide iconTabs__item"
+					class="swiper-slide iconTabs__item"
 					v-for="(card, index) in cardContent"
 					:key="index"
 					role="presentation"
@@ -40,13 +40,13 @@
 								/>
 							</span>
 						</div>
-						<h3
-							class="initiator__slide--title"
-							id="initiator_title"
-						>
-							{{ card.title }}
-						</h3>
 					</a>
+					<h3
+						class="iconTabs__item--title"
+						id="initiator_title"
+					>
+						{{ card.title }}
+					</h3>
 				</div>
 			</carousel>
 		</div>
@@ -103,7 +103,7 @@ export default {
 		return {
 			tabIndex: 0,
 			sliderOption: {
-				slidesPerView: 2,
+				slidesPerView: 1,
 				slideToClickedSlide: true,
 				centeredSlides: true,
 				spaceBetween: 40,
@@ -118,22 +118,13 @@ export default {
 					// 1025: {
 					//     slidesPerView: 3,
 					// },
-					990: {
-						slidesPerView: 3,
-					},
 					768: {
 						slidesPerView: 3,
 					},
-					575: {
+					400: {
+						centeredSlides: false,
 						slidesPerView: 2,
-						// spaceBetween: 10,
-					},
-					350: {
-						slidesPerView: 2,
-						// spaceBetween: 10,
-					},
-					250: {
-						slidesPerView: 1,
+						spaceBetween: 10,
 					},
 				},
 			},
@@ -182,7 +173,24 @@ export default {
 				text-align: center;
 			}
 		}
-
+		.slide{
+			&__card{
+				width:175px;
+				height:175px;
+				margin:auto;
+				@include flex(center , center);
+				border-top-left-radius: 25px;
+				border-bottom-right-radius: 25px;
+			}
+		}
+		.iconTabs{
+			&__item{
+				&--title{
+					font-size:rem(19px);
+					margin-top:rem(16px);
+				}
+			}
+		}
 		/deep/ {
 			.swiper-container {
 				max-width: 750px;
@@ -197,8 +205,8 @@ export default {
 			.sliderNavigation {
 				--border: var(--primary) !important;
 				height: 26px;
-				top: -26px;
-				left: -15px;
+				top: -60px;
+				left: 0;
 				button {
 					position: static !important;
 					color: var(--primary);
@@ -229,24 +237,8 @@ export default {
 				}
 			}
 		}
-		.slide__card--image {
-			border-radius: 25px;
-			height: 196px;
-		}
+
 	}
-	// .iconTabs {
-	//     &__item {
-	//         &--image {
-	//             margin: 0;
-	//         }
-	//         a .tab-icon {
-	//             width: 85px;
-	//             height: 85px;
-	//             background: none;
-	//             // margin-top: rem(6px);
-	//         }
-	//     }
-	// }
 	&__slide {
 		.slide__card--image {
 			transform: scale(0.88);
@@ -291,15 +283,17 @@ export default {
 				align-items: center;
 				&--icon {
 					display: flex;
-					width: 45px;
-					height: 45px;
+					width: 40px;
+					min-width:40px;
+					height: 40px;
 					margin-right: rem(30px);
 					color: #fff;
 					justify-content: center;
 					align-items: center;
 					@media screen and (max-width: 767px) {
-						width: 35px;
-						height: 35px;
+						width: 30px;
+						min-width:30px;
+						height: 30px;
 					}
 				}
 				&--title {
@@ -309,7 +303,7 @@ export default {
 					margin: 0px;
 					text-transform: unset;
 					@media screen and (max-width: 575px) {
-						font-size: rem(20px);
+						font-size: rem(18px);
 					}
 				}
 			}
@@ -321,6 +315,9 @@ export default {
 					margin: 0px;
 					font-weight: 400;
 					margin-bottom: rem(30px);
+					@media screen and (max-width: 575px) {
+						font-size: rem(17px);
+					}
 				}
 				/deep/ .scrollArea {
 					// --barcolor: var(--activeColor);
