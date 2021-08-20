@@ -1132,7 +1132,7 @@ main {
 	border: 2px solid #c0c9cf;
 	box-shadow: 0px 0px 12px 2px rgba($color: black, $alpha: 0.1);
 	transform: scale(0.9);
-	transition: 0.3s ease all;
+	transition: 0.4s ease all;
 	&.active {
 		background: var(--secondary);
 		transform: scale(1);
@@ -1198,10 +1198,12 @@ main {
 				--titlecolor: var(--secondary);
 				--iconbg: var(--primary);
 				h3 {
+					color: #fff;
+					font-weight: 500;
+					font-size: rem(20px);
 					opacity: 1;
 					padding-bottom: 0;
 					margin-bottom: 0;
-					// color: #fff;
 				}
 				.tab-icon {
 					img {

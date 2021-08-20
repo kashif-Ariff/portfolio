@@ -1,347 +1,53 @@
 <template>
 	<div>
-		<div class="breadCrumbs" v-if="!showModal">
+		<div class="breadCrumbs">
 			<base-bread-crumb :items="items"></base-bread-crumb>
 		</div>
-		<div
-			class="supportCenterSlider"
-			role="region"
-			:aria-label="ariaLabel"
-		>
+		<div class="publicationSlider" role="region">
 			<div class="container">
-				<div
-					class="supportCenterSlider__head iconTabs">
+				<div class="publicationSlider__head iconTabs">
 					<carousel
 						navigation-layout="side"
 						:carousel-settings="sliderOption"
 						@init="setSlider"
-						role="tablist">
+						role="tablist"
+					>
 						<div
-							class="swiper-slide slide__card iconTabs__item"
+							class="swiper-slide iconTabs__item"
+							v-for="(card, index) in cardContent"
+							:key="index"
 							role="presentation"
 						>
 							<a
-								data-target="highlights"
-								class="nav-link"
-								:class="{ active: isActive(0) }"
-								v-on:click.stop.prevent="tabIndex = 0"
+								class="nav-link slide__card"
+								:class="{ active: isActive(index) }"
+								v-on:click.stop.prevent="tabIndex = index"
 								data-toggle="tab"
 								href="#"
 								role="tab"
-								aria-controls="supportCenter_0"
-								aria-selected="true"
-								id="tab_supportCenter_0"
+								:aria-selected="index == 0 ? 'true' : 'false'"
+								:aria-controls="`tab_publication_${index}`"
+								:id="`publication_${index}`"
 							>
-								<div
-									class="iconTabs__item--image">
+								<div class="iconTabs__item--image">
 									<span class="tab-icon">
 										<img
-											src="@/assets/images/icons/faqs/color/question.png"
+											:src="
+												require(`@/assets/images/icons/publication/color/${card.image}`)
+											"
 											alt=""
 											class="img-fluid"
 										/>
 										<img
-											src="@/assets/images/icons/faqs/white/question.png"
+											:src="
+												require(`@/assets/images/icons/publication/white/${card.image}`)
+											"
 											alt=""
 											class="img-fluid selected"
 										/>
 									</span>
-									<h3>
-										Publications
-									</h3>
-								</div>
-							</a>
-						</div>
-						<div
-							class="swiper-slide slide__card iconTabs__item"
-							role="presentation"
-						>
-							<a
-								data-target="highlights"
-								class="nav-link"
-								:class="{ active: isActive(1) }"
-								v-on:click.stop.prevent="tabIndex = 1"
-								data-toggle="tab"
-								href="#"
-								role="tab"
-								aria-controls="supportCenter_1"
-								aria-selected="false"
-								id="tab_supportCenter_1"
-							>
-								<div
-									class="
-										slide__card--image
-										iconTabs__item--image
-									"
-								>
-									<span class="tab-icon">
-										<img
-											src="@/assets/images/icons/faqs/color/question.png"
-											alt=""
-											class="img-fluid"
-										/>
-										<img
-											src="@/assets/images/icons/faqs/white/question.png"
-											alt=""
-											class="img-fluid selected"
-										/>
-									</span>
-									<h3
-										class="supportCenterSlider__item--title"
-									>
-										Law
-									</h3>
-								</div>
-							</a>
-						</div>
-						<div
-							class="swiper-slide slide__card iconTabs__item"
-							role="presentation"
-						>
-							<a
-								data-target="highlights"
-								class="nav-link"
-								:class="{ active: isActive(2) }"
-								v-on:click.stop.prevent="tabIndex = 2"
-								data-toggle="tab"
-								href="#"
-								role="tab"
-								aria-controls="supportCenter_2"
-								aria-selected="false"
-								id="tab_supportCenter_2"
-							>
-								<div
-									class="
-										slide__card--image
-										iconTabs__item--image
-									"
-								>
-									<span class="tab-icon">
-										<img
-											src="@/assets/images/icons/faqs/color/question.png"
-											alt=""
-											class="img-fluid"
-										/>
-										<img
-											src="@/assets/images/icons/faqs/white/question.png"
-											alt=""
-											class="img-fluid selected"
-										/>
-									</span>
-									<h3
-										class="supportCenterSlider__item--title"
-									>
-										introduction
-									</h3>
-								</div>
-							</a>
-						</div>
-						<div
-							class="swiper-slide slide__card iconTabs__item"
-							role="presentation"
-						>
-							<a
-								data-target="highlights"
-								class="nav-link"
-								:class="{ active: isActive(3) }"
-								v-on:click.stop.prevent="tabIndex = 3"
-								data-toggle="tab"
-								href="#"
-								role="tab"
-								aria-controls="supportCenter_3"
-								aria-selected="false"
-								id="tab_supportCenter_3"
-							>
-								<div
-									class="
-										slide__card--image
-										iconTabs__item--image
-									"
-								>
-									<span class="tab-icon">
-										<img
-											src="@/assets/images/icons/faqs/color/question.png"
-											alt=""
-											class="img-fluid"
-										/>
-										<img
-											src="@/assets/images/icons/faqs/white/question.png"
-											alt=""
-											class="img-fluid selected"
-										/>
-									</span>
-									<h3
-										class="supportCenterSlider__item--title"
-									>
-										introduction
-									</h3>
-								</div>
-							</a>
-						</div>
-						<div
-							class="swiper-slide slide__card iconTabs__item"
-							role="presentation"
-						>
-							<a
-								data-target="highlights"
-								class="nav-link"
-								:class="{ active: isActive(4) }"
-								v-on:click.stop.prevent="tabIndex = 4"
-								data-toggle="tab"
-								href="#"
-								role="tab"
-								aria-controls="supportCenter_4"
-								aria-selected="false"
-								id="tab_supportCenter_4"
-							>
-								<div
-									class="
-										slide__card--image
-										iconTabs__item--image
-									"
-								>
-									<span class="tab-icon">
-										<img
-											src="@/assets/images/icons/faqs/color/question.png"
-											alt=""
-											class="img-fluid"
-										/>
-										<img
-											src="@/assets/images/icons/faqs/white/question.png"
-											alt=""
-											class="img-fluid selected"
-										/>
-									</span>
-									<h3
-										class="supportCenterSlider__item--title"
-									>
-										introduction
-									</h3>
-								</div>
-							</a>
-						</div>
-						<div
-							class="swiper-slide slide__card iconTabs__item"
-							role="presentation"
-						>
-							<a
-								data-target="highlights"
-								class="nav-link"
-								:class="{ active: isActive(5) }"
-								v-on:click.stop.prevent="tabIndex = 5"
-								data-toggle="tab"
-								href="#"
-								role="tab"
-								aria-controls="supportCenter_5"
-								aria-selected="false"
-								id="tab_supportCenter_5"
-							>
-								<div
-									class="
-										slide__card--image
-										iconTabs__item--image
-									"
-								>
-									<span class="tab-icon">
-										<img
-											src="@/assets/images/icons/faqs/color/question.png"
-											alt=""
-											class="img-fluid"
-										/>
-										<img
-											src="@/assets/images/icons/faqs/white/question.png"
-											alt=""
-											class="img-fluid selected"
-										/>
-									</span>
-									<h3
-										class="supportCenterSlider__item--title"
-									>
-										introduction
-									</h3>
-								</div>
-							</a>
-						</div>
-						<div
-							class="swiper-slide slide__card iconTabs__item"
-							role="presentation"
-						>
-							<a
-								data-target="highlights"
-								class="nav-link"
-								:class="{ active: isActive(6) }"
-								v-on:click.stop.prevent="tabIndex = 6"
-								data-toggle="tab"
-								href="#"
-								role="tab"
-								aria-controls="supportCenter_6"
-								aria-selected="false"
-								id="tab_supportCenter_6"
-							>
-								<div
-									class="
-										slide__card--image
-										iconTabs__item--image
-									"
-								>
-									<span class="tab-icon">
-										<img
-											src="@/assets/images/icons/faqs/color/question.png"
-											alt=""
-											class="img-fluid"
-										/>
-										<img
-											src="@/assets/images/icons/faqs/white/question.png"
-											alt=""
-											class="img-fluid selected"
-										/>
-									</span>
-									<h3
-										class="supportCenterSlider__item--title"
-									>
-										introduction
-									</h3>
-								</div>
-							</a>
-						</div>
-						<div
-							class="swiper-slide slide__card iconTabs__item"
-							role="presentation"
-						>
-							<a
-								data-target="highlights"
-								class="nav-link"
-								:class="{ active: isActive(7) }"
-								v-on:click.stop.prevent="tabIndex = 7"
-								data-toggle="tab"
-								href="#"
-								role="tab"
-								aria-controls="supportCenter_7"
-								aria-selected="false"
-								id="tab_supportCenter_7"
-							>
-								<div
-									class="
-										slide__card--image
-										iconTabs__item--image
-									"
-								>
-									<span class="tab-icon">
-										<img
-											src="@/assets/images/icons/faqs/color/question.png"
-											alt=""
-											class="img-fluid"
-										/>
-										<img
-											src="@/assets/images/icons/faqs/white/question.png"
-											alt=""
-											class="img-fluid selected"
-										/>
-									</span>
-									<h3
-										class="supportCenterSlider__item--title"
-									>
-										introduction
+									<h3 class="publicationSlider__item--title">
+										{{ card.title }}
 									</h3>
 								</div>
 							</a>
@@ -349,36 +55,20 @@
 					</carousel>
 				</div>
 			</div>
-			<div class="supportCenterSlider__body customTabs__contents">
+			<div class="publicationSlider__body customTabs__contents">
 				<b-tabs v-model="tabIndex" nav-wrapper-class="d-none">
-					<b-tab id="supportCenter_0" button-id="tab_supportCenter_0">
+					<b-tab
+						v-for="(card, index) in cardContent"
+						:key="index"
+						:id="`publication_${card.index}`"
+						:button-id="`tab_publication_${card.index}`"
+					>
 						<div class="card">
 							<base-document
 								:documents="documents"
 							></base-document>
 						</div>
 					</b-tab>
-					<b-tab id="supportCenter_1" button-id="tab_supportCenter_1"
-						>1</b-tab
-					>
-					<b-tab id="supportCenter_2" button-id="tab_supportCenter_2"
-						>2</b-tab
-					>
-					<b-tab id="supportCenter_3" button-id="tab_supportCenter_3"
-						>3</b-tab
-					>
-					<b-tab id="supportCenter_4" button-id="tab_supportCenter_4"
-						>4</b-tab
-					>
-					<b-tab id="supportCenter_5" button-id="tab_supportCenter_5"
-						>5</b-tab
-					>
-					<b-tab id="supportCenter_6" button-id="tab_supportCenter_6"
-						>6</b-tab
-					>
-					<b-tab id="supportCenter_7" button-id="tab_supportCenter_7"
-						>7</b-tab
-					>
 				</b-tabs>
 			</div>
 		</div>
@@ -399,7 +89,7 @@ export default {
 				observer: true,
 				observeParents: true,
 				rtl: this.$i18n.locale == 'en' ? false : true,
-				spaceBetween: 10,
+				spaceBetween: 40,
 				breakpoints: {
 					1200: {
 						slidesPerView: 5,
@@ -465,6 +155,44 @@ export default {
 					download: 'Download',
 				},
 			],
+			cardContent: [
+				{
+					index: 0,
+					image: 'question.png',
+					image_hover: 'question.png',
+					title: 'publication',
+				},
+				{
+					index: 1,
+					image: 'question.png',
+					image_hover: 'question.png',
+					title: 'Law',
+				},
+				{
+					index: 2,
+					image: 'question.png',
+					image_hover: 'question.png',
+					title: 'Executive Regulations',
+				},
+				{
+					index: 3,
+					image: 'question.png',
+					image_hover: 'question.png',
+					title: 'Annual Report',
+				},
+				{
+					index: 4,
+					image: 'question.png',
+					image_hover: 'question.png',
+					title: 'Business Environment',
+				},
+				{
+					index: 5,
+					image: 'question.png',
+					image_hover: 'question.png',
+					title: 'publication',
+				},
+			],
 		};
 	},
 	methods: {
@@ -476,168 +204,144 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.supportCenterSlider {
-	.supportCenterSlider {
-		padding: rem(35px) 0px;
-		@media screen and (max-width: 991px) {
-			padding-top: rem(10px);
-		}
-		background: #f0f0f0;
-		&__head {
-			margin-top: rem(15px);
-			margin-bottom: rem(0px);
-			text-align: center;
-			position: relative;
-			font-size: rem(22px);
-			/deep/ {
-				.sideWrapper {
-					margin: 0 60px;
-				}
-				.swiper-container {
-					padding: 10px;
+.publicationSlider {
+	padding: rem(35px) 0px;
+	@media screen and (max-width: 991px) {
+		padding-top: rem(10px);
+	}
+	&__head {
+		margin-top: rem(15px);
+		margin-bottom: rem(0px);
+		text-align: center;
+		position: relative;
+		font-size: rem(22px);
+		/deep/ {
+			.sideWrapper {
+				margin: 0 70px;
+			}
+			.swiper-container {
+				padding: 10px;
 
-					.swiper-wrapper {
-						margin: 0px;
-					}
-				}
-				.sliderNavigation {
-					--color: var(--primary);
-					--arrow: var(--primary);
-					--border: var(--primary);
-					z-index: 0;
-					height: 100%;
-					&__controls {
-						&--pagination {
-							&.customPagination {
-								font-size: rem(28px);
-								position: absolute;
-								top: -62px;
-								right: 0;
-								display: block !important;
-								@media screen and (max-width: 991px) {
-									top: -50px;
-								}
-							}
-						}
-					}
-					&.sideNavigation {
-						#nextArrow {
-							right: 0;
-						}
-						#prevArrow {
-							left: 0;
-						}
-					}
+				.swiper-wrapper {
+					margin: 0px;
 				}
 			}
-			.nav-link {
-				padding: 0;
-				transition: 0.4s ease all;
-				position: relative;
-				display: inline-block;
-				transform: scale(0.9);
-				width: 100%;
-				&.active {
-					.slide__card--image {
-						// background: unset;
+			.sliderNavigation {
+				--color: var(--primary);
+				--arrow: var(--primary);
+				--border: var(--primary);
+				z-index: 0;
+				height: 100%;
+				&.sideNavigation {
+					#nextArrow {
+						right: 0;
 					}
-					transform: scale(1);
-					.supportCenterSlider__item--title {
-						color: var(--secondary);
-						font-weight: 500;
-						font-size: rem(17px);
-					}
-				}
-				outline-offset: -3px !important;
-				outline-width: 3px;
-				.slide__card--image {
-					// border-radius: 25px;
-				}
-				&:focus {
-					outline-color: var(--primary);
-					&::before {
-						content: '';
-						position: absolute;
-					}
-				}
-			}
-			@media screen and (max-width: 1600px) {
-				margin: 0 0px;
-				margin-top: rem(15px);
-			}
-			@media screen and (max-width: 1199px) {
-				margin: 0;
-				margin-top: rem(15px);
-			}
-			@media screen and (max-width: 991px) {
-				margin-top: rem(0px);
-				/deep/ {
-					.sliderNavigation {
-						&.sideNavigation {
-							top: -5px !important;
-						}
+					#prevArrow {
+						left: 0;
 					}
 				}
 			}
 		}
-		&__item {
-			&--image {
-				width: 100%;
-				height: 140px;
-				margin: auto;
-				position: relative;
-				transition: 0.5s ease all;
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
+		.nav-link {
+			padding: 0;
+			transition: 0.4s ease all;
+			position: relative;
+			display: inline-block;
+			transform: scale(0.9);
+			width: 100%;
+			height: 105px;
+			&.active {
+				.publicationSlider__item--title {
+					font-size: rem(16px);
+					font-weight: 400;
 				}
+			}
+			outline-offset: -3px !important;
+			outline-width: 3px;
+			&:focus {
+				outline-color: var(--primary);
 				&::before {
 					content: '';
-					width: 100%;
-					height: 100%;
 					position: absolute;
-					top: 0px;
-					left: 0px;
-					background: rgba($color: #000000, $alpha: 0.5);
-					transition: 0.4s ease all;
-				}
-			}
-			&--title {
-				font-size: rem(17px);
-				color: var(--secondary);
-				text-transform: capitalize;
-				font-weight: 500;
-				display: inline-block;
-				margin-top: rem(20px);
-			}
-			/deep/ {
-				.swiper-container {
-					padding: rem(8px);
 				}
 			}
 		}
-		&__body {
-			.scrollArea {
-				height: 185px;
-			}
-			.card {
-				padding: rem(30px) rem(40px);
-			}
+		@media screen and (max-width: 1600px) {
+			margin: 0 0px;
+			margin-top: rem(15px);
+		}
+		@media screen and (max-width: 1199px) {
+			margin: 0;
+			margin-top: rem(15px);
+		}
+		@media screen and (max-width: 991px) {
+			margin-top: rem(0px);
 			/deep/ {
-				.nav-pills {
-					li {
-						@media screen and (min-width: 576px) {
-							width: 50%;
-						}
-					}
-					a:focus {
-						outline: none;
+				.sliderNavigation {
+					&.sideNavigation {
+						top: -5px !important;
 					}
 				}
-				.tab-content {
-					margin-top: rem(25px);
+			}
+		}
+	}
+	&__item {
+		&--image {
+			width: 100%;
+			height: 140px;
+			margin: auto;
+			position: relative;
+			transition: 0.5s ease all;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			&::before {
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				background: rgba($color: #000000, $alpha: 0.5);
+				transition: 0.4s ease all;
+			}
+		}
+		&--title {
+			font-size: rem(16px);
+			color: var(--secondary);
+			text-transform: capitalize;
+			font-weight: 400;
+			display: inline-block;
+			margin-top: 0;
+		}
+		/deep/ {
+			.swiper-container {
+				padding: rem(8px);
+			}
+		}
+	}
+	&__body {
+		.scrollArea {
+			height: 185px;
+		}
+		.card {
+			padding: rem(30px) rem(40px);
+		}
+		/deep/ {
+			.nav-pills {
+				li {
+					@media screen and (min-width: 576px) {
+						width: 50%;
+					}
 				}
+				a:focus {
+					outline: none;
+				}
+			}
+			.tab-content {
+				margin-top: rem(25px);
 			}
 		}
 	}
