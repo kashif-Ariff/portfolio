@@ -4,7 +4,11 @@
     <div class="container">
         <base-bread-crumb :items="breadCrumbsItems"></base-bread-crumb>
         <base-media-slider :mediaSlides="MediaSliderItems"></base-media-slider>
-        <media-center-card  :card-data="cardData" aria-label="PRESS RELEASE"/>
+         <div class="row mt-50">
+             <div class="col-lg-4 col-sm-6 mb-30" v-for="card in cardData" :key="card.index">
+                <media-center-card  :card-data="card" :aria-label="card.title"/>
+             </div>
+         </div>
         <base-pagination aria-label="PRESS RELEASE PAGINATION"></base-pagination>
     </div>
   </div>
@@ -36,6 +40,14 @@ export default {
                 },
                 {
                     index:2,
+                    image:"eid-mubarak.png",
+                    date:"February 25, 2021",
+                    link:"#",
+                    title:"Kuwait National Day",
+                    content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Sociis natoque penatibus et magnis"
+                },
+                {
+                    index:3,
                     image:"eid-mubarak.png",
                     date:"February 25, 2021",
                     link:"#",
@@ -88,6 +100,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .mediaCenter{
+    .card_parent{
+        margin-bottom: rem(30px);  
+    }
     /deep/{
         .mediaSlider{
             .swiper-slide{

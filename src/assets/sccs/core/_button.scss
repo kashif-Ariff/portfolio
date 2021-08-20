@@ -302,6 +302,15 @@
             opacity: 0.8;
         }
     }
+    &.btn-default{
+        background: var(--secondary);
+        border-radius: 10px;
+        padding-left: rem(20px);
+        padding-right: rem(20px);
+        &:hover{
+            background: var(--primary);
+        }
+    }
 }
 
 .btn-upload {
