@@ -249,7 +249,7 @@ export default {
 			display: inline-block;
 			transform: scale(0.9);
 			width: 100%;
-			height: 125px;
+			height: 120px;
 			.publicationSlider__item--title {
 				font-size: rem(16px);
 			}
