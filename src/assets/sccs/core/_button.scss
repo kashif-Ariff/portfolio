@@ -75,6 +75,7 @@
     .btn-primary:focus,
     .btn-primary:active {
         background: var(--primary);
+        opacity: 1;
         // padding: rem(10.5px) rem(40px);
         &.bold {
             font-weight: 700;
@@ -117,6 +118,7 @@
             background: #fff;
             color: var(--primary);
             cursor: pointer;
+            opacity: 1;
         }
         &.bold {
             font-weight: 700;
@@ -257,7 +259,8 @@
     &.pdf {
         background-color: #de2c2d;
         color: #fff;
-        padding: 15px 18px;
+        padding: rem(15px) rem(17px);
+        padding-right: rem(25px);
         display: inline-flex;
         &:hover {
             opacity: 0.8;

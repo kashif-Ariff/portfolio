@@ -1,5 +1,5 @@
 <template>
-    <div
+    <div 
         class="supportCenterSlider customTabs"
         role="region"
         :aria-label="ariaLabel"
@@ -14,12 +14,11 @@
                     role="tablist"
                 >
                     <div
-                        class="swiper-slide slide__card"
+                        class="swiper-slide "
                         role="presentation"
                     >
                         <a
-                            data-target="highlights"
-                            class="nav-link"
+                            class="nav-link slide__card"
                             :class="{ active: isActive(0)}"
                             v-on:click.stop.prevent="tabIndex = 0"
                             data-toggle="tab"
@@ -36,18 +35,17 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                               Business Incubators
-                            </p>
                         </a>
+                        <h3 class="slide__card--title">
+                            Business Incubators
+                        </h3>
                     </div>
                     <div
-                        class="swiper-slide slide__card"
+                        class="swiper-slide "
                         role="presentation"
                     >
                         <a
-                            data-target="highlights"
-                            class="nav-link"
+                            class="nav-link slide__card"
                             :class="{ active: isActive(1)}"
                             v-on:click.stop.prevent="tabIndex = 1"
                             data-toggle="tab"
@@ -64,18 +62,17 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                                Creative Centers
-                            </p>
                         </a>
+                        <h3 class="slide__card--title">
+                            Creative Centers
+                        </h3>
                     </div>
                     <div
-                        class="swiper-slide slide__card"
+                        class="swiper-slide"
                         role="presentation"
                     >
                         <a
-                            data-target="highlights"
-                            class="nav-link"
+                            class="nav-link  slide__card"
                             :class="{ active: isActive(2)}"
                             v-on:click.stop.prevent="tabIndex = 2"
                             data-toggle="tab"
@@ -92,18 +89,18 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                                introduction
-                            </p>
+                            
                         </a>
+                        <h3 class="slide__card--title">
+                            introduction
+                        </h3>
                     </div>
                      <div
-                        class="swiper-slide slide__card"
+                        class="swiper-slide"
                         role="presentation"
                     >
                         <a
-                            data-target="highlights"
-                            class="nav-link"
+                            class="nav-link  slide__card"
                             :class="{ active: isActive(3)}"
                             v-on:click.stop.prevent="tabIndex = 3"
                             data-toggle="tab"
@@ -120,18 +117,17 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                                introduction
-                            </p>
                         </a>
+                        <h3 class="slide__card--title">
+                            introduction
+                        </h3>
                     </div>
                      <div
-                        class="swiper-slide slide__card"
+                        class="swiper-slide "
                         role="presentation"
                     >
                         <a
-                            data-target="highlights"
-                            class="nav-link"
+                            class="nav-link slide__card"
                             :class="{ active: isActive(4)}"
                             v-on:click.stop.prevent="tabIndex = 4"
                             data-toggle="tab"
@@ -148,18 +144,17 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                                introduction
-                            </p>
                         </a>
+                        <h3 class="slide__card--title">
+                            introduction
+                        </h3>
                     </div>
                     <div
-                        class="swiper-slide slide__card"
+                        class="swiper-slide"
                         role="presentation"
                     >
                         <a
-                            data-target="highlights"
-                            class="nav-link"
+                            class="nav-link  slide__card"
                             :class="{ active: isActive(5)}"
                             v-on:click.stop.prevent="tabIndex = 5"
                             data-toggle="tab"
@@ -176,18 +171,17 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                                introduction
-                            </p>
                         </a>
+                        <h3 class="slide__card--title">
+                            introduction
+                        </h3>
                     </div>
                     <div
-                        class="swiper-slide slide__card"
+                        class="swiper-slide "
                         role="presentation"
                     >
                         <a
-                            data-target="highlights"
-                            class="nav-link"
+                            class="nav-link slide__card"
                             :class="{ active: isActive(6)}"
                             v-on:click.stop.prevent="tabIndex = 6"
                             data-toggle="tab"
@@ -204,18 +198,17 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                                introduction
-                            </p>
                         </a>
+                        <h3 class="slide__card--title">
+                            introduction
+                        </h3>
                     </div>
                     <div
-                        class="swiper-slide slide__card"
+                        class="swiper-slide"
                         role="presentation"
                     >
                         <a
-                            data-target="highlights"
-                            class="nav-link"
+                            class="nav-link  slide__card"
                             :class="{ active: isActive(7)}"
                             v-on:click.stop.prevent="tabIndex = 7"
                             data-toggle="tab"
@@ -232,10 +225,10 @@
                                     class="img-fluid"
                                 />
                             </div>
-                            <p class="supportCenterSlider__item--title">
-                                introduction
-                            </p>
                         </a>
+                        <h3 class=" slide__card--title">
+                            introduction
+                        </h3>
                     </div>
                 </carousel>
             </div>
@@ -354,27 +347,21 @@ export default {
                 }
             }
         }
-        .nav-link {
-            padding: 0;
-            transition: 0.4s ease all;
-            position: relative;
-            display: inline-block;
-            // transform: scale(0.9);
-            width: 100%;
-            .slide__card--image{
-                // transform: scale(.92);
+        .slide__card {
+            height: 145px;
+            &:hover{
+                opacity:1;
+            }
+            @include flex (center , center);
+            &--title{
+                font-size: rem(17px);
+				font-weight: 400;
+                color: var(--secondary);
+                margin:rem(16px) 0 0 0;
             }
             &.active {
-                .slide__card--image {
-                    background: unset;
-                    transform: scale(1);
-                }
+                 background: unset;
                 transform: scale(1);
-                .supportCenterSlider__item--title {
-                    color: var(--secondary);
-                    font-weight: 400;
-                    font-size: rem(17px);
-                }
             }
             outline-offset: -3px !important;
             outline-width: 3px;

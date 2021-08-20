@@ -123,7 +123,10 @@ export default {
         padding-left: 2px;
     }
     .card{
-        padding: rem(30px) rem(40px);
+        padding: rem(30px) rem(50px);
+        @media screen and (max-width:991px){
+            padding:rem(25px);
+        }
     }
 }
 [lang='ar']{
