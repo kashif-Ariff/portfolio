@@ -13,156 +13,31 @@
 						swiper-slide
 						services__slideHead--slide
 						iconTabs__item
-						nav-link
 					"
+					v-for="cardData in sliderContent"
+					:key="cardData.index"
 				>
 					<a class="nav-link slide__card" href="#" @click.prevent>
 						<div class="iconTabs__item--image">
 							<span class="tab-icon">
 								<img
-									src="@/assets/images/icons/ourServices/color/callCenter.png"
+									:src="
+										require(`@/assets/images/icons/ourServices/color/${cardData.icon}`)
+									"
 									class="img-fluid"
 									alt=""
 								/>
 								<img
-									src="@/assets/images/icons/ourServices/white/callCenter.png"
+									:src="
+										require(`@/assets/images/icons/ourServices/white/${cardData.icon}`)
+									"
 									class="img-fluid selected"
 									alt=""
 								/>
 							</span>
 						</div>
 					</a>
-					<h3>Supportive Center Services</h3>
-				</div>
-				<div
-					class="
-						swiper-slide
-						services__slideHead--slide
-						iconTabs__item
-						nav-link
-					"
-				>
-					<a class="nav-link slide__card" href="#" @click.prevent>
-						<div class="iconTabs__item--image">
-							<span class="tab-icon">
-								<img
-									src="@/assets/images/icons/ourServices/color/map.png"
-									class="img-fluid"
-									alt=""
-								/>
-								<img
-									src="@/assets/images/icons/ourServices/white/map.png"
-									class="img-fluid selected"
-									alt=""
-								/>
-							</span>
-						</div>
-					</a>
-					<h3>National Registry Services</h3>
-				</div>
-				<div
-					class="
-						swiper-slide
-						services__slideHead--slide
-						iconTabs__item
-						nav-link
-					"
-				>
-					<a class="nav-link slide__card" href="#" @click.prevent>
-						<div class="iconTabs__item--image">
-							<span class="tab-icon">
-								<img
-									src="@/assets/images/icons/ourServices/color/growing-up.png"
-									class="img-fluid"
-									alt=""
-								/>
-								<img
-									src="@/assets/images/icons/ourServices/white/growing-up.png"
-									class="img-fluid selected"
-									alt=""
-								/>
-							</span>
-						</div>
-					</a>
-					<h3>Financier Services</h3>
-				</div>
-				<div
-					class="
-						swiper-slide
-						services__slideHead--slide
-						iconTabs__item
-						nav-link
-					"
-				>
-					<a class="nav-link slide__card" href="#" @click.prevent>
-						<div class="iconTabs__item--image">
-							<span class="tab-icon">
-								<img
-									src="@/assets/images/icons/ourServices/color/leaderShip.png"
-									class="img-fluid"
-									alt=""
-								/>
-								<img
-									src="@/assets/images/icons/ourServices/white/leaderShip.png"
-									class="img-fluid selected"
-									alt=""
-								/>
-							</span>
-						</div>
-					</a>
-					<h3>Training and Monitoring</h3>
-				</div>
-				<div
-					class="
-						swiper-slide
-						services__slideHead--slide
-						iconTabs__item
-						nav-link
-					"
-				>
-					<a class="nav-link slide__card" href="#" @click.prevent>
-						<div class="iconTabs__item--image">
-							<span class="tab-icon">
-								<img
-									src="@/assets/images/icons/ourServices/color/Presentation.png"
-									class="img-fluid"
-									alt=""
-								/>
-								<img
-									src="@/assets/images/icons/ourServices/white/Presentation.png"
-									class="img-fluid selected"
-									alt=""
-								/>
-							</span>
-						</div>
-					</a>
-					<h3>Funded Project Marketing</h3>
-				</div>
-				<div
-					class="
-						swiper-slide
-						services__slideHead--slide
-						iconTabs__item
-						nav-link
-					"
-				>
-					<a class="nav-link slide__card" href="#" @click.prevent>
-						<div class="iconTabs__item--image">
-							<span class="tab-icon">
-								<img
-									src="@/assets/images/icons/ourServices/color/callCenter.png"
-									class="img-fluid"
-									alt=""
-								/>
-								<img
-									src="@/assets/images/icons/ourServices/white/callCenter.png"
-									class="img-fluid selected"
-									alt=""
-								/>
-							</span>
-						</div>
-					</a>
-					<h3>Supportive Center Services</h3>
+					<h3>{{ cardData.title }}</h3>
 				</div>
 			</carousel>
 		</div>
@@ -173,7 +48,11 @@
 					:carousel-settings="sliderOptionTwo"
 					slider-type="slider"
 				>
-					<div class="swiper-slide">
+					<div
+						class="swiper-slide"
+						v-for="cardData in sliderContent"
+						:key="cardData.index"
+					>
 						<div class="services__details">
 							<div class="services__details--image">
 								<img
@@ -182,214 +61,16 @@
 									alt=""
 								/>
 							</div>
-							<div class="services__details--detail">
-								<h3 class="title" id="Zain_crowned">
-									Zain crowned ‘Best Operator’ and ‘Best
-									Brand’ at Telecom World Middle East Awards
-									2019
+							<div class="services__details--info">
+								<h3>
+									{{ cardData.heading }}
 								</h3>
 								<base-smooth-scrollbar height="200px">
-									<p class="detail" tabindex="-1">
-										Zain, the leading mobile telecom
-										innovator in eight markets across the
-										Middle East and Africa, announces it has
-										been awarded the ‘Best Telecom Operator’
-										and ‘Best Brand’ accolade for 2019 at
-										the prestigious Telecoms World Middle
-										East Awards event held in Dubai this
-										week. This honor marks a record sixth
-										consecutive year that Zain has won the
-										‘Best Brand’ award..
-									</p>
-								</base-smooth-scrollbar>
-								<router-link
-									to="/"
-									class="btn btn-primary"
-									aria-labelledby="Zain_crowned"
-									>explore more</router-link
-								>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="services__details">
-							<div class="services__details--image">
-								<img
-									src="@/assets/images/about/awardDetail.jpg"
-									class="img-fluid"
-									alt=""
-								/>
-							</div>
-							<div class="services__details--detail">
-								<h3 class="title" id="Zain_crowned">
-									Zain crowned ‘Best Operator’ and ‘Best
-									Brand’ at Telecom World Middle East Awards
-									2019
-								</h3>
-								<base-smooth-scrollbar height="200px">
-									<p class="detail" tabindex="-1">
-										Zain, the leading mobile telecom
-										innovator in eight markets across the
-										Middle East and Africa, announces it has
-										been awarded the ‘Best Telecom Operator’
-										and ‘Best Brand’ accolade for 2019 at
-										the prestigious Telecoms World Middle
-										East Awards event held in Dubai this
-										week. This honor marks a record sixth
-										consecutive year that Zain has won the
-										‘Best Brand’ award..
-									</p>
-								</base-smooth-scrollbar>
-								<router-link
-									to="/"
-									class="btn btn-primary"
-									aria-labelledby="Zain_crowned"
-									>explore more</router-link
-								>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="services__details">
-							<div class="services__details--image">
-								<img
-									src="@/assets/images/about/awardDetail.jpg"
-									class="img-fluid"
-									alt=""
-								/>
-							</div>
-							<div class="services__details--detail">
-								<h3 class="title" id="Zain_crowned">
-									Zain crowned ‘Best Operator’ and ‘Best
-									Brand’ at Telecom World Middle East Awards
-									2019
-								</h3>
-								<base-smooth-scrollbar height="200px">
-									<p class="detail" tabindex="-1">
-										Zain, the leading mobile telecom
-										innovator in eight markets across the
-										Middle East and Africa, announces it has
-										been awarded the ‘Best Telecom Operator’
-										and ‘Best Brand’ accolade for 2019 at
-										the prestigious Telecoms World Middle
-										East Awards event held in Dubai this
-										week. This honor marks a record sixth
-										consecutive year that Zain has won the
-										‘Best Brand’ award..
-									</p>
-								</base-smooth-scrollbar>
-								<router-link
-									to="/"
-									class="btn btn-primary"
-									aria-labelledby="Zain_crowned"
-									>explore more</router-link
-								>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="services__details">
-							<div class="services__details--image">
-								<img
-									src="@/assets/images/about/awardDetail.jpg"
-									class="img-fluid"
-									alt=""
-								/>
-							</div>
-							<div class="services__details--detail">
-								<h3 class="title" id="Zain_crowned">
-									Zain crowned ‘Best Operator’ and ‘Best
-									Brand’ at Telecom World Middle East Awards
-									2019
-								</h3>
-								<base-smooth-scrollbar height="200px">
-									<p class="detail" tabindex="-1">
-										Zain, the leading mobile telecom
-										innovator in eight markets across the
-										Middle East and Africa, announces it has
-										been awarded the ‘Best Telecom Operator’
-										and ‘Best Brand’ accolade for 2019 at
-										the prestigious Telecoms World Middle
-										East Awards event held in Dubai this
-										week. This honor marks a record sixth
-										consecutive year that Zain has won the
-										‘Best Brand’ award..
-									</p>
-								</base-smooth-scrollbar>
-								<router-link
-									to="/"
-									class="btn btn-primary"
-									aria-labelledby="Zain_crowned"
-									>explore more</router-link
-								>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="services__details">
-							<div class="services__details--image">
-								<img
-									src="@/assets/images/about/awardDetail.jpg"
-									class="img-fluid"
-									alt=""
-								/>
-							</div>
-							<div class="services__details--detail">
-								<h3 class="title" id="Zain_crowned">
-									Zain crowned ‘Best Operator’ and ‘Best
-									Brand’ at Telecom World Middle East Awards
-									2019
-								</h3>
-								<base-smooth-scrollbar height="200px">
-									<p class="detail" tabindex="-1">
-										Zain, the leading mobile telecom
-										innovator in eight markets across the
-										Middle East and Africa, announces it has
-										been awarded the ‘Best Telecom Operator’
-										and ‘Best Brand’ accolade for 2019 at
-										the prestigious Telecoms World Middle
-										East Awards event held in Dubai this
-										week. This honor marks a record sixth
-										consecutive year that Zain has won the
-										‘Best Brand’ award..
-									</p>
-								</base-smooth-scrollbar>
-								<router-link
-									to="/"
-									class="btn btn-primary"
-									aria-labelledby="Zain_crowned"
-									>explore more</router-link
-								>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="services__details">
-							<div class="services__details--image">
-								<img
-									src="@/assets/images/about/awardDetail.jpg"
-									class="img-fluid"
-									alt=""
-								/>
-							</div>
-							<div class="services__details--detail">
-								<h3 class="title" id="Zain_crowned">
-									Zain crowned ‘Best Operator’ and ‘Best
-									Brand’ at Telecom World Middle East Awards
-									2019
-								</h3>
-								<base-smooth-scrollbar height="200px">
-									<p class="detail" tabindex="-1">
-										Zain, the leading mobile telecom
-										innovator in eight markets across the
-										Middle East and Africa, announces it has
-										been awarded the ‘Best Telecom Operator’
-										and ‘Best Brand’ accolade for 2019 at
-										the prestigious Telecoms World Middle
-										East Awards event held in Dubai this
-										week. This honor marks a record sixth
-										consecutive year that Zain has won the
-										‘Best Brand’ award..
+									<p
+										v-for="text in cardData.content"
+										:key="text.index"
+									>
+										{{ text }}
 									</p>
 								</base-smooth-scrollbar>
 								<router-link
@@ -436,7 +117,6 @@ export default {
 					},
 				},
 			},
-
 			sliderOptionTwo: {
 				slidesPerView: 1,
 				simulateTouch: false,
@@ -444,6 +124,74 @@ export default {
 				rtl: this.$i18n.locale == 'en' ? false : true,
 			},
 			thumbSlider: null,
+			sliderContent: [
+				{
+					index: 0,
+					icon: 'callCenter.png',
+					title: 'Supportive Center Services',
+					image: 'awardDetail.jpg',
+					heading:
+						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
+					content: [
+						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
+					],
+				},
+				{
+					index: 1,
+					icon: 'map.png',
+					title: 'National Registry Services',
+					image: 'awardDetail.jpg',
+					heading:
+						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
+					content: [
+						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
+					],
+				},
+				{
+					index: 2,
+					icon: 'growing-up.png',
+					title: 'Financier Services',
+					image: 'awardDetail.jpg',
+					heading:
+						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
+					content: [
+						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
+					],
+				},
+				{
+					index: 3,
+					icon: 'leaderShip.png',
+					title: 'Training and Monitoring',
+					image: 'awardDetail.jpg',
+					heading:
+						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
+					content: [
+						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
+					],
+				},
+				{
+					index: 4,
+					icon: 'Presentation.png',
+					title: 'Funded Project Marketing',
+					image: 'awardDetail.jpg',
+					heading:
+						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
+					content: [
+						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
+					],
+				},
+				{
+					index: 5,
+					icon: 'map.png',
+					title: 'National Registry Services',
+					image: '',
+					heading:
+						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
+					content: [
+						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
+					],
+				},
+			],
 		};
 	},
 	methods: {
@@ -511,7 +259,7 @@ export default {
 				}
 			}
 			h3 {
-				font-size: rem(19px);
+				font-size: rem(20px);
 				color: var(--secondary);
 				text-transform: capitalize;
 				font-weight: 400;
@@ -540,13 +288,6 @@ export default {
 							height: auto !important;
 						}
 					}
-				}
-
-				@media screen and (max-width: 991px) {
-					transform: scale(0.9);
-				}
-				@media screen and (max-width: 575px) {
-					transform: scale(0.9);
 				}
 				.slide__card {
 					background: var(--secondary);
@@ -622,17 +363,19 @@ export default {
 	&__details {
 		display: flex;
 		&--image {
-			flex: 0 0 490px;
-			max-width: 490px;
+			flex: 0 0 500px;
+			max-width: 500px;
 			height: 285px;
-			margin-right: 25px;
+			margin-right: rem(30px);
+			border-radius: 10px;
+			overflow: hidden;
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 			}
 		}
-		&--detail {
+		&--info {
 			flex: 1;
 			h3 {
 				font-size: rem(21px);
@@ -644,11 +387,7 @@ export default {
 				font-size: rem(20px);
 			}
 			/deep/ .scrollArea {
-				--h: 170px;
-				margin-bottom: rem(10px);
-				@media screen and (max-width: 1600px) {
-					margin-bottom: 20px;
-				}
+				--h: 200px;
 				@media screen and (max-width: 852px) {
 					--h: 150px;
 					margin-bottom: 15px;
@@ -673,7 +412,7 @@ export default {
 				height: 300px;
 				margin: 0 0 rem(30px) 0 !important;
 			}
-			&--detail {
+			&--info {
 				h3 {
 					font-size: rem(20px);
 				}
