@@ -259,6 +259,11 @@ export default {
 					font-weight: 400;
 				}
 			}
+			@media screen and (min-width: 1025px) {
+				&.hover {
+					opacity: 1;
+				}
+			}
 			outline-offset: -3px !important;
 			outline-width: 3px;
 			&:focus {
