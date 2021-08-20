@@ -51,5 +51,10 @@ export default {
         font-size: rem(30px);
     }
   }
+  /deep/{
+    .pagination{
+      padding-bottom: 0px;
+    }
+  }
 }
 </style>

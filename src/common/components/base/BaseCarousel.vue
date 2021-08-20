@@ -365,15 +365,11 @@ export default {
       }
     }
     &--arrow {
-      width: rem(65px);
-      height: rem(65px);
+      width: rem(50px);
+      height: rem(50px);
       border: solid 1px var(--border) !important;
       border-radius: 50%;
       color: var(--arrow);
-      @media screen and (max-width:1600px){
-        width: rem(55px);
-        height: rem(55px);
-      }
       .fa {
         font-size: 25px;
       }

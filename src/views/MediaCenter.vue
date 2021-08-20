@@ -1,6 +1,9 @@
 <template>
   <div class="mediaCenter">
+    <base-inner-banner :banner-detail="innerBannerDetail" />
     <div class="container">
+        <base-bread-crumb :items="breadCrumbsItems"></base-bread-crumb>
+        <base-media-slider :mediaSlides="MediaSliderItems"></base-media-slider>
         <media-center-card  :card-data="cardData" aria-label="PRESS RELEASE"/>
         <base-pagination aria-label="PRESS RELEASE PAGINATION"></base-pagination>
     </div>
@@ -8,6 +11,7 @@
 </template>
 
 <script>
+import BaseMediaSlider from "@/common/components/base/BaseMediaSlider.vue";
 import MediaCenterCard from '@/modules/media-center/partials/MediaCenterCard';
 import BasePagination from "@/common/components/base/BasePagination.vue";
 export default {
@@ -38,17 +42,69 @@ export default {
                     title:"Kuwait National Day",
                     content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Sociis natoque penatibus et magnis"
                 }
-            ]
+            ],
+            innerBannerDetail: {
+                image: "BOD.png",
+                title: "Media Center",
+            },
+            breadCrumbsItems: [
+				{
+					text: 'Home',
+					href: '#',
+				},
+				{
+					text: 'Media Center',
+					active: true,
+				},
+			],
+            MediaSliderItems: [
+            {
+                image: "media-center-slider-image.png",
+                title: "Announcements",
+                subtitle: "EID MUBARAK FROM THE NATIONAL FUND",
+                date: "May 13, 2021"
+            },
+            {
+                image: "media-center-slider-image.png",
+                title: "Announcements",
+                subtitle: "EID MUBARAK FROM THE NATIONAL FUND",
+                date: "May 13, 2021"
+            },
+            {
+                image: "media-center-slider-image.png",
+                title: "Announcements",
+                subtitle: "EID MUBARAK FROM THE NATIONAL FUND",
+                date: "May 13, 2021"
+            },
+        ],
         }
     },
     components:{
         MediaCenterCard,
         BasePagination,
+        BaseMediaSlider
     }
 }
 </script>
 <style lang="scss" scoped>
 .mediaCenter{
-    margin-top: 300px;
+    /deep/{
+        .mediaSlider{
+            .swiper-slide{
+                position: relative;
+                &:before{
+                    position: absolute;
+                    content:"";
+                    background: rgba(34,65,86,0.6);
+                    left: 0;
+                    top:0;
+                    z-index: 0;
+                    width: 100%;
+                    height: 100%;
+
+                }
+            }
+        }
+    }
 }
 </style>

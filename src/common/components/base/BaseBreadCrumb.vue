@@ -17,6 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .breadCrumb {
+  margin-bottom: rem(90px);
   /deep/ {
     .breadcrumb {
       background: transparent;

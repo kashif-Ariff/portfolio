@@ -18,7 +18,11 @@
             class="img-fluid"
           />
         </div>
-        <h2 v-if="data.thumb">{{ data.thumb }}</h2>
+        <div class="caption" v-if="data.title">
+          <h2>{{data.title}}</h2>
+          <h3 v-if="data.subtitle">{{data.subtitle}}</h3>
+          <p v-if="data.date">{{data.date}}</p>
+        </div>
       </div>
     </carousel>
   </div>
@@ -48,7 +52,7 @@ export default {
   border-bottom-right-radius: 50px;
   overflow: hidden;
   &__slides {
-    background: #e9e9e9;
+   
     img {
       width: 100%;
       height: 100%;
@@ -59,24 +63,30 @@ export default {
         outline-offset: -8px;
       }
     }
+    
   }
-  .swiper-slide {
-    h2 {
-      text-align: center;
-      font-size: rem(24px);
-      font-weight: 700;
-      color: var(--secondary);
-      padding-top: rem(30px);
-      word-spacing: rem(3px);
-      padding-left: rem(8px);
-      padding-right: rem(8px);
-      @media screen and (max-width: 767px) {
+  .swiper-slide{
+    border-radius: 44px;
+    overflow: hidden;
+    .caption{
+      position: absolute;
+      bottom: rem(40px);
+      left: rem(55px);
+      h2{
         font-size: rem(20px);
-        padding-top: rem(25px);
+        font-weight: 400;
+        color:#fff;
+        text-transform: uppercase;
       }
-      @media screen and (max-width: 575px) {
-        font-size: rem(17px);
-        padding-top: rem(20px);
+      h3{
+        font-weight: 500;
+        font-size: rem(30px);
+        color:#fff;
+        text-transform: uppercase;
+      }
+      p{
+        font-size: rem(15px);
+        color:#fff;
       }
     }
   }
@@ -86,9 +96,9 @@ export default {
       z-index: 1;
       padding: 0 rem(25px);
       background-color: rgba(10, 35, 51, 0.9);
-      width: 350px;
-      height: 130px;
-      right: 0;
+      width: 290px;
+      height: 100px;
+      right: 1px;
       position: absolute;
       bottom: 0;
       border-top-left-radius: 45px;
