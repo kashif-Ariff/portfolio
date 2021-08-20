@@ -164,32 +164,32 @@ export default {
 				},
 				{
 					index: 1,
-					image: 'question.png',
-					image_hover: 'question.png',
+					image: 'Financial-Care.png',
+					image_hover: 'Financial-Care.png',
 					title: 'Law',
 				},
 				{
 					index: 2,
-					image: 'question.png',
-					image_hover: 'question.png',
+					image: 'Presentation.png',
+					image_hover: 'Presentation.png',
 					title: 'Executive Regulations',
 				},
 				{
 					index: 3,
-					image: 'question.png',
-					image_hover: 'question.png',
+					image: 'Handshake.png',
+					image_hover: 'Handshake.png',
 					title: 'Annual Report',
 				},
 				{
 					index: 4,
-					image: 'question.png',
-					image_hover: 'question.png',
+					image: 'Shop.png',
+					image_hover: 'Shop.png',
 					title: 'Business Environment',
 				},
 				{
 					index: 5,
-					image: 'question.png',
-					image_hover: 'question.png',
+					image: 'Shop.png',
+					image_hover: 'Shop.png',
 					title: 'publication',
 				},
 			],
@@ -242,14 +242,17 @@ export default {
 				}
 			}
 		}
-		.nav-link {
-			padding: 0;
+		.slide__card {
+			padding: 0 rem(10px);
 			transition: 0.4s ease all;
 			position: relative;
 			display: inline-block;
 			transform: scale(0.9);
 			width: 100%;
-			height: 105px;
+			height: 125px;
+			.publicationSlider__item--title {
+				font-size: rem(16px);
+			}
 			&.active {
 				.publicationSlider__item--title {
 					font-size: rem(16px);
@@ -264,6 +267,10 @@ export default {
 					content: '';
 					position: absolute;
 				}
+			}
+			.tab-icon {
+				height: 4rem;
+				width: 4rem;
 			}
 		}
 		@media screen and (max-width: 1600px) {
