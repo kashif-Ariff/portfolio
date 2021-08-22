@@ -3,8 +3,8 @@
 		<base-inner-banner :banner-detail="innerBannerDetail" />
 		<div class="container">
 			<h2 class="sectionTitle text-center">Branches</h2>
-			<div class="contactUs__wrapper customTabs">
-				<div class="contactUs__wrapper--head customTabs__items">
+			<div class="contactUs__wrapper">
+				<div class="contactUs__wrapper--head">
 					<carousel
 						navigation-layout="side"
 						navigation-theme="simple"
@@ -25,9 +25,9 @@
 								data-toggle="tab"
 								href="#"
 								role="tab"
-								:aria-controls="`supportCenter_${index}`"
+								:aria-controls="`contactUs_${index}`"
 								:aria-selected="index == 0 ? 'true' : 'false'"
-								:id="`tab_supportCenter_${index}`"
+								:id="`tab_contactUs_${index}`"
 							>
 								<p class="ContactUs__slide--title">
 									{{ item.title }}
@@ -36,7 +36,7 @@
 						</div>
 					</carousel>
 				</div>
-				<div class="contactUs__wrapper--body customTabs__contents">
+				<div class="contactUs__wrapper--body">
 					<b-tabs v-model="tabIndex" nav-wrapper-class="d-none">
 						<b-tab
 							v-for="(item, index) in tabsContent"
