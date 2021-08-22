@@ -4,9 +4,10 @@
     <div class="container">
         <base-bread-crumb :items="breadCrumbsItems"></base-bread-crumb>
         <base-media-slider :mediaSlides="MediaSliderItems"></base-media-slider>
+        
          <div class="row mt-50">
              <div class="col-lg-4 col-sm-6 mb-30" v-for="card in cardData" :key="card.index">
-                <media-center-card  :card-data="card" :aria-label="card.title"/>
+                <media-center-card  :card-data="card" />
              </div>
          </div>
         <base-pagination aria-label="PRESS RELEASE PAGINATION"></base-pagination>
@@ -28,7 +29,7 @@ export default {
                     date:"May 13, 2021",
                     link:"#",
                     title:"Eid Mubarak From The National Fund",
-                    content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Sociis natoque penatibus et magnis"
+                    content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget"
                 },
                 {
                     index:1,
@@ -36,7 +37,7 @@ export default {
                     date:"March 13, 2021",
                     link:"#",
                     title:"Knowledge Economy Forum",
-                    content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Sociis natoque penatibus et magnis"
+                    content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget"
                 },
                 {
                     index:2,
@@ -119,6 +120,9 @@ export default {
 
                 }
             }
+        }
+        .pagination{
+            margin-top: rem(20px);
         }
     }
 }

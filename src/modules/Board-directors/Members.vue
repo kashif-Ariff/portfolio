@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div class="breadCrumbs" v-if="!showModal">
-      <base-bread-crumb :items="items"></base-bread-crumb>
-    </div>
     <div class="swiper-container" ref="members" v-show="!showModal">
       <div class="swiper-wrapper">
         <memberItem
@@ -109,6 +106,8 @@ export default {
       centeredSlides: true,
       observer: true,
       observeParents: true,
+      slideToClickedSlide: false,
+    loop: true,
       breakpoints: {
         992: {
           spaceBetween: 100,

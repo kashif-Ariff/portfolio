@@ -65,20 +65,20 @@
 								<h3>
 									{{ cardData.heading }}
 								</h3>
-								<base-smooth-scrollbar height="200px">
-									<p
-										v-for="text in cardData.content"
-										:key="text.index"
-									>
-										{{ text }}
+								<base-smooth-scrollbar height="145px">
+									<p>
+										{{ cardData.content }}
 									</p>
 								</base-smooth-scrollbar>
-								<router-link
-									to="/"
-									class="btn btn-primary"
-									aria-labelledby="Zain_crowned"
-									>explore more</router-link
-								>
+								<div class="button-row">
+								
+									<router-link
+										to="/"
+										class="btn btn-primary"
+										aria-labelledby="Zain_crowned"
+										>explore more</router-link
+									>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -132,9 +132,7 @@ export default {
 					image: 'awardDetail.jpg',
 					heading:
 						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
-					content: [
-						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
-					],
+					content: 'Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award.. lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum augue quis imperdiet scelerisque. Cras in erat massa. Vestibulum metus diam, posuere vitae nibh in, pellentesque semper risus. In tempus semper vestibulum.',
 				},
 				{
 					index: 1,
@@ -143,9 +141,7 @@ export default {
 					image: 'awardDetail.jpg',
 					heading:
 						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
-					content: [
-						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
-					],
+					content: 'Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive ',
 				},
 				{
 					index: 2,
@@ -154,9 +150,7 @@ export default {
 					image: 'awardDetail.jpg',
 					heading:
 						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
-					content: [
-						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
-					],
+					content: '	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
 				},
 				{
 					index: 3,
@@ -165,9 +159,7 @@ export default {
 					image: 'awardDetail.jpg',
 					heading:
 						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
-					content: [
-						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
-					],
+					content: '	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
 				},
 				{
 					index: 4,
@@ -176,9 +168,7 @@ export default {
 					image: 'awardDetail.jpg',
 					heading:
 						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
-					content: [
-						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
-					],
+					content: '	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
 				},
 				{
 					index: 5,
@@ -187,9 +177,7 @@ export default {
 					image: '',
 					heading:
 						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
-					content: [
-						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
-					],
+					content: '	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
 				},
 			],
 		};
@@ -226,7 +214,7 @@ export default {
 		/deep/ {
 			.swiper-wrapper {
 				padding: 20px 7px;
-				padding-top: 35px;
+				padding-top: 0;
 				@media screen and (max-width: 370px) {
 					padding-left: 0;
 					padding-right: 0;
@@ -252,11 +240,6 @@ export default {
 			}
 			.slide__card {
 				height: 196px;
-				border-radius: 30px;
-				.tab-icon {
-					width: 8rem;
-					height: 8rem;
-				}
 			}
 			h3 {
 				font-size: rem(20px);
@@ -333,7 +316,7 @@ export default {
 				.sliderNavigation {
 					position: absolute;
 					max-width: 1200px !important;
-					bottom: 10px;
+					bottom: 30px;
 					left: auto !important;
 					@media screen and (max-width: 1600px) {
 						bottom: 38px !important;
@@ -385,6 +368,7 @@ export default {
 			}
 			p {
 				font-size: rem(20px);
+				margin-bottom: 0;
 			}
 			/deep/ .scrollArea {
 				--h: 200px;
@@ -392,6 +376,9 @@ export default {
 					--h: 150px;
 					margin-bottom: 15px;
 				}
+			}
+			.button-row{
+				padding-top: rem(15px);
 			}
 		}
 	}

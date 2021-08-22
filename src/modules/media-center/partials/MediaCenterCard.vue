@@ -1,5 +1,5 @@
 <template>
-    <div class="card" :aria-label="ariaLabel">
+    <div class="card">
         <div class="image">
             <router-link :to="`/${$i18n.locale}/press-release-detail`" tabindex="-1">
                 <img
@@ -10,11 +10,11 @@
             </router-link>
         </div>
         <div class="card-content">
-            <span class="card__title">{{cardData.title}}</span>
+            <h3 class="card__title">{{cardData.title}}</h3>
             <div class="card__date" :id="cardData.index">{{cardData.date}}</div>
             <p class="card__detail">{{cardData.content}}</p>
             <!-- <router-link :to="`/${$i18n.locale}/press-release-detail`" tabindex="-1"></router-link> -->
-            <router-link :to="cardData.link"  :aria-describedby="cardData.index"><span class="btn btn-default">Read more</span> </router-link>
+            <router-link :to="cardData.link"  :aria-describedby="cardData.index" class="btn btn-default">Read more</router-link>
         </div>
     </div>
 </template>
@@ -33,7 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-        --heading:var(--secondary);
+        --title:var(--secondary);
         --label: var(--secondary);
         margin-bottom: unset;
         border-radius: 18px;
@@ -48,12 +48,16 @@ export default {
         overflow: hidden;
         &__title,&__detail{
             font-size: rem(16px);
-            color: var(--heading);
+            color: var(--title);
             font-weight: 400;
             margin-bottom:rem(15px);
             display: inline-block;
             @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
 
+        }
+        &__detail{
+            @include truncate(2,1.4);
+            margin-bottom: rem(25px);
         }
         &__date{
             opacity: 0.6;
@@ -65,16 +69,22 @@ export default {
         }
         &:hover{
             cursor: pointer;
-            --heading:#fff;
+            --title:#fff;
             --label: #fff;
             background: var(--secondary);
             .btn-default{
                 background: var(--primary);
+                opacity: 1;
             }
         }
         .card-content{
             padding: rem(25px) rem(25px) 0px;
             padding-bottom: 0px;
+            .btn{
+                border-radius: 13px;
+                font-size: rem(18px);
+                padding: rem(11px) rem(24px);
+            }
         }
         @media screen and (max-width:1199px){
             padding:16px;

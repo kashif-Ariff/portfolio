@@ -1030,14 +1030,16 @@ main {
 				}
 				&.active {
 					color: var(--secondary);
+					border: solid 2px var(--secondary);
 				}
 				&:hover {
 					color: var(--secondary);
 				}
 				&:focus {
-					border-style: dashed;
+					border-style: solid;
 					color: var(--secondary);
 					border-color: var(--secondary);
+					//border:none;
 				}
 			}
 		}
@@ -1176,9 +1178,9 @@ main {
 			--iconbg: transparent;
 			padding: rem(10px) rem(5px);
 			.tab-icon {
-				width: rem(80px);
-				height: rem(80px);
-				padding: rem(14px);
+				// width: rem(80px);
+				// height: rem(80px);
+				// padding: rem(14px);
 				@include flex(center, center);
 				border-radius: 50%;
 				// background: var(--iconbg);

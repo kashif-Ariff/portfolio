@@ -5,7 +5,7 @@
         <img class="img-fluid" src="@/assets/images/close_icon.png" alt="" />
       </div>
       <div class="scrollWrapper left">
-        <base-smooth-scrollbar height="360px">
+        <base-smooth-scrollbar height="400px">
           <ul class="swiper-modal-aside">
             <li
               v-for="item in members"

@@ -2,12 +2,10 @@
   <div class="suportCenter">
       <base-inner-banner :banner-detail="innerBannerDetail" />
       <div class="container">
-        <section id="" data-color-theme="dark">
-          <support-center-slider
+        <support-center-slider
               section-title=""
               aria-label=""
           ></support-center-slider>
-        </section>
     </div>
   </div>
 </template>

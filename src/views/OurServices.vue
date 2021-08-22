@@ -8,10 +8,9 @@
 </template>
 
 <script>
-import BaseMediaSlider from '@/common/components/base/BaseMediaSlider.vue';
 import ServicesType from '../modules/services/ServicesType.vue';
 export default {
-	components: { ServicesType, BaseMediaSlider },
+	components: { ServicesType },
 	data() {
 		return {
 			innerBannerDetail: {

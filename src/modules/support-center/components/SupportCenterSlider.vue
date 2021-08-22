@@ -214,7 +214,6 @@ export default {
 			}
 			.slide__card {
 				height: 145px;
-				border-radius: 21px;
 				&:hover {
 					opacity: 1;
 				}
