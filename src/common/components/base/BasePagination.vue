@@ -88,8 +88,8 @@ export default {
         font-weight: 400;
         text-transform: capitalize;
         padding: 0 rem(25px);
-        border-top-right-radius: 18px;
-        border-bottom-right-radius: 18px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         transition: .5s all;
@@ -108,14 +108,10 @@ export default {
           padding: 0px 5px;
           outline: none;
           border: 2px solid #019cde;
-          border-radius: 18px;
+          border-radius: 20px;
           font-weight: 600;
           box-shadow: unset;
           button {
-            //     background-image: url(C:/xampp/htdocs/NewNF-VU3/src/assets/images/icons/arrowDown.png);
-            &:hover {
-              //    background-image: url(C:/xampp/htdocs/NewNF-VU3/src/assets/images/icons/arrowDown.png);
-            }
             div {
               color: var(--primary) !important;
               font-weight: 700;
@@ -198,8 +194,8 @@ export default {
     }
     .form-control {
         border: 2px solid #019CDE;
-        border-top-left-radius: 18px;
-        border-bottom-left-radius: 18px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         width: 105px;

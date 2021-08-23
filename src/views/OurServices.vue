@@ -1,5 +1,5 @@
 <template>
-	<div class="ourServices">
+	<div class="ourServices"> 
 		<base-inner-banner :banner-detail="innerBannerDetail" />
 		<div class="container">
 			<services-type></services-type>

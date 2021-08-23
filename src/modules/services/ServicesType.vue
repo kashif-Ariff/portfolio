@@ -101,13 +101,13 @@ export default {
 				slideToClickedSlide: true,
 				rtl: this.$i18n.locale == 'en' ? false : true,
 				breakpoints: {
-					992: {
+					1200: {
 						slidesPerView: 5,
 						spaceBetween: 40,
 					},
 					768: {
 						slidesPerView: 4,
-						spaceBetween: 0,
+						spaceBetween: 20,
 					},
 					576: {
 						slidesPerView: 3,
@@ -192,6 +192,18 @@ export default {
 		.sideWrapper {
 			margin-top: rem(0px);
 		}
+		.iconTabs{
+			&__item{
+				&--image{
+					margin:0;
+				}
+				.nav-link {
+					.tab-icon{
+						max-width:70px;
+					}
+				}
+			}
+		}
 	}
 	&__slideHead {
 		position: relative;
@@ -234,6 +246,9 @@ export default {
 				border-top-left-radius: 24px;
     			border-bottom-right-radius: 24px;
 				transform: scale(1);
+				@media screen and (max-width:991px){
+					height:150px;
+				}
 			}
 			h3 {
 				font-size: rem(20px);
@@ -241,8 +256,8 @@ export default {
 				text-transform: capitalize;
 				font-weight: 400;
 				margin-top: rem(20px);
-				@media screen and (max-width: 767px) {
-					font-size: rem(16px);
+				@media screen and (max-width: 991px) {
+					font-size: rem(17px);
 				}
 			}
 			&.swiper-slide-thumb-active {
@@ -275,12 +290,20 @@ export default {
 	&__main {
 		position: relative;
 		margin-top: rem(40px);
+		.container{
+			@media screen and (max-width:575px){
+				padding:0;
+			}
+		}
 		/deep/ {
 			.sliderNavigation {
 				--color: var(--highlight);
 				--arrow: var(--primary);
 				--border: var(--primary);
 				--topborder: #fff;
+				@media screen and (max-width:991px){
+					margin-top:0;
+				}
 				button {
 					transition: 0.5s ease all;
 					&:hover {
@@ -302,8 +325,14 @@ export default {
 						}
 					}
 				}
+				@media screen and (max-width: 991px) {
+					.sliderNavigation__controls {
+						text-align: center;
+						margin:0;
+					}
+				}
 			}
-			@media screen and (min-width: 1200px) {
+			@media screen and (min-width: 992px) {
 				.swiper-wrapper {
 					padding-bottom: rem(30px) !important;
 				}
@@ -312,8 +341,12 @@ export default {
 					max-width: 1200px !important;
 					bottom: 30px;
 					left: auto !important;
+					right:0;
 					@media screen and (max-width: 1600px) {
 						bottom: 38px !important;
+					}
+					@media screen and (max-width: 1199px) {
+						bottom: 25px !important;
 					}
 					@media screen and (max-width: 1200px) {
 						padding: 0px 10px !important;
@@ -344,12 +377,17 @@ export default {
 			max-width: 500px;
 			height: 285px;
 			margin-right: rem(30px);
-			border-radius: 10px;
+			border-radius: 6px;
 			overflow: hidden;
-			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
+			@media screen and (min-width:992px){
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			@media screen and (max-width:767px){
+				height:auto !important;
 			}
 		}
 		&--info {
@@ -373,14 +411,18 @@ export default {
 			}
 			.button-row{
 				padding-top: rem(15px);
+				@media screen and (max-width:767px){
+					margin-bottom:rem(20px);
+				}
 			}
 		}
 	}
-	@media screen and (max-width: 991px) {
+	@media screen and (max-width: 1199px) {
 		&__details {
 			&--image {
 				flex: 0 0 400px;
 				max-width: 400px;
+				height:300px;
 			}
 		}
 	}

@@ -68,13 +68,15 @@ export default {
 <style lang="scss" scoped>
 .informationCard{
         margin-bottom: rem(40px);
+        border-radius: 21px;
     .card-body{
-        padding: rem(50px) rem(30px);
+        padding: rem(50px) rem(35px);
         // @media screen and (max-width:991px) {
         //     padding: rem(35px) rem(20px);
         // }
         &.grid{
-            grid-template-columns: 300px 1fr 265px;
+            grid-template-columns: 300px 1fr 241px;
+            align-items: center;
             @media screen and (max-width:1199px) {
                 grid-gap:20px;
                 grid-template-columns: 250px 1fr 200px;
@@ -98,7 +100,8 @@ export default {
             width: 1px;
             height: 170px;
             background: #A6B3BB;
-            top: -15px;
+            top: 50%;
+            transform: translateY(-50%);
             right: 0;
             @media screen and (max-width:1199px) {
                 height: 150px;
@@ -125,12 +128,13 @@ export default {
             color: var(--secondary);
             font-size: rem(16px);
             font-weight: 400;
-            margin: rem(30px) 0 rem(15px) 0;
+            margin: rem(25px) 0 rem(15px) 0;
             line-height: 1.5;
         }
         &--subtitle{
             display: flex;
             align-items: center;
+            
             .icon{
                 margin-right: rem(10px);
             }
@@ -143,14 +147,18 @@ export default {
     }
     &__detail{
         position: relative;
-        padding: 0 rem(30px) 0 0;
+        padding: 0 rem(55px) 0 0;
+        @media screen and (max-width:1600px){
+            padding-right:rem(35px);
+        }
        &::before{
             content: '';
             position: absolute;
             width: 1px;
             height: 170px;
             background: #A6B3BB;
-            top: -15px;
+            top: 50%;
+            transform: translateY(-50%);
             right: 0;
             @media screen and (max-width:1199px) {
                 height: 150px;
@@ -173,6 +181,7 @@ export default {
     &__link{
         display: flex;
         align-items: center;
+        justify-content: flex-end;
     }
 }
 </style>>
