@@ -1,5 +1,5 @@
 <template>
-  <div class="MainSearch" :class="isSearch ? 'active' : ''">
+  <div class="searchWrapper" :class="isSearch ? 'active' : ''">
     <div class="overlay"></div>
     <div class="search">
       <span @click="$emit('closeSearch')">
@@ -85,7 +85,8 @@ export default {
   },
   methods: {
     addTag: function (tag) {
-      createTag(tag, this.tags);
+      var newTag = createTag(tag, this.tags);
+      this.tags.push(newTag);
     },
   },
   mounted() {
@@ -107,7 +108,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.MainSearch {
+.searchWrapper {
+  
   /deep/ {
     .vue-tags-input {
       margin-top: 0px !important;
@@ -182,8 +184,8 @@ export default {
   .search {
     background-color: $whiteColor;
     display: none;
-    width: 90%;
-    border-radius: 30px;
+    width: 1250px;
+    border-radius: 50px;
     padding: rem(60px) rem(55px);
     position: fixed;
     left: 0;
@@ -231,7 +233,7 @@ export default {
       // height: 120px;
       min-height: 120px;
       border-radius: 51px;
-      padding: rem(5px) rem(15px);
+      padding: rem(5px) rem(15px) rem(5px) rem(25px);
 
       @media (max-width: 991.98px) {
         padding: rem(6px) rem(5px);
