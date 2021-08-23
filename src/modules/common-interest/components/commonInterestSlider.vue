@@ -58,7 +58,7 @@
 						class="description"
 					>
 						<div class="description__detail">
-							<base-smooth-scrollbar>
+							<base-smooth-scrollbar height="190px">
 								<h3>
 									Lorem ipsum dolor sit amet, consectetuer
 									adipiscing elit.
@@ -159,13 +159,10 @@ export default {
 					1200: {
 						slidesPerView: 5,
 					},
-					991: {
-						slidesPerView: 5,
-					},
-					768: {
+					992: {
 						slidesPerView: 4,
 					},
-					576: {
+					768: {
 						slidesPerView: 3,
 					},
 					450: {
@@ -238,31 +235,28 @@ export default {
 					}
 				}
 				.sliderNavigation {
-					--color: var(--primary);
-					--arrow: var(--primary);
-					--border: var(--primary);
 					z-index: 0;
 					height: unset;
-					&.sideNavigation {
-						#nextArrow {
-							right: 0;
-						}
-						#prevArrow {
-							left: 0;
-						}
-					}
 				}
 			}
 			.iconTabs__item--title {
 				margin-top: rem(20px);
-				white-space: break-spaces;
 			}
 			.slide__card {
 				height: 196px;
-				border-radius: 21px;
+				@media screen and (max-width:1600px){
+					height:170px;
+				}
+				@media screen and (max-width:991px){
+					height:145px;
+				}
 				.tab-icon {
 					width: 7rem;
 					height: 7rem;
+					@media screen and (max-width:991px){
+						width: 5rem;
+						height: 5rem;
+					}
 				}
 				&.active {
 					.iconTabs__item--title {
@@ -299,24 +293,7 @@ export default {
 			}
 		}
 		&__body {
-			.scrollArea {
-				height: 185px;
-			}
 			.description {
-				&__detail {
-					/deep/.scrollArea {
-						--barcolor: #6e337a !important;
-						--trackcolor: #adadad !important;
-						--h: 235px;
-					}
-					.scrollArea__contents {
-						padding-top: 5px;
-						padding-left: 5px;
-						h3 {
-							outline-offset: 2px;
-						}
-					}
-				}
 				&__title {
 					font-size: rem(21px);
 					color: var(--secondary);

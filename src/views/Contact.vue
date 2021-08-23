@@ -7,7 +7,6 @@
 				<div class="contactUs__wrapper--head">
 					<carousel
 						navigation-layout="side"
-						navigation-theme="simple"
 						:carousel-settings="sliderOption"
 						role="tablist"
 						@init="setSlider"
@@ -225,7 +224,7 @@ export default {
 				observer: true,
 				observeParents: true,
 				rtl: this.$i18n.locale == 'en' ? false : true,
-				spaceBetween: 10,
+				spaceBetween: 5,
 				breakpoints: {
 					1200: {
 						slidesPerView: 5,
@@ -306,13 +305,10 @@ export default {
 	&__wrapper {
 		&--head {
 			position: relative;
-			margin-bottom: rem(40px);
-			@media screen and (max-width: 1600px) and (min-width: 576px) {
-				margin-left: rem(20px);
-				margin-right: rem(20px);
-			}
+			margin-bottom: rem(25px);
 			a.nav-link {
 				padding: 5px;
+				opacity:1 !important;
 				.ContactUs__slide--title {
 					margin: 0px;
 					padding: rem(10px);
@@ -342,32 +338,19 @@ export default {
 			/deep/ {
 				.swiper-wrapper {
 					align-items: center;
+					padding:15px 2px;
 				}
 				.swiper-container {
-					margin-left: 7%;
-					margin-right: 7%;
-					padding: 10px;
-					@media screen and (max-width: 1600px) {
-						margin-left: 4%;
-						margin-right: 4%;
-					}
-					@media screen and (max-width: 575px) {
-						margin-left: 30px;
-						margin-right: 30px;
-					}
+					margin-left: 55px;
+					margin-right: 55px;
 				}
 				.sliderNavigation {
 					height: 100%;
 					z-index: 0;
-					--color: var(--secondary);
-					--arrow: var(--primary);
-					--border: var(--primary);
-					--pause: var(--secondary);
-					#nextArrow {
-						right: 0px;
-					}
-					#prevArrow {
-						left: 0px;
+				}
+				.sideWrapper{
+					@media screen and (max-width:991px){
+						margin-top:25px;
 					}
 				}
 			}
@@ -377,8 +360,8 @@ export default {
 				&__map {
 					padding: 0;
 					border-radius: 0px;
-					border-top-right-radius: 50px;
-					border-bottom-left-radius: 50px;
+					border-top-right-radius: 35px;
+					border-bottom-left-radius: 35px;
 					overflow: hidden;
 					background-color: #fff;
 					box-shadow: -3px 1px 10px #ccc;

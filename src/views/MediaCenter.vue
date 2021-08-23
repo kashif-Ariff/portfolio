@@ -6,7 +6,7 @@
 			<base-media-slider
 				:mediaSlides="MediaSliderItems"
 			></base-media-slider>
-			<div class="mediaCenter--head">
+			<div class="mediaCenter--head iconTabs">
 				<carousel
 					navigation-layout="side"
 					:carousel-settings="sliderOption"
@@ -15,12 +15,12 @@
 				>
 					<div
 						role="presentation"
-						class="swiper-slide mediaCenter__item"
+						class="swiper-slide mediaCenter__item iconTabs__item"
 						v-for="(item, index) in tabsContent"
 						:key="index"
 					>
 						<a
-							class="nav-link"
+							class="nav-link slide__card"
 							:class="{ active: isActive(index) }"
 							v-on:click.stop.prevent="tabIndex = index"
 							data-toggle="tab"
@@ -30,9 +30,28 @@
 							:aria-selected="index == 0 ? 'true' : 'false'"
 							:id="`tab_mediaCenter_${index}`"
 						>
-							<p class="mediaCenter__slide--title">
-								{{ item.title }}
-							</p>
+
+						<div class="iconTabs__item--detail">
+								<span class="tab-icon">
+									<img
+										:src="
+											require(`@/assets/images/media-centre/color/${item.image}`)
+										"
+										alt=""
+										class="img-fluid"
+									/>
+									<img
+										:src="
+											require(`@/assets/images/media-centre/white/${item.image}`)
+										"
+										alt=""
+										class="img-fluid selected"
+									/>
+								</span>
+								<h3 class="iconTabs__item--title">
+									{{ item.title}}
+								</h3>
+						</div>
 						</a>
 					</div>
 				</carousel>
@@ -78,18 +97,15 @@ export default {
 				observer: true,
 				observeParents: true,
 				rtl: this.$i18n.locale == 'en' ? false : true,
-				spaceBetween: 30,
+				spaceBetween: 5,
 				breakpoints: {
-					1200: {
+					992: {
 						slidesPerView: 4,
 					},
 					768: {
-						slidesPerView: 4,
-					},
-					576: {
 						slidesPerView: 3,
 					},
-					450: {
+					501: {
 						slidesPerView: 2,
 					},
 				},
@@ -98,22 +114,27 @@ export default {
 				{
 					index: 0,
 					title: 'Announcements',
+					image:'speaker.png'
 				},
 				{
 					index: 1,
 					title: 'Latest News',
+					image:'newspaper.png'
 				},
 				{
 					index: 2,
 					title: 'Events',
+					image:'calendar-check.png'
 				},
 				{
 					index: 3,
 					title: 'Success Stories',
+					image:'book-reader.png'
 				},
 				{
 					index: 4,
-					title: 'Takamol',
+					title: 'Latest News',
+					image:'newspaper.png'
 				},
 			],
 			cardData: [
@@ -206,10 +227,9 @@ export default {
 .mediaCenter {
 	&--head {
 		position: relative;
-		margin: rem(40px) 0;
-		@media screen and (max-width: 1600px) and (min-width: 576px) {
-			margin-left: rem(20px);
-			margin-right: rem(20px);
+		margin: rem(40px) 0 rem(70px) 0;
+		@media screen and (max-width:991px){
+			margin: rem(30px) 0 rem(40px) 0;
 		}
 		a.nav-link {
 			padding: 5px;
@@ -240,36 +260,43 @@ export default {
 				align-items: center;
 			}
 			.swiper-container {
-				margin-left: 5%;
-				margin-right: 5%;
-				padding: 10px;
-				@media screen and (max-width: 1600px) {
-					margin-left: 4%;
-					margin-right: 4%;
-				}
-				@media screen and (max-width: 575px) {
-					margin-left: 30px;
-					margin-right: 30px;
+				margin-left: 7%;
+				margin-right: 7%;
+				padding: 0 10px;
+				@media screen and (max-width: 767px) {
+					margin-left: 40px;
+					margin-right: 40px;
 				}
 			}
 			.sliderNavigation {
 				height: 100%;
 				z-index: 0;
-				--color: var(--secondary);
-				--arrow: var(--primary);
-				--border: var(--primary);
-				--pause: var(--secondary);
-				#nextArrow {
-					right: 0px;
-				}
-				#prevArrow {
-					left: 0px;
-				}
 			}
 		}
 	}
 	.card_parent {
 		margin-bottom: rem(30px);
+	}
+	.iconTabs{
+		&__item{
+			.nav-link{
+				border-radius: 22px;
+				height: 62px;
+				min-width:200px;
+    			transform: scale(.8);
+				border:1px solid #E6EAEC;
+				&.active{
+					transform: scale(1);
+				}
+				.tab-icon{
+					margin-right:8px;
+				}
+			}
+			&--detail{
+				@include flex (center , start);
+				flex-wrap: nowrap;
+			}
+		}
 	}
 	/deep/ {
 		.mediaSlider {

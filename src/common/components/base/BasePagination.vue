@@ -111,7 +111,7 @@ export default {
           color: #019cde !important;
           background: #fff;
           // padding: rem(8px) rem(22px);
-          width: 80px;
+          width: 87px;
           padding: 0px 5px;
           outline: none;
           border: 2px solid #019cde;
@@ -168,6 +168,7 @@ export default {
                 position: unset;
                 font-size: rem(18px);
                 line-height: normal;
+                padding-left:6px;
                 @media screen and (max-width:430px){
                   padding-left:rem(16px);
                 }
@@ -333,14 +334,14 @@ export default {
       border: unset;
       padding: 5px 0;
       li.page-item {
-        height: 40px;
-        width: 40px;
+        height: 32px;
+        width: 32px;
         @include flex(center, center);
         margin-bottom: 0;
         .page-link {
           background: transparent;
           color: #82919c;
-          font-weight: 500;
+          font-weight: 400;
           font-size: rem(18px);
           padding: 0 5px;
           margin: 0px 0px;

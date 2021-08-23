@@ -1,44 +1,42 @@
 <template>
 	<div class="supportCenterSlider">
-		<div class="container">
-			<div class="supportCenterSlider__head">
-				<carousel
-					navigation-layout="side"
-					:carousel-settings="sliderOption"
-					@init="setSlider"
-					role="tablist"
+		<div class="supportCenterSlider__head">
+			<carousel
+				navigation-layout="side"
+				:carousel-settings="sliderOption"
+				@init="setSlider"
+				role="tablist"
+			>
+				<div
+					class="swiper-slide"
+					role="presentation"
+					v-for="(card, index) in cardContent"
+					:key="card.index"
 				>
-					<div
-						class="swiper-slide"
-						role="presentation"
-						v-for="(card, index) in cardContent"
-						:key="card.index"
+					<a
+						class="nav-link slide__card"
+						:class="{ active: isActive(index) }"
+						v-on:click.stop.prevent="tabIndex = index"
+						data-toggle="tab"
+						href="#"
+						role="tab"
+						:aria-controls="`supportCenter_${index}`"
+						:aria-selected="index == 0 ? 'true' : 'false'"
+						:id="`tab_supportCenter_${index}`"
 					>
-						<a
-							class="nav-link slide__card"
-							:class="{ active: isActive(index) }"
-							v-on:click.stop.prevent="tabIndex = index"
-							data-toggle="tab"
-							href="#"
-							role="tab"
-							:aria-controls="`supportCenter_${index}`"
-							:aria-selected="index == 0 ? 'true' : 'false'"
-							:id="`tab_supportCenter_${index}`"
-						>
-							<div class="slide__card--image">
-								<img
-									:src="
-										require(`@/assets/images/support-center/${card.logo}`)
-									"
-									alt=""
-									class="img-fluid"
-								/>
-							</div>
-						</a>
-						<h3 class="slide__card--title">{{ card.title }}</h3>
-					</div>
-				</carousel>
-			</div>
+						<div class="slide__card--image">
+							<img
+								:src="
+									require(`@/assets/images/support-center/${card.logo}`)
+								"
+								alt=""
+								class="img-fluid"
+							/>
+						</div>
+					</a>
+					<h3 class="slide__card--title">{{ card.title }}</h3>
+				</div>
+			</carousel>
 		</div>
 		<div class="supportCenterSlider__body customTabs__contents">
 			<b-tabs v-model="tabIndex" nav-wrapper-class="d-none">
@@ -183,6 +181,8 @@ export default {
 					}
 				}
 				.sliderNavigation {
+					z-index: 0;
+					height: unset;
 					&__controls {
 						&--pagination {
 							&.customPagination {

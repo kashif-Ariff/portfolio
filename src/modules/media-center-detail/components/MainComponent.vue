@@ -26,30 +26,17 @@
                     icon-id="highlight"
                     icon-viewbox="0 0 21.6 20.5"
                 ></base-svg-icon>
-                Highlights :
+                Highlights
             </h3>
             <ul>
                 <li>
-                    Bader Al Kharafi: “The role of women in tech needs to be
-                    increased. It is that simple.”
+                    Manaf AlMenaifi: "The national fund is the rightful partner for SMEs in Kuwait
                 </li>
                 <li>
-                    Released on International Women’s Day, report explores
-                    important issues regarding the cause, nature, and effects of
-                    the challenges faced...
+                   The initiative also aims to support Sustainable Development Goals in Kuwai
                 </li>
                 <li>
-                    Report finds that if 600 million more women were connected
-                    to the internet over the next three years, global GDP would
-                    rise between US$13 billion - US$18 billion
-                </li>
-                <li>
-                    Continually driving equality programs, Zain pushing an
-                    agenda that is cohesive, inclusive, and fair to all
-                </li>
-                <li>
-                    Zain tapping into over 100 of its female workforce who were
-                    certified in the fundamentals of Data Analytics and Science
+                    SDG9 and SDG 12 are supported by the Hackathon
                 </li>
             </ul>
         </div>
@@ -271,6 +258,12 @@ export default {
             &:last-child{
                     text-align: right;
                 }
+            }
+        }
+        .mediaSlider {
+            .swiper-slide{
+                border-radius: 0;
+                border-bottom-right-radius: 36px;
             }
         }
     }

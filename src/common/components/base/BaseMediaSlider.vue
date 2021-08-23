@@ -49,8 +49,13 @@ export default {
 .mediaSlider {
   position: relative;
   z-index: 1;
-  border-bottom-right-radius: 50px;
-  overflow: hidden;
+  // border-bottom-right-radius: 50px;
+  // overflow: hidden;
+  &__item{
+    @media screen and (max-width:991px){
+      height:300px;
+    }
+  }
   &__slides {
    
     img {
@@ -66,23 +71,36 @@ export default {
     
   }
   .swiper-slide{
-    border-radius: 44px;
+    border-radius: 36px;
     overflow: hidden;
     .caption{
       position: absolute;
-      bottom: rem(40px);
-      left: rem(55px);
+      bottom: 45px;
+      left: 55px;
+      @media screen and (max-width:1199px){
+        bottom: 80px;
+      }
+      @media screen and (max-width:991px){
+        bottom: 140px;
+        left: 20px;
+      }
       h2{
         font-size: rem(20px);
         font-weight: 400;
         color:#fff;
         text-transform: uppercase;
+        @media screen and (max-width:991px){
+           font-size: rem(18px);
+        }
       }
       h3{
-        font-weight: 500;
+        font-weight: 400;
         font-size: rem(30px);
         color:#fff;
         text-transform: uppercase;
+        @media screen and (max-width:991px){
+           font-size: rem(25px);
+        }
       }
       p{
         font-size: rem(15px);
@@ -92,25 +110,27 @@ export default {
   }
   /deep/ {
     .sliderNavigation {
-      border-bottom-right-radius: 50px;
+      border-bottom-right-radius: 36px;
       z-index: 1;
       padding: 0 rem(25px);
       background-color: rgba(10, 35, 51, 0.9);
       width: 290px;
-      height: 100px;
-      right: 1px;
+      height: 95px;
+      right: 0px;
       position: absolute;
       bottom: 0;
-      border-top-left-radius: 45px;
+      border-top-left-radius: 36px;
       left: auto;
       @media (max-width: 991.98px) {
-        width: 185px;
+        width: 100%;
         height: 70px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 36px;
       }
-      @media (max-width: 330px) {
-        width: 132px;
-        height: 46px;
-      }
+      // @media (max-width: 330px) {
+      //   width: 132px;
+      //   height: 46px;
+      // }
       .container {
         height: 100%;
       }
@@ -120,11 +140,13 @@ export default {
         display: flex;
         align-items: center;
         height: 100%;
-        justify-content: space-between;
+            justify-content: space-around;
         &--pagination {
           order: 3;
-          font-size: rem(18px);
-          font-weight: 700;
+          font-size: rem(14px);
+          font-weight: 500;
+          color: #fff;
+          padding-right:rem(28px);
         }
         &--pause {
           display: none;
@@ -132,7 +154,11 @@ export default {
         button {
           position: relative;
           border: none !important;
-          width: 40px;
+          width: 27px;
+          &:hover{
+            background: transparent;
+            opacity: .7;
+          }
           i {
             font-size: 0px;
           }

@@ -1,21 +1,22 @@
 <template>
     <div class="card">
-        <div class="image">
-            <router-link :to="`/${$i18n.locale}/press-release-detail`" tabindex="-1">
-                <img
-                    :src="require(`@/assets/images/press-release/${cardData.image}`)" 
-                    :alt="cardData.title"
-                    class="img-fluid"
-                />
-            </router-link>
-        </div>
-        <div class="card-content">
-            <h3 class="card__title">{{cardData.title}}</h3>
-            <div class="card__date" :id="cardData.index">{{cardData.date}}</div>
-            <p class="card__detail">{{cardData.content}}</p>
-            <!-- <router-link :to="`/${$i18n.locale}/press-release-detail`" tabindex="-1"></router-link> -->
-            <router-link :to="cardData.link"  :aria-describedby="cardData.index" class="btn btn-default">Read more</router-link>
-        </div>
+        <router-link :to="`/${$i18n.locale}/press-release-detail`" tabindex="-1">
+            <div class="image">
+                    <img
+                        :src="require(`@/assets/images/press-release/${cardData.image}`)" 
+                        :alt="cardData.title"
+                        class="img-fluid"
+                    />
+                
+            </div>
+            <div class="card-content">
+                <h3 class="card__title">{{cardData.title}}</h3>
+                <div class="card__date" :id="cardData.index">{{cardData.date}}</div>
+                <p class="card__detail">{{cardData.content}}</p>
+                <!-- <router-link :to="`/${$i18n.locale}/press-release-detail`" tabindex="-1"></router-link> -->
+                <router-link :to="cardData.link"  :aria-describedby="cardData.index" class="btn btn-default">Read more</router-link>
+            </div>
+        </router-link>
     </div>
 </template>
  
@@ -36,7 +37,7 @@ export default {
         --title:var(--secondary);
         --label: var(--secondary);
         margin-bottom: unset;
-        border-radius: 18px;
+        border-radius: 28px !important;
         padding: 0;
         max-width: 390px;
         box-shadow: 0px 0px 13px -3px rgba($color: black, $alpha: 0.5);
@@ -46,6 +47,11 @@ export default {
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        @media screen and (max-width:575px){
+            max-width:300px;
+            margin:auto;
+            margin-bottom:rem(20px);
+        }
         &__title,&__detail{
             font-size: rem(16px);
             color: var(--title);
@@ -55,16 +61,19 @@ export default {
             @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
 
         }
+        &__title{
+            margin-bottom:rem(10px);
+        }
         &__detail{
-            @include truncate(2,1.4);
-            margin-bottom: rem(25px);
+            @include truncate(3,1.4);
+            margin-bottom: rem(18px);
         }
         &__date{
             opacity: 0.6;
             color: var(--label);
             font-size: rem(16px);
             font-weight: 400;
-            margin-bottom: rem(22px);
+            margin-bottom: rem(15px);
             @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
         }
         &:hover{
@@ -78,7 +87,7 @@ export default {
             }
         }
         .card-content{
-            padding: rem(25px) rem(25px) 0px;
+            padding: rem(22px) rem(25px) 0px;
             padding-bottom: 0px;
             .btn{
                 border-radius: 13px;
@@ -90,14 +99,14 @@ export default {
             padding:16px;
         }
         .image {
-            height: 230px;
+            // height: 230px;
             width: 100%;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: top;
-            }
+            // img {
+            //     width: 100%;
+            //     height: 100%;
+            //     object-fit: cover;
+            //     object-position: top;
+            // }
         }
         .date {
             font-size: rem(16px);
