@@ -206,6 +206,13 @@ export default {
               .querySelector("#sliderNavigation_" + this.sliderId)
               .classList.add("d-none")
           : "";
+          if(this.carouselSettings.slidesPerView){
+            length <=this.carouselSettings.slidesPerView
+            ? document
+                .querySelector("#sliderNavigation_" + this.sliderId)
+                .classList.add("d-none")
+            : "";
+          }
         this.totalSlides = length;
       }
       this.currentSlide = this.swiper.activeIndex + 1;
@@ -423,7 +430,8 @@ export default {
   }
   &.sideNavigation {
     top: 0;
-    height: 0;
+    height: unset;
+    z-index: 0;
     // @media screen and (max-width: 991px) {
     //     height: 0 !important;
     //     z-index: 0;

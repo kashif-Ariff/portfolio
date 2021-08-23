@@ -5,6 +5,7 @@
 			<carousel
 				class="initiator__head--slider"
 				@init="setSlider"
+				navigation-layout="side"
 				:carousel-settings="sliderOption"
 				role="tablist"
 			>
@@ -103,10 +104,11 @@ export default {
 		return {
 			tabIndex: 0,
 			sliderOption: {
-				slidesPerView: 1,
+				slidesPerView: 5,
 				slideToClickedSlide: true,
-				centeredSlides: true,
+				centeredSlides: false,
 				spaceBetween: 40,
+				loop: false,
 				rtl: this.$i18n.locale == 'en' ? false : true,
 				breakpoints: {
 					// 1800: {
@@ -202,40 +204,40 @@ export default {
 				padding: rem(7px) rem(5px);
 				margin: 0 rem(0px);
 			}
-			.sliderNavigation {
-				--border: var(--primary) !important;
-				height: 26px;
-				top: -60px;
-				left: 0;
-				button {
-					position: static !important;
-					color: var(--primary);
-					width: 50px !important;
-					height: 50px !important;
-					padding: unset;
-					div {
-						width: 100%;
-						height: 100%;
-						svg {
-							min-width: 100%;
-							height: 100%;
-						}
-					}
-					&#prevArrow {
-						margin-right: rem(15px);
-					}
-				}
-				&__controls {
-					max-width: 115px;
-					&--pagination,
-					&--pause {
-						display: none;
-					}
-					@media screen and (max-width: 1199px) {
-						margin-top: 0;
-					}
-				}
-			}
+			// .sliderNavigation {
+			// 	--border: var(--primary) !important;
+			// 	height: 26px;
+			// 	top: -60px;
+			// 	left: 0;
+			// 	button {
+			// 		position: static !important;
+			// 		color: var(--primary);
+			// 		width: 50px !important;
+			// 		height: 50px !important;
+			// 		padding: unset;
+			// 		div {
+			// 			width: 100%;
+			// 			height: 100%;
+			// 			svg {
+			// 				min-width: 100%;
+			// 				height: 100%;
+			// 			}
+			// 		}
+			// 		&#prevArrow {
+			// 			margin-right: rem(15px);
+			// 		}
+			// 	}
+			// 	&__controls {
+			// 		max-width: 115px;
+			// 		&--pagination,
+			// 		&--pause {
+			// 			display: none;
+			// 		}
+			// 		@media screen and (max-width: 1199px) {
+			// 			margin-top: 0;
+			// 		}
+			// 	}
+			// }
 		}
 
 	}

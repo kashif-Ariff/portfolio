@@ -183,8 +183,6 @@ export default {
 					}
 				}
 				.sliderNavigation {
-					z-index: 0;
-					height: unset;
 					&__controls {
 						&--pagination {
 							&.customPagination {
