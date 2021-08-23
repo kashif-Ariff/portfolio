@@ -2,16 +2,19 @@
   <div class="missionVision">
     <div class="missionVision__panel">
       <img src="@/assets/images/mission/shutterstock_370342301.png" alt="" />
-      <h2 class="missionVision__panel--title">OUR MISSION</h2>
+
       <div class="missionVision__panel--innerDetail">
         <div class="container">
           <div class="text-wrapper">
-            <a href="#" @click="closeModal()" class="cross-icon">
-              <base-svg-icon
-                icon-id="X"
-                icon-viewbox="0 0 32.991 32.992"
-              ></base-svg-icon>
-            </a>
+            <div class="d-flex">
+              <h2 class="missionVision__panel--title">OUR MISSION</h2>
+              <a href="#" @click="closeModal()" class="cross-icon">
+                <base-svg-icon
+                  icon-id="X"
+                  icon-viewbox="0 0 32.991 32.992"
+                ></base-svg-icon>
+              </a>
+            </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ut
               temporibus, vel rem aliquid velit nisi possimus eaque, omnis
@@ -25,16 +28,19 @@
 
     <div class="missionVision__panel">
       <img src="@/assets/images/mission/shutterstock_370342301.png" alt="" />
-      <h2 class="missionVision__panel--title">OUR MISSION</h2>
+
       <div class="missionVision__panel--innerDetail">
         <div class="container">
           <div class="text-wrapper">
-            <a href="#" @click="closeModal()" class="cross-icon">
-              <base-svg-icon
-                icon-id="X"
-                icon-viewbox="0 0 32.991 32.992"
-              ></base-svg-icon>
-            </a>
+            <div class="d-flex">
+              <h2 class="missionVision__panel--title">OUR MISSION</h2>
+              <a href="#" @click="closeModal()" class="cross-icon">
+                <base-svg-icon
+                  icon-id="X"
+                  icon-viewbox="0 0 32.991 32.992"
+                ></base-svg-icon>
+              </a>
+            </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ut
               temporibus, vel rem aliquid velit nisi possimus eaque, omnis
@@ -48,16 +54,19 @@
 
     <div class="missionVision__panel">
       <img src="@/assets/images/mission/shutterstock_370342301.png" alt="" />
-      <h2 class="missionVision__panel--title">OUR MISSION</h2>
+
       <div class="missionVision__panel--innerDetail">
         <div class="container">
           <div class="text-wrapper">
-            <a href="#" @click="closeModal()" class="cross-icon">
-              <base-svg-icon
-                icon-id="X"
-                icon-viewbox="0 0 32.991 32.992"
-              ></base-svg-icon>
-            </a>
+            <div class="d-flex">
+              <h2 class="missionVision__panel--title">OUR MISSION</h2>
+              <a href="#" @click="closeModal()" class="cross-icon">
+                <base-svg-icon
+                  icon-id="X"
+                  icon-viewbox="0 0 32.991 32.992"
+                ></base-svg-icon>
+              </a>
+            </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ut
               temporibus, vel rem aliquid velit nisi possimus eaque, omnis
@@ -71,16 +80,19 @@
 
     <div class="missionVision__panel">
       <img src="@/assets/images/mission/shutterstock_370342301.png" alt="" />
-      <h2 class="missionVision__panel--title">OUR MISSION</h2>
+
       <div class="missionVision__panel--innerDetail">
         <div class="container">
           <div class="text-wrapper">
-            <a href="#" @click="closeModal()" class="cross-icon">
-              <base-svg-icon
-                icon-id="X"
-                icon-viewbox="0 0 32.991 32.992"
-              ></base-svg-icon>
-            </a>
+            <div class="d-flex">
+              <h2 class="missionVision__panel--title">OUR MISSION</h2>
+              <a href="#" @click="closeModal()" class="cross-icon">
+                <base-svg-icon
+                  icon-id="X"
+                  icon-viewbox="0 0 32.991 32.992"
+                ></base-svg-icon>
+              </a>
+            </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ut
               temporibus, vel rem aliquid velit nisi possimus eaque, omnis
@@ -203,6 +215,7 @@ export default {
     position: absolute;
     transition: 0.8s ease all;
     left: 0;
+    overflow: hidden;
     &:nth-child(2) {
       left: 25%;
       &.active {
@@ -243,30 +256,39 @@ export default {
     }
 
     &--title {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
       width: 100%;
       height: 100%;
       color: #fff;
       opacity: 0.5;
       font-size: rem(42px);
       font-weight: 500;
+      text-align: center;
+      margin-bottom: 0;
+
       @media screen and (max-width: 1600px) {
         font-size: rem(30px);
       }
     }
     &--innerDetail {
-      //   display: none;
-      visibility: hidden;
-      opacity: 0;
-      width: 0;
-      height: 0;
-      //   transition: 6s all ease-in;
+      //   visibility: hidden;
+      //   opacity: 0;
+      //   width: 0;
+      //   height: 0;
       overflow-y: hidden;
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+
       .text-wrapper {
-        max-width: 800px;
+        max-width: 1000px;
         margin: auto;
+
         .d-flex {
           align-items: flex-start;
           justify-content: space-between;
@@ -276,12 +298,30 @@ export default {
           //   height: max-content;
           height: 25px;
           width: 25px;
+          right: calc((100% - 1145px) / 2);
+          position: absolute;
           &:hover {
             opacity: 0.6;
           }
           path {
             fill: #ffffff !important;
           }
+        }
+
+        .cross-icon {
+          visibility: hidden;
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        p {
+          visibility: hidden;
+          opacity: 0;
+          //   display: none;
+          position: absolute;
+          bottom: -100%;
+          z-index: -99;
+          transition: 0.7s all ease-in-out;
         }
       }
     }
@@ -301,7 +341,10 @@ export default {
       cursor: unset;
       z-index: 99;
       .missionVision__panel--title {
-        display: none;
+        // display: none;
+        opacity: 1;
+        text-align: left;
+        margin-bottom: rem(42px);
       }
       .missionVision__panel--detail {
         // position: fixed;
@@ -317,22 +360,36 @@ export default {
         width: 100%;
         height: 100%;
 
-        opacity: 1;
-        visibility: visible;
         overflow-y: auto;
+        transition: 2s all ease-in-out;
         p {
           color: #fff;
           font-size: rem(20px);
           margin-right: 30px;
+
+          opacity: 1;
+          visibility: visible;
+          //   display: block;
+          position: static;
+          bottom: unset;
+          z-index: unset;
+          //   height: 100%;
+          //   width: 100%;
         }
-        h5 {
-          text-transform: uppercase;
-          color: #ffffff;
-          font-weight: 600;
-          margin-bottom: rem(30px);
-          font-size: rem(30px);
-          margin-right: 30px;
+        .cross-icon {
+          opacity: 1;
+          visibility: visible;
+          height: 25px;
+          width: 25px;
         }
+        // h5 {
+        //   text-transform: uppercase;
+        //   color: #ffffff;
+        //   font-weight: 600;
+        //   margin-bottom: rem(30px);
+        //   font-size: rem(30px);
+        //   margin-right: 30px;
+        // }
       }
       &:hover {
         &::before {
