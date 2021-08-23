@@ -2,7 +2,6 @@
 	<div class="services" :aria-label="ariaLabel" role="region">
 		<div class="services__slideHead">
 			<carousel
-				navigationTheme="simple"
 				navigationLayout="side"
 				:carousel-settings="sliderOption"
 				class="iconTabs"
@@ -71,7 +70,6 @@
 									</p>
 								</base-smooth-scrollbar>
 								<div class="button-row">
-								
 									<router-link
 										to="/"
 										class="btn btn-primary"
@@ -91,7 +89,6 @@
 <script>
 export default {
 	props: {
-		sectionTitle: String,
 		ariaLabel: String,
 	},
 	data() {
@@ -132,7 +129,8 @@ export default {
 					image: 'awardDetail.jpg',
 					heading:
 						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
-					content: 'Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award.. lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum augue quis imperdiet scelerisque. Cras in erat massa. Vestibulum metus diam, posuere vitae nibh in, pellentesque semper risus. In tempus semper vestibulum.',
+					content:
+						'Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award.. lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum augue quis imperdiet scelerisque. Cras in erat massa. Vestibulum metus diam, posuere vitae nibh in, pellentesque semper risus. In tempus semper vestibulum.',
 				},
 				{
 					index: 1,
@@ -141,7 +139,8 @@ export default {
 					image: 'awardDetail.jpg',
 					heading:
 						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
-					content: 'Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive ',
+					content:
+						'Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive ',
 				},
 				{
 					index: 2,
@@ -150,7 +149,8 @@ export default {
 					image: 'awardDetail.jpg',
 					heading:
 						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
-					content: '	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
+					content:
+						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
 				},
 				{
 					index: 3,
@@ -159,7 +159,8 @@ export default {
 					image: 'awardDetail.jpg',
 					heading:
 						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
-					content: '	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
+					content:
+						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
 				},
 				{
 					index: 4,
@@ -168,8 +169,9 @@ export default {
 					image: 'awardDetail.jpg',
 					heading:
 						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
-					content: '	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
-				}
+					content:
+						'	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
+				},
 			],
 		};
 	},
@@ -192,14 +194,16 @@ export default {
 		.sideWrapper {
 			margin-top: rem(0px);
 		}
-		.iconTabs{
-			&__item{
-				&--image{
-					margin:0;
+		.iconTabs {
+			&__item {
+				&--image {
+					margin: 0;
 				}
 				.nav-link {
-					.tab-icon{
-						max-width:70px;
+					.tab-icon {
+						@media screen and (max-width: 991px) {
+							max-width: 70px;
+						}
 					}
 				}
 			}
@@ -207,13 +211,6 @@ export default {
 	}
 	&__slideHead {
 		position: relative;
-		padding-left: calc((100% - 1198px) / 2);
-		@media screen and (max-width: 1199px) {
-			padding-left: 15px;
-		}
-		@media screen and (max-width: 370px) {
-			padding-left: 0;
-		}
 		/deep/ {
 			.swiper-wrapper {
 				padding: 20px 7px;
@@ -244,10 +241,10 @@ export default {
 			.slide__card {
 				height: 196px;
 				border-top-left-radius: 24px;
-    			border-bottom-right-radius: 24px;
+				border-bottom-right-radius: 24px;
 				transform: scale(1);
-				@media screen and (max-width:991px){
-					height:150px;
+				@media screen and (max-width: 991px) {
+					height: 150px;
 				}
 			}
 			h3 {
@@ -290,17 +287,17 @@ export default {
 	&__main {
 		position: relative;
 		margin-top: rem(40px);
-		.container{
-			@media screen and (max-width:575px){
-				padding:0;
+		.container {
+			@media screen and (max-width: 575px) {
+				padding: 0;
 			}
 		}
 		/deep/ {
 			.sliderNavigation {
-				@media screen and (max-width:991px){
-					margin-top:0;
+				@media screen and (max-width: 991px) {
+					margin-top: 0;
 				}
-				
+
 				@media screen and (min-width: 1200px) {
 					z-index: 1;
 					width: max-content;
@@ -317,7 +314,7 @@ export default {
 				@media screen and (max-width: 991px) {
 					.sliderNavigation__controls {
 						text-align: center;
-						margin:0;
+						margin: 0;
 					}
 				}
 			}
@@ -330,7 +327,7 @@ export default {
 					max-width: 1200px !important;
 					bottom: 30px;
 					left: auto !important;
-					right:0;
+					right: 0;
 					@media screen and (max-width: 1600px) {
 						bottom: 38px !important;
 					}
@@ -368,15 +365,15 @@ export default {
 			margin-right: rem(30px);
 			border-radius: 6px;
 			overflow: hidden;
-			@media screen and (min-width:992px){
+			@media screen and (min-width: 992px) {
 				img {
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
 				}
 			}
-			@media screen and (max-width:767px){
-				height:auto !important;
+			@media screen and (max-width: 767px) {
+				height: auto !important;
 			}
 		}
 		&--info {
@@ -391,17 +388,10 @@ export default {
 				font-size: rem(20px);
 				margin-bottom: 0;
 			}
-			/deep/ .scrollArea {
-				--h: 200px;
-				@media screen and (max-width: 852px) {
-					--h: 150px;
-					margin-bottom: 15px;
-				}
-			}
-			.button-row{
+			.button-row {
 				padding-top: rem(15px);
-				@media screen and (max-width:767px){
-					margin-bottom:rem(20px);
+				@media screen and (max-width: 767px) {
+					margin-bottom: rem(20px);
 				}
 			}
 		}
@@ -411,7 +401,7 @@ export default {
 			&--image {
 				flex: 0 0 400px;
 				max-width: 400px;
-				height:300px;
+				height: 300px;
 			}
 		}
 	}
@@ -430,9 +420,6 @@ export default {
 				}
 				p {
 					font-size: rem(19px);
-				}
-				/deep/.scrollArea {
-					--h: 130px;
 				}
 			}
 		}

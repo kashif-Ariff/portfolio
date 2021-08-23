@@ -58,7 +58,7 @@
 								<li role="none">
 									<router-link
 										@click.native="closeMenu"
-										to="`/${$i18n.locale}/media-center/contact`"
+										:to="`/${$i18n.locale}/mission-vision`"
 										role="menuitem"
 										>vission and mission</router-link
 									>

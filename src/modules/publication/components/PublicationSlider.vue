@@ -55,7 +55,7 @@
 					</carousel>
 				</div>
 			</div>
-			<div class="publicationSlider__body customTabs__contents">
+			<div class="publicationSlider__body">
 				<b-tabs v-model="tabIndex" nav-wrapper-class="d-none">
 					<b-tab
 						v-for="(card, index) in cardContent"
@@ -307,9 +307,6 @@ export default {
 		}
 	}
 	&__body {
-		.scrollArea {
-			height: 185px;
-		}
 		.card {
 			padding: rem(30px) rem(40px);
 			@media screen and (max-width: 991px) {
@@ -317,16 +314,6 @@ export default {
 			}
 		}
 		/deep/ {
-			.nav-pills {
-				li {
-					@media screen and (min-width: 576px) {
-						width: 50%;
-					}
-				}
-				a:focus {
-					outline: none;
-				}
-			}
 			.tab-content {
 				margin-top: rem(25px);
 			}

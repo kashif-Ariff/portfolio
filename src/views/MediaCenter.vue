@@ -9,7 +9,6 @@
 			<div class="mediaCenter--head">
 				<carousel
 					navigation-layout="side"
-					navigation-theme="simple"
 					:carousel-settings="sliderOption"
 					role="tablist"
 					@init="setSlider"
@@ -31,7 +30,6 @@
 							:aria-selected="index == 0 ? 'true' : 'false'"
 							:id="`tab_mediaCenter_${index}`"
 						>
-							
 							<p class="mediaCenter__slide--title">
 								{{ item.title }}
 							</p>
@@ -242,8 +240,8 @@ export default {
 				align-items: center;
 			}
 			.swiper-container {
-				margin-left: 7%;
-				margin-right: 7%;
+				margin-left: 5%;
+				margin-right: 5%;
 				padding: 10px;
 				@media screen and (max-width: 1600px) {
 					margin-left: 4%;
