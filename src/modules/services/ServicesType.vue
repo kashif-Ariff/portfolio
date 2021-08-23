@@ -297,21 +297,10 @@ export default {
 		}
 		/deep/ {
 			.sliderNavigation {
-				--color: var(--highlight);
-				--arrow: var(--primary);
-				--border: var(--primary);
-				--topborder: #fff;
 				@media screen and (max-width:991px){
 					margin-top:0;
 				}
-				button {
-					transition: 0.5s ease all;
-					&:hover {
-						background: var(--secondary);
-						--arrow: #fff;
-						opacity: 1;
-					}
-				}
+				
 				@media screen and (min-width: 1200px) {
 					z-index: 1;
 					width: max-content;

@@ -322,11 +322,11 @@ export default {
   position: absolute;
   bottom: rem(60px);
   width: 100%;
-  --color: #fff;
-  --arrow: #fff;
-  --border: #fff;
   --pause: #fff;
   --topborder: #fff;
+  --color: var(--primary);
+  --arrow: var(--primary);
+  --border: var(--primary);
   color: var(--color);
   z-index: 1;
   left: 0;
@@ -370,6 +370,7 @@ export default {
       border: solid 1px var(--border) !important;
       border-radius: 50%;
       color: var(--arrow);
+      transition: 0.5s ease all;
       .fa {
         font-size: 25px;
       }
@@ -384,7 +385,10 @@ export default {
       }
       @media screen and (min-width: 1199px) {
         &:hover {
-          opacity: 0.5;
+          opacity: 1;
+          background: var(--secondary);
+          --arrow: #fff;
+          opacity: 1;
         }
       }
       &.swiper-button-disabled {
@@ -445,19 +449,19 @@ export default {
       // }
     }
     #nextArrow {
-      right: rem(-120px);
+      right: rem(0px);
     }
     #prevArrow {
-      left: rem(-120px);
+      left: rem(0px);
     }
-    @media screen and (max-width: 1400px) {
-      #nextArrow {
-        right: rem(-80px);
-      }
-      #prevArrow {
-        left: rem(-80px);
-      }
-    }
+    // @media screen and (max-width: 1400px) {
+    //   #nextArrow {
+    //     right: rem(-80px);
+    //   }
+    //   #prevArrow {
+    //     left: rem(-80px);
+    //   }
+    // }
     // @media screen and (max-width: 991px) {
     //     #nextArrow {
     //         right: 0px !important;

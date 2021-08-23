@@ -183,9 +183,6 @@ export default {
 					}
 				}
 				.sliderNavigation {
-					--color: var(--primary);
-					--arrow: var(--primary);
-					--border: var(--primary);
 					z-index: 0;
 					height: unset;
 					&__controls {
@@ -200,14 +197,6 @@ export default {
 									top: -50px;
 								}
 							}
-						}
-					}
-					&.sideNavigation {
-						#nextArrow {
-							right: 0;
-						}
-						#prevArrow {
-							left: 0;
 						}
 					}
 				}
