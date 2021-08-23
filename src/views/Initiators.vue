@@ -2,12 +2,12 @@
   <div class="initiators">
        <base-inner-banner :banner-detail="innerBannerDetail" />
        <div class="container">
-            <section id="" data-color-theme="dark">
+            <div aria-label="Initiators" role="region">
                 <initiator-slider
                     section-title="Corporate Governance"
                     aria-label="Corporate Governance"
                 ></initiator-slider>
-            </section>
+            </div>
         </div>
   </div>
 </template>
