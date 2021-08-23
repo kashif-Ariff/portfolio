@@ -54,22 +54,45 @@ export default {
     padding-left: rem(30px);
     @media screen and (max-width:1199px) {
       margin-bottom: rem(35px);
+      padding:0;
     }
     .filtersWrapper{
       display: flex;
-      align-items:center
+      align-items:center;
+      @media screen and (max-width:991px){
+        flex-wrap: wrap;
+      }
     }
     &__select{
       max-width:280px;
       flex:0 0 280px;
+      @media screen and (max-width:1199px){
+        max-width:265px;
+        flex:0 0 265px;
+      }
+      @media screen and (max-width:991px){
+        max-width:250px;
+        flex:0 0 250px;
+      }
+      @media screen and (max-width:767px){
+        max-width:100%;
+        flex:0 0 100%;
+      }
     }
     &__search{
       flex:1;
       margin:0 rem(30px);
+      @media screen and (max-width:1199px){
+        margin:0 rem(15px);
+      }
+      @media screen and (max-width:767px){
+        max-width:100%;
+        flex:0 0 100%;
+        margin:rem(15px) 0;
+      }
       input{
         border:3px solid transparent;
         @media screen and (max-width:991px) {
-            margin-top: rem(30px);
             padding: rem(28px) rem(22px);
         }
       }
@@ -77,6 +100,14 @@ export default {
     &__button{
       max-width:170px;
       flex:0 0 170px;
+      @media screen and (max-width:1199px){
+        max-width:150px;
+        flex:0 0 150px;
+      }
+      @media screen and (max-width:991px){
+        max-width:100%;
+        flex:0 0 100%;
+      }
       button{
         display: flex;
         align-items: center;
@@ -85,10 +116,12 @@ export default {
           padding: rem(13px) rem(28px);
         }
         @media screen and (max-width:1199px) {
-          margin: auto;
-          margin-top: rem(35px);
           font-size: rem(22px);
           padding: rem(11px) rem(28px);
+        }
+        @media screen and (max-width:991px) {
+          margin: auto;
+          margin-top: rem(25px);
         }
         /deep/ svg{
           width: 20px;

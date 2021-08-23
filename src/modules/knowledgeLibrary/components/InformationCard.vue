@@ -70,13 +70,13 @@ export default {
         margin-bottom: rem(40px);
         border-radius: 21px;
     .card-body{
-        padding: rem(50px) rem(35px);
+        padding: rem(55px) rem(35px) rem(50px) rem(35px);
         // @media screen and (max-width:991px) {
         //     padding: rem(35px) rem(20px);
         // }
         &.grid{
             grid-template-columns: 300px 1fr 241px;
-            align-items: center;
+            // align-items: center;
             @media screen and (max-width:1199px) {
                 grid-gap:20px;
                 grid-template-columns: 250px 1fr 200px;
@@ -87,8 +87,9 @@ export default {
             }
             @media screen and (max-width:767px) {
                 grid-template-columns: none;
-                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 50px;
                 grid-gap:15px;
+                padding:rem(22px);
             }
         }
     }
@@ -130,6 +131,9 @@ export default {
             font-weight: 400;
             margin: rem(25px) 0 rem(15px) 0;
             line-height: 1.5;
+            @media screen and (max-width:767px){
+                margin:rem(35px) 0 rem(20px) 0;
+            }
         }
         &--subtitle{
             display: flex;
@@ -166,6 +170,9 @@ export default {
             @media screen and (max-width:991px) {
                 height: 130px;
             }
+            @media screen and (max-width:767px){
+                display: none;
+            }
         }
         @media screen and (max-width:1199px) {
             padding: 0 rem(15px) 0 0;
@@ -174,14 +181,21 @@ export default {
             font-size: rem(16px);
             font-weight: 300;
             margin: 0;
-            line-height: 1.4 !important;
-            @include truncate(4.5)
+            @include truncate(5);
+            line-height: 1.6 !important;
         }
     }
     &__link{
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        .btn{
+            padding-right:rem(20px);
+        }
+        @media screen and (max-width:767px){
+            justify-content: center;
+            align-items: flex-start;
+        }
     }
 }
 </style>>

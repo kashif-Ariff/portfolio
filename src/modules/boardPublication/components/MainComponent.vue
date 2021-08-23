@@ -109,8 +109,9 @@ export default {
 <style lang="scss" scoped>
 .boardPublication{
     .card{
-        margin-top: rem(100px);
+        margin-top: rem(80px);
         padding: rem(30px) rem(40px);
+        padding-bottom:rem(40px);
     }
     /deep/{
         .pagination{

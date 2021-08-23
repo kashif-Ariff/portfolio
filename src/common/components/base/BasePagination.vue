@@ -75,7 +75,10 @@ export default {
       font-size: rem(18px);
       font-weight: 400;
       margin-right: rem(30px);
-      @media screen and (max-width: 380px) {
+      @media screen and (max-width: 991px) {
+        font-size: rem(16px);
+      }
+      @media screen and (max-width: 430px) {
         margin-bottom: 10px;
       }
     }
@@ -93,6 +96,10 @@ export default {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         transition: .5s all;
+        @media screen and (max-width:991px){
+          font-size:rem(18px);
+          padding: 0 rem(15px);
+        }
         &:hover{
           background-color: var(--secondary);
         }
@@ -111,6 +118,10 @@ export default {
           border-radius: 20px;
           font-weight: 600;
           box-shadow: unset;
+          @media screen and (max-width:991px){
+            font-size:rem(18px);
+            height:40px;
+          }
           button {
             div {
               color: var(--primary) !important;
@@ -144,6 +155,10 @@ export default {
                 padding: 0;
                 min-height: 45px;
                 line-height: 45px;
+                @media screen and (max-width:991px){
+                  min-height: 40px;
+                  line-height: 40px;
+                }
           }
           .vs__selected-options {
             .vs__selected {
@@ -153,6 +168,9 @@ export default {
                 position: unset;
                 font-size: rem(18px);
                 line-height: normal;
+                @media screen and (max-width:430px){
+                  padding-left:rem(16px);
+                }
             }
             input.vs__search {
               font-size: 0;
@@ -175,6 +193,9 @@ export default {
               top: 15px;
               background-size: 100% 100%;
               left: -22px;
+              @media screen and (max-width:991px){
+                top:10px;
+              }
             }
             .vs__open-indicator {
                 border: 0;
@@ -215,8 +236,8 @@ export default {
         width: 85px;
       }
       button {
-        padding-left: rem(16px);
-        padding-right: rem(16px);
+        padding-left: rem(15px) !important;
+        padding-right: rem(15px) !important;
       }
     }
     @media screen and (max-width: 991px) {
@@ -231,6 +252,10 @@ export default {
       }
     }
     @media screen and (max-width: 767px) {
+      .form-control {
+        height: 38px;
+        padding:rem(18px);
+      }
       button {
         height: 38px;
       }
@@ -246,7 +271,7 @@ export default {
         /deep/ {
           .v-select {
             padding: 0px;
-            @media screen and (max-width: 380px) {
+            @media screen and (max-width: 430px) {
               width: 100%;
             }
             .vs__actions {
@@ -256,7 +281,7 @@ export default {
         }
       }
     }
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 430px) {
       max-width: 100%;
       flex: unset;
       margin-bottom: 20px;
@@ -268,20 +293,27 @@ export default {
     }
    
   }
+  .gotoPage{
+    @media screen and (max-width:991px){
+      justify-content: flex-end;
+    }
+  }
   .show_items {
     @media screen and (max-width: 767px) {
       order: 2;
     }
-    @media screen and (max-width: 380px) {
+    @media screen and (max-width: 430px) {
       display: unset;
       width: 100%;
+          max-width: 100%;
+        flex: none;
     }
   }
   .gotoPage {
     @media screen and (max-width: 767px) {
       order: 3;
     }
-    @media screen and (max-width: 380px) {
+    @media screen and (max-width: 430px) {
       display: unset;
       width: 100%;
       .form-control {
@@ -293,6 +325,7 @@ export default {
     flex-wrap: wrap;
     .overflow-auto {
       order: 1;
+      margin-bottom:rem(16px);
     }
   }
   /deep/ {
@@ -351,6 +384,10 @@ export default {
         }
         &:not(:last-child) {
           margin-right: rem(12px);
+        }
+        @media screen and (max-width:991px){
+          width:25px;
+          height:25px;
         }
       }
     }

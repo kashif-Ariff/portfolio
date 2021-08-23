@@ -3,7 +3,7 @@
     <base-inner-banner :banner-detail="innerBannerDetail" />
     <div class="container">
         <div class="content-box">
-            <h2>Information Sources</h2>
+            <h2>Information Sources</h2> 
             <section>
                 <filters />
             </section>
