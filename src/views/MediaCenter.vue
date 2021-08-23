@@ -31,6 +31,7 @@
 							:aria-selected="index == 0 ? 'true' : 'false'"
 							:id="`tab_mediaCenter_${index}`"
 						>
+							
 							<p class="mediaCenter__slide--title">
 								{{ item.title }}
 							</p>
