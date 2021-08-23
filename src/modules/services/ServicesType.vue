@@ -169,16 +169,7 @@ export default {
 					heading:
 						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
 					content: '	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
-				},
-				{
-					index: 5,
-					icon: 'map.png',
-					title: 'National Registry Services',
-					image: '',
-					heading:
-						'	Zain crowned ‘Best Operator’ and ‘Best Brand’ at Telecom World Middle East Awards 2019',
-					content: '	Zain, the leading mobile telecom innovator in eight markets across the Middle East and Africa, announces it has been awarded the ‘Best Telecom Operator’ and ‘Best Brand’ accolade for 2019 at the prestigious Telecoms World Middle East Awards event held in Dubai this week. This honor marks a record sixth consecutive year that Zain has won the ‘Best Brand’ award..',
-				},
+				}
 			],
 		};
 	},
@@ -240,13 +231,16 @@ export default {
 			}
 			.slide__card {
 				height: 196px;
+				border-top-left-radius: 24px;
+    			border-bottom-right-radius: 24px;
+				transform: scale(1);
 			}
 			h3 {
 				font-size: rem(20px);
 				color: var(--secondary);
 				text-transform: capitalize;
 				font-weight: 400;
-				margin-top: rem(15px);
+				margin-top: rem(20px);
 				@media screen and (max-width: 767px) {
 					font-size: rem(16px);
 				}
