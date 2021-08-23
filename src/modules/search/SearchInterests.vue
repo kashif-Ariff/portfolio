@@ -27,27 +27,28 @@ export default {
 .searchInterests {
 	/deep/ .tabs {
 		.nav-tabs {
-			margin-top: rem(25px);
+			margin-top: rem(50px);
 			width: max-content;
 			position: relative;
 			margin-bottom: rem(25px);
+			border-bottom: unset;
 
 			li {
 				margin: 0;
 				padding: 0;
 				a {
-					font-size: rem(20px);
-					color: var(--primary);
+					font-size: rem(24px);
+					color: #6b808e;
 					border: none;
 					outline: none;
 					opacity: 0.5;
-					font-weight: bold;
-					text-transform: uppercase;
+					font-weight: 400;
+					text-transform: capitalize;
 					line-height: 1.3;
 					min-height: auto;
-					padding: rem(10px) rem(15px);
+					padding: rem(10px) rem(32px) rem(10px) rem(16px);
 					@media screen and (max-width: 575px) {
-						font-size: rem(16px);
+						font-size: rem(19px);
 						padding-left: 15px;
 						padding-right: 15px;
 						outline-offset: -6px;
@@ -58,6 +59,9 @@ export default {
 					}
 					&.active {
 						opacity: 1;
+						background: var(--secondary);
+						color: #fff;
+						border-radius: 21px;
 					}
 				}
 				&:not(:last-child) {
@@ -67,7 +71,7 @@ export default {
 					}
 				}
 				&:last-child {
-					margin-left: rem(15px);
+					margin-left: rem(20px);
 					@media screen and (max-width: 575px) {
 						margin-left: rem(0px);
 					}
@@ -101,38 +105,6 @@ export default {
 					}
 					a {
 						width: 100%;
-					}
-				}
-			}
-		}
-	}
-}
-[lang='ar'] {
-	.searchInterests {
-		/deep/ .tabs {
-			.nav-tabs {
-				li {
-					&:not(:last-child) {
-						margin-left: rem(15px);
-						margin-right: 0;
-						@media screen and (max-width: 575px) {
-							margin-left: rem(0px);
-							margin-right: 0;
-						}
-					}
-					&:last-child {
-						margin-right: rem(15px);
-						margin-left: 0;
-						@media screen and (max-width: 575px) {
-							margin-right: rem(0px);
-							margin-left: 0;
-						}
-					}
-					&:not(:last-child) {
-						&::before {
-							right: 45.45%;
-							left: auto;
-						}
 					}
 				}
 			}

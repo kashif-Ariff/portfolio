@@ -2,19 +2,19 @@
 	<div class="searchInterests">
 		<ul class="searchInterests__list">
 			<li class="searchInterests__list--result">
-				<a href="">Lorem, ipsum </a>
+				<a href="">Lorem ipsum </a>
 			</li>
 			<li class="searchInterests__list--result">
-				<a href="">Lorem, ipsum </a>
+				<a href="">Lorem ipsum </a>
 			</li>
 			<li class="searchInterests__list--result">
-				<a href="">Lorem, ipsum </a>
+				<a href="">Lorem ipsum </a>
 			</li>
 			<li class="searchInterests__list--result">
-				<a href="">Lorem, ipsum </a>
+				<a href="">Lorem ipsum </a>
 			</li>
 			<li class="searchInterests__list--result">
-				<a href="">Lorem, ipsum </a>
+				<a href="">Lorem ipsum </a>
 			</li>
 		</ul>
 	</div>
@@ -32,18 +32,24 @@ export default {};
 		}
 		&--result {
 			display: inline-block;
-			margin-bottom: rem(18px);
+			margin-top: rem(30px);
+			margin-bottom: rem(30px);
 
 			a {
-				padding: 14px;
-				background: #f2f2f2;
-				color: #404040;
+				padding: rem(10px) rem(19px);
+				background: #fff;
+				color: var(--secondary);
 				display: inline-block;
 				position: relative;
-				transition: 0.3s ease all;
-				font-weight: bold;
+				transition: 0.4s ease all;
+				font-weight: 400;
+				font-size: rem(18px);
 				outline: none;
 				outline: none;
+				text-transform: capitalize;
+				border-radius: 25px;
+				border: 2px solid #dadfe2;
+				box-shadow: 0px 2px 16px -3px rgba($color: black, $alpha: 0.26);
 				&::before {
 					content: '';
 					position: absolute;
@@ -55,32 +61,19 @@ export default {};
 					transform: translate(-50%, -50%);
 				}
 				&:focus {
-					font-weight: 800;
-					color: var(--secondary);
 					outline: none;
 					&::before {
 						border: 3px dashed var(--primary);
 					}
 				}
 				&:hover {
-					color: var(--secondary);
-					font-weight: 800;
+					background: var(--secondary);
+					color: #fff;
+					opacity: 1;
 				}
 			}
 			&:not(:last-child) {
 				margin-right: rem(18px);
-			}
-		}
-	}
-}
-[lang='ar'] {
-	.searchInterests {
-		&__list {
-			&--result {
-				&:not(:last-child) {
-					margin-left: rem(18px);
-					margin-right: 0;
-				}
 			}
 		}
 	}

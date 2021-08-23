@@ -7,13 +7,14 @@
 					<div class="FormField__input">
 						<input
 							type="text"
+							class="form-control"
 							aria-label=""
-							placeholder="Search..."
+							placeholder="Board Members.."
 						/>
 					</div>
 					<div class="FormField__button">
-						<button>
-							<i>Search</i>
+						<button class="btn btn-primary">
+							<i>Submit</i>
 							<span
 								><base-svg-icon
 									icon-id="form-search-icon"
@@ -35,7 +36,7 @@ export default {};
 
 <style lang="scss" scoped>
 .search-field {
-	padding-top: rem(10px);
+	margin-top: rem(10px);
 	.visuallyhidden {
 		width: 0;
 		height: 0;
@@ -51,18 +52,14 @@ export default {};
 			}
 			input {
 				width: 100%;
-				padding: rem(18px);
-				border: unset;
-				outline: unset;
-				border-bottom: 2px solid var(--secondary);
 				font-size: rem(24px);
-				color: var(--primary);
-				padding-left: unset;
-				font-weight: 800;
-				text-transform: uppercase;
+				height: 76px;
+				border-radius: 40px;
+				color: var(--secondary) !important;
+				padding-left: rem(30px);
+				padding-right: rem(30px);
 				&::placeholder {
-					color: var(--primary);
-					opacity: 1;
+					color: var(--secondary);
 				}
 				@media screen and (max-width: 575px) {
 					font-size: rem(20px);
@@ -91,29 +88,20 @@ export default {};
 				flex: 0 0 62px;
 			}
 			button {
-				background: var(--primary);
-				color: #fff;
-				padding: rem(24px);
-				font-size: rem(24px);
-				border: unset;
-				outline: unset;
+				padding: rem(12.5px) rem(21.5px);
 				margin-left: rem(30px);
 				display: flex;
 				position: relative;
 				align-items: center;
-				transition: 0.3s all ease-in;
 				@media screen and (max-width: 575px) {
 					margin-left: rem(15px);
 				}
 
 				span {
-					display: flex;
-					width: 30px;
-					height: 30px;
-					margin-left: rem(20px);
+					margin-left: rem(15px);
 					/deep/ svg {
-						width: 30px;
-						height: 30px;
+						width: 22px;
+						height: 22px;
 					}
 					@media screen and (max-width: 575px) {
 						margin-left: 0;
@@ -121,28 +109,8 @@ export default {};
 						justify-content: center;
 					}
 				}
-				&:focus {
-					&::before {
-						content: '';
-						position: absolute;
-						width: 115%;
-						height: 135%;
-						border: 3px dashed var(--primary);
-						top: 50%;
-						left: 50%;
-						transform: translate(-50%, -50%);
-					}
-				}
-				&:hover {
-					background-color: var(--secondary);
-				}
 				@media screen and (max-width: 767px) {
 					padding: rem(12px);
-					span {
-						/deep/ svg {
-							zoom: 0.8;
-						}
-					}
 				}
 			}
 		}
@@ -150,47 +118,14 @@ export default {};
 }
 .search__results {
 	display: inline-block;
-	font-size: rem(16px);
+	font-size: rem(20px);
 	margin-top: rem(25px);
-	font-weight: 800;
+	font-weight: 400;
 	color: var(--secondary);
-	text-transform: uppercase;
-	margin-left: rem(14px);
+	text-transform: capitalize;
 	@media screen and (max-width: 575px) {
 		text-align: center;
 		display: block;
-	}
-}
-[lang='ar'] {
-	.search-field {
-		.FormField {
-			&__input {
-				input {
-					padding-right: unset;
-				}
-			}
-			&__button {
-				button {
-					margin-right: rem(30px);
-					margin-left: 0;
-					@media screen and (max-width: 575px) {
-						margin-right: rem(15px);
-						margin-left: 0;
-					}
-					span {
-						margin-right: rem(20px);
-						margin-left: 0;
-						@media screen and (max-width: 575px) {
-							margin-right: 0;
-						}
-					}
-				}
-			}
-		}
-	}
-	.search__results {
-		margin-right: rem(14px);
-		margin-left: 0;
 	}
 }
 </style>
