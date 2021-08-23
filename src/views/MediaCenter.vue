@@ -30,8 +30,7 @@
 							:aria-selected="index == 0 ? 'true' : 'false'"
 							:id="`tab_mediaCenter_${index}`"
 						>
-
-						<div class="iconTabs__item--detail">
+							<div class="iconTabs__item--detail">
 								<span class="tab-icon">
 									<img
 										:src="
@@ -49,9 +48,9 @@
 									/>
 								</span>
 								<h3 class="iconTabs__item--title">
-									{{ item.title}}
+									{{ item.title }}
 								</h3>
-						</div>
+							</div>
 						</a>
 					</div>
 				</carousel>
@@ -114,27 +113,27 @@ export default {
 				{
 					index: 0,
 					title: 'Announcements',
-					image:'speaker.png'
+					image: 'speaker.png',
 				},
 				{
 					index: 1,
 					title: 'Latest News',
-					image:'newspaper.png'
+					image: 'newspaper.png',
 				},
 				{
 					index: 2,
 					title: 'Events',
-					image:'calendar-check.png'
+					image: 'calendar-check.png',
 				},
 				{
 					index: 3,
 					title: 'Success Stories',
-					image:'book-reader.png'
+					image: 'book-reader.png',
 				},
 				{
 					index: 4,
 					title: 'Latest News',
-					image:'newspaper.png'
+					image: 'newspaper.png',
 				},
 			],
 			cardData: [
@@ -228,7 +227,7 @@ export default {
 	&--head {
 		position: relative;
 		margin: rem(40px) 0 rem(70px) 0;
-		@media screen and (max-width:991px){
+		@media screen and (max-width: 991px) {
 			margin: rem(30px) 0 rem(40px) 0;
 		}
 		a.nav-link {
@@ -260,12 +259,12 @@ export default {
 				align-items: center;
 			}
 			.swiper-container {
-				margin-left: 7%;
-				margin-right: 7%;
+				margin-left: 55px;
+				margin-right: 55px;
 				padding: 0 10px;
 				@media screen and (max-width: 767px) {
-					margin-left: 40px;
-					margin-right: 40px;
+					margin-left: 45px;
+					margin-right: 45px;
 				}
 			}
 			.sliderNavigation {
@@ -277,23 +276,23 @@ export default {
 	.card_parent {
 		margin-bottom: rem(30px);
 	}
-	.iconTabs{
-		&__item{
-			.nav-link{
+	.iconTabs {
+		&__item {
+			.nav-link {
 				border-radius: 22px;
 				height: 62px;
-				min-width:200px;
-    			transform: scale(.8);
-				border:1px solid #E6EAEC;
-				&.active{
+				min-width: 200px;
+				transform: scale(0.8);
+				border: 1px solid #e6eaec;
+				&.active {
 					transform: scale(1);
 				}
-				.tab-icon{
-					margin-right:8px;
+				.tab-icon {
+					margin-right: 8px;
 				}
 			}
-			&--detail{
-				@include flex (center , start);
+			&--detail {
+				@include flex(center, start);
 				flex-wrap: nowrap;
 			}
 		}
