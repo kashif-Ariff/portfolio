@@ -390,8 +390,8 @@ export default {
 			//    height: rem(55px);
 			//  }
 			@media screen and (max-width: 991px) {
-				width: 45px;
-				height: 45px;
+				width: 40px;
+				height: 40px;
 			}
 			@media screen and (min-width: 1199px) {
 				&:hover {

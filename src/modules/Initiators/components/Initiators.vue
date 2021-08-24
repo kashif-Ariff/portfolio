@@ -92,17 +92,17 @@ export default {
 		return {
 			tabIndex: 0,
 			sliderOption: {
-				slidesPerView: 5,
+				slidesPerView: 1,
 				slideToClickedSlide: true,
 				centeredSlides: false,
-				spaceBetween: 40,
 				loop: false,
 				rtl: this.$i18n.locale == 'en' ? false : true,
 				breakpoints: {
 					768: {
 						slidesPerView: 3,
+						spaceBetween: 40,
 					},
-					400: {
+					431: {
 						centeredSlides: false,
 						slidesPerView: 2,
 						spaceBetween: 10,
@@ -148,6 +148,8 @@ export default {
 .initiators {
 	position: relative;
 	&__head {
+		margin-left: rem(65px);
+		margin-right: rem(65px);
 		position: relative;
 		@media screen and (max-width: 1199px) {
 			text-align: center;
@@ -163,6 +165,14 @@ export default {
 				@include flex(center, center);
 				border-top-left-radius: 25px;
 				border-bottom-right-radius: 25px;
+				@media screen and (max-width: 767px) {
+					width: 135px;
+					height: 135px;
+					.tab-icon {
+						width: 4rem;
+						height: 4rem;
+					}
+				}
 			}
 		}
 		.iconTabs {
@@ -184,11 +194,24 @@ export default {
 				@media screen and (max-width: 991px) {
 					justify-content: center;
 				}
+				@media screen and (max-width: 767px) {
+					justify-content: unset;
+				}
 				.swiper-slide {
 					padding: rem(7px) rem(5px);
 					margin: 0;
 					@media screen and (max-width: 991px) {
-						margin-right: 0 !important;
+						margin-right: rem(20px) !important;
+					}
+				}
+			}
+			.sliderNavigation {
+				&__controls {
+					#nextArrow {
+						right: -4rem;
+					}
+					#prevArrow {
+						left: -4rem;
 					}
 				}
 			}
