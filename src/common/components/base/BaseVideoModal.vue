@@ -10,12 +10,16 @@
         >
             <div class="videoWrapper">
                 <iframe
+                    v-if="videoType!='mp4'"
                     :src="videoUrl"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                 ></iframe>
+                <video id="player" playsinline controls v-if="videoType=='mp4'">
+                    <source :src="videoUrl" type="video/mp4" />
+                </video>
             </div>
         </b-modal>
     </div>
@@ -29,6 +33,7 @@ export default {
             default: false,
         },
         videoUrl: String,
+        videoType: String
     },
     data() {
         return {
@@ -70,6 +75,9 @@ export default {
             iframe {
                 width: 100%;
                 height: 100%;
+            }
+            video{
+                width: 100%;
             }
         }
         

@@ -2,10 +2,10 @@
   <div class="home">
     <base-sections-scroll :page-sections="pageSections"></base-sections-scroll>
     <section id="header" data-color-theme="light">
-      <HomeBannerVue />
+      <home-banner />
     </section>
     <section id="main-common" data-color-theme="dark">
-      <common-interst></common-interst>
+      <common-interst />
     </section>
     <section id="services" data-color-theme="light">
       <services></services>
@@ -18,14 +18,14 @@
 
 <script>
 import CommonInterst from "../modules/home/components/CommonInterst.vue";
-import HomeBannerVue from "../modules/home/components/HomeBanner.vue";
+import HomeBanner from "../modules/home/components/HomeBanner.vue";
 import Services from "../modules/home/components/Services.vue";
 import Initiators from "../modules/home/components/Initiators.vue";
 import BaseSectionsScroll from "@/common/components/base/BaseSectionsScroll";
 export default {
   name: "Home",
   components: {
-    HomeBannerVue,
+    HomeBanner,
     CommonInterst,
     Services,
     Initiators,

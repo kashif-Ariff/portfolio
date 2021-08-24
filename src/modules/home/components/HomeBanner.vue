@@ -4,19 +4,24 @@
       @closeSearch="isOpenSearch = false"
       :isSearch="isOpenSearch"
     ></search-modal>
+    <base-video-modal
+          @closeVideoModal="closeModal"
+          :is-show="showModal"
+          :video-url="videoUrlSet"
+          :video-type="videoType"
+      ></base-video-modal>
     <div class="header-div service clinics" id="clinics">
       <div class="overlay"></div>
       <div class="container">
-        <video-modal
+        <!-- <video-modal
           @CloseVideo="isShowVideo = false"
           :isVideo="isShowVideo"
-        ></video-modal>
+        ></video-modal> -->
         <carousel
           class="header-slider"
           :fractionPagination="true"
           navigation-theme="simple"
           :carousel-settings="sliderOption"
-          v-if="!isShowVideo"
         >
           <div class="swiper-slide heaer-slider-item">
             <h2>
@@ -50,7 +55,11 @@
               <span> Do you want to see our <a href="#">services</a> ? </span>
             </p>
             <div class="watch-video">
-              <div class="animate-video" @click="isShowVideo = true">
+              <div class="animate-video" @click.prevent="
+									openModal(
+										require('@/assets/video/shopping.mp4')
+									)
+								">
                 <span>
                   <i class="fa fa-play fa-2x"></i>
                 </span>
@@ -79,9 +88,13 @@
 
 <script>
 import SearchModal from "./partials/SearchModal.vue";
-import VideoModal from "./partials/VideoModal.vue";
+import BaseVideoModal from '@/common/components/base/BaseVideoModal'
+import videoModal from '@/mixin/videoModal.js'
+
+// import VideoModal from "./partials/VideoModal.vue";
 export default {
-  components: { SearchModal, VideoModal },
+  components: { SearchModal, BaseVideoModal },
+  mixins:[videoModal],
   data() {
     return {
       sliderOption: {
@@ -89,27 +102,7 @@ export default {
         spaceBetween: 0,
       },
       isOpenSearch: false,
-      isShowVideo: false,
     };
-  },
-  watch: {
-    isShowVideo: function (val) {
-      var vid = document.getElementById("player");
-      if (val) {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-        vid.play();
-      } else {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-        vid.load();
-        vid.pause();
-      }
-    },
   },
 };
 </script>
