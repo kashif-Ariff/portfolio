@@ -4,7 +4,7 @@
 		<div class="container">
 			<section>
 				<main-component></main-component>
-			</section>
+			</section> 
 		</div>
 	</div>
 </template>

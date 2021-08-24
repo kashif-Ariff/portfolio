@@ -2,7 +2,15 @@
 	<div class="container">
 		<div class="Faq__mainContent">
 			<div class="Faq__mainContent--left">
-				<ul class="Faq__ListItoms itemTabs">
+				<button :class="toggleDropDown ? 'active' : ''"
+                        @click="toggleDropDown = !toggleDropDown"
+                        type="button"
+                        class="toggleTab"
+                        aria-label="mobile category tabs">
+						All
+				</button>
+				<ul class="Faq__ListItoms itemTabs" :class="toggleDropDown ? 'active' : ''"
+                    role="tablist">
 					<li v-for="Card in faqItem" :key="Card.index" class="iconTabs__item">
 						<a
 							data-target="highlights"
@@ -134,6 +142,46 @@
 									</b-card-body>
 								</b-collapse>
 							</b-card>
+							<b-card no-body>
+								<b-card-header header-tag="header" role="tab">
+									<b-button
+										block
+										v-b-toggle.accordion-6
+										variant="info"
+										>What is the National Fund? </b-button
+									>
+								</b-card-header>
+								<b-collapse
+									id="accordion-6"
+									visible
+									accordion="my-accordion"
+									role="tabpanel"
+								>
+									<b-card-body>
+										<b-card-text> An independent governmental entity which sponsors, and finances small and medium enterprises fully owned by Kuwaiti citizens.  </b-card-text>
+									</b-card-body>
+								</b-collapse>
+							</b-card>
+							<b-card no-body>
+								<b-card-header header-tag="header" role="tab">
+									<b-button
+										block
+										v-b-toggle.accordion-7
+										variant="info"
+										>What is the National Fund? </b-button
+									>
+								</b-card-header>
+								<b-collapse
+									id="accordion-7"
+									visible
+									accordion="my-accordion"
+									role="tabpanel"
+								>
+									<b-card-body>
+										<b-card-text> An independent governmental entity which sponsors, and finances small and medium enterprises fully owned by Kuwaiti citizens.  </b-card-text>
+									</b-card-body>
+								</b-collapse>
+							</b-card>
 
 							<!-- customButton  -->
 							<div class="card customBtn">
@@ -173,6 +221,7 @@ export default {
 	data() {
 		return {
 			tabIndex: 0,
+            toggleDropDown: false,
 			faqItem:[
 				{
 					index:0,
@@ -230,6 +279,20 @@ export default {
 			return this.tabIndex == index;
 		},
 	},
+	watch: {
+        tabIndex: function (e) {
+            var activeText = document
+                .querySelector(
+                    `.Faq__mainContent--left ul li:nth-child(${
+                        e + 1
+                    }) a.nav-link`,
+                )
+                .innerText.toLowerCase()
+            document.querySelector('.Faq__mainContent--left button').innerText =
+                activeText
+            this.toggleDropDown = !this.toggleDropDown
+        },
+    },
 };
 </script>
 
@@ -240,12 +303,93 @@ export default {
 	}
 	&__mainContent {
 		display: flex;
+		@media screen and (max-width:767px){
+			flex-wrap: wrap;
+		}
 		&--left {
-			flex: 0 0 170px;
-			max-width: 170px;
+			flex: 0 0 145px;
+			max-width: 145px;
+			.toggleTab{
+				display:none;
+			}
+			@media screen and (max-width:991px){
+				flex: 0 0 110px;
+				max-width: 110px;
+			}
+			@media screen and (max-width:767px){
+				flex: none;
+				max-width: 100%;
+				width:100%;
+				position:relative;
+				.toggleTab{
+					position: relative;
+					font-size: rem(20px);
+					font-weight: 500;
+					color: var(--secondary);
+					text-transform: capitalize;
+					width:100%;
+					padding: 15px 0px 14px;
+					margin-right: 0px;
+					margin-left: auto;
+					background: #fff;
+					border: none;
+					text-align: left;
+					padding-left: 20px;
+					transition: 0.4s ease all;
+					margin-bottom: 25px;
+					display: block;
+					outline: 3px dashed transparent;
+					display: block;
+					border:1px solid var(--secondry);
+					border:2px solid;
+					&:before{
+						content: '';
+						position: absolute;
+						width: 0;
+						height: 0;
+						border-left: 10px solid transparent;
+						border-right: 10px solid transparent;
+						border-top: 10px solid var(--primary);
+						right: 30px;
+						top: 50%;
+						transform: translateY(-50%);
+						transition: 0.3s ease all;
+					}
+					&.active{
+						&:before{
+							transform: translateY(-50%) rotate(180deg);
+						}
+					}
+				}
+			}
 			height: 100%;
 			.Faq__ListItoms {
 				list-style: none;
+				@media screen and (max-width:767px){
+					padding:10px;
+					background:#fff;
+					border-top-left-radius: 25px;
+    				border-bottom-right-radius: 25px;
+					margin-bottom: rem(20px);
+					box-shadow: 0px 0px 22px -3px rgba($color: black, $alpha: 0.26);
+					position: absolute;
+					width:100%;
+					list-style: none;
+					background: #fff;
+					right: 0;
+					z-index: 5;
+					top: 53px;
+					height: 0px;
+					opacity:0;
+					overflow: hidden;
+					transition: 0.3s ease all;
+					margin-top:rem(20px);
+					&.active{
+						height:auto;
+						opacity: 1;
+					}
+					
+				}
 				li {
 					&:not(:last-child) {
 						margin-bottom: rem(15px);
@@ -255,8 +399,8 @@ export default {
 			.nav-link {
 				transform: unset;
 				width: 100%;
-				padding: rem(15px) rem(18px);
-				min-height: 145px;
+				padding: rem(15px) rem(15px);
+				min-height: 125px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -265,10 +409,32 @@ export default {
 				font-size: rem(16px);
 				font-weight: 400;
 				border: 1px solid rgba($color: #a4b1b9, $alpha: 0.6);
+				border-top-left-radius: 25px;
+    			border-bottom-right-radius: 25px;
+				@media screen and (max-width:991px){
+					min-height:110px;
+				}
+				@media screen and (max-width:767px){
+					min-height:auto;
+					flex-direction: row;
+					border-radius: 0;
+					.icon{
+						margin:0 rem(15px) 0 0;
+						min-height:30px;
+					}
+				}
 				.tab-icon{
-					width:50px;
-					height: 50px;
+					width:45px;
+					height: 45px;
 					padding: 0px;
+					@media screen and (max-width:991px){
+						width:40px;
+						height:40px;
+					}
+					@media screen and (max-width:767px){
+						width:25px;
+						height:25px;
+					}
 				}
 				&.active {
 					background: var(--secondary);
@@ -281,17 +447,25 @@ export default {
 			flex: 1;
 			height: 100%;
 			margin-left: 25px;
+			@media screen and (max-width:767px){
+				margin-left:0;
+			}
 		}
 	}
 	.accordion {
 		> .card {
 			padding-left: rem(30px);
 			padding-right: rem(30px);
-			border-radius: 40px !important;
+			border-radius: 25px !important;
 			border-color: #B6C8D1;
 			border-width: 1px;
-			padding-top: rem(16px);
-			padding-bottom: rem(16px);
+			padding-top: rem(10px);
+			padding-bottom: rem(10px);
+			margin-bottom:rem(27px);
+			@media screen and (max-width:767px){
+				padding-left: rem(16px);
+				padding-right: rem(16px);
+			}
 			> .card-header {
 				background: transparent;
 				border: 0;
@@ -303,6 +477,8 @@ export default {
 					text-align: left;
 					padding-left: 35px;
 					padding-right: 30px;
+					padding-top:rem(10px);
+					padding-bottom:rem(10px);
 					position: relative;
 					line-height: 1.2;
 					white-space: pre-wrap;
@@ -334,6 +510,9 @@ export default {
 						right: 0;
 						top: 15px;
 						transition: 0.4s ease all;
+						@media screen and (max-width:767px){
+							top:12px;
+						}
 					}
 					&[aria-expanded="true"]{
 						&::after{
@@ -343,11 +522,13 @@ export default {
 				}
 			}
 			.card-body {
-				padding-top: rem(10px);
+				padding-top: 5px;
 				padding-left: 60px;
+				padding-bottom:rem(10px);
 				p {
 					font-size: rem(18px);
 					color: #82919C;
+					line-height:1.3;
 					position: relative;
 					&::before{
 						content: '';
@@ -358,6 +539,10 @@ export default {
 						width: 19px;
 						background: #019cde;
 					}
+					@media screen and (max-width:767px){
+						font-size:rem(16px);
+					}
+
 				}
 			}
 		}
@@ -366,19 +551,26 @@ export default {
 			font-size: rem(20px);
 			color: var(--secondary);
 			text-align: left;
-			padding-top: rem(20px);
-			padding-bottom: rem(20px);
+			padding-top: rem(15px);
+			padding-bottom: rem(15px);
+			padding-right:rem(42px);
 			position: relative;
 			line-height: 1.2;
 			white-space: pre-wrap;
 			font-weight:400;
+			border-radius: 40px !important;
 			outline: none;
 			.label{
 				padding-left: 35px;
-			padding-right: 30px;
+				padding-right: 30px;
+				@media screen and (max-width:767px){
+					padding-left: 30px;
+    				padding-right: 14px;
+				}
 			}
 			@media screen and (max-width: 767px) {
 				font-size: rem(17px);
+				padding-right:rem(20px);
 			}
 			&:before {
 				content: '';
@@ -391,6 +583,9 @@ export default {
 				left: 30px;
 				top: 50%;
 				transform: translateY(-50%);
+				@media screen and (max-width: 767px) {
+					left: 12px;
+				}
 			}
 			.card-header{
 				display: flex;
@@ -398,15 +593,18 @@ export default {
 				justify-content: space-between;
 				.btn{
 					color:#fff;
-					padding-left: 15px;
+					padding-left: 17px;
 					padding-right: 20px;
 					display: flex;
-					align-items: center;
-					padding-top: 12px;
-    				padding-bottom: 12px;
+					padding-top: 14px;
+    				padding-bottom: 14px;
+					font-size:rem(20px);
+					@media screen and (max-width:1600px){
+						font-size:rem(18px);
+					}
 					.icon{
-						width: 20px;
-						height: 20px;
+						width: 15px;
+						height: 14px;
 						display: inline-block;
 						color: #fff;
 						margin-right: 8px;

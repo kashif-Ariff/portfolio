@@ -544,8 +544,8 @@ header {
 }
 nav {
   position: relative;
-  border-bottom: 0.5px solid #f8f9fa15;
-  padding-bottom: 5px;
+  // border-bottom: 0.5px solid #f8f9fa15;
+  // padding-bottom: 5px;
   @include prefixer(transition, all 0.2s ease, o moz wibket);
   a{
     font-weight:400;

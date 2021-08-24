@@ -15,7 +15,7 @@
                         icon-viewbox="0 0 32.991 32.992"
                     ></base-svg-icon>
                 </span>
-            </router-link>
+            </router-link> 
         </div>
         <base-media-slider
             :media-slides="images"
@@ -46,7 +46,7 @@
                     icon-id="detail"
                     icon-viewbox="0 0 38 38"
                 ></base-svg-icon
-                >details :
+                >details
             </h3>
             <div class="contentWrapper">
                 <div>
@@ -186,19 +186,28 @@ export default {
     }
     h3.title {
         font-size: rem(30px);
-        font-weight: 500;
+        font-weight: 400;
         color: var(--secondary);
         margin-top: rem(20px);
         text-transform: uppercase;
         display: flex;
         align-items: center;
         padding: rem(30px) 0;
+        @media screen and (max-width:767px){
+            font-size:rem(23px);
+        }
 
         div {
             display: inline-block;
             width: 30px;
             height: 35px;
             margin-right: rem(12px);
+            @media screen and (max-width:575px){
+                /deep/{
+                    width:25px;
+                    height:25px;
+                }
+            }
         }
         @media screen and (max-width: 767px) {
             font-size: rem(22px);
@@ -207,9 +216,16 @@ export default {
     ul {
         li {
             font-size: rem(26px);
-            line-height: 1.4;
+            line-height: 1.1;
             font-weight: 400;
             color: #404040;
+            margin-bottom:rem(12px);
+            &::marker{
+                font-size:rem(32px);
+            }
+            @media screen and (max-width:767px){
+                font-size:rem(20px);
+            }
         }
     }
     .cross-icon {
@@ -229,6 +245,12 @@ export default {
                 line-height: 1.4;
                 font-weight: 400;
                 color: #404040;
+                @media screen and (max-width:1600px){
+                    font-size:rem(24px);
+                }
+                @media screen and (max-width:767px){
+                    font-size:rem(18px);
+                }
             }
         }
     }
@@ -238,25 +260,89 @@ export default {
         padding: 0;
     }
     /deep/ {
-        .table__head{
-            display: none;
-        }
-        .table__body{
-            .table__row--cell{
-            &:nth-child(2){
-                position: relative;
-                &::before{
-                    position: absolute;
-                    content: '';
-                    width: 1px;
-                    height: 22px;
-                    top: 14px;
-                    left: -15px;
-                    background: var(--secondary);
+        .table{
+            &__head{
+                display: none;
+            }
+            &__row{
+                border:1px solid #C7CFD4;
+                &--cell{
+                    &:first-child{
+                        padding:0;
+                    }
+                    &:nth-child(2){
+                        position: relative;
+                        width:20% !important;
+                        &::before{
+                            position: absolute;
+                            content: '';
+                            width: 1px;
+                            height: 22px;
+                            top: 14px;
+                            left: -15px;
+                            background: var(--secondary);
+                        }
+                    }
+                    &:last-child{
+                        text-align: right;
+                    }
+                    .icon{
+                        justify-content: flex-start;
+                        span{
+                            width:16px;
+                            min-width:16px;
+                            height:16px;
+                            margin-top: -6px;
+                            margin-right:rem(20px);
+                        }
+                    }
+                    .btn{
+                        &.btn-file{
+                            min-width:155px;
+                            padding: rem(17px) rem(25px);
+                        }
+                    }
                 }
             }
-            &:last-child{
-                    text-align: right;
+            @media screen and (max-width:991px){
+                &__row{
+                    display: flex;
+                    flex-wrap: wrap;
+                    &--cell{
+                        font-size:rem(20px);
+                        padding:(10px) !important;
+                        &:first-child{
+                            width:100% !important;
+                            text-align: center;
+                            justify-content: center;
+                        }
+                        &:nth-child(2){
+                            width:50% !important;
+                        }
+                        &:nth-child(3){
+                            width:50% !important;
+                        }
+                        &:not(:first-child){
+                            border-bottom:0 !important;
+                        }
+                        .btn{
+                            &.btn-file{
+                                margin-right: 0;
+                                margin-left: auto;
+                                min-width:120px;
+                                padding:rem(16px) rem(20px);
+                            }
+                        }
+                        .icon{
+                            span{
+                                margin-right:rem(15px);
+                                margin-top:-1px;
+                            }
+                        }
+                        &:before{
+                            display: none;
+                        }
+                    }
                 }
             }
         }
@@ -264,6 +350,9 @@ export default {
             .swiper-slide{
                 border-radius: 0;
                 border-bottom-right-radius: 36px;
+                @media screen and (max-width:991px){
+                    border-bottom-left-radius: 36px;
+                }
             }
         }
     }

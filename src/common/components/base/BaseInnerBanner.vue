@@ -63,9 +63,6 @@ export default {
     }
     &--justTitle {
       padding-top: rem(200px);
-      @media screen and (max-width: 1600px) {
-        padding-top: rem(250px);
-      }
       @media screen and (max-width: 991px) {
         padding-top: rem(225px);
       }
