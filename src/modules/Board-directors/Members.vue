@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div> 
     <div class="swiper-container" ref="members" v-show="!showModal">
       <div class="swiper-wrapper">
         <memberItem
@@ -100,7 +100,7 @@ export default {
   mounted() {
     this.swiper = new Swiper(this.$refs.members, {
       slidesPerView: 3,
-      spaceBetween: 0,
+      spaceBetween: 20,
       //  freeMode: true,
       //  freeModeSticky: true,
       centeredSlides: true,
@@ -110,13 +110,13 @@ export default {
     loop: true,
       breakpoints: {
         992: {
-          spaceBetween: 100,
+          spaceBetween: 80,
           // allowTouchMove: false,
           slidesPerView: 3,
           // centeredSlides: false,
         },
         1200: {
-          spaceBetween: 100,
+          spaceBetween: 155,
           // allowTouchMove: false,
           // centeredSlides: false,
           slidesPerView: 3,
@@ -162,17 +162,20 @@ export default {
   }
   h2 {
     font-size: rem(35px);
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1;
     margin-bottom: 5px;
     color: #224156;
+    @media screen and (max-width:1600px){
+      font-size:rem(32px);
+    }
   }
   p {
     font-size: rem(28px);
     font-weight: 400;
     opacity: 0.6;
     margin: 0;
-    color: #224156;
+    color: #7A8D9A;
     line-height: 1.2;
     @media screen and (max-width: 991px) {
       font-size: rem(20px);

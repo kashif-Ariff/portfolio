@@ -5,54 +5,56 @@
                 "position": "Chairman of the Board of Directors",
                 "id": 1,
                 "img": "Ahmed_Tahous.png",
-                "info": "A representative of Kuwait <br>Investment Authority <br>Member of the Board of Directors since 2017 <br>Chairman of the Board of Directors since 2018",
-                "dob": "1957",
-                "education": "Bachelor’s degree in Business Administration with a major in economics from Kuwait University",
-                "work": "<strong>Work Experience</strong>: 35 years in the banking and investment sector in the international and Kuwaiti markets.<br> He is the CEO of the tradable securities sector at the Kuwait Investment Authority, the world’s oldest sovereign wealth fund.",
-                "membership": "<strong>Other Memberships</strong>: Member of the Board at Kuwait Fund for Arab Economic Development"
+                "info": [
+                    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+                    "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. ",
+                    "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. ", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+                    "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. "
+                ]
             },
             {
                 "name": "Bader Nasser Al-Kharaf",
                 "position": "Vice Chairman and Group CEO",
                 "id": 2,
                 "img": "Bader_Nasser.png",
-                "info": "Member of the Board of Directors since 2011 <br>Vice Chairman of the Board of Directors since 2015 <br>CEO since 2017",
-                "dob": "1977",
-                "education": "M.B.A. from London Business School, and Bachelor’s degree in Mechanical Engineering from Kuwait University",
-                "work": "<strong>Work Experience</strong>: Exceptional record of leading business development and consulting projects for major companies and international institutions. His expertise extends in the financial, investment, and industrial sectors across a wide network of projects in the Gulf region, the MENA, Europe, and Asia.",
-                "membership": "<strong>Other Memberships</strong>: Chairman of the Executive Committee at Boursa Kuwait, Chairman of the Gulf Cables and Electrical Industries Company, Board Member of Fouladh Holding Company, Member Board of Directors of the International Refreshment Commercial Company (Coca-Cola), Member of the Board of Directors of Gulf Bank."
+                "info": [
+                    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+                    "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. ",
+                    "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. "
+                ]
             },
             {
                 "name": "Talal Said Al-Mamari",
                 "position": "Member of the Board of Directors",
                 "id": 3,
                 "img": "Talal_Said.png",
-                "info": "Member of the Board of Directors since 2017",
-                "dob": "1972",
-                "education": "Bachelor’s degree in Business Administration from Duquesne University - Pittsburgh - Pennsylvania, USA",
-                "work": "<strong>Work Experience</strong>: Al-Mamari is the CEO of Omantel, 25 years of experience, played a pivotal role in many projects, the most important of which is the initial public offering to sell part of the government’s share in the company, and the company’s restructuring project by merging fixed communication services and mobile in a single entity, and the legal merger of Oman Mobile with Omantel, he also managed the acquisition project by Omantel of 9.84% of the capital of Zain Group in 2017.",
-                "membership": "<strong>Other Memberships</strong>: Membership of the Board of Directors of the Oman Center for Governance and the Al-Amal Investment Fund."
+                "info": [
+                    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+                    "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. ",
+                    "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. "
+                ]
             },
             {
                 "name": "Abdulrahman Mohammed Ibrahim Al-Asfour",
                 "position": "Independent Board Member",
                 "id": 4,
                 "img": "Abdulrahman_Mohammed.png",
-                "info": "Member of the Board of Directors since 2018",
-                "dob": "1981",
-                "education": " Bachelor’s degree in Business Administration with a major in Accounting from Kuwait University",
-                "work": "<strong>Work Experience</strong>: extensive technical experience in the application of information technology solutions, worked as a financial expert in the management of information systems at Equate Petrochemical Company,<br>He has experience in the field of auditing through his work at the State Audit Bureau.",
-                "membership": "<strong>Other Memberships</strong>:  Chief Executive Officer of Alpha Group Holding. He also served as a Board member of WABA Medical Insurance Company."
+                "info": [
+                    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+                    "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. ",
+                    "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. "
+                ]
             },
             {
                 "name": "Yousef Khaled Al-Abdulrazzaq",
                 "position": "Member of the Board of Directors",
                 "id": 5,
                 "img": "Yousef_Khaled.png",
-                "info": "A representative of Kuwait Investment Authority <br>Member of the Board of Directors since 2018",
-                "dob": "1983",
-                "education": "Bachelor’s degree in Business Administration, majoring in Finance, from Kuwait University",
-                "work": "<strong>Work Experience</strong>: His experience extends to 12 years at Kuwait Investment Authority in the general reserve sector. In 2010, he participated in the project team for the privatization of Kuwait Airways. He is currently an investment manager within the General Reserve Sector under the local equities department at the Kuwait Investment Authority."
+                "info": [
+                    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+                    "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. ",
+                    "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. "
+                ]
             }
 
         ]
@@ -115,4 +117,4 @@
 
         ]
     }
-} 
+}

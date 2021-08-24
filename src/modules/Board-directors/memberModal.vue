@@ -1,11 +1,11 @@
 <template>
-  <div class="swiper-modal">
+  <div class="swiper-modal"> 
     <div class="swiper-modal-body">
       <div class="swiper-modal-close" @click="$emit('close')">
         <img class="img-fluid" src="@/assets/images/close_icon.png" alt="" />
       </div>
       <div class="scrollWrapper left">
-        <base-smooth-scrollbar height="400px">
+        <base-smooth-scrollbar height="475px">
           <ul class="swiper-modal-aside">
             <li
               v-for="item in members"
@@ -13,8 +13,8 @@
               :class="{ active: item.id === member.id }"
               @click="$emit('memberClick', item)"
             >
-              <p class="text-md fw-900" v-html="item.name"></p>
-              <p class="text-sm fw-600">{{ item.position }}</p>
+              <p class="text-md name fw-600" v-html="item.name"></p>
+              <p class="text-sm position fw-600">{{ item.position }}</p>
             </li>
           </ul>
         </base-smooth-scrollbar>
@@ -35,14 +35,9 @@
             <h2 class="swiper-modal-position" v-html="member.position"></h2>
           </div>
           <div class="scrollWrapper right">
-            <base-smooth-scrollbar height="350px">
-              <p v-html="member.info"></p>
-              <!-- <p>
-                <strong>DOB: </strong>{{ member.dob }}<br />
-                <strong>Education: </strong>{{ member.education }}
-              </p> -->
+            <base-smooth-scrollbar height="275px">
+              <p v-for="text in member.info" :key="text.index" v-html="text"></p>
               <p v-html="member.work"></p>
-              <!-- <p v-html="member.membership"></p> -->
             </base-smooth-scrollbar>
           </div>
         </div>
@@ -67,7 +62,37 @@ export default {
 .fw-900 {
   font-weight: 900;
 }
+.text-md{
+  font-weight:500;
+}
 .swiper-modal {
+  // margin-top:-124px;
+  // @media screen and (max-width:1600px){
+  //   margin-top:-100px;
+  // }
+  // @media screen and (max-width:991px){
+  //   padding:rem(25px) 0 rem(40px) 0;
+  //   margin-top:-80px;
+  // }
+  /deep/{
+    .scrollbar-wrap {
+      .scrollbar-y{
+        right:40px;
+      }
+    }
+    .name{
+      font-weight:500;
+    }
+  }
+  .swiper-modal-content{
+    /deep/{
+      .scrollbar-wrap {
+        .scrollbar-y{
+          right:5px;
+        }
+      }
+    }
+  }
   width: 100%;
   //   background-image: url(../../assets/images/banners/board-of-directors.png);
   background-color: #fff;
@@ -132,20 +157,39 @@ export default {
     align-items: flex-start;
   }
 }
-
+.swiper-modal-content-image{
+  
+  margin-bottom: 20px;
+   margin-right: 20px;
+   border-top-left-radius: 21px;
+    border-bottom-right-radius: 21px;
+    @media screen and (min-width:768px){
+      box-shadow: 0px 5px 13px -1px rgba($color: black, $alpha: 0.3);
+    }
+  @media screen and (max-width: 991px) {
+      margin-bottom: rem(30px);
+    }
+    @media screen and (max-width: 991px) and (min-width: 767px) {
+      margin-right: rem(20px);
+    }
+    
+  @media (min-width: 1200px) {
+    margin-right: 28px;
+  }
+}
 .swiper-modal-aside {
   flex-shrink: 0;
   padding: 0;
   margin: 0;
   list-style: none;
   padding-right: 50px;
-  border-right: 2px solid rgba(0, 0, 0, 0.2);
+  border-right: 4px solid rgba(0, 0, 0, 0.1);
   @media (max-width: 991px) {
     display: none;
   }
 
   @media (min-width: 1200px) {
-    padding-right: 80px;
+    padding-right: 50px;
   }
 
   & > * {
@@ -171,6 +215,9 @@ export default {
     opacity: 1;
     p {
       color: #019cde;
+      &.position{
+          color:#67C4EB;
+      }
     }
   }
   li {
@@ -178,6 +225,10 @@ export default {
       margin-bottom: 5px;
       line-height: 1;
       font-size: rem(17px);
+      color:#224156;
+      &.position{
+        color:#7A8D9A;
+      }
       @media screen and (max-width: 1600px) {
         font-size: rem(16px);
       }
@@ -192,7 +243,9 @@ export default {
 
 .swiper-modal-img {
   max-width: 264px;
-  margin-bottom: 20px;
+  @media screen and (min-width:992px){
+    height:315px;
+  }
   @media screen and (max-width: 991px) {
     max-width: 200px;
   }
@@ -206,18 +259,14 @@ export default {
     max-width: 1000px;
   }
   img {
-    border-top-left-radius: 35px;
-    border-bottom-right-radius: 35px;
-    box-shadow: 0px 0px 12px -2px rgba($color: black, $alpha: 0.1);
+    border-top-left-radius: 21px;
+    border-bottom-right-radius: 21px;
+    
     @media screen and (max-width: 991px) {
       margin: auto;
       display: block;
       text-align: center;
-      margin-bottom: rem(30px);
       max-width: 150px;
-    }
-    @media screen and (max-width: 991px) and (min-width: 767px) {
-      margin-right: rem(20px);
     }
     @media screen and (max-width: 767px) {
       max-width: 100px;
@@ -225,11 +274,7 @@ export default {
   }
 
   @media (min-width: 992px) {
-    margin-left: 50px;
-  }
-
-  @media (min-width: 1200px) {
-    margin-left: 80px;
+    margin-left: 20px;
   }
   p {
     line-height: 1.3;
@@ -251,14 +296,19 @@ export default {
 .swiper-modal-close {
   cursor: pointer;
   position: absolute;
-  top: -30px;
+  top: 10px;
   right: 20px;
   @media screen and (max-width: 1600px) {
-    top: -20px;
+    top: 0px;
   }
   @media (min-width: 1601px) {
-    top: -20px;
     right: 0;
+  }
+  @media (max-width: 1199px) {
+    top:-43px;
+  }
+  @media (max-width: 991px) {
+    top:0px;
   }
   @media screen and (max-width: 767px) {
     top: -15px;
@@ -268,17 +318,14 @@ export default {
 
 .swiper-modal-img {
   flex-shrink: 0;
-  margin-right: 20px;
 
-  @media (min-width: 1200px) {
-    margin-right: 28px;
-  }
 }
 
 .swiper-modal-header {
   padding-bottom: 10px;
   margin-bottom: 20px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding-left:20px;
+  // border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   @media screen and (max-width: 767px) {
     text-align: center;
   }
@@ -313,7 +360,7 @@ export default {
   .swiper-modal-aside {
     padding-left: 50px;
     padding-right: 0;
-    border-left: 2px solid rgba(0, 0, 0, 0.2);
+    border-left: 4px solid rgba(0, 0, 0, 0.2);
     border-right: 0;
 
     @media (min-width: 1200px) {

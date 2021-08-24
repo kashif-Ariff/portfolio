@@ -35,16 +35,35 @@ export default {
     };
   },
   created() {
+    document.body.classList.add("board-directors");
     this.$i18n.locale == "en"
       ? (this.bod = this.bod.en)
       : (this.bod = this.bod.ar);
   },
+  mounted() {
+    document.body.classList.add("board-directors");
+  },
+  destroyed() {
+    document.body.classList.remove("board-directors");
+  },
 };
 </script>
 
+
+<style lang="scss" >
+  .board-directors{
+  footer{
+    margin-top: 0;;
+  }
+}
+</style>
 <style lang="scss" scoped>
 .boardDirector {
   position: relative;
   padding-bottom: rem(80px);
+  @media screen and (max-width:767px){
+    padding-bottom:rem(60px);
+  }
 }
+
 </style>

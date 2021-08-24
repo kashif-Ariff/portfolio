@@ -1,6 +1,6 @@
 <template>
   <div
-    class="swiper-slide"
+    class="swiper-slide" 
     @mouseenter="enter"
     @mouseleave="$emit('leave', member)"
     @click="
@@ -46,13 +46,13 @@ export default {
   filter: unset !important;
   cursor: pointer;
   overflow: hidden;
-  border-top-left-radius: 35px;
-  border-bottom-right-radius: 35px;
-  transform: scale(0.7);
-  box-shadow: 0px 0px 13px 3px rgba($color: black, $alpha: 0.1);
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  transform: scale(0.86);
+  box-shadow: 0px 6px 13px 3px rgba($color: black, $alpha: .25);
   //   width: 280px !important;
   @media screen and (max-width: 575px) {
-    height: 300px;
+    height: 250px;
   }
   //   &:nth-child(2) {
   //     margin-top: 20px;
@@ -176,7 +176,7 @@ export default {
 @media (min-width: 992px) {
   .swiper-slide {
     //     width: 100px !important;
-    height: 412px;
+    height: 415px;
 
     &:hover {
       //  width: 150px !important;
@@ -188,7 +188,7 @@ export default {
 @media (min-width: 1600px) {
   .swiper-slide {
     //     width: 120px !important;
-    height: 412px;
+    height: 415px;
 
     &:hover {
       //  width: 150px !important;
