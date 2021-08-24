@@ -134,6 +134,14 @@ export default {
 	}
 	.form-group {
 		margin-bottom: rem(50px);
+		textarea.form-control {
+			@media screen and (max-width: 991px) {
+				height: 12.5rem !important;
+			}
+			@media screen and (max-width: 767px) {
+				height: 7.5rem !important;
+			}
+		}
 	}
 	.button-row {
 		i {

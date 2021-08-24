@@ -171,7 +171,7 @@ export default {
 			margin-bottom: 0;
 		}
 		a.nav-link {
-			padding: 5px;
+			// padding: 5px;
 			opacity: 1 !important;
 			.ContactUs__slide--title {
 				margin: 0px;

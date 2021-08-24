@@ -2,19 +2,19 @@
 	<div class="searchInterests">
 		<ul class="searchInterests__list">
 			<li class="searchInterests__list--result">
-				<a href="">Lorem ipsum </a>
+				<a href="#">Lorem ipsum </a>
 			</li>
 			<li class="searchInterests__list--result">
-				<a href="">Lorem ipsum </a>
+				<a href="#">Lorem ipsum </a>
 			</li>
 			<li class="searchInterests__list--result">
-				<a href="">Lorem ipsum </a>
+				<a href="#">Lorem ipsum </a>
 			</li>
 			<li class="searchInterests__list--result">
-				<a href="">Lorem ipsum </a>
+				<a href="#">Lorem ipsum </a>
 			</li>
 			<li class="searchInterests__list--result">
-				<a href="">Lorem ipsum </a>
+				<a href="#">Lorem ipsum </a>
 			</li>
 		</ul>
 	</div>
@@ -31,11 +31,11 @@ export default {};
 			display: inline-block;
 			margin-top: rem(30px);
 			margin-bottom: rem(30px);
-			@media screen and (max-width:1199px){
+			@media screen and (max-width: 1199px) {
 				margin-top: rem(15px);
 				margin-bottom: rem(15px);
 			}
-			@media screen and (max-width:991px){
+			@media screen and (max-width: 991px) {
 				margin-top: rem(10px);
 				margin-bottom: rem(10px);
 			}

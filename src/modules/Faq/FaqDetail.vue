@@ -2,16 +2,25 @@
 	<div class="container">
 		<div class="Faq__mainContent">
 			<div class="Faq__mainContent--left">
-				<button :class="toggleDropDown ? 'active' : ''"
-                        @click="toggleDropDown = !toggleDropDown"
-                        type="button"
-                        class="toggleTab"
-                        aria-label="mobile category tabs">
-						All
+				<button
+					:class="toggleDropDown ? 'active' : ''"
+					@click="toggleDropDown = !toggleDropDown"
+					type="button"
+					class="toggleTab"
+					aria-label="mobile category tabs"
+				>
+					All
 				</button>
-				<ul class="Faq__ListItoms itemTabs" :class="toggleDropDown ? 'active' : ''"
-                    role="tablist">
-					<li v-for="Card in faqItem" :key="Card.index" class="iconTabs__item">
+				<ul
+					class="Faq__ListItoms itemTabs"
+					:class="toggleDropDown ? 'active' : ''"
+					role="tablist"
+				>
+					<li
+						v-for="Card in faqItem"
+						:key="Card.index"
+						class="iconTabs__item"
+					>
 						<a
 							data-target="highlights"
 							class="nav-link slide__card"
@@ -23,17 +32,20 @@
 						>
 							<span class="icon iconTabs__item--image">
 								<span class="tab-icon">
-										<img
-										:src="require(`@/assets/images/icons/faqs/white/${Card.images.active}`)"
+									<img
+										:src="
+											require(`@/assets/images/icons/faqs/white/${Card.images.active}`)
+										"
 										class="img-fluid selected"
 									/>
 									<img
-										:src="require(`@/assets/images/icons/faqs/color/${Card.images.nonActive}`)"
-										class="img-fluid "
+										:src="
+											require(`@/assets/images/icons/faqs/color/${Card.images.nonActive}`)
+										"
+										class="img-fluid"
 									/>
-								</span>
-								 </span
-							>{{Card.label}}
+								</span> </span
+							>{{ Card.label }}
 						</a>
 					</li>
 				</ul>
@@ -48,8 +60,8 @@
 										block
 										v-b-toggle.accordion-1
 										variant="info"
-										>What is the National Fund? </b-button
-									>
+										>What is the National Fund?
+									</b-button>
 								</b-card-header>
 								<b-collapse
 									id="accordion-1"
@@ -58,7 +70,12 @@
 									role="tabpanel"
 								>
 									<b-card-body>
-										<b-card-text> An independent governmental entity which sponsors, and finances small and medium enterprises fully owned by Kuwaiti citizens.  </b-card-text>
+										<b-card-text>
+											An independent governmental entity
+											which sponsors, and finances small
+											and medium enterprises fully owned
+											by Kuwaiti citizens.
+										</b-card-text>
 									</b-card-body>
 								</b-collapse>
 							</b-card>
@@ -68,8 +85,8 @@
 										block
 										v-b-toggle.accordion-2
 										variant="info"
-										>What is the National Fund? </b-button
-									>
+										>What is the National Fund?
+									</b-button>
 								</b-card-header>
 								<b-collapse
 									id="accordion-2"
@@ -78,7 +95,12 @@
 									role="tabpanel"
 								>
 									<b-card-body>
-										<b-card-text> An independent governmental entity which sponsors, and finances small and medium enterprises fully owned by Kuwaiti citizens.  </b-card-text>
+										<b-card-text>
+											An independent governmental entity
+											which sponsors, and finances small
+											and medium enterprises fully owned
+											by Kuwaiti citizens.
+										</b-card-text>
 									</b-card-body>
 								</b-collapse>
 							</b-card>
@@ -88,8 +110,8 @@
 										block
 										v-b-toggle.accordion-3
 										variant="info"
-										>What is the National Fund? </b-button
-									>
+										>What is the National Fund?
+									</b-button>
 								</b-card-header>
 								<b-collapse
 									id="accordion-3"
@@ -98,7 +120,12 @@
 									role="tabpanel"
 								>
 									<b-card-body>
-										<b-card-text> An independent governmental entity which sponsors, and finances small and medium enterprises fully owned by Kuwaiti citizens.  </b-card-text>
+										<b-card-text>
+											An independent governmental entity
+											which sponsors, and finances small
+											and medium enterprises fully owned
+											by Kuwaiti citizens.
+										</b-card-text>
 									</b-card-body>
 								</b-collapse>
 							</b-card>
@@ -108,8 +135,8 @@
 										block
 										v-b-toggle.accordion-4
 										variant="info"
-										>What is the National Fund? </b-button
-									>
+										>What is the National Fund?
+									</b-button>
 								</b-card-header>
 								<b-collapse
 									id="accordion-4"
@@ -118,7 +145,12 @@
 									role="tabpanel"
 								>
 									<b-card-body>
-										<b-card-text> An independent governmental entity which sponsors, and finances small and medium enterprises fully owned by Kuwaiti citizens.  </b-card-text>
+										<b-card-text>
+											An independent governmental entity
+											which sponsors, and finances small
+											and medium enterprises fully owned
+											by Kuwaiti citizens.
+										</b-card-text>
 									</b-card-body>
 								</b-collapse>
 							</b-card>
@@ -128,8 +160,8 @@
 										block
 										v-b-toggle.accordion-5
 										variant="info"
-										>What is the National Fund? </b-button
-									>
+										>What is the National Fund?
+									</b-button>
 								</b-card-header>
 								<b-collapse
 									id="accordion-5"
@@ -138,7 +170,12 @@
 									role="tabpanel"
 								>
 									<b-card-body>
-										<b-card-text> An independent governmental entity which sponsors, and finances small and medium enterprises fully owned by Kuwaiti citizens.  </b-card-text>
+										<b-card-text>
+											An independent governmental entity
+											which sponsors, and finances small
+											and medium enterprises fully owned
+											by Kuwaiti citizens.
+										</b-card-text>
 									</b-card-body>
 								</b-collapse>
 							</b-card>
@@ -148,8 +185,8 @@
 										block
 										v-b-toggle.accordion-6
 										variant="info"
-										>What is the National Fund? </b-button
-									>
+										>What is the National Fund?
+									</b-button>
 								</b-card-header>
 								<b-collapse
 									id="accordion-6"
@@ -158,7 +195,12 @@
 									role="tabpanel"
 								>
 									<b-card-body>
-										<b-card-text> An independent governmental entity which sponsors, and finances small and medium enterprises fully owned by Kuwaiti citizens.  </b-card-text>
+										<b-card-text>
+											An independent governmental entity
+											which sponsors, and finances small
+											and medium enterprises fully owned
+											by Kuwaiti citizens.
+										</b-card-text>
 									</b-card-body>
 								</b-collapse>
 							</b-card>
@@ -168,8 +210,8 @@
 										block
 										v-b-toggle.accordion-7
 										variant="info"
-										>What is the National Fund? </b-button
-									>
+										>What is the National Fund?
+									</b-button>
 								</b-card-header>
 								<b-collapse
 									id="accordion-7"
@@ -178,7 +220,12 @@
 									role="tabpanel"
 								>
 									<b-card-body>
-										<b-card-text> An independent governmental entity which sponsors, and finances small and medium enterprises fully owned by Kuwaiti citizens.  </b-card-text>
+										<b-card-text>
+											An independent governmental entity
+											which sponsors, and finances small
+											and medium enterprises fully owned
+											by Kuwaiti citizens.
+										</b-card-text>
 									</b-card-body>
 								</b-collapse>
 							</b-card>
@@ -192,10 +239,10 @@
 									<a href="#" class="contact btn btn-primary">
 										<span class="icon">
 											<base-svg-icon
-											icon-id="agent"
-											icon-viewbox="0 0 29.531 28.658"
-										></base-svg-icon>
-										</span>Contact us
+												icon-id="agent"
+												icon-viewbox="0 0 29.531 28.658"
+											></base-svg-icon> </span
+										>Contact us
 									</a>
 								</div>
 							</div>
@@ -221,57 +268,57 @@ export default {
 	data() {
 		return {
 			tabIndex: 0,
-            toggleDropDown: false,
-			faqItem:[
+			toggleDropDown: false,
+			faqItem: [
 				{
-					index:0,
-					label:"About The National Fund",
-					images:{
-						active:"question.png",
-						nonActive:"question.png"
-					}
+					index: 0,
+					label: 'About The National Fund',
+					images: {
+						active: 'question.png',
+						nonActive: 'question.png',
+					},
 				},
 				{
-					index:1,
-					label:"Funding & Terms",
-					images:{
-						active:"Financial-Care-2.png",
-						nonActive:"Financial-Care-2.png"
-					}
+					index: 1,
+					label: 'Funding & Terms',
+					images: {
+						active: 'Financial-Care-2.png',
+						nonActive: 'Financial-Care-2.png',
+					},
 				},
 				{
-					index:2,
-					label:"Feasibility study",
-					images:{
-						active:"Presentation-3.png",
-						nonActive:"Presentation-3.png"
-					}
+					index: 2,
+					label: 'Feasibility study',
+					images: {
+						active: 'Presentation-3.png',
+						nonActive: 'Presentation-3.png',
+					},
 				},
 				{
-					index:3,
-					label:"Business Partners",
-					images:{
-						active:"Handshake.png",
-						nonActive:"Handshake.png"
-					}
+					index: 3,
+					label: 'Business Partners',
+					images: {
+						active: 'Handshake.png',
+						nonActive: 'Handshake.png',
+					},
 				},
 				{
-					index:4,
-					label:"Lands & Shops",
-					images:{
-						active:"Shop.png",
-						nonActive:"Shop.png"
-					}
+					index: 4,
+					label: 'Lands & Shops',
+					images: {
+						active: 'Shop.png',
+						nonActive: 'Shop.png',
+					},
 				},
 				{
-					index:5,
-					label:"National Directory",
-					images:{
-						active:"Connected-Folder.png",
-						nonActive:"Connected-Folder.png"
-					}
-				}
-			]
+					index: 5,
+					label: 'National Directory',
+					images: {
+						active: 'Connected-Folder.png',
+						nonActive: 'Connected-Folder.png',
+					},
+				},
+			],
 		};
 	},
 	methods: {
@@ -280,19 +327,19 @@ export default {
 		},
 	},
 	watch: {
-        tabIndex: function (e) {
-            var activeText = document
-                .querySelector(
-                    `.Faq__mainContent--left ul li:nth-child(${
-                        e + 1
-                    }) a.nav-link`,
-                )
-                .innerText.toLowerCase()
-            document.querySelector('.Faq__mainContent--left button').innerText =
-                activeText
-            this.toggleDropDown = !this.toggleDropDown
-        },
-    },
+		tabIndex: function (e) {
+			var activeText = document
+				.querySelector(
+					`.Faq__mainContent--left ul li:nth-child(${
+						e + 1
+					}) a.nav-link`
+				)
+				.innerText.toLowerCase();
+			document.querySelector('.Faq__mainContent--left button').innerText =
+				activeText;
+			this.toggleDropDown = !this.toggleDropDown;
+		},
+	},
 };
 </script>
 
@@ -303,31 +350,31 @@ export default {
 	}
 	&__mainContent {
 		display: flex;
-		@media screen and (max-width:767px){
+		@media screen and (max-width: 767px) {
 			flex-wrap: wrap;
 		}
 		&--left {
 			flex: 0 0 145px;
 			max-width: 145px;
-			.toggleTab{
-				display:none;
+			.toggleTab {
+				display: none;
 			}
-			@media screen and (max-width:991px){
+			@media screen and (max-width: 991px) {
 				flex: 0 0 110px;
 				max-width: 110px;
 			}
-			@media screen and (max-width:767px){
+			@media screen and (max-width: 767px) {
 				flex: none;
 				max-width: 100%;
-				width:100%;
-				position:relative;
-				.toggleTab{
+				width: 100%;
+				position: relative;
+				.toggleTab {
 					position: relative;
 					font-size: rem(20px);
 					font-weight: 500;
 					color: var(--secondary);
 					text-transform: capitalize;
-					width:100%;
+					width: 100%;
 					padding: 15px 0px 14px;
 					margin-right: 0px;
 					margin-left: auto;
@@ -340,9 +387,9 @@ export default {
 					display: block;
 					outline: 3px dashed transparent;
 					display: block;
-					border:1px solid var(--secondry);
-					border:2px solid;
-					&:before{
+					border: 1px solid var(--secondry);
+					border: 2px solid;
+					&:before {
 						content: '';
 						position: absolute;
 						width: 0;
@@ -355,8 +402,8 @@ export default {
 						transform: translateY(-50%);
 						transition: 0.3s ease all;
 					}
-					&.active{
-						&:before{
+					&.active {
+						&:before {
 							transform: translateY(-50%) rotate(180deg);
 						}
 					}
@@ -365,30 +412,30 @@ export default {
 			height: 100%;
 			.Faq__ListItoms {
 				list-style: none;
-				@media screen and (max-width:767px){
-					padding:10px;
-					background:#fff;
+				@media screen and (max-width: 767px) {
+					padding: 10px;
+					background: #fff;
 					border-top-left-radius: 25px;
-    				border-bottom-right-radius: 25px;
+					border-bottom-right-radius: 25px;
 					margin-bottom: rem(20px);
-					box-shadow: 0px 0px 22px -3px rgba($color: black, $alpha: 0.26);
+					box-shadow: 0px 0px 22px -3px rgba($color: black, $alpha:
+								0.26);
 					position: absolute;
-					width:100%;
+					width: 100%;
 					list-style: none;
 					background: #fff;
 					right: 0;
 					z-index: 5;
 					top: 53px;
 					height: 0px;
-					opacity:0;
+					opacity: 0;
 					overflow: hidden;
 					transition: 0.3s ease all;
-					margin-top:rem(20px);
-					&.active{
-						height:auto;
+					margin-top: rem(20px);
+					&.active {
+						height: auto;
 						opacity: 1;
 					}
-					
 				}
 				li {
 					&:not(:last-child) {
@@ -410,36 +457,35 @@ export default {
 				font-weight: 400;
 				border: 1px solid rgba($color: #a4b1b9, $alpha: 0.6);
 				border-top-left-radius: 25px;
-    			border-bottom-right-radius: 25px;
-				@media screen and (max-width:991px){
-					min-height:110px;
+				border-bottom-right-radius: 25px;
+				@media screen and (max-width: 991px) {
+					min-height: 110px;
 				}
-				@media screen and (max-width:767px){
-					min-height:auto;
+				@media screen and (max-width: 767px) {
+					min-height: auto;
 					flex-direction: row;
 					border-radius: 0;
-					.icon{
-						margin:0 rem(15px) 0 0;
-						min-height:30px;
+					.icon {
+						margin: 0 rem(15px) 0 0;
+						min-height: 30px;
 					}
 				}
-				.tab-icon{
-					width:45px;
+				.tab-icon {
+					width: 45px;
 					height: 45px;
 					padding: 0px;
-					@media screen and (max-width:991px){
-						width:40px;
-						height:40px;
+					@media screen and (max-width: 991px) {
+						width: 40px;
+						height: 40px;
 					}
-					@media screen and (max-width:767px){
-						width:25px;
-						height:25px;
+					@media screen and (max-width: 767px) {
+						width: 25px;
+						height: 25px;
 					}
 				}
 				&.active {
 					background: var(--secondary);
 					color: #fff;
-					
 				}
 			}
 		}
@@ -447,8 +493,8 @@ export default {
 			flex: 1;
 			height: 100%;
 			margin-left: 25px;
-			@media screen and (max-width:767px){
-				margin-left:0;
+			@media screen and (max-width: 767px) {
+				margin-left: 0;
 			}
 		}
 	}
@@ -457,12 +503,12 @@ export default {
 			padding-left: rem(30px);
 			padding-right: rem(30px);
 			border-radius: 25px !important;
-			border-color: #B6C8D1;
+			border-color: #b6c8d1;
 			border-width: 1px;
 			padding-top: rem(10px);
 			padding-bottom: rem(10px);
-			margin-bottom:rem(27px);
-			@media screen and (max-width:767px){
+			margin-bottom: rem(27px);
+			@media screen and (max-width: 767px) {
 				padding-left: rem(16px);
 				padding-right: rem(16px);
 			}
@@ -477,12 +523,12 @@ export default {
 					text-align: left;
 					padding-left: 35px;
 					padding-right: 30px;
-					padding-top:rem(10px);
-					padding-bottom:rem(10px);
+					padding-top: rem(10px);
+					padding-bottom: rem(10px);
 					position: relative;
 					line-height: 1.2;
 					white-space: pre-wrap;
-					font-weight:400;
+					font-weight: 400;
 					outline: none;
 					@media screen and (max-width: 767px) {
 						font-size: rem(17px);
@@ -510,12 +556,12 @@ export default {
 						right: 0;
 						top: 15px;
 						transition: 0.4s ease all;
-						@media screen and (max-width:767px){
-							top:12px;
+						@media screen and (max-width: 767px) {
+							top: 12px;
 						}
 					}
-					&[aria-expanded="true"]{
-						&::after{
+					&[aria-expanded='true'] {
+						&::after {
 							transform: rotate(180deg);
 						}
 					}
@@ -524,13 +570,13 @@ export default {
 			.card-body {
 				padding-top: 5px;
 				padding-left: 60px;
-				padding-bottom:rem(10px);
+				padding-bottom: rem(10px);
 				p {
 					font-size: rem(18px);
-					color: #82919C;
-					line-height:1.3;
+					color: #82919c;
+					line-height: 1.3;
 					position: relative;
-					&::before{
+					&::before {
 						content: '';
 						position: absolute;
 						top: 10px;
@@ -539,46 +585,45 @@ export default {
 						width: 19px;
 						background: #019cde;
 					}
-					@media screen and (max-width:767px){
-						font-size:rem(16px);
+					@media screen and (max-width: 767px) {
+						font-size: rem(16px);
 					}
-
 				}
 			}
 		}
-		.customBtn{
+		.customBtn {
 			background: transparent;
 			font-size: rem(20px);
 			color: var(--secondary);
 			text-align: left;
 			padding-top: rem(15px);
 			padding-bottom: rem(15px);
-			padding-right:rem(42px);
+			padding-right: rem(42px);
 			position: relative;
 			line-height: 1.2;
 			white-space: pre-wrap;
-			font-weight:400;
+			font-weight: 400;
 			border-radius: 40px !important;
 			outline: none;
-			.label{
+			.label {
 				padding-left: 35px;
 				padding-right: 30px;
-				@media screen and (max-width:767px){
+				@media screen and (max-width: 767px) {
 					padding-left: 30px;
-    				padding-right: 14px;
+					padding-right: 14px;
 				}
 			}
 			@media screen and (max-width: 767px) {
 				font-size: rem(17px);
-				padding-right:rem(20px);
+				padding-right: rem(20px);
 			}
 			&:before {
 				content: '';
 				position: absolute;
 				width: 22px;
 				height: 22px;
-				background: url(../../assets/images/svg/faq-icon.svg)
-					left top no-repeat;
+				background: url(../../assets/images/svg/faq-icon.svg) left top
+					no-repeat;
 				background-size: cover;
 				left: 30px;
 				top: 50%;
@@ -587,27 +632,28 @@ export default {
 					left: 12px;
 				}
 			}
-			.card-header{
+			.card-header {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
-				.btn{
-					color:#fff;
+				.btn {
+					color: #fff;
 					padding-left: 17px;
 					padding-right: 20px;
 					display: flex;
 					padding-top: 14px;
-    				padding-bottom: 14px;
-					font-size:rem(20px);
-					@media screen and (max-width:1600px){
-						font-size:rem(18px);
+					padding-bottom: 14px;
+					font-size: rem(20px);
+					@media screen and (max-width: 1600px) {
+						font-size: rem(18px);
 					}
-					.icon{
+					.icon {
 						width: 15px;
 						height: 14px;
 						display: inline-block;
 						color: #fff;
 						margin-right: 8px;
+						margin-top: -3px;
 					}
 				}
 			}
