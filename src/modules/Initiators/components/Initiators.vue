@@ -180,9 +180,17 @@ export default {
 				margin-right: auto;
 				padding: 10px 0px;
 			}
-			.swiper-slide {
-				padding: rem(7px) rem(5px);
-				margin: 0 rem(0px);
+			.swiper-wrapper {
+				@media screen and (max-width: 991px) {
+					justify-content: center;
+				}
+				.swiper-slide {
+					padding: rem(7px) rem(5px);
+					margin: 0;
+					@media screen and (max-width: 991px) {
+						margin-right: 0 !important;
+					}
+				}
 			}
 		}
 	}
