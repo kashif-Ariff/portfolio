@@ -310,7 +310,9 @@ export default {
 		.card {
 			padding: rem(30px) rem(40px);
 			@media screen and (max-width: 991px) {
-				padding: rem(25px);
+				box-shadow: none;
+				padding: 0;
+				border: 0;
 			}
 		}
 		/deep/ {

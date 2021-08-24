@@ -69,8 +69,8 @@ const routes = [
                     import ('../views/Publication.vue'),
             },
             {
-                path: `/:lang/common-intrest`,
-                name: 'common-intrest',
+                path: `/:lang/common-interest`,
+                name: 'common-interest',
                 component: () =>
                     import ('../views/CommonInterest.vue'),
             },

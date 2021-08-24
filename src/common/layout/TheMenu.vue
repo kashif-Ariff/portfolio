@@ -230,7 +230,7 @@
 						<li role="none">
 							<router-link
 								@click.native="closeMenu"
-								:to="`/${$i18n.locale}/common-intrest`"
+								:to="`/${$i18n.locale}/common-interest`"
 								role="menuitem"
 								>common interest</router-link
 							>
