@@ -27,13 +27,18 @@ export default {};
 <style lang="scss" scoped>
 .searchInterests {
 	&__list {
-		@media screen and (max-width: 991px) {
-			text-align: center;
-		}
 		&--result {
 			display: inline-block;
 			margin-top: rem(30px);
 			margin-bottom: rem(30px);
+			@media screen and (max-width:1199px){
+				margin-top: rem(15px);
+				margin-bottom: rem(15px);
+			}
+			@media screen and (max-width:991px){
+				margin-top: rem(10px);
+				margin-bottom: rem(10px);
+			}
 
 			a {
 				padding: rem(10px) rem(19px);
@@ -49,7 +54,7 @@ export default {};
 				text-transform: capitalize;
 				border-radius: 25px;
 				border: 2px solid #dadfe2;
-				box-shadow: 0px 2px 16px -3px rgba($color: black, $alpha: 0.26);
+				box-shadow: 0px 1px 20px -3px rgba($color: black, $alpha: 0.26);
 				&::before {
 					content: '';
 					position: absolute;

@@ -51,8 +51,12 @@
 						</p>
 					</div>
 					<button
-						class="baseSearchlist__card--button btn btn-primary"
-						aria-describedby="name3"
+						class="
+							baseSearchlist__card--button
+							btn btn-primary
+							d-md-block d-none
+						"
+						aria-describedby="name"
 					>
 						read more
 					</button>
@@ -83,6 +87,17 @@
 								</div>
 							</a>
 						</div>
+					</div>
+					<div class="text-center d-md-none d-block">
+						<button
+							class="
+								baseSearchlist__card--button
+								btn btn-primary
+							"
+							aria-describedby="name"
+						>
+							read more
+						</button>
 					</div>
 				</div>
 			</div>

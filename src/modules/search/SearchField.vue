@@ -43,7 +43,7 @@ export default {};
 	}
 	.FormField {
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
 		&__input {
 			width: 82%;
 			@media screen and (max-width: 1200px) {
@@ -58,11 +58,20 @@ export default {};
 				color: var(--secondary) !important;
 				padding-left: rem(30px);
 				padding-right: rem(30px);
+				border:1px solid #B8C3C9;
 				&::placeholder {
 					color: var(--secondary);
 				}
-				@media screen and (max-width: 575px) {
+				@media screen and (max-width: 991px) {
+					font-size: rem(22px);
+					height: 65px;
+					&::placeholder {
+						font-size: rem(22px);
+					}
+				}
+				@media screen and (max-width: 767px) {
 					font-size: rem(20px);
+					height: 50px;
 					&::placeholder {
 						font-size: rem(20px);
 					}

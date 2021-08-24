@@ -17,7 +17,7 @@
 		</div>
 		<div class="baseSearchlist__card">
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-6">
 					<span class="baseSearchlist__card--date">5 MAY - 2021</span>
 					<h3>
 						<router-link
@@ -55,7 +55,7 @@
 						read more
 					</button>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-6">
 					<div class="baseSearchlist__card--media">
 						<div class="media-image">
 							<img

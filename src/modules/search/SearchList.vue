@@ -23,6 +23,6 @@ export default {
 
 <style lang="scss" scoped>
 .baseSearchlist {
-	padding-top: rem(70px);
+	padding-top: rem(45px);
 }
 </style>

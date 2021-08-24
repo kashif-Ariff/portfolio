@@ -19,7 +19,7 @@
 		</div>
 		<div class="baseSearchlist__card">
 			<div class="row align-items-center">
-				<div class="col-md-7">
+				<div class="col-md-6">
 					<span class="baseSearchlist__card--date">5 MAY - 2021</span>
 					<h3>
 						<router-link
@@ -47,18 +47,33 @@
 						</p>
 					</div>
 					<button
-						class="baseSearchlist__card--button btn btn-primary"
-						aria-describedby="name2"
+						class="
+							baseSearchlist__card--button
+							btn btn-primary
+							d-md-block d-none
+						"
+						aria-describedby="name"
 					>
 						read more
 					</button>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-6">
 					<div class="baseSearchlist__card--media slider">
 						<base-media-slider
 							:media-slides="slideImages"
 						></base-media-slider>
 					</div>
+					<div class="text-center d-md-none d-block">
+							<button
+								class="
+									baseSearchlist__card--button
+									btn btn-primary
+								"
+								aria-describedby="name"
+							>
+								read more
+							</button>
+						</div>
 				</div>
 			</div>
 		</div>
@@ -88,3 +103,21 @@ export default {
 	},
 };
 </script>
+
+<style lang="scss" scoped>
+	.baseSearchlist{
+		&__item{
+			/deep/{
+				.mediaSlider{
+					.swiper-slide{
+						border-radius: 21px;
+					}
+					.sliderNavigation{
+						border-bottom-right-radius: 21px;
+						border-top-left-radius: 21px;
+					}
+				}
+			}
+		}
+	}
+</style>

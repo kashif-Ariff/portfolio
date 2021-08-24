@@ -30,7 +30,7 @@ export default {
 			margin-top: rem(50px);
 			width: max-content;
 			position: relative;
-			margin-bottom: rem(25px);
+			margin-bottom: 0;
 			border-bottom: unset;
 
 			li {
@@ -38,7 +38,7 @@ export default {
 				padding: 0;
 				a {
 					font-size: rem(24px);
-					color: #6b808e;
+					color: #224156;
 					border: none;
 					outline: none;
 					opacity: 0.5;
@@ -47,11 +47,10 @@ export default {
 					line-height: 1.3;
 					min-height: auto;
 					padding: rem(10px) rem(32px) rem(10px) rem(16px);
-					@media screen and (max-width: 575px) {
+					@media screen and (max-width: 767px) {
 						font-size: rem(19px);
 						padding-left: 15px;
 						padding-right: 15px;
-						outline-offset: -6px;
 					}
 					&:focus {
 						outline-color: var(--primary);
@@ -66,9 +65,6 @@ export default {
 				}
 				&:not(:last-child) {
 					margin-right: rem(15px);
-					@media screen and (max-width: 575px) {
-						margin-right: rem(0px);
-					}
 				}
 				&:last-child {
 					margin-left: rem(20px);
@@ -81,7 +77,7 @@ export default {
 						content: '';
 						position: absolute;
 						width: 2px;
-						height: 15px;
+						height: 20px;
 						background: var(--secondary);
 						top: 50%;
 						left: 45.45%;
