@@ -1,10 +1,10 @@
 <template>
 	<div class="baseSearchlist__item">
-		<!-- <base-video-modal
+		<base-video-modal
             @closeVideoModal="closeModal"
             :is-show="showModal"
             :video-url="videoUrlSet"
-        ></base-video-modal> -->
+        ></base-video-modal>
 		<div class="baseSearchlist__section">
 			<h2>
 				<a href="" class="baseSearchlist__section--title"> Events </a>
@@ -91,5 +91,12 @@
 </template>
 
 <script>
-export default {};
+import videoModal from '@/mixin/videoModal.js'
+import BaseVideoModal from '@/common/components/base/BaseVideoModal'
+export default {
+	mixins:[videoModal],
+	components:{
+		BaseVideoModal
+	}
+};
 </script>

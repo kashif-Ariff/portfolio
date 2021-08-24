@@ -10,9 +10,10 @@ export default {
             this.showModal = modal
             this.videoUrlSet = ""
         },
-        openModal(modal, videoUrl) {
+        openModal(videoUrl) {
             this.showModal = true
             this.videoUrlSet = videoUrl
+            console.log(this.videoUrlSet);
         }
     },
      watch:{
