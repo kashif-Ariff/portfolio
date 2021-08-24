@@ -103,6 +103,7 @@ export default {
 					},
 					768: {
 						slidesPerView: 3,
+						spaceBetween: 0,
 					},
 					501: {
 						slidesPerView: 2,
@@ -262,6 +263,10 @@ export default {
 				margin-left: 55px;
 				margin-right: 55px;
 				padding: 0 10px;
+				@media screen and (max-width: 991px) {
+					margin-left: 45px;
+					margin-right: 50px;
+				}
 				@media screen and (max-width: 767px) {
 					margin-left: 45px;
 					margin-right: 45px;
@@ -315,6 +320,12 @@ export default {
 		}
 		.pagination {
 			margin-top: rem(20px);
+			ul.pagination {
+				margin-top: rem(5px);
+			}
+			@media screen and (max-width: 767px) {
+				margin-top: rem(10px);
+			}
 		}
 	}
 }
