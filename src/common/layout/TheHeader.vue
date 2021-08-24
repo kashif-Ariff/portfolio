@@ -39,6 +39,14 @@
                     </span>
                     <span>menu</span>
                   </div>
+                  <div class="nav-search">
+                    <router-link to="`/${$i18n.locale}/search`">
+                      <base-svg-icon
+                            icon-id="headersearch_icon"
+                            icon-viewbox="0 0 512 512">
+                      </base-svg-icon>
+                    </router-link>
+                  </div>
                   <div class="nav-lang">
                     <span>
                       <a href="#">العربية</a>
@@ -789,6 +797,24 @@ nav {
           display:none;
         }
       }
+    }
+  }
+  .nav-search{
+    position:relative;
+    &:after{
+      position: absolute;
+      left: auto;
+      top: 50%;
+      bottom: -20px;
+      width: 0.5px;
+      background-color: #fff;
+      height: 17px;
+      transform: translateY(-50%);
+      content: "";
+      right: -15px;
+    }
+    /deep/svg{
+      width:21px;
     }
   }
 }
