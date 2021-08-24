@@ -1,171 +1,190 @@
 <template>
-  <div>
-    <BaseIcons />
-    <the-menu @close="closeMenu"></the-menu>
-    <FixedHeader :threshold="150">
-      <header class="">
-        <nav class="nav">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-lg-6">
-                <div class="nav-logo">
-                  <img src="@/assets/images/home/logo-one.png" alt="" />
-                  <img src="@/assets/images/home/logo-two.png" alt="" />
-                </div>
-              </div>
+	<div>
+		<BaseIcons />
+		<the-menu @close="closeMenu"></the-menu>
+		<FixedHeader :threshold="150">
+			<header class="">
+				<nav class="nav">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-lg-6">
+								<div class="nav-logo">
+									<img
+										src="@/assets/images/home/logo-one.png"
+										alt=""
+									/>
+									<img
+										src="@/assets/images/home/logo-two.png"
+										alt=""
+									/>
+								</div>
+							</div>
 
-              <div class="col-12 col-lg-6">
-                <div class="nav-content">
-                  <div class="nav-login login-modal-btn">
-                    <!-- <i class="fa fa-user-o"></i> -->
-                    <vue-fontawesome icon="user-o"></vue-fontawesome>
-                    <span>login</span>
-                  </div>
-                  <div class="nav-services" @click="isService = !isService" :class="isService?'active':''">
-                    <span class="iconCustom">
-                      <base-svg-icon
-                        icon-id="service-icon"
-                        icon-viewbox="0 0 87.1 87.11"
-                      ></base-svg-icon>
-                    </span>
-                    <span><a href="#">our services</a></span>
-                  </div>
-                  <div class="nav-menu" @click="openMenu">
-                    <span class="iconCustom">
-                      <base-svg-icon
-                        icon-id="header-menu"
-                        icon-viewbox="0 0 54.76 41.87"
-                      ></base-svg-icon>
-                    </span>
-                    <span>menu</span>
-                  </div>
-                  <div class="nav-search">
-                    <router-link to="`/${$i18n.locale}/search`">
-                      <base-svg-icon
-                            icon-id="headersearch_icon"
-                            icon-viewbox="0 0 512 512">
-                      </base-svg-icon>
-                    </router-link>
-                  </div>
-                  <div class="nav-lang">
-                    <span>
-                      <a href="#">العربية</a>
-                    </span>
-                  </div>
-                  <span v-if="isService" @click="isService = false">
-                    <svg
-                      id="close-srv"
-                      viewBox="0 0 311 311.07733"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="m16.035156 311.078125c-4.097656 0-8.195312-1.558594-11.308594-4.695313-6.25-6.25-6.25-16.382812 0-22.632812l279.0625-279.0625c6.25-6.25 16.382813-6.25 22.632813 0s6.25 16.382812 0 22.636719l-279.058594 279.058593c-3.136719 3.117188-7.234375 4.695313-11.328125 4.695313zm0 0"
-                      />
-                      <path
-                        d="m295.117188 311.078125c-4.097657 0-8.191407-1.558594-11.308594-4.695313l-279.082032-279.058593c-6.25-6.253907-6.25-16.386719 0-22.636719s16.382813-6.25 22.636719 0l279.058594 279.0625c6.25 6.25 6.25 16.382812 0 22.632812-3.136719 3.117188-7.230469 4.695313-11.304687 4.695313zm0 0"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </header>
-    </FixedHeader>
-    <login-popup></login-popup>
-    <services :isOpen="isService"></services>
-  </div>
+							<div class="col-12 col-lg-6">
+								<div class="nav-content">
+									<div class="nav-login login-modal-btn">
+										<!-- <i class="fa fa-user-o"></i> -->
+										<vue-fontawesome
+											icon="user-o"
+										></vue-fontawesome>
+										<span>login</span>
+									</div>
+									<div
+										class="nav-services"
+										@click="isService = !isService"
+										:class="isService ? 'active' : ''"
+									>
+										<span class="iconCustom">
+											<base-svg-icon
+												icon-id="service-icon"
+												icon-viewbox="0 0 87.1 87.11"
+											></base-svg-icon>
+										</span>
+										<span
+											><a href="#">our services</a></span
+										>
+									</div>
+									<div class="nav-menu" @click="openMenu">
+										<span class="iconCustom">
+											<base-svg-icon
+												icon-id="header-menu"
+												icon-viewbox="0 0 54.76 41.87"
+											></base-svg-icon>
+										</span>
+										<span>menu</span>
+									</div>
+									<div class="nav-search">
+										<router-link
+											:to="`/${$i18n.locale}/search`"
+										>
+											<base-svg-icon
+												icon-id="headersearch_icon"
+												icon-viewbox="0 0 512 512"
+											>
+											</base-svg-icon>
+										</router-link>
+									</div>
+									<div class="nav-lang">
+										<span>
+											<a href="#">العربية</a>
+										</span>
+									</div>
+									<span
+										v-if="isService"
+										@click="isService = false"
+									>
+										<svg
+											id="close-srv"
+											viewBox="0 0 311 311.07733"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="m16.035156 311.078125c-4.097656 0-8.195312-1.558594-11.308594-4.695313-6.25-6.25-6.25-16.382812 0-22.632812l279.0625-279.0625c6.25-6.25 16.382813-6.25 22.632813 0s6.25 16.382812 0 22.636719l-279.058594 279.058593c-3.136719 3.117188-7.234375 4.695313-11.328125 4.695313zm0 0"
+											/>
+											<path
+												d="m295.117188 311.078125c-4.097657 0-8.191407-1.558594-11.308594-4.695313l-279.082032-279.058593c-6.25-6.253907-6.25-16.386719 0-22.636719s16.382813-6.25 22.636719 0l279.058594 279.0625c6.25 6.25 6.25 16.382812 0 22.632812-3.136719 3.117188-7.230469 4.695313-11.304687 4.695313zm0 0"
+											/>
+										</svg>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</header>
+		</FixedHeader>
+		<login-popup></login-popup>
+		<services :isOpen="isService"></services>
+	</div>
 </template>
 <script>
-import BaseIcons from "@/common/components/base/BaseSvgIcons.vue";
-import FixedHeader from "vue-fixed-header";
-import LoginPopup from "@/common/layout/LoginPopup.vue";
-import Services from "@/common/layout/Services.vue";
-import TheMenu from "./TheMenu.vue";
-import Menu from "@/common/layout/mixin/Menu";
+import BaseIcons from '@/common/components/base/BaseSvgIcons.vue';
+import FixedHeader from 'vue-fixed-header';
+import LoginPopup from '@/common/layout/LoginPopup.vue';
+import Services from '@/common/layout/Services.vue';
+import TheMenu from './TheMenu.vue';
+import Menu from '@/common/layout/mixin/Menu';
 export default {
-  mixins: [Menu],
-  components: {
-    BaseIcons,
-    FixedHeader,
-    LoginPopup,
-    Services,
-    TheMenu,
-  },
-  data() {
-    return {
-      isService: false,
-      isMenuOpen: false,
-    };
-  },
-  methods: {
-    changeLocale(locale) {
-      this.$i18n.locale = locale;
-      this.$router.push({
-        params: { lang: locale },
-      });
-      this.$router.go();
-    },
-  },
-  computed: {
-    otherLangText() {
-      return this.$i18n.locale === "ar" ? "English" : "العربية";
-    },
-    otherLocale() {
-      return this.$i18n.locale === "en" ? "ar" : "en";
-    },
-  },
-  watch: {},
+	mixins: [Menu],
+	components: {
+		BaseIcons,
+		FixedHeader,
+		LoginPopup,
+		Services,
+		TheMenu,
+	},
+	data() {
+		return {
+			isService: false,
+			isMenuOpen: false,
+		};
+	},
+	methods: {
+		changeLocale(locale) {
+			this.$i18n.locale = locale;
+			this.$router.push({
+				params: { lang: locale },
+			});
+			this.$router.go();
+		},
+	},
+	computed: {
+		otherLangText() {
+			return this.$i18n.locale === 'ar' ? 'English' : 'العربية';
+		},
+		otherLocale() {
+			return this.$i18n.locale === 'en' ? 'ar' : 'en';
+		},
+	},
+	watch: {},
 };
 </script>
 
 <style lang="scss" scoped>
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: 999999;
-  transition: 0.4s ease all;
-  .iconCustom {
-    display: inline-block;
-    /deep/ {
-      div {
-        display: inline-block;
-        width: 22px;
-        height: 0;
-        margin-right: rem(12px);
-      }
-    }
-  }
-  &.vue-fixed-header--isFixed {
-    background: #224156;
-    border-bottom: 1px solid #224156;
-    .nav-logo {
-      transform: scale(0.99);
-      img {
-        height: 73px;
-        transform: scale(0.9);
-        @media screen and (max-width: 575.98px) {
-          height: auto;
-        }
-        
-      }
-    }
-    nav {
-      .nav-content {
-        transform: scale(0.9);
-      }
-    }
-    @media screen and (max-width:991px){
-      top:-85px;
-    }
-    @media screen and (max-width:575px){
-      top:-70px;
-    }
-  }
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 999999;
+	transition: 0.4s ease all;
+	.iconCustom {
+		display: inline-block;
+		/deep/ {
+			div {
+				display: inline-block;
+				width: 22px;
+				height: 0;
+				margin-right: rem(12px);
+			}
+		}
+	}
+	&.vue-fixed-header--isFixed {
+		background: #224156;
+		border-bottom: 1px solid #224156;
+		.nav-logo {
+			transform: scale(0.99);
+			img {
+				height: 73px;
+				transform: scale(0.9);
+				@media screen and (max-width: 575.98px) {
+					height: auto;
+				}
+			}
+		}
+		nav {
+			.nav-content {
+				transform: scale(0.9);
+			}
+		}
+		@media screen and (max-width: 991px) {
+			top: -85px;
+		}
+		@media screen and (max-width: 575px) {
+			top: -70px;
+		}
+	}
 }
 
 // .header-div {
@@ -533,542 +552,566 @@ header {
 //   }
 // }
 
-
-
 /*-------- Animate -------------*/
 
 @keyframes pulse {
-  0% {
-    transform: scale(0.1, 0.1);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.2, 1.2);
-    opacity: 0;
-  }
+	0% {
+		transform: scale(0.1, 0.1);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.2, 1.2);
+		opacity: 0;
+	}
 }
 nav {
-  position: relative;
-  // border-bottom: 0.5px solid #f8f9fa15;
-  // padding-bottom: 5px;
-  @include prefixer(transition, all 0.2s ease, o moz wibket);
-  a{
-    font-weight:400;
-  }
-  &::after {
-    @include postionEle(0, 0, 0, absolute, $whiteColor, 45%, 100%);
-    border-bottom-right-radius: 50px;
-    content: "";
-    z-index: 0;
-    @media (max-width: 991.98px) {
-      display: none;
-    }
-  }
-  .row {
-    div {
-      &:last-child {
-        @include xxSmall {
-          padding-left: 5px;
-          padding-right: 5px;
-        }
-      }
-    }
-  }
-  .nav-logo {
-    position: relative;
-    z-index: 1;
-    padding: 7px 0;
-    transition: 0.4s ease all;
-    img {
-      transition: 0.4s ease all;
-      @media screen and (max-width:1199px){
-        max-width:275px;
-      }
-       @media screen and (max-width:991px){
-        max-width: 185px;
-        transform: scale(.9);
-        &:last-child{
-          max-height:62px;
-        }
-      }
-      &:first-child{
-          margin-right:10px;
-        }
-      @include xSmall {
-        width: 168px;
-        &:last-child {
-          @include xSmall {
-            width: 50px;
-          }
-        }
-      }
-    }
-    @media (max-width: 991px) {
-      text-align: center;
-      padding: rem(5px) 0;
-      background: #fff;
-      border-bottom-right-radius: 40px;
-      border-bottom-left-radius: 40px;
-      margin-bottom:10px;
-    }
-  }
-  .nav-content {
-    @extend %d-flex-between;
-    max-height: 100%;
-    height: 100%;
-    color: $whiteColor;
-    transition: 0.4s ease all;
-    .nav-services {
-      cursor: pointer;
-      // height: 100%;
-      display: flex;
-      align-items: center;
-      .iconCustom{
-        height:20px;
-      }
-      &.poniter {
-        pointer-events: none;
-        opacity: 0.5;
-      }
-      &:hover , &.active{
-        color:rgba(255, 255, 255, 0.5);
-        a{
-          color:rgba(255, 255, 255, 0.5);
-        }
-      }
-      @media screen and (min-width: 415px){
-        &.active{
-          pointer-events: none;
-        }
-      }
-    }
-    #close-srv {
-      width: 18px;
-      fill: $whiteColor;
-      cursor: pointer;
-      margin-right: 0;
-    }
-    svg {
-      margin-inline-end: rem(10px);
-      width: 22px;
-      fill: $whiteColor;
-      @media (max-width: 1199.98px) {
-        margin-inline-end: 0px;
-      }
-      @include xSmall {
-        width: 15px;
-      }
-      @include xxSmall {
-        display: none;
-      }
-    }
-    span {
-      text-transform: uppercase;
-      //  @include fonts($Gotham-Book, 16px);
-      font-size: rem(16px);
-      font-weight: 500;
-      @media screen and (max-width:1199px){
-        font-size:rem(14px);
-      }
-      @include xSmall {
-        font-size: rem(13px);
-      }
-      @include xxSmall {
-        font-size: rem(12px);
-        font-weight: bold;
-      }
-    }
-    .nav-login {
-      @extend %d-flex-center;
-      background-color: $mainColor;
-      height: 50px;
-      width: 138px;
-      line-height: 50px;
-      text-align: center;
-      border-radius: 25px;
-      position: relative;
-      cursor: pointer;
-      @media screen and (max-width:1199px){
-        width:110px;
-        height:45px;
-        line-height: 45px;
-      }
-      @media screen and (max-width:991px){
-        width:100px;
-        height:35px;
-        line-height: 35px;
-      }
-      @media screen and (max-width:575px){
-        height: 35px !important;
-        width: 90px !important;
-      }
-      @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
-      @include xSmall {
-        height: 49px;
-        width: 67px;
-      }
-      i {
-        font-size: rem(18px);
-        margin-inline-end: rem(10px);
-        @media screen and (max-width:1199px){
-          font-size:REM(16px);
-        }
-        @include xSmall {
-          margin-inline-end: 2px;
-          font-size: rem(14px);
-        }
-      }
-      // svg {
-      //   @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
-      // }
-      &:hover {
-        background-color: #fff;
-        color: $secondColor;
-      }
-      // &:hover svg {
-      //   fill: $secondColor;
-      // }
-    }
-    .nav-menu {
-      cursor: pointer;
-      position: relative;
-      // height: 100%;
-      display: flex;
-      align-items: center;
-      &::before {
-        @include postionEle(
-          50%,
-          -20px,
-          // -22%,
-          auto,
-          absolute,
-          $whiteColor,
-          0.5px,
-          17px
-        );
-        transform: translateY(-50%);
-        content: "";
-        @include large {
-          left: -9px;
-        }
-        @include xSmall {
-          display: none;
-        }
-      }
-      &::after {
-        @include postionEle(
-          50%,
-          auto,
-          -20px,
-          // -21%,
-          absolute,
-          $whiteColor,
-          0.5px,
-          17px
-        );
-        transform: translateY(-50%);
-        content: "";
-        right: -20px;
-        @include large {
-          right: -9px;
-        }
-        @include xSmall {
-          display: none;
-        }
-      }
-      &:hover{
-        opacity:.7;
-      }
-    }
-    .nav-lang {
-      a {
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-    @media screen and (max-width:991px){
-      justify-content: space-around;
-      .nav-menu{
-        &:before , &:after{
-          display:none;
-        }
-      }
-    }
-  }
-  .nav-search{
-    position:relative;
-    &:after{
-      position: absolute;
-      left: auto;
-      top: 50%;
-      bottom: -20px;
-      width: 0.5px;
-      background-color: #fff;
-      height: 17px;
-      transform: translateY(-50%);
-      content: "";
-      right: -15px;
-    }
-    /deep/svg{
-      width:21px;
-    }
-  }
+	position: relative;
+	// border-bottom: 0.5px solid #f8f9fa15;
+	// padding-bottom: 5px;
+	@include prefixer(transition, all 0.2s ease, o moz wibket);
+	a {
+		font-weight: 400;
+	}
+	&::after {
+		@include postionEle(0, 0, 0, absolute, $whiteColor, 45%, 100%);
+		border-bottom-right-radius: 50px;
+		content: '';
+		z-index: 0;
+		@media (max-width: 991.98px) {
+			display: none;
+		}
+	}
+	.row {
+		div {
+			&:last-child {
+				@include xxSmall {
+					padding-left: 5px;
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+	.nav-logo {
+		position: relative;
+		z-index: 1;
+		padding: 7px 0;
+		transition: 0.4s ease all;
+		img {
+			transition: 0.4s ease all;
+			@media screen and (max-width: 1199px) {
+				max-width: 275px;
+			}
+			@media screen and (max-width: 991px) {
+				max-width: 185px;
+				transform: scale(0.9);
+				&:last-child {
+					max-height: 62px;
+				}
+			}
+			&:first-child {
+				margin-right: 10px;
+			}
+			@include xSmall {
+				width: 168px;
+				&:last-child {
+					@include xSmall {
+						width: 50px;
+					}
+				}
+			}
+		}
+		@media (max-width: 991px) {
+			text-align: center;
+			padding: rem(5px) 0;
+			background: #fff;
+			border-bottom-right-radius: 40px;
+			border-bottom-left-radius: 40px;
+			margin-bottom: 10px;
+		}
+	}
+	.nav-content {
+		@extend %d-flex-between;
+		max-height: 100%;
+		height: 100%;
+		color: $whiteColor;
+		transition: 0.4s ease all;
+		.nav-services {
+			cursor: pointer;
+			// height: 100%;
+			display: flex;
+			align-items: center;
+			.iconCustom {
+				height: 20px;
+			}
+			&.poniter {
+				pointer-events: none;
+				opacity: 0.5;
+			}
+			&:hover,
+			&.active {
+				color: rgba(255, 255, 255, 0.5);
+				a {
+					color: rgba(255, 255, 255, 0.5);
+				}
+			}
+			@media screen and (min-width: 415px) {
+				&.active {
+					pointer-events: none;
+				}
+			}
+		}
+		#close-srv {
+			width: 18px;
+			fill: $whiteColor;
+			cursor: pointer;
+			margin-right: 0;
+		}
+		svg {
+			margin-inline-end: rem(10px);
+			width: 22px;
+			fill: $whiteColor;
+			@media (max-width: 1199.98px) {
+				margin-inline-end: 0px;
+			}
+			@include xSmall {
+				width: 15px;
+			}
+			@include xxSmall {
+				display: none;
+			}
+		}
+		span {
+			text-transform: uppercase;
+			//  @include fonts($Gotham-Book, 16px);
+			font-size: rem(16px);
+			font-weight: 500;
+			@media screen and (max-width: 1199px) {
+				font-size: rem(14px);
+			}
+			@include xSmall {
+				font-size: rem(13px);
+			}
+			@include xxSmall {
+				font-size: rem(12px);
+				font-weight: bold;
+			}
+		}
+		.nav-login {
+			@extend %d-flex-center;
+			background-color: $mainColor;
+			height: 50px;
+			width: 138px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 25px;
+			position: relative;
+			cursor: pointer;
+			@media screen and (max-width: 1199px) {
+				width: 110px;
+				height: 45px;
+				line-height: 45px;
+			}
+			@media screen and (max-width: 991px) {
+				width: 100px;
+				height: 35px;
+				line-height: 35px;
+			}
+			@media screen and (max-width: 575px) {
+				height: 35px !important;
+				width: 90px !important;
+			}
+			@include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
+			@include xSmall {
+				height: 49px;
+				width: 67px;
+			}
+			i {
+				font-size: rem(18px);
+				margin-inline-end: rem(10px);
+				@media screen and (max-width: 1199px) {
+					font-size: REM(16px);
+				}
+				@include xSmall {
+					margin-inline-end: 2px;
+					font-size: rem(14px);
+				}
+			}
+			// svg {
+			//   @include prefixer(transition, all 0.3s ease-in-out, o moz wibket);
+			// }
+			&:hover {
+				background-color: #fff;
+				color: $secondColor;
+			}
+			// &:hover svg {
+			//   fill: $secondColor;
+			// }
+		}
+		.nav-menu {
+			cursor: pointer;
+			position: relative;
+			// height: 100%;
+			display: flex;
+			align-items: center;
+			&::before {
+				@include postionEle(
+					50%,
+					-20px,
+					// -22%,
+					auto,
+					absolute,
+					$whiteColor,
+					0.5px,
+					17px
+				);
+				transform: translateY(-50%);
+				content: '';
+				@include large {
+					left: -9px;
+				}
+				@include xSmall {
+					display: none;
+				}
+			}
+			&::after {
+				@include postionEle(
+					50%,
+					auto,
+					-20px,
+					// -21%,
+					absolute,
+					$whiteColor,
+					0.5px,
+					17px
+				);
+				transform: translateY(-50%);
+				content: '';
+				right: -20px;
+				@include large {
+					right: -9px;
+				}
+				@include xSmall {
+					display: none;
+				}
+			}
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		.nav-lang {
+			a {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		@media screen and (max-width: 991px) {
+			justify-content: space-around;
+			.nav-menu {
+				&:before,
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+	.nav-search {
+		position: relative;
+		&:after {
+			position: absolute;
+			left: auto;
+			top: 50%;
+			bottom: -20px;
+			width: 0.5px;
+			background-color: #fff;
+			height: 17px;
+			transform: translateY(-50%);
+			content: '';
+			right: -15px;
+		}
+		/deep/svg {
+			width: 21px;
+		}
+		@media screen and (max-width: 1199px) {
+			&::after {
+				right: -10px;
+			}
+			/deep/ svg {
+				width: 18px;
+			}
+		}
+		@media screen and (max-width: 991px) {
+			&::after {
+				display: none;
+			}
+		}
+		&:hover {
+			opacity: 0.8;
+		}
+	}
 }
 
 .login {
-  display: none;
-  position: absolute;
-  top: 22px;
-  width: 75%;
-  z-index: 9999;
-  margin: auto;
-  left: 0;
-  right: 0;
-  @include medium {
-    width: 90%;
-  }
-  @include xSmall {
-    width: 95%;
-    .row {
-      padding: 0 10px;
-    }
-  }
-  .login-info {
-    padding: 0px rem(60px);
-    padding-top: rem(39px);
-    padding-bottom: rem(85px);
-    background-color: $whiteColor;
-    text-align: center;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    @media (max-width: 991.98px) {
-      padding-bottom: rem(56px);
-    }
-    @include small_medium {
-      border-radius: 25px !important;
-      padding-inline-end: rem(20px);
-      padding-inline-start: rem(20px);
-    }
-    #close-login {
-      display: none;
-      width: 50px;
-      fill: $secondColor;
-      @include small_medium {
-        cursor: pointer;
-        display: inline-block;
-        position: absolute;
-        right: 8px;
-        top: 6px;
-        @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
-        &:hover {
-          transform: scale(0.7);
-        }
-      }
-      @include xSmall {
-        width: 35px;
-      }
-    }
-    h2 {
-      //  @include fonts($Gotham-bold, 42px);
-      font-size: rem(42px);
-      font-weight: 700;
-      color: $thirdColor;
-      margin-bottom: rem(60px);
-      text-transform: uppercase;
-      @media (max-width: 991.98px) {
-        font-size: rem(30px);
-        margin-bottom: rem(38px);
-      }
-      @include small_medium {
-        margin-bottom: rem(25px);
-      }
-    }
-    form {
-      @extend %d-flex-center-column;
-      div {
-        width: 100%;
-        background-color: $bg-input;
-        position: relative;
-        border-radius: 20px;
-        &:first-child {
-          svg {
-            top: 22px;
-          }
-        }
-        &:last-of-type {
-          margin-top: rem(39px);
-          margin-bottom: rem(39px);
-          @include small_medium {
-            margin-top: rem(20px);
-            margin-bottom: rem(20px);
-          }
-          svg {
-            width: 22px;
-            fill: $secondColor;
-            &:last-of-type {
-              left: auto;
-              right: 18px;
-              cursor: pointer;
-              width: 25px;
-              top: 23px;
-            }
-          }
-        }
-        input {
-          // @include fonts($Gotham-Book, 21px);
-          font-size: rem(21px);
-          font-weight: 500;
-          background-color: inherit;
-          color: $thirdColor;
-          padding-inline-start: rem(53px);
-          padding-inline-end: rem(50px);
-          border-radius: 10px;
-          height: 62px;
-          margin: auto;
-          width: 100%;
-          position: relative;
-          @include small_medium {
-            padding-inline-start: rem(44px);
-            padding-inline-end: rem(44px);
-          }
-          &::placeholder {
-            //   @include fonts($Gotham-Book, 21px);
-            font-weight: 500;
-            font-size: rem(21px);
-            color: $thirdColor;
-            @include small_medium {
-              font-size: rem(14px);
-            }
-          }
-        }
-        svg {
-          fill: $secondColor;
-          width: 25px;
-          position: absolute;
-          top: 16px;
-          z-index: 1;
-          left: 17px;
-          @include small_medium {
-            width: 20px;
-            top: 24px;
-          }
-        }
-      }
-      a {
-        //    @include fonts($Gotham-bold, 24px);
-        font-size: rem(24px);
-        font-weight: 700;
-        color: $thirdColor;
-        // margin-top: 28px;
-        margin-top: 2px;
-        &:hover {
-          text-decoration: underline;
-        }
-        @include small_medium {
-          margin-top: rem(15px);
-          font-size: rem(18px);
-        }
-      }
-      button {
-        @extend %d-flex-center;
-        margin-top: rem(35px);
-        background-color: $mainColor;
-        //    @include fonts($Gotham-Book, 18px);
-        font-size: rem(18px);
-        font-weight: 500;
-        @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
-        &:hover {
-          background-color: $thirdColor;
-        }
-        @include small_medium {
-          margin-top: rem(15px);
-        }
-      }
-      #sing-up {
-        display: none;
-        @include small_medium {
-          display: block;
-        }
-      }
-    }
-  }
-  .login-img {
-    padding: 0;
-    background-image: url("../../assets/images/home/login-img.png");
-    // height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    text-align: center;
-    z-index: 1;
-    @include small_medium {
-      display: none;
-    }
-    &::after {
-      @include postionEle(0, 0, 0, absolute, $opacity-color, 100%, 100%);
-      content: "";
-      z-index: -1;
-      border-top-right-radius: 25px;
-      border-bottom-right-radius: 25px;
-    }
-    svg {
-      width: 50px;
-      fill: $whiteColor;
-      display: block;
-      margin-left: auto;
-      cursor: pointer;
-      margin-inline-end: rem(15px);
-      margin-top: rem(30px);
-      @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
-      &:hover {
-        transform: scale(0.7);
-      }
-    }
-    h2 {
-      text-transform: uppercase;
-      // margin-top: 150px;
-      margin-top: rem(75px);
-      //  @include fonts($Gotham-bold, 42px);
-      font-weight: 700;
-      font-size: rem(42px);
-      color: $whiteColor;
-      @media (max-width: 991.98px) {
-        font-size: rem(30px);
-        margin-top: rem(61px);
-      }
-    }
-    p {
-      //  @include fonts($Gotham-Light, 24px);
-      font-weight: 300;
-      font-size: rem(24px);
-      @include medium {
-        font-size: rem(18px);
-      }
-      color: $whiteColor;
-      margin: rem(34px) 0;
-    }
-    button {
-      border: 1px solid $whiteColor;
-      background-color: transparent;
-      @extend %d-flex-center;
-      margin: auto;
-      //  @include fonts($Gotham-Book, 18px);
-      font-size: rem(18px);
-      font-weight: 500;
-      @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
-      &:hover {
-        // background-color: #009bde9a;
-        // border: none;
-        // opacity: .5;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-      }
-    }
-  }
+	display: none;
+	position: absolute;
+	top: 22px;
+	width: 75%;
+	z-index: 9999;
+	margin: auto;
+	left: 0;
+	right: 0;
+	@include medium {
+		width: 90%;
+	}
+	@include xSmall {
+		width: 95%;
+		.row {
+			padding: 0 10px;
+		}
+	}
+	.login-info {
+		padding: 0px rem(60px);
+		padding-top: rem(39px);
+		padding-bottom: rem(85px);
+		background-color: $whiteColor;
+		text-align: center;
+		border-top-left-radius: 25px;
+		border-bottom-left-radius: 25px;
+		@media (max-width: 991.98px) {
+			padding-bottom: rem(56px);
+		}
+		@include small_medium {
+			border-radius: 25px !important;
+			padding-inline-end: rem(20px);
+			padding-inline-start: rem(20px);
+		}
+		#close-login {
+			display: none;
+			width: 50px;
+			fill: $secondColor;
+			@include small_medium {
+				cursor: pointer;
+				display: inline-block;
+				position: absolute;
+				right: 8px;
+				top: 6px;
+				@include prefixer(
+					transition,
+					all 0.3s ease-in-out,
+					o wibket moz
+				);
+				&:hover {
+					transform: scale(0.7);
+				}
+			}
+			@include xSmall {
+				width: 35px;
+			}
+		}
+		h2 {
+			//  @include fonts($Gotham-bold, 42px);
+			font-size: rem(42px);
+			font-weight: 700;
+			color: $thirdColor;
+			margin-bottom: rem(60px);
+			text-transform: uppercase;
+			@media (max-width: 991.98px) {
+				font-size: rem(30px);
+				margin-bottom: rem(38px);
+			}
+			@include small_medium {
+				margin-bottom: rem(25px);
+			}
+		}
+		form {
+			@extend %d-flex-center-column;
+			div {
+				width: 100%;
+				background-color: $bg-input;
+				position: relative;
+				border-radius: 20px;
+				&:first-child {
+					svg {
+						top: 22px;
+					}
+				}
+				&:last-of-type {
+					margin-top: rem(39px);
+					margin-bottom: rem(39px);
+					@include small_medium {
+						margin-top: rem(20px);
+						margin-bottom: rem(20px);
+					}
+					svg {
+						width: 22px;
+						fill: $secondColor;
+						&:last-of-type {
+							left: auto;
+							right: 18px;
+							cursor: pointer;
+							width: 25px;
+							top: 23px;
+						}
+					}
+				}
+				input {
+					// @include fonts($Gotham-Book, 21px);
+					font-size: rem(21px);
+					font-weight: 500;
+					background-color: inherit;
+					color: $thirdColor;
+					padding-inline-start: rem(53px);
+					padding-inline-end: rem(50px);
+					border-radius: 10px;
+					height: 62px;
+					margin: auto;
+					width: 100%;
+					position: relative;
+					@include small_medium {
+						padding-inline-start: rem(44px);
+						padding-inline-end: rem(44px);
+					}
+					&::placeholder {
+						//   @include fonts($Gotham-Book, 21px);
+						font-weight: 500;
+						font-size: rem(21px);
+						color: $thirdColor;
+						@include small_medium {
+							font-size: rem(14px);
+						}
+					}
+				}
+				svg {
+					fill: $secondColor;
+					width: 25px;
+					position: absolute;
+					top: 16px;
+					z-index: 1;
+					left: 17px;
+					@include small_medium {
+						width: 20px;
+						top: 24px;
+					}
+				}
+			}
+			a {
+				//    @include fonts($Gotham-bold, 24px);
+				font-size: rem(24px);
+				font-weight: 700;
+				color: $thirdColor;
+				// margin-top: 28px;
+				margin-top: 2px;
+				&:hover {
+					text-decoration: underline;
+				}
+				@include small_medium {
+					margin-top: rem(15px);
+					font-size: rem(18px);
+				}
+			}
+			button {
+				@extend %d-flex-center;
+				margin-top: rem(35px);
+				background-color: $mainColor;
+				//    @include fonts($Gotham-Book, 18px);
+				font-size: rem(18px);
+				font-weight: 500;
+				@include prefixer(
+					transition,
+					all 0.3s ease-in-out,
+					o wibket moz
+				);
+				&:hover {
+					background-color: $thirdColor;
+				}
+				@include small_medium {
+					margin-top: rem(15px);
+				}
+			}
+			#sing-up {
+				display: none;
+				@include small_medium {
+					display: block;
+				}
+			}
+		}
+	}
+	.login-img {
+		padding: 0;
+		background-image: url('../../assets/images/home/login-img.png');
+		// height: 100vh;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-top-right-radius: 25px;
+		border-bottom-right-radius: 25px;
+		text-align: center;
+		z-index: 1;
+		@include small_medium {
+			display: none;
+		}
+		&::after {
+			@include postionEle(0, 0, 0, absolute, $opacity-color, 100%, 100%);
+			content: '';
+			z-index: -1;
+			border-top-right-radius: 25px;
+			border-bottom-right-radius: 25px;
+		}
+		svg {
+			width: 50px;
+			fill: $whiteColor;
+			display: block;
+			margin-left: auto;
+			cursor: pointer;
+			margin-inline-end: rem(15px);
+			margin-top: rem(30px);
+			@include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
+			&:hover {
+				transform: scale(0.7);
+			}
+		}
+		h2 {
+			text-transform: uppercase;
+			// margin-top: 150px;
+			margin-top: rem(75px);
+			//  @include fonts($Gotham-bold, 42px);
+			font-weight: 700;
+			font-size: rem(42px);
+			color: $whiteColor;
+			@media (max-width: 991.98px) {
+				font-size: rem(30px);
+				margin-top: rem(61px);
+			}
+		}
+		p {
+			//  @include fonts($Gotham-Light, 24px);
+			font-weight: 300;
+			font-size: rem(24px);
+			@include medium {
+				font-size: rem(18px);
+			}
+			color: $whiteColor;
+			margin: rem(34px) 0;
+		}
+		button {
+			border: 1px solid $whiteColor;
+			background-color: transparent;
+			@extend %d-flex-center;
+			margin: auto;
+			//  @include fonts($Gotham-Book, 18px);
+			font-size: rem(18px);
+			font-weight: 500;
+			@include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
+			&:hover {
+				// background-color: #009bde9a;
+				// border: none;
+				// opacity: .5;
+				border: 1px solid rgba(255, 255, 255, 0.5);
+			}
+		}
+	}
 }
 </style>
