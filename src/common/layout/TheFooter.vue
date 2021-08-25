@@ -81,7 +81,7 @@ footer {
   position: relative;
   @media screen and (max-width:991px){
     padding-top:rem(30px);
-    margin-top:rem(50px);
+    margin-top:rem(40px);
   }
   &:after{
     content:"";
@@ -149,9 +149,8 @@ footer {
               margin-bottom: 9px;
             }
             margin-bottom: rem(33px);
-            //   @include fonts($Gotham-Book, 18px);
             font-size: rem(18px);
-            font-weight: 500;
+            font-weight: 400;
             color: var(--secondary);
           }
         }
@@ -171,7 +170,7 @@ footer {
           h6 {
             //   @include fonts($Gotham-bold, 14px);
             font-size: rem(14px);
-            font-weight: 700;
+            font-weight: 400;
             color: $thirdColor;
             margin-bottom: rem(20px);
             @include small_medium {
@@ -217,7 +216,7 @@ footer {
         h4 {
           // @include fonts($Gotham-bold, 18px);
           font-size: rem(18px);
-          font-weight: 700;
+          font-weight: 400;
           color: $thirdColor;
           margin-bottom: rem(25px);
         }

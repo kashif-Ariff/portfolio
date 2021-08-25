@@ -41,6 +41,7 @@ export default {
   position: relative;
   @media screen and (max-width:991px){
     height:275px;
+    margin-bottom: rem(30px);
   }
   &__image {
     height: 100%;

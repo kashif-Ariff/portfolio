@@ -261,6 +261,10 @@
         padding: rem(15px) rem(15px);
         padding-right: rem(28px);
         display: inline-flex;
+        @media screen and (max-width: 991px) {
+            padding: rem(10px) rem(15px);
+            padding-right: rem(20px);
+        }
         &:hover {
             opacity: 0.8;
         }

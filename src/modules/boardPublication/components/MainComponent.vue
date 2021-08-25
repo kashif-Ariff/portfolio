@@ -112,6 +112,12 @@ export default {
         margin-top: rem(80px);
         padding: rem(30px) rem(40px);
         padding-bottom:rem(40px);
+        @media screen and (max-width:991px){
+            margin-top:rem(40px);
+            box-shadow: none;
+            padding:0;
+            border:0;
+        }
     }
     /deep/{
         .pagination{

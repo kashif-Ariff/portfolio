@@ -11,14 +11,12 @@
 
       <div class="missionVision__panel--innerDetail">
         <div class="container">
-          <h2 class="missionVision__panel--title">OUR MISSION</h2>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ut
-            temporibus, vel rem aliquid velit nisi possimus eaque, omnis cumque
-            non nesciunt error, laborum blanditiis repellat libero minima
-            commodi ad! 1
-          </p>
+          <h2 class="missionVision__panel--title">OUR VISSION</h2>
+          <base-smooth-scrollbar height="170px">
+            <p>
+              Build an inclusive, collaborative, and innovative ecosystem for entrepreneurs to lay the foundation for economic opportunities in Kuwait.
+            </p>
+          </base-smooth-scrollbar>
         </div>
       </div>
     </div>
@@ -29,13 +27,11 @@
       <div class="missionVision__panel--innerDetail">
         <div class="container">
           <h2 class="missionVision__panel--title">OUR MISSION</h2>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ut
-            temporibus, vel rem aliquid velit nisi possimus eaque, omnis cumque
-            non nesciunt error, laborum blanditiis repellat libero minima
-            commodi ad! 2
-          </p>
+          <base-smooth-scrollbar height="170px">
+            <p>
+              Build a world-class institution that leverages the power of entrepreneurs to generate national economic prosperity.
+            </p>
+          </base-smooth-scrollbar>
         </div>
       </div>
     </div>
@@ -45,20 +41,12 @@
 
       <div class="missionVision__panel--innerDetail">
         <div class="container">
-          <h2 class="missionVision__panel--title">OUR MISSION</h2>
-          <!-- <a href="#" @click="closeModal()" class="cross-icon">
-            <base-svg-icon
-              icon-id="X"
-              icon-viewbox="0 0 32.991 32.992"
-            ></base-svg-icon>
-          </a> -->
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ut
-            temporibus, vel rem aliquid velit nisi possimus eaque, omnis cumque
-            non nesciunt error, laborum blanditiis repellat libero minima
-            commodi ad! 3
-          </p>
+          <h2 class="missionVision__panel--title">OUR OBJECTIVE</h2>
+          <ul>
+              <li>Create jobs for Kuwaitis in the private sector.</li>
+              <li>ncrease SME participation in the economy. </li>
+              <li>Help create a business-friendly environment or SMEs.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -68,14 +56,11 @@
 
       <div class="missionVision__panel--innerDetail">
         <div class="container">
-          <h2 class="missionVision__panel--title">OUR MISSION</h2>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ut
-            temporibus, vel rem aliquid velit nisi possimus eaque, omnis cumque
-            non nesciunt error, laborum blanditiis repellat libero minima
-            commodi ad! 4
-          </p>
+          <h2 class="missionVision__panel--title">OUR STORY</h2>
+          <base-smooth-scrollbar height="170px">
+								<p>In April 2013, the Government has enacted law number 98 of 2013 to establish a National Fund for SME Development (the “SME Fund”). The law is intended to help the country make a major stride in the efforts to support the youth, combat unemployment, and enable the private sector to drive economic growth.</p>
+                <p>As an independent public corporation, with a total capital of KD 2 billion, the SME Fund will finance up to 80 percent of capital for feasible small and medium projects submitted by Kuwaiti nationals. The law defines eligible SMEs as enterprises that employ 1 to 50 Kuwaiti workers, with financing requirements that do not exceed KD 500 thousands. </p>
+						</base-smooth-scrollbar>
         </div>
       </div>
     </div>
@@ -133,6 +118,11 @@ export default {
   .mission-vission{
     footer{
       margin-top:0;
+      background:#fff;
+    }
+    @media screen and (max-width:767px){
+      padding-top:125px;
+      background: #224156;
     }
   }
 </style>
@@ -174,6 +164,9 @@ export default {
       object-fit: cover;
       object-position: 60% center;
       z-index: 0;
+      @media screen and (max-width:767px){
+            object-position: center 32%;
+      }
     }
     &::before {
       content: "";
@@ -187,7 +180,7 @@ export default {
       z-index: 1;
       //   transition: 0.3s ease all;
     }
-
+    
     &--title {
       width: 100%;
       height: 100%;
@@ -208,7 +201,7 @@ export default {
         font-size: rem(28px);
       }
       @media screen and (max-width: 575px) {
-        font-size: rem(22px);
+        font-size: rem(24px);
       }
     }
     &--innerDetail {
@@ -219,7 +212,7 @@ export default {
       left: 50%;
       transform: translate(-50%, -50%);
       width: 100%;
-      @media screen and (max-width:991px) and (min-width:576px) and (orientation: landscape){
+      @media screen and (max-width:991px) and (min-width:768px) and (orientation: landscape){
         top: 65%;
       }
       .container {
@@ -234,12 +227,24 @@ export default {
         @media screen and (max-width:575px){
           max-width:100%;
         }
-        p {
+        ul , p {
+          color: #fff;
+          font-size: rem(28px);
+          margin-right: 30px;
           visibility: hidden;
           opacity: 0;
           position: absolute;
           bottom: -100%;
           z-index: -99;
+          @media screen and (max-width:1600px){
+            font-size: rem(25px);
+          }
+          @media screen and (max-width:991px){
+            font-size: rem(22px);
+          }
+          @media screen and (max-width:575px){
+            font-size: rem(18px);
+          }
           //   transition: 0.7s all ease-in-out;
         }
       }
@@ -255,7 +260,9 @@ export default {
     }
     &.active {
       width: 100%;
-
+      @media screen and (max-width:767px){
+        height:400px;
+      }
       cursor: unset;
       z-index: 99;
       .missionVision__panel--title {
@@ -269,20 +276,31 @@ export default {
         align-items: center;
         width: 100%;
         height: 100%;
-
         overflow-y: auto;
         transition: 2s all ease-in-out;
-        p {
-          color: #fff;
-          font-size: rem(20px);
-          margin-right: 30px;
-
+        @media screen and (max-width:767px){
+          padding:rem(20px) 0;
+        }
+        ul , p {
           opacity: 1;
           visibility: visible;
-
           position: static;
           bottom: unset;
           z-index: unset;
+        }
+        ul{
+          margin-right:0;
+          li{
+            margin-bottom:rem(8px);
+            line-height:1.1;
+            &::marker{
+              color:#fff;
+              font-size:rem(35px);
+              @media screen and (max-width:767px){
+                font-size:rem(25px);
+              }
+            }
+          }
         }
       }
       &:hover {
@@ -304,6 +322,9 @@ export default {
     &.show {
       display: inline-block;
     }
+    @media screen and (max-width:767px){
+      display: none !important;
+    }
     &:hover {
       opacity: 0.6;
     }
@@ -319,9 +340,22 @@ export default {
     @media screen and (max-width:767px){
       right: calc((100% - 540px) / 2);
     }
-    @media screen and (max-width:575px){
-      right: 15px;
-    }
+    // @media screen and (max-width:575px){
+    //   right: 15px;
+    // }
   }
+  @media screen and (max-width:767px){
+      flex-direction: column;
+      height:auto;
+      &__panel{
+        position:relative;
+        width:100%;
+        height:175px;
+        left: auto !important;
+        right: auto !important;
+        overflow-y:inherit;
+        transition:height 1s;
+      }
+    }
 }
 </style>
