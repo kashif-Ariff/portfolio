@@ -2,7 +2,7 @@
   <div class="searchWrapper" :class="isSearch ? 'active' : ''">
     <div class="overlay"></div>
     <div class="search">
-      <span @click="$emit('closeSearch')">
+      <span @click="$emit('closeSearch'),removeTag()">
         <img src="@/assets/images/home/icon/close-login.png" alt="" />
       </span>
       <div class="search-input">
@@ -88,6 +88,9 @@ export default {
       var newTag = createTag(tag, this.tags);
       this.tags.push(newTag);
     },
+    removeTag:function(){
+     this.tags=[]
+    }
   },
   mounted() {
     document.querySelector("input").focus();
