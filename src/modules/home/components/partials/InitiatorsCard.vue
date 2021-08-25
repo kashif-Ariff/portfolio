@@ -93,6 +93,7 @@ export default {
           color: $mainColor;
           display: block;
           @include prefixer(transition, all 0.3s ease-in-out, o wibket moz);
+          text-align: center;
           &:hover {
             color: $secondColor;
           }

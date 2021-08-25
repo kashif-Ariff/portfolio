@@ -184,7 +184,7 @@ export default {
   .search {
     background-color: $whiteColor;
     display: none;
-    width: 1250px;
+    max-width: 1250px;
     border-radius: 50px;
     padding: rem(60px) rem(55px);
     position: fixed;
@@ -194,11 +194,15 @@ export default {
     transform: translateY(-50%);
     margin: auto;
     z-index: 999999;
+    // @media (max-width: 1199px) {
+    //   margin:rem(20px);
+    // }
     @media (max-width: 991.98px) {
       padding: rem(80px) rem(10px) rem(20px) rem(20px);
+      border-radius: 35px;
     }
     @include small_medium {
-      width: 97%;
+      width: 95%;
     }
     > span {
       position: absolute;
@@ -239,6 +243,9 @@ export default {
         padding: rem(6px) rem(5px);
         min-height: 70px;
       }
+      @media (max-width: 575px) {
+        min-height: 50px;
+      }
       label {
         padding-inline-end: 40px;
         //    @include fonts($Gotham-bold, 25px);
@@ -247,6 +254,9 @@ export default {
         color: $mainColor;
         margin-bottom: 0px;
         position: relative;
+        @media screen and (max-width:991px){
+          padding-left:rem(15px);
+        }
         &::after {
           @include postionEle(
             50%,
@@ -294,16 +304,16 @@ export default {
               width: 36px;
             }
             @include xSmall {
-              width: 25px;
+              width: 22px;
             }
           }
         }
         @include xSmall {
-          width: 55px;
-          height: 55px;
+          width: 50px;
+          height: 47px;
           /deep/ {
             svg {
-              width: 25px;
+              width: 22px;
             }
           }
         }
@@ -358,12 +368,13 @@ export default {
       h6 {
         //    @include fonts($Gotham-bold, 18px);
         font-size: rem(18px);
-        font-weight: 700;
+        font-weight: 500;
         margin-bottom: rem(25px);
         color: $thirdColor;
       }
       @media (max-width: 991.98px) {
-        margin-top: rem(15px);
+        margin-top: rem(35px);
+        padding:0 15px;
       }
       ul {
         @media (max-width: 991.98px) {
@@ -383,6 +394,9 @@ export default {
           border-radius: 30px;
           cursor: pointer;
           transition: 0.3s all ease-in-out;
+          @media screen and (max-width:991px){
+            margin-right:rem(10px);
+          }
           &:hover {
             color: $grayOpacity;
             background-color: #212529;

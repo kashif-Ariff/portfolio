@@ -150,7 +150,7 @@ footer {
             }
             margin-bottom: rem(33px);
             font-size: rem(18px);
-            font-weight: 400;
+            font-weight: 500;
             color: var(--secondary);
           }
         }
@@ -163,18 +163,18 @@ footer {
           margin-bottom: rem(33px);
           margin-top: 12px;
           @include small_medium {
-            margin-bottom: rem(15px);
+            margin-bottom: rem(25px);
           }
         }
         div {
           h6 {
             //   @include fonts($Gotham-bold, 14px);
             font-size: rem(14px);
-            font-weight: 400;
+            font-weight: 500;
             color: $thirdColor;
             margin-bottom: rem(20px);
             @include small_medium {
-              margin-bottom: rem(7px);
+              margin-bottom: rem(10px);
             }
           }
           ul {
@@ -216,7 +216,7 @@ footer {
         h4 {
           // @include fonts($Gotham-bold, 18px);
           font-size: rem(18px);
-          font-weight: 400;
+          font-weight: 500;
           color: $thirdColor;
           margin-bottom: rem(25px);
         }

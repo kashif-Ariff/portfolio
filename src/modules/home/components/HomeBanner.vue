@@ -250,7 +250,7 @@ export default {
 				margin-bottom: rem(60px);
 				font-weight: 700;
 				@media (max-width: 991.98px) {
-					width: 90%;
+					width: 99%;
 					margin-bottom: rem(15px);
 					font-size: rem(30px);
 					line-height: 1.2;
@@ -431,7 +431,9 @@ export default {
 					}
 				}
 				span {
-					letter-spacing: 2px;
+					@media screen and (min-width:768px){
+						letter-spacing: 2px;
+					}
 					a {
 						border-bottom: 1px solid #536c7a;
 					}

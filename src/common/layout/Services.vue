@@ -352,6 +352,9 @@ export default {
         padding-inline-start: 5px;
         padding-inline-end: 5px;
       }
+      @media screen and (max-width:575px){
+        padding:0 15px;
+      }
     }
 
     .drop-down-itmes {
@@ -360,9 +363,10 @@ export default {
       padding: rem(22px) rem(50px);
       //  height: 110px;
       @media (max-width: 1600px) {
-           padding: rem(15px) rem(35px);
+           padding: 15px rem(35px);
       }
       @include small_medium {
+        border-radius: 21px;
         margin-bottom: rem(15px);
       }
 
@@ -525,6 +529,11 @@ export default {
         width: 150px;
         margin:rem(25px) auto auto auto;
       }
+      @media screen and (max-width:575px){
+        width:100%;
+        height: 54px;
+        line-height: 54px;
+      }
       @extend %d-flex-center;
       cursor: pointer;
       @include prefixer(transition, all 0.5s ease-in-out, o wibket moz);
@@ -542,10 +551,13 @@ export default {
         svg {
           fill: $whiteColor;
           width: 30px;
+          @media screen and (max-width:767px){
+            width:25px;
+          }
         }
       }
     }
-    @media screen and (max-width:991px){
+    @media screen and (max-width:767px){
       .col-12:not(:last-child){
         border-bottom:1px solid;
         padding-bottom:10px;

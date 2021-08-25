@@ -601,7 +601,7 @@ export default {
 			padding-right: rem(42px);
 			position: relative;
 			line-height: 1.2;
-			white-space: pre-wrap;
+			// white-space: pre-wrap;
 			font-weight: 400;
 			border-radius: 40px !important;
 			outline: none;
@@ -609,7 +609,7 @@ export default {
 				padding-left: 35px;
 				padding-right: 30px;
 				@media screen and (max-width: 767px) {
-					padding-left: 30px;
+					padding-left: 35px;
 					padding-right: 14px;
 				}
 			}
@@ -629,7 +629,7 @@ export default {
 				top: 50%;
 				transform: translateY(-50%);
 				@media screen and (max-width: 767px) {
-					left: 12px;
+					left: 14px;
 				}
 			}
 			.card-header {

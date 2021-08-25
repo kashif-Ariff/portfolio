@@ -367,11 +367,14 @@ export default {
       //  padding-bottom: 40px;
       top: 50%;
       transform: translateY(-50%);
+      @media screen and (max-width: 1199px) {
+        width: 93%;
+      }
      @media screen and (max-width:1025px){
-        margin:0 40px;
+        margin:40px auto;
      }
       @media screen and (max-width: 767px) {
-        max-width: 80%;
+        width: 80%;
       }
       //  @include medium {
       //    max-width: 80%;
@@ -386,15 +389,15 @@ export default {
         padding: rem(110px) rem(96px);
         background-color: $whiteColor;
         text-align: center;
-        border-top-left-radius: 25px;
-        border-bottom-left-radius: 25px;
+        border-top-left-radius: 33px;
+        border-bottom-left-radius: 33px;
         display: flex;
         flex-direction: column;
         @media screen and (max-width:1600px){
           padding: rem(70px);
         }
         @media (max-width: 991.98px) {
-          padding-bottom: 56px;
+          padding-bottom: rem(35px);
         }
         @include small_medium {
           border-radius: 25px !important;
@@ -406,6 +409,7 @@ export default {
           width: 50px;
           fill: $secondColor;
           @include small_medium {
+            width: 30px;
             cursor: pointer;
             display: inline-block;
             position: absolute;
@@ -561,8 +565,8 @@ export default {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        border-top-right-radius: 25px;
-        border-bottom-right-radius: 25px;
+        border-top-right-radius: 33px;
+        border-bottom-right-radius: 33px;
         text-align: center;
         display: flex;
         flex-direction: column;

@@ -231,6 +231,7 @@ export default {
     .cross-icon {
         display: inline-block;
         height: max-content;
+        color:#224156;
         &:hover {
             opacity: 0.6;
         }
