@@ -17,6 +17,7 @@
         "vue-i18n": "^8.25.0",
         "vue-router": "^3.5.2",
         "vue-scrollbar-live": "^5.7.1",
+        "vue-slider-component": "^3.2.14",
         "vue-smooth-scrollbar": "^0.1.2",
         "vue-typer": "^1.2.0",
         "vuescroll": "^4.17.3"
