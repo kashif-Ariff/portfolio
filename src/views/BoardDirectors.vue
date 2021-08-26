@@ -4,7 +4,7 @@
     <div class="container">
       <base-bread-crumb :items="items"></base-bread-crumb>
       <div class="boardDirector">
-        <boardOfDirectors :members="this.bod.members" class="mt-md" />
+        <boardOfDirectors :members="this.bod" class="mt-md" />
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@ export default {
   components: { boardOfDirectors },
   data() {
     return {
-      bod: bod,
+      bod,
       innerBannerDetail: {
         image: "BOD.png",
         title: "Board of directors",
@@ -37,8 +37,8 @@ export default {
   created() {
     document.body.classList.add("board-directors");
     this.$i18n.locale == "en"
-      ? (this.bod = this.bod.en)
-      : (this.bod = this.bod.ar);
+      ? (this.bod = this.bod.en.members)
+      : (this.bod = this.bod.ar.members);
   },
   mounted() {
     document.body.classList.add("board-directors");
@@ -49,11 +49,10 @@ export default {
 };
 </script>
 
-
-<style lang="scss" >
-  .board-directors{
-  footer{
-    margin-top: 0;;
+<style lang="scss">
+.board-directors {
+  footer {
+    margin-top: 0;
   }
 }
 </style>
@@ -61,9 +60,8 @@ export default {
 .boardDirector {
   position: relative;
   padding-bottom: rem(80px);
-  @media screen and (max-width:767px){
-    padding-bottom:rem(60px);
+  @media screen and (max-width: 767px) {
+    padding-bottom: rem(60px);
   }
 }
-
 </style>

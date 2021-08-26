@@ -255,6 +255,12 @@ export default {
   &__side {
     max-width: 325px;
     margin-right: auto;
+    @media screen and (max-width:767px){
+      margin-left: auto;
+    }
+    @media screen and (max-width:575px){
+          max-width: 260px;
+    }
     .rangeCard {
       margin-bottom: rem(60px);
       .title {
@@ -309,8 +315,14 @@ export default {
     justify-content: space-between;
     padding-left: rem(70px);
     flex-wrap: wrap;
+    @media screen and (max-width:767px){
+      padding-left: unset;
+    }
     .projects{
         width:50%;
+        @media screen and (max-width:360px) {
+          width: 100%;
+        }
     }
   }
 }

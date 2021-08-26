@@ -1,5 +1,5 @@
 <template>
-  <div> 
+  <div>
     <div class="swiper-container" ref="members" v-show="!showModal">
       <div class="swiper-wrapper">
         <memberItem
@@ -14,24 +14,20 @@
       </div>
     </div>
 
-    <transition name="fade">
-      <div v-if="showName && !showModal" class="member">
-        <div class="text-center mt-md">
-          <h2 class="heading-secondary" v-html="currentMember.name"></h2>
-          <p class="mt-sm" v-html="currentMember.position"></p>
-        </div>
+    <div v-if="showName && !showModal" class="member">
+      <div class="text-center mt-md">
+        <h2 class="heading-secondary" v-html="currentMember.name"></h2>
+        <p class="mt-sm" v-html="currentMember.position"></p>
       </div>
-    </transition>
+    </div>
 
-    <transition name="fade">
-      <memberModal
-        v-if="showModal"
-        :member="currentMember"
-        :members="members"
-        @memberClick="modalMemberClick"
-        @close="showModal = false"
-      />
-    </transition>
+    <memberModal
+      v-if="showModal"
+      :member="currentMember"
+      :members="members"
+      @memberClick="modalMemberClick"
+      @close="showModal = false"
+    />
   </div>
 </template>
 
@@ -84,6 +80,7 @@ export default {
       } else {
         this.swiper.slideTo(idx);
       }
+      console.log(idx);
       //  if (window.innerWidth < 992) {
 
       //  } else {
@@ -107,7 +104,7 @@ export default {
       observer: true,
       observeParents: true,
       slideToClickedSlide: false,
-    loop: true,
+      // loop: true,
       breakpoints: {
         992: {
           spaceBetween: 80,
@@ -133,6 +130,15 @@ export default {
       this.currentMember = this.members[this.swiper.activeIndex];
       this.showName = true;
     });
+  },
+  watch: {
+    showModal: function (val) {
+      if (val) {
+        document.querySelector("body").classList.add("modal-open-bord");
+      } else {
+        document.querySelector("body").classList.remove("modal-open-bord");
+      }
+    },
   },
 };
 </script>
@@ -166,8 +172,8 @@ export default {
     line-height: 1;
     margin-bottom: 5px;
     color: #224156;
-    @media screen and (max-width:1600px){
-      font-size:rem(32px);
+    @media screen and (max-width: 1600px) {
+      font-size: rem(32px);
     }
   }
   p {
@@ -175,7 +181,7 @@ export default {
     font-weight: 400;
     opacity: 0.6;
     margin: 0;
-    color: #7A8D9A;
+    color: #7a8d9a;
     line-height: 1.2;
     @media screen and (max-width: 991px) {
       font-size: rem(20px);

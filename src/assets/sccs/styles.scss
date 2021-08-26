@@ -32,6 +32,17 @@ p {
 	color: #647a88;
 }
 
+
+.modal-open-bord{
+	.breadCrumb{
+		display: none;
+	}
+	.boardDirector{
+		padding: 0px;
+	}
+}
+
+
 .custom-btn {
 	text-transform: uppercase;
 	width: 230px;

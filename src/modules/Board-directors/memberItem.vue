@@ -1,6 +1,6 @@
 <template>
   <div
-    class="swiper-slide" 
+    class="swiper-slide"
     @mouseenter="enter"
     @mouseleave="$emit('leave', member)"
     @click="
@@ -49,7 +49,7 @@ export default {
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
   transform: scale(0.86);
-  box-shadow: 0px 6px 13px 3px rgba($color: black, $alpha: .25);
+  box-shadow: 0px 6px 13px 3px rgba($color: black, $alpha: 0.25);
   //   width: 280px !important;
   @media screen and (max-width: 575px) {
     height: 250px;

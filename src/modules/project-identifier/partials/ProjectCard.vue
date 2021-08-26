@@ -107,6 +107,9 @@ export default {
     height: 170px;
     display: flex;
     align-items: flex-end;
+    // @media screen and (max-width: 575px) {
+    //   height: 125px;
+    // }
     @media screen and (min-width: 1600px) {
       max-width: 235px;
       height: 180px;
@@ -126,6 +129,10 @@ export default {
   }
   &__detail {
     list-style-type: none;
+    @media screen and (max-width: 360px) {
+      max-width: 244px;
+      margin: auto;
+    }
     &--item {
       display: flex;
       .icon {

@@ -1,6 +1,7 @@
 {
     "en": {
-        "members": [{
+        "members": [
+            {
                 "name": "Ahmed Tahous Al-Tahous",
                 "position": "Chairman of the Board of Directors",
                 "id": 1,
@@ -8,7 +9,8 @@
                 "info": [
                     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
                     "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. ",
-                    "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. ", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+                    "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. ",
+                    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
                     "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. "
                 ]
             },
@@ -56,11 +58,11 @@
                     "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. "
                 ]
             }
-
         ]
     },
     "ar": {
-        "members": [{
+        "members": [
+            {
                 "name": "أحمد طاحوس الطاحوس",
                 "position": "رئيس مجلس الإدارة",
                 "id": 1,
@@ -114,7 +116,6 @@
                 "education": " شهادة البكالوريوس في إدارة الأعمال بتخصص في المالية من جامعة الكويت ",
                 "work": "<strong>الخبرة العملية:</strong> خبرته تمتد إلى 12 عاما في الهيئة العامة للاستثمار في قطاع الاحتياطي العام، شارك في العام 2010 ضمن فريق  مشروع خصخصة شركة الخطوط الجوية الكويتية. يشغل منصب مدير استثمار ضمن وحدة المساهمات الخاصة بالمحافظ والصناديق الاستثمارية المحلية في الهيئة العامة للاستثمار."
             }
-
         ]
     }
 }

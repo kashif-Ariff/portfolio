@@ -1,10 +1,7 @@
 <template>
   <div class="baseInnerBanner">
     <div class="baseInnerBanner__image">
-      <img
-        :src="require(`@/assets/images/banners/${bannerDetail.image}`)"
-        alt=""
-      />
+      <img :src="require(`@/assets/images/banners/${bannerDetail.image}`)" alt="" />
     </div>
     <div class="container">
       <div
@@ -39,8 +36,8 @@ export default {
   height: 340px;
   margin-bottom: rem(60px);
   position: relative;
-  @media screen and (max-width:991px){
-    height:275px;
+  @media screen and (max-width: 991px) {
+    height: 275px;
     margin-bottom: rem(30px);
   }
   &__image {
@@ -56,11 +53,11 @@ export default {
     }
   }
   &__detail {
-    padding-top: rem(180px);
+    padding-top: rem(140px);
     text-align: center;
     z-index: 1;
     @media screen and (max-width: 1600px) {
-      padding-top: rem(230px);
+      padding-top: rem(180px);
     }
     &--justTitle {
       padding-top: rem(200px);
@@ -73,11 +70,11 @@ export default {
       color: #fff;
       text-transform: uppercase;
       font-weight: 400;
-      @media screen and (max-width:991px){
-        font-size:rem(35px);
+      @media screen and (max-width: 991px) {
+        font-size: rem(35px);
       }
-      @media screen and (max-width:575px){
-        font-size:rem(30px);
+      @media screen and (max-width: 575px) {
+        font-size: rem(30px);
       }
     }
     &--info {
@@ -86,8 +83,9 @@ export default {
       margin-top: rem(20px);
       margin-bottom: rem(10px);
       font-weight: 400;
-      @media screen and (max-width:767px){
-        font-size:rem(19px);
+      @include truncate(3);
+      @media screen and (max-width: 767px) {
+        font-size: rem(19px);
       }
     }
   }
