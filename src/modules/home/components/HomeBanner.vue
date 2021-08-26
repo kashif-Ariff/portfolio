@@ -38,7 +38,7 @@
 									erase-style="clear"
 								></vue-typer>
 							</p>
-							<span class="search-icon">
+							<span class="search-icon" @click="popUpScroll()">
 								<base-svg-icon
 									icon-id="search-icon"
 									icon-viewbox="0 0 81.49 81.49"
@@ -111,6 +111,12 @@ export default {
 			},
 			isOpenSearch: false,
 		};
+	},
+	methods: {
+		popUpScroll: function () {
+			var root = document.getElementsByTagName('html')[0];
+			root.setAttribute('class', 'hidden');
+		},
 	},
 };
 </script>
@@ -431,7 +437,7 @@ export default {
 					}
 				}
 				span {
-					@media screen and (min-width:768px){
+					@media screen and (min-width: 768px) {
 						letter-spacing: 2px;
 					}
 					a {
