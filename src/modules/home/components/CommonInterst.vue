@@ -38,7 +38,7 @@ export default {
 	data() {
 		return {
 			sliderOption: {
-				slidesPerView: 1,
+				slidesPerView: 1.2,
 				spaceBetween: 20,
 				breakpoints: {
 					1200: {

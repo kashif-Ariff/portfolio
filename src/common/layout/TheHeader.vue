@@ -759,7 +759,7 @@ nav {
 			&::before {
 				@include postionEle(
 					50%,
-					-20px,
+					-12px,
 					// -22%,
 					auto,
 					absolute,
@@ -770,7 +770,7 @@ nav {
 				transform: translateY(-50%);
 				content: '';
 				@include large {
-					left: -9px;
+					left: -6px;
 				}
 				@include xSmall {
 					display: none;
@@ -780,7 +780,7 @@ nav {
 				@include postionEle(
 					50%,
 					auto,
-					-20px,
+					-12px,
 					// -21%,
 					absolute,
 					$whiteColor,
@@ -789,9 +789,9 @@ nav {
 				);
 				transform: translateY(-50%);
 				content: '';
-				right: -20px;
+				right: -12px;
 				@include large {
-					right: -9px;
+					right: -6px;
 				}
 				@include xSmall {
 					display: none;
@@ -830,14 +830,14 @@ nav {
 			height: 17px;
 			transform: translateY(-50%);
 			content: '';
-			right: -15px;
+			right: -12px;
 		}
 		/deep/svg {
 			width: 21px;
 		}
 		@media screen and (max-width: 1199px) {
 			&::after {
-				right: -10px;
+				right: -6px;
 			}
 			/deep/ svg {
 				width: 18px;
