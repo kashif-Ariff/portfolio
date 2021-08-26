@@ -98,22 +98,22 @@ export default {
   },
   data() {
     return {
-      Employees: 0,
+      Employees: 5,
       optionsOne: {
         dotSize: 22,
-        height: 4,
+        height: 3,
         direction: "ltr",
         data: null,
         dataLabel: "label",
         dataValue: "value",
-        min: 0,
+        min: 5,
         max: 200,
         interval: 5,
       },
       Assets: 0,
       optionsTwo: {
         dotSize: 22,
-        height: 4,
+        height: 3,
         direction: "ltr",
         data: null,
         dataLabel: "label",
@@ -125,7 +125,7 @@ export default {
       Revenue: 0,
       optionsThree: {
         dotSize: 22,
-        height: 4,
+        height: 3,
         direction: "ltr",
         data: null,
         dataLabel: "label",
@@ -140,7 +140,7 @@ export default {
           title: "Small Project",
           image: "Small.png",
           employees: {
-            min: "6",
+            min: "5",
             max: "50",
           },
           assets: {
@@ -169,40 +169,40 @@ export default {
             max: "1500000",
           },
         },
-        {
-          index: 2,
-          title: "Small Project",
-          image: "Small.png",
-          employees: {
-            min: "6",
-            max: "50",
-          },
-          assets: {
-            min: 0,
-            max: "249999",
-          },
-          revenue: {
-            min: 0,
-            max: "749999",
-          },
-        },
-        {
-          index: 3,
-          title: "Medium Project",
-          image: "Medium.png",
-          employees: {
-            min: "51",
-            max: "150",
-          },
-          assets: {
-            min: "250000",
-            max: "500000",
-          },
-          revenue: {
-            min: "750000",
-            max: "1500000",
-          },
-        },
+        // {
+        //   index: 2,
+        //   title: "Small Project",
+        //   image: "Small.png",
+        //   employees: {
+        //     min: "6",
+        //     max: "50",
+        //   },
+        //   assets: {
+        //     min: 0,
+        //     max: "249999",
+        //   },
+        //   revenue: {
+        //     min: 0,
+        //     max: "749999",
+        //   },
+        // },
+        // {
+        //   index: 3,
+        //   title: "Medium Project",
+        //   image: "Medium.png",
+        //   employees: {
+        //     min: "51",
+        //     max: "150",
+        //   },
+        //   assets: {
+        //     min: "250000",
+        //     max: "500000",
+        //   },
+        //   revenue: {
+        //     min: "750000",
+        //     max: "1500000",
+        //   },
+        // },
       ],
     };
   },
@@ -248,18 +248,20 @@ export default {
     },
   },
 };
-</script>
+</script> 
 
 <style lang="scss" scoped>
 .projectIdentifier {
+  padding-top:rem(20px);
   &__side {
     max-width: 325px;
     margin-right: auto;
     @media screen and (max-width:767px){
       margin-left: auto;
+      margin-bottom:rem(40px);
     }
     @media screen and (max-width:575px){
-          max-width: 260px;
+          max-width: 85%;
     }
     .rangeCard {
       margin-bottom: rem(60px);
@@ -270,7 +272,7 @@ export default {
         text-align: center;
         margin-bottom: rem(14px);
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
         .icon {
           display: block;
@@ -294,6 +296,12 @@ export default {
         margin-bottom: rem(30px);
         font-weight: 400;
       }
+      @media screen and (max-width:767px){
+        margin-bottom:rem(30px);
+        .label{
+          margin-bottom: rem(20px);
+        }
+      }
     }
     /deep/ {
       .slide {
@@ -313,8 +321,14 @@ export default {
   &__content {
     display: flex;
     justify-content: space-between;
-    padding-left: rem(70px);
+    padding-left: rem(120px);
     flex-wrap: wrap;
+    @media screen and (max-width:1600px){
+      padding-left:rem(90px);
+    }
+    @media screen and (max-width:991px){
+      padding-left:rem(70px);
+    }
     @media screen and (max-width:767px){
       padding-left: unset;
     }
@@ -323,6 +337,12 @@ export default {
         @media screen and (max-width:360px) {
           width: 100%;
         }
+    }
+  }
+  /deep/{
+    .vue-slider-dot-tooltip-inner{
+          border-color: rgba(1, 156, 222, 1);
+        background-color: rgba(1, 156, 222, 1);
     }
   }
 }

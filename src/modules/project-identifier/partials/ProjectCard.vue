@@ -86,7 +86,7 @@ export default {
   position: relative;
   transition: 0.3s ease all;
   &.disable {
-    transform: scale(0.9);
+    // transform: scale(0.9);
     pointer-events: none;
     &::before {
       content: "";
@@ -96,35 +96,40 @@ export default {
       width: 100%;
       height: 100%;
       transition: 0.3s ease all;
-      background: rgba($color: #fff, $alpha: 0.5);
+      background: rgba($color: #fff, $alpha: 0.6);
     }
   }
   &__image {
     max-width: 225px;
-    margin-left: auto;
+    // margin-left: auto;
     margin-right: auto;
     margin-bottom: rem(25px);
     height: 170px;
     display: flex;
     align-items: flex-end;
-    // @media screen and (max-width: 575px) {
-    //   height: 125px;
-    // }
+    
     @media screen and (min-width: 1600px) {
       max-width: 235px;
       height: 180px;
+    }
+    @media screen and (max-width: 575px) {
+      height: 150px;
+      max-width: 200px;
     }
   }
   &__title {
     font-size: rem(25px);
     color: var(--secondary);
-    text-align: center;
+    padding-left:rem(15px);
     font-weight: 400;
     margin-bottom: rem(40px);
 
     @media screen and (min-width: 1600px) {
       margin-bottom: rem(50px);
       font-size: rem(30px);
+    }
+    @media screen and (max-width: 575px) {
+      font-size: rem(22px);
     }
   }
   &__detail {
@@ -139,12 +144,12 @@ export default {
         display: block;
         width: 22px;
         color: var(--primary);
-        margin-right: rem(10px);
+        margin-right: rem(15px);
       }
       .detail {
         font-size: rem(18px);
         color: var(--secondary);
-        line-height: 1.3;
+        line-height: 1.5;
       }
     }
   }

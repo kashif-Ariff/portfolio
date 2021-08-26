@@ -59,6 +59,9 @@ export default {
     @media screen and (max-width: 1600px) {
       padding-top: rem(180px);
     }
+    @media screen and (max-width: 1025px)  and (min-width:992px){
+      padding-top: rem(160px);
+    }
     &--justTitle {
       padding-top: rem(200px);
       @media screen and (max-width: 991px) {
@@ -76,6 +79,9 @@ export default {
       @media screen and (max-width: 575px) {
         font-size: rem(30px);
       }
+      @media screen and (max-width: 414px) {
+        font-size: rem(25px);
+      }
     }
     &--info {
       color: #fff;
@@ -86,6 +92,9 @@ export default {
       @include truncate(3);
       @media screen and (max-width: 767px) {
         font-size: rem(19px);
+      }
+      @media screen and (max-width: 575px) {
+        font-size: rem(16px);
       }
     }
   }
