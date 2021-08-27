@@ -57,7 +57,7 @@
 						button-id="tab_commoninterest_0"
 						class="description"
 					>
-						<div class="description__detail">
+						<div>
 							<base-smooth-scrollbar height="190px">
 								<h3>
 									Lorem ipsum dolor sit amet, consectetuer
@@ -244,16 +244,16 @@ export default {
 			}
 			.slide__card {
 				height: 196px;
-				@media screen and (max-width:1600px){
-					height:170px;
+				@media screen and (max-width: 1600px) {
+					height: 170px;
 				}
-				@media screen and (max-width:991px){
-					height:145px;
+				@media screen and (max-width: 991px) {
+					height: 145px;
 				}
 				.tab-icon {
 					width: 7rem;
 					height: 7rem;
-					@media screen and (max-width:991px){
+					@media screen and (max-width: 991px) {
 						width: 5rem;
 						height: 5rem;
 					}
@@ -294,7 +294,7 @@ export default {
 		}
 		&__body {
 			.description {
-				&__title {
+				h3 {
 					font-size: rem(21px);
 					color: var(--secondary);
 					font-weight: 400;

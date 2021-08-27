@@ -229,7 +229,7 @@ export default {
 				background-color: #fff;
 				box-shadow: -3px 1px 10px #ccc;
 				@media screen and (max-width: 991px) {
-					height: 300px;
+					height: 350px;
 				}
 				iframe {
 					width: 100%;

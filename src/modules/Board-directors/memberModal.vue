@@ -193,6 +193,9 @@ export default {
 	@media (min-width: 1200px) {
 		margin-right: 28px;
 	}
+	@media screen and (max-width: 767px) {
+		margin-right: 0;
+	}
 }
 .swiper-modal-aside {
 	flex-shrink: 0;

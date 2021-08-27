@@ -580,10 +580,17 @@ export default {
 						content: '';
 						position: absolute;
 						top: 10px;
-						left: -29px;
+						left: -24px;
 						height: 2px;
-						width: 19px;
+						width: 15px;
 						background: #019cde;
+						border-radius: 79px;
+						@media screen and (max-width: 991px) {
+							top: 8px;
+						}
+						@media screen and (max-width: 767px) {
+							top: 7px;
+						}
 					}
 					@media screen and (max-width: 767px) {
 						font-size: rem(16px);

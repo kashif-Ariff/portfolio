@@ -123,7 +123,8 @@ export default {
 				width: 100%;
 				height: 70px;
 				border-top-left-radius: 0;
-				border-bottom-left-radius: 21px;
+				border-bottom-left-radius: 34px;
+				// border-bottom-left-radius: 21px;
 			}
 			// @media (max-width: 330px) {
 			//   width: 132px;

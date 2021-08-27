@@ -62,6 +62,13 @@ export default {
 		@media screen and (max-width: 767px) {
 			margin-top: rem(50px);
 		}
+		@media screen and (max-width: 991px) {
+			/deep/ .mediaSlider__item {
+				img {
+					border-bottom-left-radius: 34px;
+				}
+			}
+		}
 	}
 	.card {
 		border-radius: 25px;

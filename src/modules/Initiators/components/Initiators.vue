@@ -203,6 +203,12 @@ export default {
 					@media screen and (max-width: 991px) {
 						margin-right: rem(20px) !important;
 					}
+					@media screen and (max-width: 767px) {
+						margin-right: rem(10px) !important;
+					}
+					@media screen and (max-width: 415px) {
+						margin-right: 0 !important;
+					}
 				}
 			}
 			.sliderNavigation {

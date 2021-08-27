@@ -254,11 +254,17 @@ export default {
 			.iconTabs__item--title {
 				font-size: rem(16px);
 				text-transform: capitalize;
+				@media screen and (max-width: 767px) {
+					font-size: rem(14px);
+				}
 			}
 			&.active {
 				.iconTabs__item--title {
 					font-size: rem(16px);
 					font-weight: 400;
+					@media screen and (max-width: 767px) {
+						font-size: rem(14px);
+					}
 				}
 			}
 			@media screen and (min-width: 1025px) {

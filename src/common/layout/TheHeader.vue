@@ -147,7 +147,7 @@ header {
 	left: 0;
 	right: 0;
 	margin: auto;
-	z-index: 999999;
+	z-index: 999;
 	transition: 0.4s ease all;
 	.iconCustom {
 		display: inline-block;
@@ -844,7 +844,7 @@ nav {
 			}
 			/deep/ svg {
 				width: 18px;
-				@media screen and (max-width:410px){
+				@media screen and (max-width: 410px) {
 					width: 14px;
 				}
 			}
