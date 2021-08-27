@@ -981,8 +981,9 @@ main {
 	}
 	&:focus,
 	&:focus-within {
-		outline: 3px dashed var(--secondary);
-		outline-offset: -1px;
+		// outline: 3px dashed var(--secondary);
+		// outline-offset: -1px;
+		outline: none;
 	}
 	.vs__actions {
 		padding-right: 0;
@@ -1270,9 +1271,12 @@ main {
 	display: flex;
 	flex-wrap: wrap;
 	&__item {
-		margin-bottom: 65px;
+		margin-bottom: rem(65px);
 		width: 100%;
 		max-width: 100%;
+		@media screen and (max-width: 767px) {
+			margin-bottom: rem(40px);
+		}
 	}
 	&__section {
 		padding: 0px rem(55px);

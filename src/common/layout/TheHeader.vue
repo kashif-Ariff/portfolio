@@ -645,6 +645,9 @@ nav {
 			align-items: center;
 			.iconCustom {
 				height: 20px;
+				@media screen and (max-width: 410px) {
+					height: 14px;
+				}
 			}
 			&.poniter {
 				pointer-events: none;
@@ -841,6 +844,9 @@ nav {
 			}
 			/deep/ svg {
 				width: 18px;
+				@media screen and (max-width:410px){
+					width: 14px;
+				}
 			}
 		}
 		@media screen and (max-width: 991px) {

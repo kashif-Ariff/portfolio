@@ -14,7 +14,7 @@
 				<a href="#" class="btn btn-default"
 					>Load more search results..</a
 				>
-			</div> 
+			</div>
 		</div>
 	</div>
 </template>
@@ -59,6 +59,9 @@ export default {
 .search {
 	.siteSearch {
 		margin-top: rem(70px);
+		@media screen and (max-width: 767px) {
+			margin-top: rem(50px);
+		}
 	}
 	.card {
 		border-radius: 25px;
@@ -74,7 +77,7 @@ export default {
 			padding-top: rem(18px);
 			padding-bottom: rem(18px);
 			padding-right: rem(50px);
-			    border-radius: 20px;
+			border-radius: 20px;
 		}
 	}
 }

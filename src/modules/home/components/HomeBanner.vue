@@ -358,7 +358,7 @@ export default {
 						63px,
 						absolute,
 						$mainColor,
-						24px
+						rem(24px)
 					);
 					content: 'Search';
 					z-index: 666;
@@ -372,12 +372,13 @@ export default {
 					}
 					@media (max-width: 991.98px) {
 						top: -17px;
-						font-size: 18px;
+						font-size: rem(18px);
+						left: 40px;
 					}
 					@include xSmall {
-						font-size: 14px;
+						font-size: rem(14px);
 						top: -11px;
-						left: 25px;
+						left: 22px;
 					}
 				}
 				p {
