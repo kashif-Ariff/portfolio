@@ -2,67 +2,69 @@
 	<div class="searchWrapper" :class="isSearch ? 'active' : ''">
 		<div class="overlay"></div>
 		<div class="search">
-			<span @click="$emit('closeSearch'), removeTag()">
+			<span class="closeIcon" @click="$emit('closeSearch'), removeTag()">
 				<img src="@/assets/images/home/icon/close-login.png" alt="" />
 			</span>
-			<div class="search-input">
-				<label>Projects... </label>
-				<vue-tags-input v-model="tag" placeholder="" :tags="tags" />
+			<base-smooth-scrollbar height="300px">
+				<div class="search-input">
+					<label>Projects... </label>
+					<vue-tags-input v-model="tag" placeholder="" :tags="tags" />
 
-				<span>
-					<base-svg-icon
-						icon-id="search-icon"
-						icon-viewbox="0 0 81.49 81.49"
-					></base-svg-icon>
-				</span>
-			</div>
+					<span>
+						<base-svg-icon
+							icon-id="search-icon"
+							icon-viewbox="0 0 81.49 81.49"
+						></base-svg-icon>
+					</span>
+				</div>
 
-			<div class="row search-list">
-				<div class="col-12 col-lg-3">
-					<h6>LATEST INTERESTS</h6>
-					<ul class="list-unstyled">
-						<li>Training</li>
-						<li>License</li>
-						<li>Investment</li>
-						<li>Marketing</li>
-						<li>lorem ipsum</li>
-						<li>lorem ipsum</li>
-					</ul>
+				<div class="row search-list">
+					<div class="col-12 col-lg-3">
+						<h6>LATEST INTERESTS</h6>
+						<ul class="list-unstyled">
+							<li>Training</li>
+							<li>License</li>
+							<li>Investment</li>
+							<li>Marketing</li>
+							<li>lorem ipsum</li>
+							<li>lorem ipsum</li>
+						</ul>
+					</div>
+					<div class="col-12 col-lg-3">
+						<h6>LATEST INTERESTS</h6>
+						<ul class="list-unstyled">
+							<li>Training</li>
+							<li>License</li>
+							<li>Investment</li>
+							<li>Marketing</li>
+							<li>lorem ipsum</li>
+							<li>lorem ipsum</li>
+						</ul>
+					</div>
+					<div class="col-12 col-lg-3">
+						<h6 class="text-capitalize">Lorem Ipsum</h6>
+						<ul class="list-unstyled">
+							<li>Lorem Ipsum</li>
+							<li>Lorem Ipsum</li>
+							<li>Lorem Ipsum</li>
+							<li>Lorem Ipsum</li>
+							<li>Lorem Ipsum</li>
+							<li>Lorem Ipsum</li>
+						</ul>
+					</div>
+					<div class="col-12 col-lg-3">
+						<h6 class="text-capitalize">Lorem Ipsum</h6>
+						<ul class="list-unstyled">
+							<li>Lorem Ipsum</li>
+							<li>Lorem Ipsum</li>
+							<li>Lorem Ipsum</li>
+							<li>Lorem Ipsum</li>
+							<li>Lorem Ipsum</li>
+							<li>Lorem Ipsum</li>
+						</ul>
+					</div>
 				</div>
-				<div class="col-12 col-lg-3">
-					<h6>LATEST INTERESTS</h6>
-					<ul class="list-unstyled">
-						<li>Training</li>
-						<li>License</li>
-						<li>Investment</li>
-						<li>Marketing</li>
-						<li>lorem ipsum</li>
-						<li>lorem ipsum</li>
-					</ul>
-				</div>
-				<div class="col-12 col-lg-3">
-					<h6 class="text-capitalize">Lorem Ipsum</h6>
-					<ul class="list-unstyled">
-						<li>Lorem Ipsum</li>
-						<li>Lorem Ipsum</li>
-						<li>Lorem Ipsum</li>
-						<li>Lorem Ipsum</li>
-						<li>Lorem Ipsum</li>
-						<li>Lorem Ipsum</li>
-					</ul>
-				</div>
-				<div class="col-12 col-lg-3">
-					<h6 class="text-capitalize">Lorem Ipsum</h6>
-					<ul class="list-unstyled">
-						<li>Lorem Ipsum</li>
-						<li>Lorem Ipsum</li>
-						<li>Lorem Ipsum</li>
-						<li>Lorem Ipsum</li>
-						<li>Lorem Ipsum</li>
-						<li>Lorem Ipsum</li>
-					</ul>
-				</div>
-			</div>
+			</base-smooth-scrollbar>
 		</div>
 	</div>
 </template>
@@ -90,6 +92,8 @@ export default {
 		},
 		removeTag: function () {
 			this.tags = [];
+			let root = document.getElementsByTagName('html')[0];
+			root.removeAttribute('class', 'hidden');
 		},
 	},
 	mounted() {
@@ -105,8 +109,6 @@ export default {
 	watch: {
 		tags: function () {
 			document.querySelector('input').focus();
-			let root = document.getElementsByTagName('html')[0];
-			root.removeAttribute('class', 'hidden');
 		},
 	},
 };
@@ -208,7 +210,7 @@ export default {
 		@include small_medium {
 			width: 95%;
 		}
-		> span {
+		span.closeIcon {
 			position: absolute;
 			top: 21px;
 			right: 16px;
@@ -425,9 +427,20 @@ export default {
 		.overlay,
 		.search {
 			display: block;
-			overflow: scroll;
-			max-height: 100%;
-			overflow-x: hidden;
+			// @media screen and (max-width: 991px) {
+			// 	overflow: scroll;
+			// 	max-height: 100%;
+			// 	overflow-x: hidden;
+			// 	&::-webkit-scrollbar {
+			// 		width: 0px;
+			// 	}
+			// 	&::-webkit-scrollbar-track {
+			// 		background: transparent;
+			// 	}
+			// 	&::-webkit-scrollbar-thumb:hover {
+			// 		background: transparent;
+			// 	}
+			// }
 		}
 	}
 }
