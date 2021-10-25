@@ -18,22 +18,17 @@ export default {
 <style lang="scss" scoped>
 .breadCrumb {
 	margin-bottom: rem(70px);
-	@media screen and (max-width: 1600px) {
-		margin-bottom: rem(50px);
-	}
-	@media screen and (max-width: 991px) {
-		margin-bottom: rem(35px);
-	}
 	/deep/ {
 		.breadcrumb {
 			background: transparent;
 			&-item {
-				color: var(--secondary);
+				position: relative;
+				color: var(--info);
 				opacity: 1;
-				font-size: rem(24px);
+				font-size: rem(14px);
+				font-weight: 500;
 				padding-right: rem(55px);
 				padding-left: rem(16px);
-				position: relative;
 				text-transform: capitalize;
 				&:first-child {
 					padding-left: 0;
@@ -48,7 +43,6 @@ export default {
 				}
 				@media screen and (max-width: 575px) {
 					font-size: rem(16px);
-					//   padding-right: rem(20px);
 				}
 				&:not(:first-child) {
 					&::before {
@@ -71,7 +65,7 @@ export default {
 					opacity: 0.6;
 					font-size: rem(24px);
 					transition: 0.3s ease all;
-					text-transform: uppercase;
+					text-transform: capitalize;
 					@media screen and (max-width: 991px) {
 						font-size: rem(22px);
 						padding-right: rem(30px);
@@ -82,7 +76,6 @@ export default {
 					}
 					@media screen and (max-width: 575px) {
 						font-size: rem(16px);
-						//   padding-right: rem(20px);
 					}
 					&:hover {
 						opacity: 1;

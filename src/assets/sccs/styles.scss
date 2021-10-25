@@ -1070,58 +1070,6 @@ main {
 }
 
 .scrollArea {
-	--barcolor: #d31b88;
-	--trackcolor: #000;
-	.scrollbar-content {
-		padding-right: 20px;
-	}
-	.scrollbar {
-		border-radius: 0 !important;
-		width: 4px !important;
-		background: var(--barcolor) !important;
-	}
-	.scrollbar-y {
-		width: 4px !important;
-		opacity: 1 !important;
-		background: var(--secondary) !important;
-		border-radius: 25px !important;
-	}
-	&__contents {
-		padding-right: rem(25px);
-	}
-	.__vuescroll {
-		.__rail-is-vertical {
-			background: var(--secondary) !important;
-			border-radius: 0 !important;
-			right: 0 !important;
-		}
-		.__bar-is-vertical {
-			border-radius: 0 !important;
-			background: var(--secondary) !important;
-			opacity: 1 !important;
-		}
-		.__bar-wrap-is-vertical {
-			background: var(--trackcolor) !important;
-			border-radius: 0 !important;
-		}
-	}
-}
-
-[data-color-theme='light'] {
-	--highlight: #eada2f;
-	--trackcolor: #fff;
-	.swiper-slide {
-		.nav-link {
-			--highlight: #eada2f;
-		}
-	}
-	.scrollArea {
-		--barcolor: #d1c12f;
-		--trackcolor: #000;
-	}
-}
-
-.scrollArea {
 	.detail {
 		padding-right: 15px;
 	}
@@ -1448,7 +1396,16 @@ main {
 		}
 	}
 }
-
+.boardDirector {
+	position: relative;
+	padding-bottom: rem(80px);
+	@media screen and (max-width: 991px) {
+		padding-bottom: rem(50px);
+	}
+	@media screen and (max-width: 767px) {
+		padding-bottom: rem(60px);
+	}
+}
 [lang='ar'] {
 	.scrollArea {
 		.detail {
