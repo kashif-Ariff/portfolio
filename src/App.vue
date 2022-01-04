@@ -17,13 +17,6 @@ export default {
 		TheHeader,
 		TheFooter,
 	},
-	created: function () {
-		console.log(this.$i18n.locale);
-		if (this.$i18n.locale == 'ar') {
-			document.getElementsByTagName('html')[0].lang = 'ar';
-			document.getElementsByTagName('html')[0].classList.add('ar');
-		}
-	},
 };
 </script>
 <style lang="scss"></style>
