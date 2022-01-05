@@ -73,9 +73,12 @@ h6 {
 }
 
 p {
-    font-size: $p;
-    margin: 0 0 rem(20px) 0;
-    line-height: 1.2;
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: "Abel", sans-serif;
+    margin-bottom: 3.125rem;
+    line-height: 1.4;
 }
 
 // Basic typography styling

@@ -2,6 +2,12 @@
 	<div class="home">
 		<div class="container">
 
+			<!-------------- main Intro Section ------------->
+
+			<main-intro />
+
+			<!-------x----- main Intro Section -------x------>
+
 			<!-------------- About US Section ------------->
 
 			<about-us />
@@ -27,11 +33,12 @@
 </template>
 
 <script>
+import mainIntro from '@/components/mainIntro.vue';
 import AboutUs from '@/components/AboutUs.vue';
 import Contact from '@/components/Contact.vue';
 import MySkills from '@/components/MySkills.vue';
 export default {
-  components: { AboutUs , Contact , MySkills },
+  components: {mainIntro, AboutUs , Contact , MySkills },
 	name: 'Home',
 };
 </script>
