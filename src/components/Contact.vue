@@ -8,33 +8,17 @@
             <div class="contact__left">
               <h4>{{title}}</h4>
               <p>{{desc}}</p>
-              <ul class="list-unstyled">
+              <ul class="list-unstyled" v-for="item in info" :key="item.id">
                 <li>
                   <div class="icon">
-                    <img src="@/assets/images/svg/user-solid.svg" class="img-fluid" alt="user">
+                    <img :src="require(`@/assets/images/svg/${item.image}`)" class="img-fluid" alt="user">
                   </div>
                 </li>
-                 <li>Name<p>kashif</p></li>
-              </ul>
-              <ul class="list-unstyled">
-                <li>
-                  <div class="icon">
-                    <img src="@/assets/images/svg/map-marker-alt-solid.svg" class="img-fluid" alt="user">
-                  </div>
-                </li>
-                 <li>Adress<p>pakistan</p></li>
-              </ul>
-              <ul class="list-unstyled">
-                <li>
-                  <div class="icon">
-                    <img src="@/assets/images/svg/envelope-solid.svg" class="img-fluid" alt="user">
-                  </div>
-                </li>
-                 <li>Email<p><a href="mailto:kashif@kuwaitnet.com">kashif@kuwaitnet.com</a></p></li>
+                 <li>{{item.title}}<p>{{item.subTitle}}</p></li>
               </ul>
             </div>
             <div class="contact__right">
-              <h3>Message me</h3>
+              <h3>{{heading}}</h3>
                <form>
                  <div class="row">
                     <div class="col-md-6">
@@ -59,7 +43,7 @@
                     </div>
                  </div>
                  <div class="button-row">
-                  <button class="btn btn-primary" href="#"><span>Send message</span></button>
+                  <button class="btn btn-primary" href="#"><span>{{btnText}}</span></button>
                 </div>
                </form>
             </div>
@@ -73,9 +57,32 @@ export default {
     
     data(){
         return{
+          info:[
+            {
+              id:0,
+              image:'user-solid.svg',
+              title:'Name',
+              subTitle:'Kashif'
+            },
+            {
+              id:1,
+              image:'map-marker-alt-solid.svg',
+              title:'Location',
+              subTitle:'Pakistan'
+            },
+            {
+              id:2,
+              image:'envelope-solid.svg',
+              title:'Email',
+              subTitle:'kashif@kuwaitnet.com'
+            },
+          ],
           mainTitle:"Contact me",
           title:"Get in touch",
-          desc:"My inbox is always open. Whether for a potential project or idea, I’ll try my best to answer your email!"
+          desc:"My inbox is always open. Whether for a potential project or idea, I’ll try my best to answer your email!",
+		  heading:'Message me',
+		  btnText:'Send message'
+
         }
     },
  
@@ -153,5 +160,15 @@ export default {
         }
       }
     }
+    @media screen and (max-width:991px){
+		&__left{
+      flex:none;
+      max-width:100%;
+      margin-bottom:rem(30px);
+    }
+    &__right{
+      padding:0;
+    }
+	}
   }
 </style>

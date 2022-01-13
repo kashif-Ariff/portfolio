@@ -6,58 +6,22 @@
           <div class="flex-row">
              
             <div class="mySkills__left">
-              <h3>My creative skills and experience</h3>
+              <h3>{{heading}}</h3>
               <p>{{desc}}</p>
               <div class="button-row">
-                  <button class="btn btn-primary" href="#"><span>Read More</span></button>
+                  <button class="btn btn-primary" href="#"><span>{{btnText}}</span></button>
                 </div>
             </div>
             <div class="mySkills__right">
-              <div class="progressBarWrapper">
-                <div class="d-flex align-items-center justify-content-between">
-                  <span>Html</span>
-                  <span>95%</span>
+              <div class="progressBarWrapper" v-for="item in myProgress" :key="item.id">
+				<div class="d-flex align-items-center justify-content-between">
+					<span>{{item.skill}}</span>
+					<span>{{item.percentage}}</span>
                 </div>
                 <div class="progress">
-                  <div class="progress-bar" style="width:95%"></div>
-              </div>
-              </div>
-              <div class="progressBarWrapper">
-                <div class="d-flex align-items-center justify-content-between">
-                  <span>css</span>
-                  <span>95%</span>
+					<div class="progress-bar" :style="{width:item.percentage}"></div>
                 </div>
-                <div class="progress">
-                  <div class="progress-bar" style="width:95%"></div>
-              </div>
-              </div>
-              <div class="progressBarWrapper">
-                <div class="d-flex align-items-center justify-content-between">
-                  <span>bootstrap</span>
-                  <span>95%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" style="width:95%"></div>
-              </div>
-              </div>
-              <div class="progressBarWrapper">
-                <div class="d-flex align-items-center justify-content-between">
-                  <span>vue js</span>
-                  <span>80%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" style="width:80%"></div>
-              </div>
-              </div>
-              <div class="progressBarWrapper">
-                <div class="d-flex align-items-center justify-content-between">
-                  <span>javascript</span>
-                  <span>70%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" style="width:70%"></div>
-              </div>
-              </div>
+				</div>
             </div>
           </div>
         </div>
@@ -71,7 +35,52 @@ export default {
         return{
           mainTitle:"My Skills",
           title:"What i Know",
-          desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		  desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+		  myProgress:[
+			  {
+				  id:0,
+				  skill:'Html',
+				  percentage:'99.9%'
+			  },
+			  {
+				  id:1,
+				  skill:'Css',
+				  percentage:'99.9%'
+			  },
+			  {
+				  id:2,
+				  skill:'Bootstrap',
+				  percentage:'90%'
+			  },
+			  {
+				  id:3,
+				  skill:'Jquery',
+				  percentage:'80%'
+			  },
+			  {
+				  id:4,
+				  skill:'Javascript',
+				  percentage:'70%'
+			  },
+			  {
+				  id:5,
+				  skill:'Vue.js',
+				  percentage:'80%'
+			  },
+			  {
+				  id:6,
+				  skill:'W3validation',
+				  percentage:'99.9%'
+			  },
+			  {
+				  id:7,
+				  skill:'Responsive Web',
+				  percentage:'99.9%'
+			  }
+		  ],
+		  heading:'My creative skills and experience',
+		  btnText:'Read More'
+         
         }
     },
  
@@ -149,5 +158,15 @@ export default {
         }
       }
     }
+    @media screen and (max-width:991px){
+		&__left{
+      flex:none;
+      max-width:100%;
+      margin-bottom:rem(25px);
+    }
+    &__right{
+      padding:0;
+    }
+	}
   }
 </style>

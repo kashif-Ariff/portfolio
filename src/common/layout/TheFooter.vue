@@ -11,7 +11,7 @@
 footer{
     text-align: center;
     padding:rem(20px) 0;
-    background:var(--black);
+    // background:var(--black);
     border-top:2px solid var(--black);
     p{
         font-family:$default-font;
