@@ -13,13 +13,16 @@
                                 {{item.title}}
                             </div>
                             <div class="card__desc--actions">
-                                
-                                    <a href="#" class="btn btn-primary">
-                                        <span>
-                                            <i class="fa fa-link"></i>
-                                        </span>
-                                    </a> 
-                                  
+                                <CoolLightBox :items="items" :index="index" @close="index = null">
+                                    
+                                </CoolLightBox> 
+                                <a href="#" class="btn btn-primary" v-for="(image, imageIndex) in items"
+                                    :key="imageIndex"
+                                    @click="index = imageIndex">
+                                    <span>
+                                        <i class="fa fa-link"></i>
+                                    </span>
+                                </a> 
                                 <a :href="`${item.linkPage}`" class="btn btn-primary" target="_blank">
                                     <span>
                                         <i class="fa fa-link"></i>    
@@ -35,166 +38,164 @@
 </template>
 
 <script>
-
-import VueEasyLightbox from 'vue-easy-lightbox'
+import CoolLightBox from 'vue-cool-lightbox'
 export default {
-     components: {
-    VueEasyLightbox
-  },
-    
+    components: {
+        CoolLightBox,
+    },
+
     data(){
         return{
-          project:[
+            project:[
+                {  
+                id: '1',
+                image: 'nutru.jpeg', 
+                alt: 'Nutru',
+                title: 'Nutru',
+                imgOpen: '0',
+                linkPage: 'http://logicsdrive.net/clients/email/images/new-nutru16/'
+            },
             {  
-            id: '1',
-            image: 'nutru.jpeg', 
-            alt: 'Nutru',
-            title: 'Nutru',
-            imgOpen: '0',
-            linkPage: 'http://logicsdrive.net/clients/email/images/new-nutru16/'
-        },
-        {  
-            id: '2',
-            animate: '1000',
-            image: 'tdalal.png', 
-            alt: 'Tdalal',
-            title: 'Tdalal',
-            imgOpen: '1',
-            linkPage: 'https://tdalal.com.kw/en/'
-        }, 
-        {  
-            id: '3',
-            animate: '1500',
-            image: 'ottu.png', 
-            alt: 'Ottu',
-            title: 'Ottu',
-            imgOpen: '2',
-            linkPage: 'https://www.ottu.com/en/'
-        },  
-        {  
-            id: '4',
-            animate: '500',
-            image: 'da3aity.png', 
-            alt: 'Da3aity',
-            title: 'Da3aity',
-            imgOpen: '3',
-            linkPage: 'http://www.da3aity.com/'
-        }, 
-        {  
-            id: '5',
-            animate: '1000',
-            image: 'nextgen.png', 
-            alt: 'NextGen',
-            title: 'NextGen',
-            imgOpen: '4',
-            linkPage: 'https://www.nextgenconnect.com/'
-        },
-        {  
-            id: '6',
-            animate: '1500',
-            image: 'kn2021.png', 
-            alt: 'Kn',
-            title: 'Kn2021',
-            imgOpen: '5',
-            linkPage: 'https://kuwaitnet.com/'
-        }, 
-        {  
-            id: '7',
-            animate: '500',
-            image: 'nf.png', 
-            alt: 'Nf',
-            title: 'National Fund',
-            imgOpen: '6',
-            linkPage: 'https://www.nationalfund.gov.kw/en/'
-        }, 
-        {  
-            id: '8',
-            animate: '1000',
-            image: 'olshi.png', 
-            alt: 'Olshi',
-            title: 'Olshi',
-            imgOpen: '7',
-            linkPage: '#'
-        },
-        {  
-            id: '9',
-            animate: '1500',
-            image: 'america-garden.png', 
-            alt: 'America Gardens',
-            title: 'America Gardens',
-            imgOpen: '8',
-            linkPage: 'https://americagardensusa.com/'
-        },
-        {  
-            id: '10',
-            animate: '500',
-            image: 'aqarat.png', 
-            alt: 'Aqarat',
-            title: 'Aqarat',
-            imgOpen: '9',
-            linkPage: 'https://www.aqarat.com.kw/'
-        },
-        {  
-            id: '11',
-            animate: '1000',
-            image: 'ee.png', 
-            alt: 'Evalyn Elizabeth',
-            title: 'Evalyn Elizabeth',
-            imgOpen: '10',
-            linkPage: 'https://www.evalynelizabeth.com/'
-        },
-        {  
-            id: '12',
-            animate: '1500',
-            image: 'mtp.png', 
-            alt: 'Michele Therese',
-            title: 'Michele Therese',
-            imgOpen: '11',
-            linkPage: 'https://www.micheletherese.com/'
-        },
-        {  
-            id: '13',
-            animate: '500',
-            image: 'duwaween.png', 
-            alt: 'Duwaween',
-            title: 'Duwaween',
-            imgOpen: '12',
-            linkPage: 'https://web.duwaween.games/en/'
-        },
-        {  
-            id: '14',
-            animate: '1000',
-            image: 'makeawag.png', 
-            alt: 'Make a Wag',
-            title: 'Make a Wag',
-            imgOpen: '13',
-            linkPage: 'https://www.makeawag.org/'
-        },
-        {  
-            id: '15',
-            animate: '1500',
-            image: 'movestudio.png', 
-            alt: 'Move Studio',
-            title: 'Move Studio',
-            imgOpen: '14',
-            linkPage: 'https://www.movestudiopilates.com/'
-        },
-        {  
-            id: '16',
-            animate: '500',
-            image: 'eventlify.png', 
-            alt: 'Eventlify',
-            title: 'Eventlify',
-            imgOpen: '15',
-            linkPage: 'https://www.eventlify.com/'
-        }
-          ],
-          mainTitle:"Contact me",
-          title:"Get in touch",
-          desc:"My inbox is always open. Whether for a potential project or idea, I’ll try my best to answer your email!",
-		  heading:'Message me',
-		  btnText:'Send message'
-
+                id: '2',
+                animate: '1000',
+                image: 'tdalal.png', 
+                alt: 'Tdalal',
+                title: 'Tdalal',
+                imgOpen: '1',
+                linkPage: 'https://tdalal.com.kw/en/'
+            }, 
+            {  
+                id: '3',
+                animate: '1500',
+                image: 'ottu.png', 
+                alt: 'Ottu',
+                title: 'Ottu',
+                imgOpen: '2',
+                linkPage: 'https://www.ottu.com/en/'
+            },  
+            {  
+                id: '4',
+                animate: '500',
+                image: 'da3aity.png', 
+                alt: 'Da3aity',
+                title: 'Da3aity',
+                imgOpen: '3',
+                linkPage: 'http://www.da3aity.com/'
+            }, 
+            {  
+                id: '5',
+                animate: '1000',
+                image: 'nextgen.png', 
+                alt: 'NextGen',
+                title: 'NextGen',
+                imgOpen: '4',
+                linkPage: 'https://www.nextgenconnect.com/'
+            },
+            {  
+                id: '6',
+                animate: '1500',
+                image: 'kn2021.png', 
+                alt: 'Kn',
+                title: 'Kn2021',
+                imgOpen: '5',
+                linkPage: 'https://kuwaitnet.com/'
+            }, 
+            {  
+                id: '7',
+                animate: '500',
+                image: 'nf.png', 
+                alt: 'Nf',
+                title: 'National Fund',
+                imgOpen: '6',
+                linkPage: 'https://www.nationalfund.gov.kw/en/'
+            }, 
+            {  
+                id: '8',
+                animate: '1000',
+                image: 'olshi.png', 
+                alt: 'Olshi',
+                title: 'Olshi',
+                imgOpen: '7',
+                linkPage: '#'
+            },
+            {  
+                id: '9',
+                animate: '1500',
+                image: 'america-garden.png', 
+                alt: 'America Gardens',
+                title: 'America Gardens',
+                imgOpen: '8',
+                linkPage: 'https://americagardensusa.com/'
+            },
+            {  
+                id: '10',
+                animate: '500',
+                image: 'aqarat.png', 
+                alt: 'Aqarat',
+                title: 'Aqarat',
+                imgOpen: '9',
+                linkPage: 'https://www.aqarat.com.kw/'
+            },
+            {  
+                id: '11',
+                animate: '1000',
+                image: 'ee.png', 
+                alt: 'Evalyn Elizabeth',
+                title: 'Evalyn Elizabeth',
+                imgOpen: '10',
+                linkPage: 'https://www.evalynelizabeth.com/'
+            },
+            {  
+                id: '12',
+                animate: '1500',
+                image: 'mtp.png', 
+                alt: 'Michele Therese',
+                title: 'Michele Therese',
+                imgOpen: '11',
+                linkPage: 'https://www.micheletherese.com/'
+            },
+            {  
+                id: '13',
+                animate: '500',
+                image: 'duwaween.png', 
+                alt: 'Duwaween',
+                title: 'Duwaween',
+                imgOpen: '12',
+                linkPage: 'https://web.duwaween.games/en/'
+            },
+            {  
+                id: '14',
+                animate: '1000',
+                image: 'makeawag.png', 
+                alt: 'Make a Wag',
+                title: 'Make a Wag',
+                imgOpen: '13',
+                linkPage: 'https://www.makeawag.org/'
+            },
+            {  
+                id: '15',
+                animate: '1500',
+                image: 'movestudio.png', 
+                alt: 'Move Studio',
+                title: 'Move Studio',
+                imgOpen: '14',
+                linkPage: 'https://www.movestudiopilates.com/'
+            },
+            {  
+                id: '16',
+                animate: '500',
+                image: 'eventlify.png', 
+                alt: 'Eventlify',
+                title: 'Eventlify',
+                imgOpen: '15',
+                linkPage: 'https://www.eventlify.com/'
+            }
+            ],
+            items: [
+                'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nature-quotes-1557340276.jpg?crop=0.666xw:1.00xh;0.168xw,0&resize=640:*',
+                'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nature-quotes-1557340276.jpg?crop=0.666xw:1.00xh;0.168xw,0&resize=640:*',
+            ],
+            index: null
         }
     },
  

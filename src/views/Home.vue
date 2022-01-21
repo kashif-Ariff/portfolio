@@ -89,7 +89,7 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
 	background-attachment: fixed;
-	@media screen and (max-width:767px) {
+	@media screen and (max-width:767px){
 		background-position: center;
 	}
 	/*--------------------
