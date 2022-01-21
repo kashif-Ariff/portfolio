@@ -23,6 +23,12 @@
 
 			<!-------x----- MySkills  Section -------x------>
 
+			<!-------------- MyWork Section ------------->
+
+			<my-work/>
+
+			<!-------x----- MyWork Section -------x------>
+
 
 			<!-------------- Contact Section ------------->
 
@@ -39,8 +45,9 @@ import mainIntro from '@/components/mainIntro.vue';
 import AboutUs from '@/components/AboutUs.vue';
 import Contact from '@/components/Contact.vue';
 import MySkills from '@/components/MySkills.vue';
+import MyWork from '@/components/MyWork.vue';
 export default {
-  components: {mainIntro, AboutUs , Contact , MySkills },
+  components: {mainIntro, AboutUs , Contact , MySkills, MyWork },
 	name: 'Home',
 	methods: {
 		
@@ -82,6 +89,9 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
 	background-attachment: fixed;
+	@media screen and (max-width:767px) {
+		background-position: center;
+	}
 	/*--------------------
 	Back to Top Button
 	---------------------*/
