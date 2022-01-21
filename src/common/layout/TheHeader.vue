@@ -23,7 +23,7 @@
                             <ul>
                                 <li><a href="#about">about</a></li>
                                 <li><a href="#services">services</a></li>
-                                <li><a href="#services">my work</a></li>
+                                <li><a href="#work">my work</a></li>
                                 <li><a href="#skills">skills</a></li>
                                 <li><a href="#contact">contact</a></li>
                             </ul>

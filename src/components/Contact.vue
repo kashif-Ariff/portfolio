@@ -1,6 +1,6 @@
 <template>
     <section class="contact" id="contact">
-        <div class="container">
+        <div class="">
           <div class="sectionTitle">{{mainTitle}}</div>
           <h3>{{title}}</h3>
           <div class="flex-row">
@@ -128,6 +128,9 @@ export default {
       font-weight:600;
       font-family:$default-font;
       text-align:center;
+      @media screen and (max-width:767px){
+        font-size:rem(30px);
+      }
     }
     p{
       color:var(--white);
@@ -135,6 +138,9 @@ export default {
       font-weight:400;
       font-family:$default-font;
       margin-bottom:rem(50px);
+      @media screen and (max-width:767px){
+        font-size:rem(18px);
+      }
     }
     .button-row{
       margin-top:0;
@@ -146,10 +152,16 @@ export default {
       li{
         font-family:$default-font;
         font-size:rem(20px);
+        @media screen and (max-width:767px){
+        font-size:rem(18px);
+      }
         .icon{
           margin-right:rem(20px);
           img{
             width:30px;
+            @media screen and (max-width:767px){
+              width:25px;
+            }
           }
         }
         p{

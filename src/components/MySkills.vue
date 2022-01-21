@@ -1,6 +1,6 @@
 <template>
     <section class="mySkills" id="skills">
-        <div class="container">
+        <div class="">
           <div class="sectionTitle">{{mainTitle}}</div>
           <h3 class="text-center">{{title}}</h3>
           <div class="flex-row">
@@ -92,6 +92,7 @@ export default {
     color:var(--white);
     .flex-row{
       margin-top:rem(70px);
+      
     }
     .progressBarWrapper{
       margin-bottom:rem(35px);
@@ -99,6 +100,9 @@ export default {
         font-size:rem(25px);
         margin-bottom:10px;
         text-transform: uppercase;
+        @media screen and (max-width: 767px) {
+            font-size:rem(20px);
+        }
       }
       .progress-bar{
         background: var(--primary);
@@ -114,6 +118,9 @@ export default {
       font-size:rem(40px);
       font-weight:600;
       font-family:$default-font;
+      @media screen and (max-width: 767px) {
+            font-size:rem(30px);
+        }
       }
     }
     &__right{
@@ -133,6 +140,9 @@ export default {
       font-weight:400;
       font-family:$default-font;
       margin-bottom:rem(50px);
+      @media screen and (max-width: 767px) {
+            font-size:rem(18px);
+        }
     }
     .button-row{
       margin-top:0;

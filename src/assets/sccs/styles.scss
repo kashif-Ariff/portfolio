@@ -22,6 +22,7 @@
     font-family: $primary-font;
     @media screen and (max-width: 991px) {
         font-size: rem(50px);
+        margin-bottom: rem(25px);
     }
     @media screen and (max-width: 575px) {
         font-size: rem(40px);
@@ -45,6 +46,7 @@ h3 {
     margin-bottom: rem(45px);
     @media screen and (max-width: 991px) {
         font-size: rem(30px);
+        margin-bottom: rem(30px);
     }
 }
 
@@ -53,6 +55,9 @@ section {
     position: relative;
     @media screen and (max-width: 991px) {
         padding: rem(60px) 0;
+    }
+    @media screen and (max-width: 767px) {
+        padding: rem(40px) 0;
     }
 }
 

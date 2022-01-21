@@ -1,6 +1,6 @@
 <template>
     <section class="aboutUs" id="about">
-       <div class="container">
+       <div class="">
           <div class="sectionTitle">{{title}}</div>
           <h3 class="text-center">{{subTitle}}</h3>
           <div class="flex-row">
