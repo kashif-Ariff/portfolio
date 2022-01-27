@@ -13,16 +13,7 @@
                                 {{item.title}}
                             </div>
                             <div class="card__desc--actions">
-                                <CoolLightBox :items="items" :index="index" @close="index = null">
-                                    
-                                </CoolLightBox> 
-                                <a href="#" class="btn btn-primary" v-for="(image, imageIndex) in items"
-                                    :key="imageIndex"
-                                    @click="index = imageIndex">
-                                    <span>
-                                        <i class="fa fa-link"></i>
-                                    </span>
-                                </a> 
+                                <Carousel /> 
                                 <a :href="`${item.linkPage}`" class="btn btn-primary" target="_blank">
                                     <span>
                                         <i class="fa fa-link"></i>    
@@ -38,12 +29,11 @@
 </template>
 
 <script>
-import CoolLightBox from 'vue-cool-lightbox'
+import Carousel from '@/components/Carousel.vue';
 export default {
     components: {
-        CoolLightBox,
-    },
-
+    Carousel
+  },
     data(){
         return{
             project:[
@@ -191,11 +181,6 @@ export default {
                 linkPage: 'https://www.eventlify.com/'
             }
             ],
-            items: [
-                'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nature-quotes-1557340276.jpg?crop=0.666xw:1.00xh;0.168xw,0&resize=640:*',
-                'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nature-quotes-1557340276.jpg?crop=0.666xw:1.00xh;0.168xw,0&resize=640:*',
-            ],
-            index: null
         }
     },
  

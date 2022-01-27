@@ -28,7 +28,7 @@
 			<my-work/>
 
 			<!-------x----- MyWork Section -------x------>
-
+			
 
 			<!-------------- Contact Section ------------->
 
@@ -47,7 +47,7 @@ import Contact from '@/components/Contact.vue';
 import MySkills from '@/components/MySkills.vue';
 import MyWork from '@/components/MyWork.vue';
 export default {
-  components: {mainIntro, AboutUs , Contact , MySkills, MyWork },
+  components: {mainIntro, AboutUs , Contact , MySkills, MyWork},
 	name: 'Home',
 	methods: {
 		
